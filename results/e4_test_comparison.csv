@@ -1,0 +1,12 @@
+,baseline @0.5,baseline tuned,BERT @0.5,BERT tuned,test support
+First Party Collection/Use,0.81,0.817,0.865,0.881,196.0
+Third Party Sharing/Collection,0.736,0.766,0.833,0.833,144.0
+User Choice/Control,0.693,0.685,0.685,0.676,62.0
+"User Access, Edit and Deletion",0.741,0.632,0.808,0.833,25.0
+Data Retention,0.462,0.462,0.588,0.588,10.0
+Data Security,0.795,0.787,0.886,0.865,37.0
+Policy Change,0.889,0.884,0.776,0.809,23.0
+Do Not Track,0.8,0.667,0.8,0.8,6.0
+International and Specific Audiences,0.832,0.825,0.869,0.841,61.0
+Other,0.667,0.622,0.718,0.7,212.0
+macro-F1,0.742,0.715,0.783,0.783,
