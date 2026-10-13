@@ -1,6 +1,6 @@
 import glob
 import os
-
+import re
 import pandas as pd
 
 CATEGORIES = [
@@ -50,3 +50,7 @@ def build_table(root="data/opp115", min_votes=2):
                              and votes.loc[sid, c] >= min_votes)
             rows.append(row)
     return pd.DataFrame(rows)
+
+def clean_text(t):
+    t = re.sub(r"<[^>]+>", " ", str(t))   # strip <br> etc.
+    return re.sub(r"\s+", " ", t).strip()
