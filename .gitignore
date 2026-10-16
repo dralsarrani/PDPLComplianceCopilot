@@ -1,3 +1,25 @@
+# Python
 __pycache__/
+*.pyc
+.venv/
+venv/
+
+# Secrets: never commit the real .env
+.env
+
+# OPP-115 extras (from 3A)
 data/opp115/original_policies/
 data/opp115/.idea/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Local caches and big model files
+.cache/
+chroma_db/
+*.pt
+*.safetensors
+
+# OS / editor
+.DS_Store
+Thumbs.db
