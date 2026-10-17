@@ -1,0 +1,25 @@
+# Data
+pandas
+numpy
+requests
+openpyxl
+
+# Classifier (3A)
+scikit-learn
+joblib
+torch
+transformers
+
+# Retrieval and LLM (person 2)
+rank-bm25
+sentence-transformers
+chromadb
+openai
+
+# App
+streamlit
+python-dotenv
+
+# Notebooks
+matplotlib
+jupyter
