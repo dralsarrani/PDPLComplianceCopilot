@@ -1,0 +1,82 @@
+Privacy Policy
+Introduction
+King Saud University is committed to ensuring the confidentiality and privacy of its website users’ data. It uses this data to guarantee the highest level of service in accordance with the laws and regulations of the Kingdom of Saudi Arabia. The University’s website collects selective personal data, and by using the website, you agree to this Privacy Notice. Personal Data refers to any information that can directly or indirectly identify you.
+Article One: Definitions
+The following words and phrases, wherever they appear in this Notice, shall have the indicated meanings, unless the context requires otherwise.
+a. System: King Saud University’s Statute, issued under Royal Decree No. (9589) dated 9/2/1444H
+b. University: : King Saud University.
+c. University Board: The Board of Directors of King Saud University.
+d. University President: The President of King Saud University.
+e. Data Management Office (DMO): The Data Management Office at the University.
+f. Personal Data: Any information related to an identifiable natural person, directly or indirectly (e.g., name, ID number, location data).
+g. Privacy Notice: A document outlining the University or its website’s method of collecting and managing user data.
+h. University Affiliates: Whoever works full time or part time for the University, including faculty, staff, and students.
+Article Two: Objectives of the Privacy Notice
+This Notice aims to:
+1. Enhance transparency and ensure that users understand how their data is managed and protected.
+2. Protect user privacy in compliance with University laws and regulations.
+3. Prevent misuse or unauthorized access to data.
+4. Comply with DMO requirements and relevant legislative regulations.
+Article Three: Scope of Application
+This notice applies to all University affiliates. The DMO is responsible for the implementation and may issue further directives as deemed necessary after approval
+Article Four: Collected Personal Data
+Protecting the user’s privacy is a priority for the University. Therefore, this Privacy Notice is written concisely to help users understand the purpose of collecting personal data when using services from the University's website. The University collects the following personal data upon service:
+Username
+Authorization type
+Registration date
+Last access date
+Article Five: Methods of Collecting Personal Data
+Personal data is collected only upon the user’s approval when requesting services and after accepting the Privacy Notice. No data is collected from casual browsing.
+Article Six: Purpose and Method of Processing Personal Data
+The University processes personal data to:
+Verify user identity and contact details.
+Track and respond to requests.
+Facilitate communication with users.
+Article Seven: Mechanism for Using Personal Data
+The University uses collected data for the sole purposes stated in this Notice or as required by Saudi Law, including that of the Personal Data Protection Law and regulations approved by the University board.
+Article Eight: Storage and Disposal of Personal Data
+Personal data is stored on the University's servers, which utilize the latest data protection technologies in line with the Saudi National Cybersecurity Authority standards. Unwanted data is securely and permanently deleted from the server; it cannot be recovered or accessed after deletion.
+Article Nine: Collection and Processing of Personal Data
+a‌- Collecting personal data is based on legitimate interests (improving user experience) or legal obligations.
+b‌- Personal data is processed only after explicit consent is obtained from the user. The consent can be withdrawn by contacting the DMO via:
+1. Website : (dmo.ksu.edu.sa)
+2. Email : (dmo@ksu.edu.sa)
+3. Phone : (0114678041)
+Article Ten: Rights of the Data Subject
+In compliance with Saudi Privacy Protection Laws, its executive regulations, and the University’s regulations approved by the board, the owner of personal data has the right to:
+a. Know about the method and the legal framework of collecting, processing, sharing, saving, and terminating data. The framework can be obtained from this Privacy Notice or through contacts in Article Nine.
+b. Access to a clear and readable copy of acquired data via email in Article Nine.(dmo@ksu.edu.sa)
+c. Request corrections and updates for inaccurate and incomplete data via email in Article Nine.(dmo@ksu.edu.sa).
+d. Request data termination under certain conditions, unless a legal provision or contractual requirements specify a specific retention period. Requests can be filed via the email address provided in Article Nine.(dmo@ksu.edu.sa).
+e. Withdraw consent to process personal data at any time unless there are legitimate purposes that require otherwise. Requests can be filed via the email address provided in Article Nine. (dmo@ksu.edu.sa).
+Article Eleven: Sharing Personal Data with Third Parties
+Data is disclosed to third parties only with prior consent or as required by law, including the Personal Data Protection Law, its executive regulations, or regulations approved by the University board.
+Article Twelve: External Links
+The University provides external links for user convenience and needs. However, it is not responsible for the content of these links. Users are solely responsible for their actions on external sites provided by the University’s website.
+Article Thirteen: Responsibilities of the DMO
+The DMO is responsible for:
+a. Preparing, implementing, and protecting this Notice and related procedures, as well as personal data.
+b. Reviewing and updating contracts and agreements in compliance with the approved Privacy Notice.
+c. Preparing and documenting necessary forms to handle and resolve privacy breaches.
+d. Preparing privacy awareness programs and enhancing the awareness of privacy policies among University affiliates.
+e. Adequately informing the owner of data about the purpose of collecting data.
+f. Inform the owner of personal data about external sources used in the indirect collection of data.
+g. Use data only for stated purposes.
+h. Answer University affiliates’ questions and complaints related to this Privacy Notice.
+i. Provide channels that allow the owner of personal data to access, review, and update personal data
+Article Fourteen: General Provisions
+1. This Notice is effective upon approval by the University Board and supersedes all previous versions.
+2. The Board may interpret, amend, or update this Notice as needed.
+3. Unaddressed matters in this Notice are governed by the University’s regulations and instructions.
+4. The University President may issue executive procedures in connection with this Notice.
+Application Content
+All applications provided by the University are service-oriented and educational applications developed in line with the University’s goals and vision for digital transformation and keeping pace with technological advancements.
+These applications do not include any social networking features, live-streaming services, or any content that violates intellectual property protection regulations or the rights of others.
+User Data
+The applications do not collect or request any personal data from users. They are limited to displaying the user’s employment or academic data that has already been officially recorded upon joining the University or when the account was first created.
+Data Sharing
+The applications do not share any user data with any intermediary or external parties in any form. They also do not grant any permissions to third-party software or systems to access application data or processes.
+The applications likewise do not provide any application programming interfaces (APIs) to any external entities.
+Device Tracking and User Location
+The device identifier is used solely for the purpose of sending general notifications to users.
+The applications do not track the user’s device or geographic location without the user’s explicit consent. Location permission is clearly requested when using the attendance and departure service, and the service is activated only after the user’s approval.

@@ -1,0 +1,99 @@
+Privacy Policy
+Last updated: August 2026
+1. Who we are
+Tamara Financing Company (“Tamara”, “we”, “us”), located at King Abdullah Branch Road, King Salman Dist., Building No. 2907, Postal Code 12444, Riyadh, Kingdom of Saudi Arabia, acts as the data controller responsible for your personal data.
+If you have any questions, you can reach our data privacy team at: [email protected]
+2. What this notice covers
+This Privacy Notice explains how we collect, use, share, and protect your personal data when you interact with our platforms and services.
+3. The data we collect
+To provide our services, we collect several types of personal data, directly or via third parties including:
+Identity data (such as your name, date of birth, gender and national ID)
+Contact data (such as your phone number and email)
+Financial details, such as payment card details, bank account details, IBAN, repayment information, transaction history, and credit-related information
+Technical and usage data (such as device information, device location and IP address and in-app and website browser usage information).
+Location data
+Data obtained from third parties (such as merchants, financial institutions, credit bureaus, identity verification, social media and network sites where you are registered, open banking sources, utilities, past or on-going court cases and fraud prevention providers)
+Information from linked third-party accounts where you choose to provide access.
+4. Sensitive data
+Due to the nature of our services, we process certain types of personal data that may be considered sensitive under applicable laws. This includes:
+Financial and credit-related data
+Identity verification data, and where applicable, biometric data
+Where biometric data is used, it is processed either by Tamara or by authorized third-party providers acting on our behalf, with appropriate safeguards in place and in accordance with applicable laws.
+5. How we collect your data
+We collect personal data:
+Directly from you when you register or use our services
+From merchants when you transact using Tamara
+From financial institutions, open banking service providers and credit bureaus
+From identity verification and fraud prevention providers
+6. Failure to provide personal data
+If we are required to collect personal data under applicable laws or as part of a contract with you and you do not provide it, we may not be able to provide our services. In such cases, we will inform you accordingly.
+7. How we use your data
+We use your personal data to:
+Deliver our financing services and process transactions including providing customer support and enforcing our terms
+Assess your creditworthiness and verify your identity
+Monitor and prevent fraud and misuse (including identifying when you sign in to your account and giving you appropriate access to our platforms)
+Communicate important service-related updates
+Improve and develop our services, including risk models and user experience
+We may also anonymize personal data so it can no longer be linked to you and use it for analytics, reporting, service improvement, and product development.
+Comply with legal and regulatory obligations
+We will only send marketing communications where you have provided explicit consent.
+8. Legal basis for processing
+We process your personal data depending on the purpose of processing, including:
+To perform our contract with you
+To comply with legal and regulatory obligations including financial crime rules and/or any court orders
+To protect our legitimate interests, such as fraud prevention, carrying out our obligations in our agreements with our business partners, measuring effectiveness and service improvement, where permitted
+Based on your consent, where required
+9. Automated decision-making
+We use automated systems to support credit assessment and fraud detection.
+Where a decision is made solely through automated processing and significantly affects you, you have the right to request a human review and obtain additional information about how the decision was made.
+10. Cookies and tracking technologies
+We use cookies, pixel tags, and similar technologies to operate and improve our services, enhance user experience, and support analytics and marketing activities.
+Cookies may include:
+Strictly necessary cookies required for the operation and security of our services.
+Analytics cookies to understand how users interact with our platforms.
+Marketing cookies to provide relevant advertisements and measure campaign effectiveness.
+Where required, we obtain your consent before placing non-essential cookies on your device.
+You can control or disable cookies through your browser or device settings. Please note that disabling certain cookies may affect the functionality of our services.
+11. Sharing your data
+We may share your personal data with:
+Merchants you transact with
+Payment processing providers and financial partners
+Credit reporting agencies
+Identity verification and fraud prevention providers
+Service providers supporting our operations and customer engagement (including debt collection agencies and SMS services)
+Regulatory and governmental authorities where required
+These parties process your data only for specified purposes and, where applicable, under our instructions and subject to appropriate safeguards.
+12. Third-party links
+Our platforms may include links to third-party websites or applications. We are not responsible for their privacy practices, and we encourage you to review their privacy notices.
+13. International transfers
+Your personal data may be transferred, accessed, hosted, supported, or processed outside the Kingdom of Saudi Arabia where necessary to provide our services or support our operations. In such cases, we ensure that the transfer, access, hosting, support, or processing is carried out in accordance with applicable data protection, regulatory, and sectoral requirements, including appropriate contractual, technical, organizational, and security safeguards.
+14. Data retention
+We retain your personal data only for as long as necessary to fulfill the purposes outlined in this notice, including:
+For the duration of your relationship with us
+To comply with legal, regulatory, tax, and financial obligations (typically up to 5–10 years, where required)
+To resolve disputes and enforce agreements
+15. Marketing communications
+We will only send you marketing communications where you have provided clear and explicit consent.
+You may withdraw your consent related to marketing communications at any time through your account settings or by contacting us.
+16. Children’s privacy
+Our services are not intended for individuals under the age of 18. If we become aware that personal data has been collected from a minor, we will take appropriate steps to delete it.
+17. Your legal rights
+Under applicable data protection laws, you have the right to:
+Be informed about how your personal data is processed.
+Access your personal data.
+Request correction or update of your personal data.
+Request deletion or destruction of your personal data, where applicable.
+Withdraw your consent, where processing is based on consent.
+To protect your personal data, we may ask you to provide information needed to verify your identity before we process your request. We may also request additional information where needed to understand your request and respond to it properly.
+Certain rights may be limited where processing is required to meet legal or regulatory obligations.
+You also have the right to lodge a complaint with the Saudi Data and Artificial Intelligence Authority (SDAIA). Where your complaint relates to Tamara’s regulated financing services in the Kingdom of Saudi Arabia, you may also escalate your complaint to the Saudi Central Bank (SAMA) through its official complaint channels.
+To exercise your rights, contact: [email protected]
+We will respond to valid data subject rights requests within 30 days of receiving the request. Where permitted by applicable law, this period may be extended by up to an additional 30 days if the request is complex, requires additional verification, requires coordination with relevant internal teams or third parties, or if we receive multiple requests from the same individual. Where an extension is needed, we will notify you and explain the reason for the delay.
+18. Security measures and breach handling
+We implement appropriate technical and organizational measures to protect your personal data, including:
+Encryption of data in transit and at rest
+Access controls and monitoring
+Regular security testing and audits
+In the event of a personal data breach, we will take appropriate action and notify affected parties and authorities where required by law.
+19. Updates to this notice
+We may update this Privacy Notice from time to time. Any changes will be published on our platform, and where appropriate, we will notify you.

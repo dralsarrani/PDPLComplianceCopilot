@@ -1,0 +1,64 @@
+Privacy Notice of King Fahd University of Petroleum and Minerals (KFUPM)
+King Fahd University of Petroleum and Minerals (hereinafter referred to as “KFUPM” or “the University”) is committed to safeguarding the privacy of individuals who interact with its website and online services. This Privacy Notice outlines how KFUPM collects, uses, discloses, and protects personal data in compliance with the Personal Data Protection Law (PDPL) of Saudi Arabia, as regulated by the Saudi Data & Artificial Intelligence Authority (SDAIA).
+Controller of Your Personal Data
+KFUPM, located in Dhahran, Saudi Arabia, acts as the Controller of your personal data and determines the purposes and means of processing your personal information. For inquiries regarding data processing, you may contact us at Digital Risk & Information Security.
+1. Information We Collect
+KFUPM may collect and process different types of personal data, including but not limited to:
+Personal Identifiable Information: Full name, national ID or residency number, email address, and phone number.
+Academic Records: Enrollment status, course registrations, grades, and academic history.
+Technical Data: IP addresses, browser types, device identifiers, and browsing activities on the University’s website.
+Financial Information: Payment records related to tuition, fees, or university services.
+Employment Data: Faculty and staff records, including performance evaluations and payroll information.
+Health and Safety Information: Emergency contact details and health-related data when required.
+2. Purpose of Data Processing
+KFUPM processes personal data for the following legitimate purposes:
+Academic Services: Providing academic, administrative, and research-related services.
+Service Enhancement: Improving user experience and optimizing website functionality.
+Legal and Regulatory Compliance: Ensuring adherence to legal, regulatory, and accreditation requirements.
+Communication: Managing inquiries, requests, and providing necessary information.
+Security: Protecting University systems and ensuring cybersecurity.
+Financial Transactions: Processing tuition payments, scholarships, and financial aid.
+Employment Management: Managing staff payroll, performance assessments, and employment-related obligations.
+3. Methods of Data Collection
+KFUPM collects personal data through various methods, including:
+Direct Interactions: Information provided via online forms, emails, phone calls, or official correspondence.
+Automated Technologies: Data is collected through cookies, server logs, and analytics tools when you interact with our website.
+Third-Party Sources: Information obtained from government agencies, affiliated institutions, or other authorized entities.
+4. Legal Basis for Processing Personal Data
+KFUPM processes personal data under the following legal justification:
+The collection and processing of personal data are based on the data subject’s consent, which may be withdrawn at any time, unless another legal basis applies.
+5. Data Sharing and Disclosure
+KFUPM may share personal data under the following conditions:
+Government Authorities: As required by law or regulation.
+Service Providers: With third-party vendors under confidentiality agreements for operational and technical support.
+Academic and Research Partners: When necessary for academic collaborations and research purposes.
+Others: With explicit consent or as necessary to protect vital interests.
+6. Data Security
+KFUPM implements appropriate technical and organizational measures to protect collected personal data from unauthorized access, modification, disclosure, or destruction, in compliance with the applicable laws and regulations of Saudi Arabia.
+7. Data Retention and Destruction
+KFUPM retains personal data only for as long as necessary to fulfill its intended purpose or as required by applicable laws and regulations. When no longer needed, data is securely deleted, anonymized, or archived in accordance with legal obligations.
+8. Your Rights
+Under the PDPL, individuals have the following rights concerning their personal data:
+The right to be informed about the legal basis and the purpose of the Collection of their [SAMA1]
+The right to access their personal data by viewing or reviewing the personal data held by KFUPM, in accordance with applicable regulations.
+The right to request and obtain a copy of their personal data held by KFUPM in a readable and clear format.
+The right to request correcting, completing, or updating their personal data held by KFUPM.
+The right to request the destruction of their personal data held by KFUPM under specific conditions.
+To exercise these rights, please contact us at Digital Risk & Information Security.
+9. Transfer of Personal Data Outside the Geographical Borders of the Kingdom
+According to the applicable regulations, the storage and processing of the beneficiary’s personal data shall be conducted securely within the geographical borders of the Kingdom of Saudi Arabia to ensure the preservation of national digital sovereignty. Personal data may only be transferred or processed outside the Kingdom under the circumstances specified in Article 29 of the Personal Data Protection Law. These exceptions include cases where the transfer is necessary to fulfill legal, contractual, or vital interests, provided that adequate data protection measures are in place to safeguard the transferred information. KFUPM may transfer personal data outside Saudi Arabia when necessary and in compliance with PDPL regulations. Adequate data protection safeguards will be implemented for such transfers.
+10. Data Breach Notification
+In the event of a data breach that could affect personal data, KFUPM will notify impacted individuals and regulatory authorities as required by law.
+11. Cookies and Tracking Technologies
+KFUPM utilizes cookies and other tracking technologies to enhance website performance and user experience. Users can manage cookie preferences through browser settings.
+12. Updates to This Privacy Notice
+KFUPM reserves the right to modify this Privacy Notice as necessary to reflect changes in legal and operational requirements. Updated notices will be published on this page, and users are encouraged to review them periodically.
+13. Contact Information
+For inquiries or concerns regarding this Privacy Notice, please contact us at Digital Risk & Information Security. Phone: +966138602666 Email: dris@kfupm.edu.sa
+By using KFUPM’s website and services, you acknowledge that you have read and understood this Privacy Notice and agree to its terms.
+Need help with the Privacy Policy?
+If you have any questions about this Privacy Policy, the practices of this site, or your dealings with this site, please contact us at:
+KFUPM
+Dhahran, 31261, Kingdom of Saudi Arabia,
+Phone: +966 (3) 860 0000
+Email: info@kfupm.edu.sa

@@ -3,6 +3,7 @@ pandas
 numpy
 requests
 openpyxl
+beautifulsoup4
 
 # Classifier (3A)
 scikit-learn

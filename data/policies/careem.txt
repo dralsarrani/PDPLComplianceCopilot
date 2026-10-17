@@ -1,0 +1,257 @@
+Privacy Notice Ride | Careem
+Updated: March 2026
+This Privacy Notice explains how Uber Technologies Inc. (“UTI”) and/or its Affiliates (collectively “Uber”, “we” or “us”) collects and uses Personal Data. Uber offers its services as defined in the Terms and Conditions for Careem Rides (“Services” or “Careem Rides”) on an intermediation platform made available by Careem Deliveries FZ LLC (the “Careem Technologies” or “Careem Technologies Everything App” or “Careem Platform”). This Privacy Notice applies to all users of Careem Technologies mobile applications, websites, call-centre or technology when requesting Careem Rides in the countries listed in Annex I, and when such users interact or communicate with us in relation to Careem Rides. Our privacy practices relating to Hala Users and Taxi Users in Abu Dhabi in the United Arab Emirates, Guest Users and Visitors are detailed in Sections 12 to 15 For other countries, please refer to the relevant privacy notice.
+Our privacy practices in relation to Captains/Drivers will be governed by the Uber Privacy Notice that can be found here. If you are a taxi Captain/Driver providing Taxi Services in Abu Dhabi, UAE, please refer to the Integrated Transport Centre’s (ITC) Terms of Use and Privacy Policy.
+Data Controllers:
+When you download the Careem Technologies Everything App to receive transportation services, Careem Technologies will be the data controller for the Personal Data provided during the registration process, and other personal data you provide directly for your personal account in order to use the Careem Technologies Everything App and the services offered (“Account Data”).
+When using the Careem Technologies Everything App, you may acquire one or more services. If you want to use Careem Rides specifically, this Service is offered by Uber. Therefore, your Account Data will be shared with UTI which acts as a separate data controller. In addition, all data that is collected, processed and used as part of the Services will be controlled by UTI.
+This Privacy Notice relates solely to the data received, collected, processed and used as part of your registration and use of the Services provided via Uber through the Careem Platform. All other data that is collected, processed and used for the services, except Careem Rides, requested by you in the Careem Technologies Everything App will be controlled and processed by Careem Technologies and their Privacy notice can be accessed here for further details.
+Uber will share some of your data related to the Services with Careem Technologies for the purposes described under Section 5, mainly to facilitate a unified experience across the different services on the Careem Platform, for which Careem Technologies will act as an independent controller.
+Payments:
+For the purposes of collecting payments that are due from Riders to Captains/Drivers, Careem Technologies will act as a payment collection agent for Uber and the controller for the data it collects directly from you and/or receives from Uber. Careem Technologies may also be required to process such data to comply with applicable laws and regulations, notwithstanding its role as payment collection agent for Uber. If you have any questions in relation to the use of such data, please contact Careem Technologies here.
+By accessing or using the Services, you confirm that you have read this Privacy Notice in full and understand that the information collected by Uber is in accordance with this Privacy Notice which may be used in accordance with Applicable Laws, this Privacy Notice and Uber’s Privacy Notice for Captains/Drivers.
+1. Scope and Application
+2. Legal Basis for the Processing of Personal Data
+3. Collection of Information
+4. Use of Personal Data and Why
+5. Sharing of Personal Data and Why
+6. Automated decision taking
+7. International Transfer of Personal Data
+8. Storage of Personal Data
+9. Your Choices
+10. Security Precautions
+11. Cookies
+12. Special Notice to Hala users in the United Arab Emirates
+13. Special notice to Taxi users in Abu Dhabi, United Arab Emirates
+14. Guest Users
+15. Suppliers
+16. Changes to this Privacy Notice
+17. Contact Us
+1. Scope and Application
+This Privacy Notice applies specifically to all Riders in the countries listed in Annex I,who access or use our Services. Across this Notice, we will be using some important definitions:
+Affiliates means: (i) any entity where UTI., directly or indirectly, through one or more intermediaries, holds at least 50% of the equity, or 50% of the voting rights; and (ii) any subsidiary or affiliate of such entity in (i). It also includes our legal representatives, administrators, successors-in-interest and permitted assigns.
+Applicable Law means any law that applies to our processing of your Personal Data, whether by virtue of offering Services to you, monitoring your behaviour online (such as by using Cookies), your using of our Services or the provision of your services to us.
+Captain/Driver means an individual authorised to access the Services and provide Transportation Services to Riders who requested trips through the Careem Platform.
+Riders means individuals that request or receive Transportation Services through the Careem Platform, including those that receive - - Transportation Services requested by another individual.
+Personal Data is any data or information that relates to an individual and which could, of itself or in combination with other data or information, identify who an individual is.
+Process or Processing means the collection, storage, use or transfer of Personal Data.
+Terms of Use means the Riders’ Terms and Conditions issued by the relevant Uber entity from time to time and accepted by the Riders.
+Transaction Data means any information that is collected related to your transaction with Uber which can include but is not limited to your name, contact information, payment information and details of the transaction itself.
+2. Legal Basis for the Processing of Personal Data
+Depending on applicable privacy laws, where you use our Services, and our purpose for using your data, Uber relies on the following legal basis for processing your data:
+Contractual Necessity: This basis applies when we must use your data in order to provide the services you request and meet our responsibilities under the contract to which you are a party to. For example, to provide and maintain our Services and to send administrative or Service-related messages.
+Consent: This legal basis applies when we notify you how we will collect and use your data and you voluntarily agree to that use of your data. Where we rely on consent, you have the right to withdraw your consent at any time, in which case we will cease that collection and use of your data. For example, to send personalized marketing communications.
+Legitimate Interest: This legal basis applies when Uber or a third party to whom personal data has been disclosed processes your data for legitimate purposes (such as for purposes of safety, security, and fraud detection and prevention), provided this processing of data is necessary for those purposes and the benefits of those purposes are not in conflict with your fundamental rights and freedoms. For example, we process personal data to analyze and enhance the performance of our services, based on our legitimate interest in improving service quality and ensuring the platform operates efficiently for all.
+Legal Obligation: This legal basis applies when we are required to comply with a mandatory legal requirement or order issued by a competent court. For example, to screen Captains and Riders before enabling certain services.
+3. Collection of Information
+Depending on the Services you are accessing or using, we collect and use:
+A. Information that you provide directly to us;
+B. Information about the use of your account and our Services;
+C. Information obtained from other sources and third parties, which may include information about you.
+A. Information You Provide to Us
+If you are a Rider, you are solely responsible for the accuracy of the information you provide on the Careem Platform, and Uber will only modify or update your Personal Data upon your request or when you modify your account details on the Careem Platform. We collect Personal Data that you provide directly to us through your access or use of the Services, such as when you:
+create or modify your account on the Careem Platform for use of our Services;
+access the Services;
+request the Services on your behalf or on behalf of others;
+contact Careem’s customer support;
+complete user surveys or provide feedback; or
+otherwise communicate with us.
+The Personal Data collected in these processes may include your:
+name;
+email address, from which we can also deduce your place of employment when sharing an enterprise/corporate email address;
+phone number;
+addresses that you provide to the Careem Platform to store in your profile for future reference;
+payment method;
+residential address;
+payment information, including your preferred payment method;
+images/video, including photos or videos submitted to verify your identity such as through facial verification technologies;
+identification card (copy) and the information included on it, including but not limited to your gender, date of birth, nationality, profession and/or image;
+other information which we reasonably require or that you choose to provide.
+Personal Data of children under 18 years of age
+Careem Rides does not knowingly collect, keep or maintain Personal Data from children, as the Services may only be used by persons older than 18 Gregorian years and individuals who can form legally binding contracts under applicable law.
+If you book a ride on behalf of a child under the age of 18 Gregorian years then we might indirectly collect information about that child. Each time you are booking a ride on behalf of a child under the age of 18 Gregorian years you represent and warrant to us that:
+you have the legal right to do so on behalf of the child;
+you have the legal right to provide consent on the child’s behalf to the collection and use of that child’s Personal Data by us; and
+you provide that consent to us by continuing to book the ride or using our Services on behalf of the child to the fullest extent possible under the applicable laws.
+Please note that if you choose not to provide us with some of this Personal Data, or request that we erase some or all of it, we may not be able to provide you with our Services at all, or provide it to the same standard we can if we are using that Personal Data.
+B. Information We Collect Through use of Our Services
+When you access or use our Services, we collect information, some of which will constitute Personal Data. In some cases, we collect this data through cookies, pixels, tags, and similar tracking technologies that create and maintain unique identifiers. Such information may include your:
+mobile network information;
+mobile operating system;
+mobile application crash reports;
+mobile application features and applications used;
+time zone setting;
+device location;
+IP address;
+device information, including the type of mobile device you use, a unique device identifier (for example, your device's IMEI number, the MAC address of the device's wireless network interface, installed applications, or the mobile phone number used by the device);
+SMS data;
+transaction-related information;
+information on safety-related incidents;
+registration history information;
+audio recordings made by the driver during a trip, if available and legally permitted in your region;
+details of the specific Service you have requested;
+Captain/Driver feedback you choose to provide;
+your specific location at the time you are accessing or using our Services;
+the time and date of your booking of the Service, either at that time or at a time in the future;
+your booked or actual destination;
+your trip route; and
+the Personal Data of individuals on whose behalf you access or use our Services, for example, when you book a ride for others.
+C. Information We Collect From Other Sources
+We may also receive information, including Personal Data, from other sources and combine that either with Personal Data we receive from you or collect through our Services. For example:
+We may receive information from your employer (or similar entity) if your employer (or similar entity) participates in any of our enterprise/corporate solutions
+If you choose to link, create, or log in to your Careem account with a payment provider or social media service (e.g., Facebook), or if you engage with a separate app or website that uses our API (or whose API we use), we may receive information about you or your connections from that site or app;
+We may get information from our Affiliates or any third party we contract with on whether you have been blocked from providing services on or blocked from making use of the Affiliates’ or third party’s services, respectively; and
+We may obtain Personal Data from third parties who help us verify an individual’s identity and background information for legal, regulatory, anti-money laundering, safety, and security purposes. This can include screening against sanctions lists, lists of politically exposed persons and relatives/close associates of such persons, and adverse media.
+collect information about you from your employer, if your employer uses one of our enterprise solutions; and
+receive ratings by Captains/Driver after they have provided services to you.
+4. Use of Personal Data and Why
+We may use Personal Data collected in the manners described above to:
+Provide, maintain, and improve our Services;
+Perform internal administration and operations, including to conduct data analysis, testing, and research; to monitor and analyze usage and activity trends; and to troubleshoot software bugs and operational problems
+Send or facilitate communications (i) between Riders and Captains/Drivers, such as estimated times of arrival (ETAs), or (ii) at your direction, between you and a contact of yours in connection with your use of certain features, such as referrals or invites;
+Send you communications to you, including administrative or Service-related messages, receipts and other communications we think will be of interest to you, including information about existing and/or new products, services, promotions, news, and events of Uber and other companies, where permissible and according to Applicable Laws;
+Process contest, sweepstake, or other promotion entries and fulfill any related awards;
+Allow you to participate in interactive features of our Services;
+Keep our Services safe and secure, including screening Riders before enabling their use of our Services and/or at subsequent intervals. Such reviews may include assessing reported safety incidents by an Affiliate or a contracted third-party platform. We may take actions, including restricting access to our Services or reporting incidents to the third-party platform to prevent unsafe Riders from using our Services or theirs.
+Prevent, detect, and combat fraud or unsafe activities, including by using device, location, profile, usage, and other data;
+Personalize and improve the Services, including to provide or recommend features, content, social connections, referrals, and advertisements;
+Using Rider ratings and feedback to encourage compliance with Terms of Use;
+Alter, modify, reorder, augment or otherwise use search results from Google Maps/Earth services to improve location services;
+Locate you if you use the alert button within the Careem Technologies EverythingApp’s mobile application; and
+To ask you about your experience using our Services, including about a particular Captain/Driver.
+5. Sharing of Personal Data and Why
+Depending upon the purposes for which we have collected your Personal Data, we may share your Personal Data:
+With Uber Affiliates;
+With third parties that we use to carry out work on our behalf or to perform a contract we enter into with them, including:
+Careem technologies, in relation to:
+the Account Data that is used when registering to the Careem Platform to use Careem Rides and to provide a smooth experience when navigating between services on the Careem Platform, such as your account identity, payment methods and preferences; and
+Careem Rides data, that will be used by Careem Technologies as a separate controller across the various services offered on the Careem Platform; (i) improve reliability of the Careem Platform; (ii) provide and/or improve the customer support experience; (iii) train models; (iv) identify and combat fraudulent and unsafe activities, and; (v) create profiles of users to facilitate a unified experience on the Careem Platform and offer personalised offers and promotions.
+Google, in connection with the use of Google Maps/Earth in Careem Platform (see Google’s privacy policy and Google Maps/Google Earth Additional Terms of Services for information on their collection and use of data at https://www.google.com/policies/privacy and https://maps.google.com/help/terms_maps.html, respectively ).
+social media companies, including Facebook, in connection with Careem Rides’ use of their tools in the Careem Platform (see Facebook’s privacy policy for information on their collection and use of data);
+vendors who help us verify identity, background information, or who screen users in connection with sanctions, anti-money laundering, fraud or know-your-customer requirements. In some cases, these service providers may retain identity documents that are suspected to be fraudulent for the purpose of identifying fraud in the future;
+cloud storage providers;
+payment processors and facilitators;
+marketing partners and marketing platform providers, including social media advertising services, advertising networks, third-party data providers and tools, and other service providers that help us understand you better as a user and measure advertising effectiveness;
+research partners, including those performing surveys or research projects in partnership with Uber or on Uber’s behalf;
+vendors that assist Uber to enhance the safety and security of our Services;
+consultants, lawyers, accountants, and other professional service providers;
+airports, including when required by airport authorities as a condition of operating on airport property;
+financial institutions, such as banks we partner with to offer joint products.
+With third parties to market their products or services to you if you have agreed to receive promotional updates;
+If we otherwise notify you and you consent to the sharing;
+With third parties in an aggregated and/or anonymized form which cannot reasonably be used to identify you;
+With law enforcement officials, financial regulators, anti money laundering agencies, government authorities, public health officials, competent authorities or other third parties: (i) to enforce or apply our Terms of Use; (ii) to investigate potential breaches of these terms or applicable laws or if we believe your actions are inconsistent with our Terms of Use; (iii) to protect the rights, property, or safety of Careem or others; or (iv) if we believe disclosure is in accordance with, or is otherwise required by any applicable law, regulation, operating license or agreement, legal process or governmental requests, or where the disclosure is otherwise appropriate due to safety or similar concern;
+With a claims processor or an insurer to provide any necessary information (including your contact information) if there is a complaint, dispute or conflict, which may include an accident, involving you and another party and such information or data is necessary to resolve the complaint, dispute or conflict; and
+With third parties in connection with, or during negotiations of, any merger, sale of company assets, consolidation or restructuring, financing, or acquisition of all or a portion of our business by or into another company.
+At your request, such as when you agree to share your ETA and location with a friend;
+With Captains on the Uber Driver App, to enable them to provide the Services you request. For example, we share your name and pickup and/or drop-off locations with Captains. In certain situations, such as when you contact the Captain directly through the app or when facilitating the return of a lost item, they may also have access to your phone number in order to facilitate the trip.
+With third parties with whom you choose to let us share your Personal Data, including other applications or websites that integrate with our API or Services, or those with an API or service with which we integrate;
+With your employer (or similar entity) if your employer participates in any of our enterprise/corporate solutions; or
+for legal proceedings and requirements to investigate or address any claims or disputes relating to use of Careem Rides, to satisfy requirements under applicable laws, regulations, operating licenses or agreements, insurance policies, or pursuant to legal process or governmental request, including from law enforcement. Such actions are performed on the grounds that they are necessary for purposes of Uber’s legitimate interests in investigating and responding to claims and disputes relating to use of Careem Rides and features (including but not limited to audio recordings), and/or necessary for compliance with applicable legal requirements.
+If you wish to change how we use your Personal Data, you can do so at any time. You will find details in Section 9(2) (Marketing – Opting-In and Opting-Out), Section 9(3) (Data Subject Rights) and Section 17(Contact Us) below.
+6. Automated decision taking
+We use personal data to make automated decisions relating to use of our Services, such as to:
+Determine Riders ratings, and deactivating where there are low ratings;
+Match available Captains/Drivers to Riders requesting services based on availability, proximity, and other factors;
+Enable dynamic pricing, in which the price of a ride is determined based on constantly varying factors such as the estimated time and distance, the predicted route, estimated traffic, and the number of Captains/Drivers and Riders using the Uber Driver App and Careem Technologies EverythingApp respectively, at a given moment; and
+Flag Riders who are identified as having engaged in fraud, unsafe activity, or other activities that may harm Careem Rides and/or others.
+Uber performs the above activities on the grounds that they are necessary to fulfill our obligations to Riders under our Terms of Use or other agreements with users, or on the grounds that they are necessary for purposes of the legitimate interests of Careem Rides, its users and others.
+7. International Transfer of Personal Data
+Reflecting the regional span of our business, we process personal data globally. This means we may also transfer personal data to countries other than the one where you live or use theServices. When we transfer your Personal Data abroad, we will take appropriate measures to protect your Personal Data in accordance with this Privacy Notice and the laws of the country from where the transfer is occurring.
+Where Applicable Laws require you to consent to the processing of personal data outside the country where you access the Services from Careem Rides, you provide that consent to us by continuing to book the ride to the fullest extent possible under the Applicable Laws.
+8. Storage of Personal Data
+We will store and retain your Personal Data for the period of time necessary for the purpose for which the data has been collected, unless the nature of the purpose changes in which case the retention period may be extended or shortened.
+Apart from the purposes for which we collect your Personal Data, we also store and retain this Personal Data to preserve the integrity of our databases, to carry out on-going Services on your behalf, for research, analytics and statistics purposes and to ensure compliance with applicable laws and regulations.
+Following an account deletion request (where warranted in accordance with the data subject rights referred to below), we will erase or archive from active use the Personal Data of the individual to which the requirement or request relates, unless we are required to retain it due to legal or regulatory requirements, for purposes of safety, security, and fraud prevention, or because of an issue relating to your account such as an outstanding credit or an unresolved claim or dispute.
+9. Your Choices
+1. Device permissions
+Most mobile device platforms (iOS, Android, etc.) have defined certain types of device data that apps cannot access without the device owner’s permission. Different platforms have different methods for how that permission can be obtained. Please check the available settings on your device or check with your provider.
+2. Marketing and Opting-In and Opting-Out
+You have the choice to opt-out from receiving marketing communications from us. In some countries we cannot provide you with any direct marketing communications unless we have obtained your express consent to do so in advance.
+In all cases, you may change your preferences at any time and Careem Rides provides End Users and Captains the opportunity to opt-out of receiving direct marketing communications from us:
+in any direct email marketing communication that you receive from us; and
+for End Users, from the Settings menu in the Careem application (see below for further details).
+How to opt-out using the Settings menu in the Careem application:
+(a) open the Careem application and select the icon in the top right corner;
+(b) select “Profile”;
+(c) scroll down and select "Settings”;
+(d) select “Communication Preferences”;
+(e) you can then de-select all methods of communication from our Services or services from our partners to opt-out; and
+(f) once you have made your selections, your preferences will be saved. You can either close the Careem application or tap the back arrow in the top left corner to take you back to the Careem application home page.
+3. Data Subject Rights
+If you would like Uber to correct personal data held about you related to Careem Rides, please read here. This enables you to have any incomplete or inaccurate information Careem Rides holds about you corrected.
+If you decide to deactivate your account, you may reach out to us here.
+Depending upon which country you are in at the time that we collect and use your Personal Data to provide you Services, you may have some or all of the following rights under applicable law:
+To request access to your data, including your profile data and trip history (commonly known as a “data subject access request”). If the information you request reveals personal data about a third party, we will: (i) seek that individual's consent before responding to your request, (ii) consider if it is otherwise reasonable to provide it to you; or (iii) we will redact third parties' personal data before responding. If we are unable to provide you with access to your personal data because disclosure would infringe the rights and freedoms of third parties, we will notify you of this decision.
+To request erasure of your Personal Data. This enables you to ask Uber to erase Personal Data where:
+your Personal Data is no longer needed for the purposes for which it was collected;
+the sole legal ground for processing was your consent and you have withdrawn it;
+you have objected to processing of your Personal Data on the legal grounds relating to your particular situation, and Uber cannot prove that there are overriding legitimate interests for processing;
+your Personal Data were processed unlawfully; or
+your Personal Data must be erased in order to comply with legal requirements.
+Before requesting to delete your account, you understand that you will also be subject to the terms and conditions of Careem Technologies which may include but not be limited to completing/cancelling any active or scheduled bookings, cancel subscriptions and empty your Careem Pay wallet. If you are the Rider of an enterprise/corporate account, we may be unable to process your deletion request if there are outstanding payments for that enterprise account.
+After we receive your erasure request, you will be logged out of your Careem account. We will process your request within 90 days. If you log in your Careem Account during these 90 days, your deletion account will be cancelled and your account will remain unchanged.
+Uber may be required to retain some data in line with legal or regulatory requirements, for purposes of safety, security, and fraud prevention, or because of an issue relating to your account such as an outstanding credit or an unresolved claim or dispute.
+To object to us processing of your Personal Data where Uber is relying on a legitimate interest (or those of a third party) and there is something about your particular situation which makes you want to object to processing on this ground.
+To request us to restrict our processing of your Personal Data where:
+you consider that our processing of your Personal Data is inaccurate;
+you consider that the processing is unlawful and you oppose the erasure of your Personal Data and you require the restriction of the processing instead;
+we no longer need the Personal Data for the purposes of the processing but the Personal Data is required by you for the establishment, exercise or defence of a legal claim; or
+where you require verification that processing on the legitimate interests of Uber overrides your interests.
+To revoke your consent, where we have expressly asked for your consent as a legal basis to process your Personal Data. The revocation of your consent will not affect the lawfulness of the processing based on your prior consent.
+Depending on your location or the version of the Careem application that you are using, you may exercise these rights through the Settings menu in the Careem Technologies EverythingApp or by contacting here.
+You may be contacted for additional information if we are unable to verify your identity, the scope of your request is unclear or does not provide sufficient information for us to conduct a search (for example, this will be the case if you request "all information about me"). Once we have all the information, we need to locate your personal data, we will begin processing your request.
+Applicable law may allow or require us to refuse to act on your request, or we may have destroyed, erased, or made your personal data anonymous in accordance with our record retention obligations and practices. If we determine that your request does not have a legal basis, we reserve the right to not further process your request and we will inform you of this decision.
+In addition, depending on your location, you may have the right to file a complaint relating to our handling of your Personal Data with the data protection authority in your country.
+10. Security Precautions
+Your Careem Rides profile is password-protected so that only you, Uber and Careem Technologies, and authorized Uber Affiliates, its employees, or service providers (“Authorised Personnel”) have access to your account information. Uber’s authorised personnel will never proactively reach out to you and ask for any personal account information, including your password.
+Uber makes every effort to ensure that your Personal Data is secure. Uber and/or any of its Affiliates has employees and service providers dedicated to maintaining adherence to this Privacy Notice and other privacy initiatives, periodically reviewing security of our Services and making sure that all employees and service providers are aware of our security practices. Unfortunately, no data transmission over the Internet can be guaranteed to be 100% secure. As a result, Uber cannot guarantee the security of any Personal Data you transmit to us, and you do so at your own risk. If you have any further questions on this issue, refer to the Terms of Use. To the extent permitted by Applicable Law, Uber expressly disclaims any liability, and you hereby waive any claims, and indemnify us for any claims that may be brought by third parties who access or use our Services through the Careem account, that may arise should any other individuals obtain the Personal Data that Uber collects about you or third parties who access or use our Services via your account.
+11. Cookies
+Cookies are small text files that are stored on browsers or devices by websites, apps, online media, and advertisements. For more information on how Careem Technologies collects information through its website, please refer to their Cookie Policy here.
+12. Special Notice to Hala users in the United Arab Emirates
+If you are accessing or using services provided by RTA Careem LLC (“Hala”) in the UAE, this section applies to you. This section should be read in conjunction with the Hala Terms of Use and Privacy Policy. Careem Networks FZ LLC (a subsidiary of Uber) (“Careem Networks”) has been engaged by Hala to provide certain technology and Processing services to Hala in support of Hala’s business within the UAE. As a result, Careem Networks has engaged Careem Technologies and/or GPC Computer Software Limited (“Autocab”) as sub-processors to Process your Personal Data on Hala’s behalf and to enable you to access or use the products or services provided by Hala.
+To the extent that you are using Hala services, then any Personal Data that you provide through the Careem Platform will be Processed by Careem Networks, Careem Technologies, Autocab and Hala for the purposes of Hala providing its service to you. When using Hala’s services you are also agreeing to this Processing of Personal Data by Careem Networks, Autocab and/or Careem Technologies on behalf of Hala for these purposes, and to the transfer of any Personal Data about you that Careem Networks Processes for these purposes to Hala. When this occurs Hala is responsible for determining the purpose and means of that Processing. To the fullest extent permitted under Applicable Laws Careem Networks shall have no liability under or in connection with the processing of Personal Data in connection with Careem Networks’ provision of services to Hala.
+Marketing
+You consent that both Careem Networks or its Affiliates and Hala may use the Personal Data you provide to Hala for the purposes of either Careem Networks or Hala directly contacting you to market their separate services to you.
+13. Special Notice to Taxi users in Abu Dhabi, United Arab Emirates
+If you are accessing or using taxi services provided by Captains/Drivers who are licensed by, and are providing their transportation services to you via, the Integrated Transport Centre (“ITC”) in Abu Dhabi, UAE, through the Careem Platform (“Taxi Services”) this section applies to you. We have been engaged by ITC to provide certain technology and Processing services to ITC for the Taxi Services. As a result, Careem Technologies has been engaged by us as a sub-processor to Process your Personal Data and to enable you to access or use the Taxi Services.
+To the extent that you are using the Taxi Services, you understand that any Personal Data that you provide through the Careem Platform will be Processed by us, Careem Technologies, and ITC for the purposes of providing the Taxi Services to you.
+14. Guest Users
+We consider you a Guest User if you receive trips but are not the owner of an account with Careem Rides, such as when:
+You request a trip via partner websites or apps such as ride-hailing aggregators.
+A trip is arranged by another account owner.
+Guest User personal data may be associated with, and accessible by, the owner of the Careem account.
+In these cases, your personal data is used and may be shared with third parties: (i) to provide such trips; and (ii) for purposes of safety and security, customer support, research and development, enabling communication between users, and in connection with legal proceedings and requirements.
+15. Suppliers
+We consider you as a Supplier if you are an individual that provides services to Careem Rides, either in their own capacity, or on behalf of an organization as a member or employee of that organization.
+If you are a Supplier or work for a Supplier, we collect Personal Data when you, or the business you represent, provides, or seeks to provide us with, services; or otherwise communicate with us.
+The Personal Data collected during may include:
+your name;
+your email address;
+your phone number;
+your postal address;
+passport or national identification number;
+bank information where payment for Services will be made;
+information on shareholders, principal officers, financial history, references, and ultimate beneficial owners; and
+other information which we reasonably require or that you choose to provide.
+We may use Personal Data collected in the manners described above to:
+To contact you with regards to the provision of your services to us; and
+To facilitate payments to you; and
+To consider our potential or current relationship with your business.
+If you are a Supplier, we will be relying on third parties who help us verify identity and background information for legal, regulatory, anti-money laundering, sanctions and security purposes. This can include screening against sanctions lists, lists of politically exposed persons and relatives/close associates of such persons, and adverse media.
+Please note that if you choose not to provide us with some of this Personal Data, or request that we erase some or all of it, we may not be able to engage you or continue to engage you to provide services to us.
+16. Changes to this Privacy Notice
+We may change this Privacy Notice from time to time. If we make significant changes in the way we treat your Personal Data, or to the Privacy Notice, we will provide you notice through the Services or by some other means, such as email or a push notification.
+To the extent permitted by Applicable Law, your continued use of the Services after such notice constitutes your consent to the changes to the extent permitted by law.
+We encourage you to periodically review this Privacy Notice for the latest information on our privacy practices.
+17. Contact Us
+If you have any questions, comments and requests related to this Privacy Notice, or if you have any questions about how Careem Rides processes your Personal Data, please contact us by completing the Subject Access Request form. In both cases, you can also contact us by post addressed to Privacy Legal Team, UTI, 1725 3rd Street, San Francisco, CA 94158.
+Annex I
+1. Kingdom of Bahrain
+2. Arab Republic of Egypt
+3. Kingdom of Saudi Arabia
+4. United Arab Emirates
+5. State of Kuwait
+6. Hashemite Kingdom of Jordan
+7. Kingdom of Morocco
+8. The Republic of Iraq
