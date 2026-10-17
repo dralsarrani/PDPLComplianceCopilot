@@ -1,0 +1,202 @@
+Nahdi Medical Company KSA Data Privacy Notice (Policy)
+1.Introduction
+Nahdi Online Pharmacy (Nahdi online store), owned and operated by Nahdi Medical Company (“Nahdi Company”) and Nahdi Clinics, owned and operated by Al Nahdi Care Company (“Nahdi Clinics”) (Nahdi Company and Nahdi Clinics will be jointly referred to as "we" or "our"), are committed to protecting your personal data. This privacy notice ("PrivacyNotice") is for individuals based in the Kingdom of Saudi Arabia (“KSA”).
+This Privacy Notice explains what personal data we collect about you, why we collect it, and how we use it. We decide how and why your personal data is collected and used. This makes us the "controller" of your personal data under the KSA Personal Data Protection Law[1] (“Law”).
+If we make major changes to how we collect and process your personal data, we will update this Privacy Notice.
+[1] As approved by Royal Decree No. 19/m, dated 9/2/1443H (16 September 2021).
+2. What is Personal Data and processing?
+2.1 What is Personal Data?
+Personal data refers to any information that can identify you as an individual.
+The types of personal data we collect can vary based on the situation. This may include, for example:
+● Your name
+● Your phone number
+● Your email
+● Your address
+● Your online identifiers (such as IP address or technical device)
+● Your geolocation
+● Your gender
+● Your age
+● Your nationality
+● Your national ID
+● Your insurance number
+● Your activity logs on our digital channels
+● Your purchase history
+● Your payment information
+● All your online interaction data (e.g. browsing history, etc.)
+● Your health condition information, etc.
+For more details on the types of your personal data that we may use – please contact us via DPO@nahdi.sa.
+2.2 What is processing?
+Processing means doing anything with personal data, e.g. viewing, collecting, using, storing, sharing, modifying, printing, copying, archiving, erasing, etc.
+3. What lawful bases do we use for processing your Personal Data?
+3.1. We will only process your personal data if we have a lawful basis to do so. This means we will use your personal data only when we have a legal reason to justify such a use, as required by Law.
+3.2. We may rely on the following lawful bases:
+3.2.1. Your consent (we will let you know on a case-by-case basis should we require your consent).
+3.2.2. Processing achieves a definite interest for you and it is impossible or difficult to contact you.
+3.2.3. Processing is required by applicable laws and is performed in accordance with them.
+3.2.4. Processing is performed in order to perform an agreement to which you are a party.
+3.2.5. Processing is necessary for the purpose of our legitimate interest.
+4.When, how and why do we process your personal data?
+4.1. We process your personal data in various ways, depending on the specific purpose outlined below. Here are some examples of how we may process your personal data: collecting, recording, storing, using, sharing, disclosing, destroying, etc.
+4.2. Nahdi Pharamacists may use their phone numbers as an official communication channel to contact you for service-related follow-ups, health-related reminders, or customer support for Nahdi pharmacies.
+4.3. Please see in the table below the key purposes for which we may use your personal data, as well as examples of processing activities. For more details – please contact us via DPO@nahdi.sa.
+Processing of personal data in Nahdi online store
+No
+Purposes of processing activities
+Examples of processing activities
+1.
+Your registration in our databases as a new customer
+● Collecting from you your name, phone number, email, gender and address.
+2.
+Enable you to search and discover the products in the Nahdi online store
+● Tracking your searching activities within the Nahdi online store.
+3.
+Enable you to write reviews and make ratings on products
+● Collecting from you your name or nickname, as well as your email.
+4.
+Enable you to purchase products at the Nahdi online store or the online application
+● Tracking your online behavior at the Nahdi online store, enabling you to add and remove items to the basket and enabling you to make orders in the Nahdi online store.
+● Collecting your personal address and your device’s location.
+5.
+Performance of sales transaction and provision to your additional services
+● Arranging the payment with the use of your bank card or payment application.
+● Generation of the invoice.
+● Sending the invoice and satisfaction survey to your email.
+● Arranging delivery of products to you
+● Providing to your additional services like “Ask the pharmacist”, “Wazen Hayatek”, etc.
+6.
+Supporting your medication adherence
+● Analyzing your purchase and browsing history on our platform to understand your health needs. Sending reminders to help ensure timely intake of your medications, in order to support your well-being.
+Processing of personal data at Nahdi Clinics
+No
+Purposes of processing activities
+Examples of processing activities
+1.
+Your registration in our databases as a new patient
+● Collecting from you your name, phone number, email, address and other information required for your registration.
+2.
+Your identification in the Clinics databases as an existing customer
+● Collecting from you your name or an ID document.
+3.
+Provision to your medical services
+● Assessing your health condition, managing treatments, performing medical procedures, issuing prescriptions, etc.
+4.
+Collecting payment for the medical services
+● Arranging the payment with the use of your bank card or payment application.
+● Generation of the invoice.
+● Checking your eligibility for insurance coverage.
+5.
+Communicating with you as our patient
+● Scheduling and confirming appointments with the use of your email and application.
+● Communicating with you in other cases when required to provide medical services to you.
+Other examples of processing your personal data in the online store and online resources of Nahdi Clinics
+No
+Purposes of processing activities
+Examples of processing activities
+1.
+Your enrollment to the Nuhdeek programme
+● Registering you as a member of the Nuhdeek programme upon your registration in the Nahdi online store.
+2.
+Accumulating Nuhdeek points for you
+● Accumulating points that could be redeemed in exchange of discounts for various products.
+3.
+Sending to you marketing and advertising information
+● Sending marketing and advertising materials regarding products of Nahdi and its partners with the use of your phone number or email.
+4.
+Marketing performance analysis
+● Processing personal data for marketing and business analysis, including for measuring performance of marketing efforts.
+5.
+Users experience improvement
+● Processing personal data for improving and personalizing your experience at our websites.
+4.3.1 Collecting and processing your personal data is mandatory to fulfill the purposes specified in the table above.
+4.4. Please note that if we do not complete the collection of personal data for the above purposes, we will not be able to provide you with a high level of service.
+4.5 We will collect your personal data directly from you. In certain situations, we may also collect your personal data from third parties. These third parties may include healthcare providers, insurance companies, authorized representatives and legal authorities. We will only collect your personal data from these third parties in the specific circumstances outlined in Section 5 below.
+4.6 If there is a change in your personal data, please contact us via DPO@nahdi.sa.
+5. Processing personal data for other purposes
+5.1. Generally, we will use your personal data only for the purposes outlined in section 4 above.
+5.2. In accordance with the Law, we may process your personal data for purposes other than those listed in section 4. This may occur in the following situations:
+5.2.1. If you give your consent to such collection and processing.
+5.2.2. If your personal data is publicly available, or if it was collected from a publicly available source.
+5.2.3. If collection and processing is required for your vital interests.
+5.2.4. If collection or processing of your personal data is necessary to protect public health or safety, or to protect the life or health of you or other individuals.
+5.2.5. If your personal data is recorded or stored in a form that makes it impossible to identify you directly or indirectly.
+5.2.6. Collection of your personal data is necessary to achieve our legitimate interests (in this case we will not process your sensitive data, e.g. health data).
+6. Consent collection
+6.1. In some cases, we may request your consent for processing your personal data. For example, we will request your consent to use your personal data for sending to you marketing and advertising information – by Nahdi Company and Nahdi Clinics.
+6.2. We may collect your consent using the following methods:
+6.2.1.Online Forms: You may be asked to provide your consent by checking a box or selecting an option on an online form.
+6.2.2.OTP Codes: We may send a one-time password (OTP) to your phone number. You will need to present this OTP to our representative (e.g. pharmacist) to confirm your consent.
+6.2.3.Email Confirmations: We may send an email to your registered email address with a link to confirm your consent.
+6.2.4.Other methods which allow us to collect your consent in compliance with the Law.
+At any time, you may withdraw your consent given to both Nahdi Company and Nahdi Clinics or in relation to either of them.
+You may withdraw your consent with the use of the form at the following website - https://www.nahdi.sa/dsr-english/
+If you have any questions about the consent you have given, please contact us via DPO@nahdi.sa.
+7. Your rights in relation to processing your Personal Data
+Under the Law, you have the following rights regarding your personal data:
+No
+Your personal data protection rights
+Description of your personal data protection rights
+1.
+Right to be informed
+You have the right to be informed of:
+The valid legal or practical justification for collecting your personal data; and
+The purpose for collecting your personal data.
+2.
+Right to have access to your personal data
+You have the right to have access to your personal data that is held by us.
+3.
+Right to request your personal data
+You have the right to request your personal data held by us in a readable and clear format.
+4.
+Right to request correction, completion or updating
+You have the right to request correction, completion or updating of your personal data which is held by us.
+5.
+Right to request erasure (destruction)
+You have the right to request erasure (destruction) of your personal data available to us, which is no longer required by us (subject to compliance of the requirements of the Law).
+If you would like to know more about your rights or if you would like to exercise any of them, please contact us via DPO@nahdi.sa.
+8. Cross-border personal data processing
+We may need to transfer your personal data outside of the KSA for processing. When we do this, we will ensure compliance with the Law. Additionally, we will adhere to any other relevant laws and regulations to protect your data during cross-border transfers.
+9. Storing personal data
+9.1. We will arrange safe storage of your personal data in our systems, including, for example:
+Magento,
+MicroStrategy,
+Azure Cloud,
+Power BI,
+Oracle DXP,
+Oracle Datawarehouse,
+Dynamic Yield,
+SSO and other systems, as could be required.
+For more details about the systems which we use for processing personal data – please contact us via DPO@nahdi.sa.
+9.2. We will determine the period of storage of your personal data in accordance with our Data Retention Policy. When determining the period of storage of your personal data we will consider:
+9.2.1. requirements for the storage period under the applicable laws and regulations.
+9.2.2. specific purposes for which we require your personal data.
+10. Protecting personal data
+10.1. We protect your personal data by using a range of methods and measures. For example:
+10.1.1. We have in place policies and procedures in protection of personal data.
+10.1.2. Our employees attend specific trainings on how to deal with your personal data; and
+10.1.3. We apply encryption and other techniques to protect your personal data.
+11. Disclosure of your personal data
+11.1. We may, as could be required for the purposes listed in section 4 above, disclose your Personal Data to the following organizations:
+11.1.1. our contractors who provide us with data processing, professional or management services, such as IT companies, consulting companies, payment processing companies, etc.
+11.1.2. delivery companies for the purposes of delivery of products to you,
+11.1.3. our media partners who mainly provide us and our partners with online and other digital media services,
+11.1.4. our partners who may provide you with discounts for their products or services, based on your points accumulated in Nuhdeek loyalty program.
+11.1.5. our other service providers to provide any other services that are mentioned above but agreed with us,
+11.1.6. regulatory authorities or other third parties as could be required by laws or regulations or
+11.1.7. where we sell or transfer our business in a merger/acquisition transaction.
+11.2. We may disclose your personal data subject to the following conditions:
+11.2.1. You consented to the disclosure.
+11.2.2. Your personal data has been collected from a publicly available source.
+11.2.3. The entity requesting disclosure is a public entity, and the collection or processing of your personal data is required for public interest or security purposes, or to implement another law, or to fulfill judicial requirements.
+11.2.4. Disclosure is necessary to protect public health, public safety, or to protect the lives or health of specific individuals.
+11.2.5. The disclosure will only involve subsequent processing in a form that makes it impossible to directly or indirectly identify you.
+11.2.6. The disclosure is necessary to achieve our legitimate interests (in this case no sensitive data (e.g. health data) will be processed).
+12. Disposal of personal data
+12.1. If we no longer need your personal data and if we do not have any legal basis to hold it further, we will arrange its destruction, anonymization or return it to you (unless we must return it to any other entity based on our legal obligations).
+12.2. We will ensure that:
+12.2.1. in case of anonymization: you will not be further re-identified after anonymization; and
+12.2.2. in case of destruction: the personal data will not be reconstructed after it was erased.
+13. Contact details
+If you have any questions or comments about this Notice or on how we use your personal data, please contact us at the following details:
+Address: Nahdi Medical Company, King Abdulaziz Branch Road, Jeddah, PO Box 17129, Saudi Arabia
+Email:DPO@nahdi.sa
+Website where you can make requests regarding your rights and withdraw your consent to processing of your personal data (where relevant): https://www.nahdi.sa/dsr-english/

@@ -1,0 +1,12 @@
+policy_id,name,sector,language,method,url,start_line,stop_line
+hungerstation,HungerStation,Food delivery,en,script,https://hungerstation.com/sa-en/privacy-policy,,
+careem,Careem,Ride-hailing,en,script,https://www.careem.com/en-AE/privacy-notice-ride,,
+alrajhi,Al Rajhi Bank,Banking,en,manual,https://alrajhibank.com.sa/en/About-alrajhi-bank/privacy-policy,,
+alinma,Alinma Bank,Banking,ar,script,https://www.alinma.com/ar/About-the-Bank/Privacy,,
+tamara,Tamara,Fintech (BNPL),en,script,https://tamara.co/privacy-policy,Privacy Policy,
+jarir,Jarir Bookstore,Retail,en,script,https://www.jarir.com/sa-en/privacy-policy,Jarir Privacy Statement,
+stc,stc,Telecom,ar,script,https://www.stc.com.sa/ar/content-page/privacy.html,إشعار الخصوصية,stc مجموعة stc
+saudia,Saudia,Airline,en,manual,https://www.saudia.com/help/useful-links/legal-and-terms-and-conditions/privacy-policy,,
+nahdi,Nahdi Medical,Health / pharmacy,en,script,https://www.nahdionline.com/en-sa/static/privacy-policy,Nahdi Medical Company KSA Data Privacy Notice (Policy),
+ksu,King Saud University,Education,en,script,https://ksu.edu.sa/en/privacy-policy,,Privacy PolicyGovernance
+kfupm,KFUPM,Education,en,script,https://www.kfupm.edu.sa/privacy-policy,Privacy Notice of King Fahd,Contact Us
