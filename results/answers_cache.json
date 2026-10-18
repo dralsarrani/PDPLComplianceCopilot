@@ -125,5 +125,72 @@
       }
     ],
     "from_cache": false
+  },
+  "can a company keep my personal data after the purpose of collecting it ends?": {
+    "question": "Can a company keep my personal data after the purpose of collecting it ends?",
+    "covered": true,
+    "answer": "The Controller may retain data after the purpose of the Collection ceases to exist; provided that it does not contain anything that may lead to specifically identifying Data Subject pursuant to the controls stipulated in the Regulations. In the following cases, the Controller shall retain the Personal Data after the purpose of the Collection ceases to exist: a) If there is a legal basis for retaining the Personal Data for a specific period, in which case the Personal Data shall be destroyed upon the lapse of that period or when the purpose of the Collection is satisfied, whichever longer. b) If the Personal Data is closely related to a case under consideration before a judicial authority and the retention of the Personal Data is required for that purpose, in which case the Personal Data shall be destroyed once the judicial procedures are concluded.",
+    "citations": [
+      "PDPL-A18-EN"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "The Controller may retain data after the purpose of the Collection ceases to exist; provided that it does not contain anything that may lead to specifically identifying Data Subject pursuant to the controls stipulated in the Regulations.",
+        "citations": [
+          {
+            "id": "PDPL-A18-EN",
+            "status": "supported",
+            "reason": "The article clearly states that the Controller may retain data under the specified conditions."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "In the following cases, the Controller shall retain the Personal Data after the purpose of the Collection ceases to exist: a) If there is a legal basis for retaining the Personal Data for a specific period, in which case the Personal Data shall be destroyed upon the lapse of that period or when the purpose of the Collection is satisfied, whichever longer.",
+        "citations": [
+          {
+            "id": "PDPL-A18-EN",
+            "status": "supported",
+            "reason": "The article explicitly mentions the conditions under which the Controller shall retain Personal Data."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "b) If the Personal Data is closely related to a case under consideration before a judicial authority and the retention of the Personal Data is required for that purpose, in which case the Personal Data shall be destroyed once the judicial procedures are concluded.",
+        "citations": [
+          {
+            "id": "PDPL-A18-EN",
+            "status": "supported",
+            "reason": "The article directly states the condition regarding retention of Personal Data related to judicial authority cases."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "PDPL-A18-EN",
+        "score": 0.9844
+      },
+      {
+        "record_id": "PDPL-A41-EN",
+        "score": 0.7493
+      },
+      {
+        "record_id": "IR-A33-EN",
+        "score": 0.3848
+      },
+      {
+        "record_id": "PDPL-A11-EN",
+        "score": 0.2934
+      },
+      {
+        "record_id": "IR-A19-EN",
+        "score": 0.0691
+      }
+    ],
+    "from_cache": false
   }
 }
