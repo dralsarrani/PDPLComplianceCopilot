@@ -13,6 +13,7 @@ transformers
 
 # Retrieval and LLM (person 2)
 rank-bm25
+nltk
 sentence-transformers
 chromadb
 openai
