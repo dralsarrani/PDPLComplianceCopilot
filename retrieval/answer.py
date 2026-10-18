@@ -110,8 +110,13 @@ def answer(question, k=5, model=None):
 if __name__ == "__main__":
     query = " ".join(sys.argv[1:]) or input("Enter your question: ")
     result = answer(query)
+    print(f"\nQuestion: {query}\n")
+    print("Retrieved articles (after reranking):")
+    for rank, r in enumerate(result["retrieved"], start=1):
+        print(f"Rank {rank}: {r['record_id']:<12} | Score: {r['score']}")
+    print("\nAnswer:")
     print(result["answer"])
-    print("Citations:", ", ".join(result["citations"]) or "none")
+    print("\nCitations:", ", ".join(result["citations"]) or "none")
     if result["dropped_citations"]:
         print("Dropped (not in retrieved articles):", ", ".join(result["dropped_citations"]))
     if result["from_cache"]:
