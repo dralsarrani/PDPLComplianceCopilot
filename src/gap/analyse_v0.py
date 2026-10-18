@@ -3,8 +3,13 @@ Gap Analyser v0 (3B): check a privacy policy against the PDPL checklist.
 
 v0 uses OpenAI only (no classifier, no article retrieval yet). The model reads
 the whole policy and, for each requirement in the checklist, returns
-covered / partial / missing (or not_applicable for conditional requirements),
-with a sentence quoted from the policy as evidence.
+covered / partial / missing, with a sentence quoted from the policy as evidence.
+
+The model judges only whether the policy covers each requirement. Conditional
+requirements (e.g. R16, R17) are not sent with their condition, because the
+model then mixed the condition into the requirement. A conditional requirement
+that is missing is kept as missing and printed with its condition, so a person
+can decide whether the condition applies to the company.
 
 Every quote is checked against the policy text: if the model returns a quote
 that is not in the policy, evidence_found is False and the result should not
@@ -32,17 +37,18 @@ CHECKLIST = Path("data/checklist/pdpl_checklist.csv")
 OUTPUT_DIR = Path("results/gap_v0")
 DEFAULT_MODEL = "gpt-4o-mini"
 MAX_POLICY_CHARS = 60000
-STATUSES = ["covered", "partial", "missing", "not_applicable"]
+STATUSES = ["covered", "partial", "missing"]
 
 SYSTEM_PROMPT = """You check privacy policies against the Saudi Personal Data Protection Law (PDPL).
 For each requirement you get, decide what the policy says about it:
 - covered: the policy clearly and specifically states it.
 - partial: the policy mentions it, but vaguely or only in part.
 - missing: the policy says nothing about it.
-- not_applicable: only for requirements marked conditional, when the policy shows the condition does not apply.
+Read the whole policy before answering missing: a requirement can be in any section.
 Judge only from the policy text. Do not assume anything the policy does not say.
 For covered or partial, copy one short sentence from the policy word for word as evidence,
-in the policy's own language. For missing or not_applicable, evidence is an empty string.
+in the policy's own language, without adding "..." or punctuation.
+For missing, evidence is an empty string.
 Answer in JSON: {"results": [{"req_id": "...", "status": "...", "evidence": "...", "reason": "..."}]}
 with one item per requirement, in the same order. reason is one short sentence in English."""
 
@@ -55,20 +61,26 @@ def normalise(text):
     return re.sub(r"\s+", " ", text).strip().lower()
 
 
+def quote_in_policy(evidence, policy_norm):
+    """True if the quote is in the policy. Ignores "..." and punctuation the
+    model adds at the ends of the quote (e.g. a final full stop)."""
+    parts = [p.strip(" .,;:!?\"'“”…") for p in re.split(r"\.\.\.|…", normalise(evidence))]
+    parts = [p for p in parts if p]
+    return bool(parts) and all(p in policy_norm for p in parts)
+
+
 def build_prompt(policy_text, checklist):
     lines = []
     for r in checklist.itertuples():
-        line = f"{r.req_id}: {r.requirement_en}"
-        if r.applies == "conditional":
-            line += f" [conditional: {r.condition}]"
-        lines.append(line)
+        lines.append(f"{r.req_id}: {r.requirement_en}")
     return ("Requirements:\n" + "\n".join(lines)
             + "\n\nPrivacy policy:\n\"\"\"\n" + policy_text[:MAX_POLICY_CHARS] + "\n\"\"\"")
 
 
 def analyse(policy_text, checklist=None, model=None):
     """Return one dict per checklist requirement:
-    {req_id, requirement, articles, status, evidence, evidence_found, reason}"""
+    {req_id, requirement, articles, applies, condition, status, evidence,
+    evidence_found, reason}"""
     load_dotenv()
     checklist = load_checklist() if checklist is None else checklist
     model = model or os.environ.get("OPENAI_MODEL", DEFAULT_MODEL)
@@ -94,9 +106,11 @@ def analyse(policy_text, checklist=None, model=None):
             "req_id": r.req_id,
             "requirement": r.requirement_en,
             "articles": r.articles,
+            "applies": r.applies,
+            "condition": r.condition,
             "status": status,
             "evidence": evidence,
-            "evidence_found": bool(evidence) and normalise(evidence) in policy_norm,
+            "evidence_found": quote_in_policy(evidence, policy_norm),
             "reason": a.get("reason", ""),
         })
     return report
@@ -111,6 +125,8 @@ def main():
 
     for row in report:
         flag = "" if row["evidence_found"] or not row["evidence"] else "  (quote not found in policy)"
+        if row["applies"] == "conditional" and row["status"] == "missing":
+            flag += f"  (required only if: {row['condition']})"
         print(f"{row['req_id']}  {row['status']:<15} {row['requirement'][:60]}{flag}")
     counts = pd.Series([r["status"] for r in report]).value_counts().to_dict()
     print("\nSummary:", counts)
