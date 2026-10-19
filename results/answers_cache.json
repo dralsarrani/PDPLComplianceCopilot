@@ -2,11 +2,35 @@
   "هل يجوز نقل بيانات العملاء خارج المملكة؟": {
     "question": "هل يجوز نقل بيانات العملاء خارج المملكة؟",
     "covered": true,
-    "answer": "يجوز نقل بيانات العملاء خارج المملكة إذا تحقق أي من الأغراض المحددة في المادة، مثل تنفيذ التزامات بموجب اتفاقية أو خدمة مصالح المملكة، مع مراعاة الشروط المحددة في الفقرة الثانية من المادة، مثل عدم المساس بالأمن الوطني وتوافر مستوى مناسب لحماية البيانات الشخصية.",
+    "answer": "يجوز لجهة التحكم نقل البيانات الشخصية إلى خارج المملكة أو الإفصاح عنها لجهة خارج المملكة لتحقيق أغراض معينة، مثل تنفيذ التزامات بموجب اتفاقية أو خدمة مصالح المملكة. يجب أن تتوافر شروط معينة عند نقل البيانات الشخصية، مثل عدم المساس بالأمن الوطني وتوفير مستوى مناسب لحماية البيانات الشخصية في الخارج.",
     "citations": [
       "PDPL-A29-AR"
     ],
-    "dropped_citations": [],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "يجوز لجهة التحكم نقل البيانات الشخصية إلى خارج المملكة أو الإفصاح عنها لجهة خارج المملكة لتحقيق أغراض معينة، مثل تنفيذ التزامات بموجب اتفاقية أو خدمة مصالح المملكة.",
+        "citations": [
+          {
+            "id": "PDPL-A29-AR",
+            "status": "supported",
+            "reason": "The article clearly states the conditions for transferring personal data, including national security and protection levels."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "يجب أن تتوافر شروط معينة عند نقل البيانات الشخصية، مثل عدم المساس بالأمن الوطني وتوفير مستوى مناسب لحماية البيانات الشخصية في الخارج.",
+        "citations": [
+          {
+            "id": "PDPL-A29-AR",
+            "status": "supported",
+            "reason": "The article explicitly mentions the conditions required when transferring personal data, including national security and adequate protection."
+          }
+        ],
+        "uncited": false
+      }
+    ],
     "retrieved": [
       {
         "record_id": "PDPL-A29-AR",
