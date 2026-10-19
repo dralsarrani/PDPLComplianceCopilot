@@ -1,13 +1,580 @@
-
 {
   "questions": [
     {
       "id": "Q001",
       "language": "ar",
-      "question": "هل يحق للشركة مشاركة بياناتي الشخصية مع جهة أخرى دون موافقتي؟",
+      "question": "كيف يعرّف نظام حماية البيانات الشخصية «البيانات الشخصية»؟",
       "answerable": true,
-      "gold_article_ids": ["PDPL-A15-AR"],
-      "reference_answer": "الأصل أنه لا يجوز للشركة الإفصاح عن البيانات الشخصية إلا في الحالات المحددة في المادة 15 من نظام حماية البيانات الشخصية. وقد يجوز الإفصاح دون موافقة صاحب البيانات في بعض الحالات النظامية، مثل الإفصاح لجهة عامة وفق الشروط المحددة أو لحماية الصحة والسلامة العامة أو لتحقيق مصالح مشروعة وفق الضوابط المنصوص عليها."
+      "gold_article_ids": [
+        "PDPL-A01-AR"
+      ],
+      "reference_answer": "يشمل تعريف البيانات الشخصية كل بيان يمكن أن يؤدي إلى التعرف على فرد مباشرةً أو بصورة غير مباشرة، بما في ذلك الاسم والهوية وبيانات الاتصال وغيرها من البيانات ذات الطابع الشخصي.",
+      "scenario_type": "Direct",
+      "supporting_excerpt": "4- البيانات الشخصية: كل بيان -مهما كان مصدره أو شكله- من شأنه أن يؤدي إلى معرفة الفرد على وجه التحديد، أو يجعل التعرف عليه ممكنًا بصفة مباشرة أو غير مباشرة، ومن ذلك: الاسم، ورقم الهوية الشخصية، والعناوين، وأرقام التواصل، وأرقام الرُّخص والسجلات والممتلكات الشخصية، وأرقام الحسابات البنكية والبطاقات الائتمانية، وصور الفرد الثابتة أو المتحركة، وغير ذلك من البيانات ذات الطابع الشخصي.",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q003",
+      "language": "ar",
+      "question": "ما حقوق صاحب البيانات الشخصية الأساسية وفق النظام؟",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A04-AR"
+      ],
+      "reference_answer": "تورد المادة الرابعة الحق في العلم، والوصول إلى البيانات الشخصية، وطلب الحصول عليها بصيغة مقروءة، وطلب تصحيحها أو إتمامها أو تحديثها، وطلب إتلاف ما انتهت الحاجة إليه، مع مراعاة أحكام النظام واللوائح.",
+      "scenario_type": "Direct",
+      "supporting_excerpt": "يكون لصاحب البيانات الشخصية -وفقاً للأحكام الواردة في النظام وما تحدده اللوائح- الحقوق الآتية: 1- الحق في العلم، ويشمل ذلك إحاطته علماً بالمسوغ النظامي لجمع بياناته الشخصية والغرض من جمعها. 2- الحق في وصوله إلى بياناته الشخصية المتوافرة لدى جهة التحكم، وفق الضوابط والإجراءات التي تحددها اللوائح، ودون إخلال بما ورد في المادة (التاسعة) من النظام. 3- الحق في طلب الحصول على بياناته الشخصية المتوافرة لدى جهة التحكم بصيغة مقروءة وواضحة، وفق الضوابط والإجراءات التي تحددها اللوائح. 4- الحق في طلب تصحيح بياناته الشخصية المتوافرة لدى جهة التحكم، أو إتمامها، أو تحديثها. 5- الحق في طلب إتلاف بياناته الشخصية المتوافرة لدى جهة التحكم مما انتهت الحاجة إليه منها، وذلك دون إخلال بما تقضي به المادة (الثامنة عشرة) من النظام.",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q004",
+      "language": "ar",
+      "question": "عميل وافق على معالجة بياناته ثم تراجع عن الموافقة؛ هل يستطيع العدول عنها، وما أثر ذلك؟",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A05-AR",
+        "IR-A12-AR"
+      ],
+      "reference_answer": "يجيز النظام العدول عن الموافقة في أي وقت؛ وتوضح المادة 12 من اللائحة التنفيذية وجوب إتاحة إجراءات للعدول وإيقاف المعالجة القائمة على تلك الموافقة دون تأخير غير مبرر، دون المساس بمشروعية المعالجة السابقة أو المعالجة المستندة إلى مسوغ نظامي آخر.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "1. لصاحب البيانات الشخصية العدول عن موافقته على معالجة بياناته الشخصية في أي وقت، وله إبلاغ جهة التحكم بذلك بأي من الوسائل المتاحة وفقاً للمادة (الرابعة) من هذه اللائحة. 2. قبل طلب الموافقة من صاحب البيانات الشخصية، على جهة التحكم وضع إجراءات تُتيح العدول عن تلك الموافقة، واتخاذ التدابير اللازمة لضمان تنفيذها، على أن تكون إجراءات العدول عن الموافقة مماثلة أو أكثر سهولةً من إجراءات الحصول عليها. 3. في حال العدول عن الموافقة، فيجب على جهة التحكم إيقاف المعالجة دون تأخير غير مبرر، ولا يؤثر الرجوع عن الموافقة على مشروعية أي عملية معالجة تمت في ظل الموافقة وقبل الرجوع عنها.",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q005",
+      "language": "ar",
+      "question": "هل تحتاج جهة التحكم دائمًا إلى موافقة صاحب البيانات لمعالجة بياناته مهما كان المسوغ؟",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A05-AR",
+        "PDPL-A06-AR"
+      ],
+      "reference_answer": "الأصل المنصوص عليه في المادة الخامسة مرتبط بالموافقة مع الاستثناءات المحددة في النظام، وتذكر المادة السادسة حالات لا تخضع للموافقة، مثل وجود مسوغ بنظام آخر أو اتفاق سابق أو بعض حالات المصالح المشروعة بضوابطها.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "لا تخضع معالجة البيانات الشخصية للموافقة المشار إليها في الفقرة (1) من المادة (الخامسة) من النظام، في الأحوال الآتية: 1- عندما تُحقق المعالجة مصلحة متحققة لصاحب البيانات وكان الاتصال به متعذراً أو كان من الصعب تحقيق ذلك. 2- عندما تكون المعالجة بمقتضى نظام آخر أو تنفيذاً لاتفاق سابق يكون صاحب البيانات الشخصية طرفاً فيه. 3- إذا كانت جهة التحكم جهة عامة، وكانت تلك المعالجة مطلوبة لأغراض أمنية أو لاستيفاء مُتطلبات قضائية. 4- عندما تكون المعالجة ضرورية لتحقيق مصالح مشروعة لجهة التحكم، ما لم يخل ذلك بحقوق صاحب البيانات الشخصية أو يتعارض مع مصالحه ولم تكن تلك البيانات بيانات حساسة. وتبيّن اللوائح الأحكام والضوابط المتعلقة بذلك.",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q006",
+      "language": "ar",
+      "question": "يشترط تطبيق إلكتروني موافقة المستخدم على معالجة بيانات غير مرتبطة بالخدمة قبل السماح له بإنشاء حساب. هل يجوز ذلك وفق نظام حماية البيانات الشخصية؟",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A07-AR"
+      ],
+      "reference_answer": "لا يجوز جعل الموافقة شرطًا لتقديم خدمة أو منفعة إلا عندما تكون الخدمة أو المنفعة ذات علاقة بمعالجة البيانات الشخصية التي أعطيت الموافقة بشأنها.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "لا يجوز أن تكون الموافقة المشار إليها في الفقرة (1) من المادة (الخامسة) من النظام شرطاً لإسداء خدمة أو تقديم منفعة، ما لم تكن الخدمة أو المنفعة ذات علاقة بمعالجة البيانات الشخصية التي صدرت الموافقة عليها.",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q008",
+      "language": "ar",
+      "question": "تعتزم شركة جمع بيانات شخصية من جهة أخرى بدلًا من جمعها مباشرة من أصحابها. متى يجوز ذلك، وما القيود النظامية ذات العلاقة؟",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A10-AR",
+        "IR-A15-AR"
+      ],
+      "reference_answer": "الأصل جمع البيانات من صاحبها مباشرة ومعالجتها للغرض الذي جمعت من أجله؛ وتحدد المادة العاشرة استثناءات لجمع البيانات من غير صاحبها أو تغيير الغرض، مع ضوابط إضافية في المادة 15 من اللائحة التنفيذية.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "لا يجوز لجهة التحكم جمع البيانات الشخصية إلا من صاحبها مباشرةً، ولا تجوز كذلك مُعالجة تلك البيانات إلا لتحقيق الغرض الذي جُمعت من أجله. ومع ذلك، يجوز لجهة التحكم جمع البيانات الشخصية من غير صاحبها مباشرةً، أو مُعالجتها لغرض آخر غير الذي جمعت من أجله، وذلك في الأحوال الآتية: 1- إذا وافق صاحب البيانات الشخصية على ذلك، وفقاً لأحكام النظام. 2- إذا كانت البيانات الشخصية متاحة للعموم، أو جرى جمعها من مصدر متاح للعموم. 3- إذا كانت جهة التحكم جهة عامة، وكان جمع البيانات الشخصية أو معالجتها؛ مطلوباً لأغراض المصلحة العامة أو لأغراض أمنية أو لتنفيذ نظام آخر أو لاستيفاء مُتطلبات قضائية.",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q009",
+      "language": "ar",
+      "question": "يتطلب نموذج التسجيل بيانات شخصية لا ترتبط بالغرض من تقديم الخدمة. ما الضابط النظامي الذي يحدد مقدار البيانات التي يجوز جمعها؟",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A11-AR",
+        "IR-A19-AR"
+      ],
+      "reference_answer": "تلزم المادة الحادية عشرة بأن يكون محتوى البيانات ملائمًا ومقصورًا على الحد الأدنى اللازم لتحقيق غرض الجمع، وتفصّل المادة 19 من اللائحة ضوابط تقليل البيانات.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "3- يجب أن يكون مُحتوى البيانات الشخصية ملائماً ومقصوراً على الحد الأدنى اللازم لتحقيق الغرض من جمعها، مع تجنب شموله على ما يؤدي إلى معرفة صاحبها بصورة محددة متى تحقق الغرض من جمعها. وتحدد اللوائح الضوابط اللازمة لذلك. 4- إذا اتضح أن البيانات الشخصية التي تجمع لم تعد ضرورية لتحقيق الغرض من جمعها، فعلى جهة التحكم التوقف عن جمعها، وإتلاف ما سبق أن جمعته منها دون تأخير.",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q011",
+      "language": "ar",
+      "question": "عند تسجيل عميل جديد، ما المعلومات الأساسية التي يجب على جهة التحكم إبلاغه بها قبل جمع بياناته الشخصية أو عند جمعها؟",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A13-AR",
+        "IR-A04-AR"
+      ],
+      "reference_answer": "عند جمع البيانات مباشرة من صاحبها، يجب إبلاغه بالمسوغ النظامي وأغراض الجمع، والتمييز بين البيانات الإلزامية والاختيارية، وهوية جهة التحكم وقنوات التواصل معها ومسؤول حماية البيانات إن وجد، والجهات التي قد يُفصح لها عن البيانات وأي نقل أو معالجة خارج المملكة، والآثار المحتملة لعدم تقديم البيانات، ومدة الاحتفاظ بها أو معايير تحديدها، وحقوق صاحب البيانات وكيفية ممارستها وسحب الموافقة عند انطباق ذلك، مع مراعاة الأحكام والاستثناءات المحددة في المادة 13 من النظام والمادة 4 من اللائحة التنفيذية.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "على جهة التحكم، في حالة جمع البيانات الشخصية من صاحبها مباشرةً، اتخاذ الوسائل الكافية لإحاطته علماً بالعناصر الآتية عند البدء في جمع بياناته: 1- المسوغ النظامي لجمع بياناته الشخصية. 2- الغرض من جمع بياناته الشخصية، وما إذا كان جمعها كلها أو بعضها إلزاميًّا أم اختياريًّا، وإحاطته كذلك بأن بياناته لن تعالج لاحقاً بصورة تتنافى مع الغرض من جمعها أو في غير الأحوال المنصوص عليها في المادة (العاشرة) من النظام. 3- هوية من يجمع البيانات الشخصية وعنوان مرجعه عند الاقتضاء، ما لم يكن جمعها لأغراض أمنية. 4- الجهة أو الجهات التي سَيُجرى إفصاح البيانات الشخصية إليها، وصفتها، وما إذا كانت البيانات الشخصية ستنقل أو سيفصح عنها أو ستعالج خارج المملكة.",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q013",
+      "language": "ar",
+      "question": "شركة تريد الإفصاح عن بيانات العملاء لشريك تجاري؛ هل الإفصاح متاح دون وجود مسوغ؟",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A15-AR",
+        "IR-A20-AR"
+      ],
+      "reference_answer": "تقصر المادة 15 جواز الإفصاح على حالات محددة مثل الموافقة وغيرها من الحالات المذكورة بالنظام، وتضع اللائحة التنفيذية ضوابط إضافية للإفصاح؛ لذلك لا يكفي مجرد رغبة الشركة في المشاركة.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "لا يجوز لجهة التحكم الإفصاح عن البيانات الشخصية إلا في الأحوال الآتية: 1- إذا وافق صاحب البيانات الشخصية على الإفصاح وفقاً لأحكام النظام. 2- إذا كانت البيانات الشخصية قد جرى جمعها من مصدر متاح للعموم. 3- إذا كانت الجهة التي تطلب الإفصاح جهة عامة، وكان ذلك لأغراض المصلحة العامة أو لأغراض أمنية أو لتنفيذ نظام آخر أو لاستيفاء مُتطلبات قضائية. 4- إذا كان الإفصاح ضروريًّا لحماية الصحة العامة أو السلامة العامة أو حماية حياة فرد أو أفراد معينين أو حماية صحتهم. 5- إذا كان الإفصاح سيقتصر على معالجتها لاحقاً بطريقة لا تؤدي إلى معرفة هوية صاحب البيانات الشخصية أو أي فرد آخر على وجه التحديد.",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q014",
+      "language": "ar",
+      "question": "صححت جهة تحكم بيانات شخصية سبق أن أفصحت عنها لجهة أخرى. ما التزامها تجاه الجهة التي تلقت البيانات؟",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A17-AR",
+        "IR-A22-AR"
+      ],
+      "reference_answer": "نعم، تقضي المادة 17 بإشعار الجهة التي انتقلت إليها البيانات بأي تصحيح أو إكمال أو تحديث وإتاحة التعديل لها، وتفصّل اللائحة إجراءات التصحيح ذات الصلة.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "1- إذا جرى تصحيح خطأ أو إكمال نقص أو إجراء تحديث في البيانات الشخصية، فعلى جهة التحكم أن تُشعر أي جهة أخرى انتقلت إليها تلك البيانات بأي تعديل يطرأ عليها، وأن تتيح لها ذلك التعديل. 2- توضح اللوائح المدد الزمنية للتصحيح والتحديث، وأنواع التصحيح، والإجراءات المطلوبة لتفادي الآثار المترتبة على معالجة بيانات شخصية غير صحيحة أو غير دقيقة أو غير حديثة.",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q016",
+      "language": "ar",
+      "question": "ما التزام جهة التحكم بحماية البيانات الشخصية أثناء معالجتها ونقلها، وفق النظام ولائحته التنفيذية؟",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A19-AR",
+        "IR-A23-AR"
+      ],
+      "reference_answer": "تشترط المادة 19 اتخاذ الإجراءات والوسائل التنظيمية والإدارية والتقنية اللازمة لحماية البيانات الشخصية بما في ذلك أثناء نقلها، وتفصّل المادة 23 من اللائحة مقتضيات أمن المعلومات.",
+      "scenario_type": "Direct",
+      "supporting_excerpt": "على جهة التحكم اتخاذ ما يلزم من إجراءات ووسائل تنظيمية وإدارية وتقنية تضمن المحافظة على البيانات الشخصية، بما في ذلك عند نقلها؛ وذلك وفقاً للأحكام والضوابط التي تحددها اللوائح.",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q017",
+      "language": "ar",
+      "question": "وقعت لدى جهة تحكم حادثة تسرب بيانات شخصية يُحتمل أن تسبب ضررًا. متى يجب إشعار الجهة المختصة، ومتى يجب إبلاغ صاحب البيانات الشخصية؟",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A20-AR",
+        "IR-A24-AR"
+      ],
+      "reference_answer": "عند وقوع حادثة تسرب بيانات شخصية يُحتمل أن تضر بالبيانات أو بصاحبها أو تتعارض مع حقوقه أو مصالحه، تلتزم جهة التحكم بإشعار الجهة المختصة خلال مدة لا تتجاوز 72 ساعة من وقت علمها بالحادثة، وفق المادة 24/1 من اللائحة التنفيذية. كما تلتزم بإشعار صاحب البيانات الشخصية دون تأخير غير مبرر عند تحقق شروط الإشعار وفق المادة 24/5، مع مراعاة متطلبات الإشعار الواردة في اللائحة.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "1. تُشعر جهة التحكم الجهة المختصة في حالة وقوع حادثة تسرّب للبيانات الشخصية خلال مدة لا تتجاوز (72) ساعة من وقت علمها بالحادثة، إذا كان من شأن تلك الحادثة الإضرار بالبيانات الشخصية أو صاحب البيانات الشخصية أو كانت تتعارض مع حقوقه أو مصالحه، على أن يتضمن الإشعار ما يأتي: أ-وصف لحادثة تسرب البيانات الشخصية، على أن يتضمن وقتها وتاريخها وكيفية وقوعها ووقت علم جهة التحكم بها. ب-الفئات والأعداد الفعلية أو التقريبية لأصحاب البيانات الشخصية المعنيين، ونوع البيانات الشخصية.",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q018",
+      "language": "ar",
+      "question": "قدّم صاحب بيانات شخصية طلبًا لممارسة أحد حقوقه النظامية. ما المدة المحددة للاستجابة لطلبه، وما الحالات التي تجيز تمديدها؟",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A21-AR",
+        "IR-A03-AR"
+      ],
+      "reference_answer": "تقرر المادة الثالثة من اللائحة التنفيذية تنفيذ الطلب خلال 30 يومًا، مع إمكانية تمديد لا يتجاوز 30 يومًا إضافيًا في ظروف موضحة باللائحة، بشرط إخطار صاحب البيانات مسبقًا بالتمديد ومبرراته.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "أ-تنفيذ طلبات ممارسة الحقوق المنصوص عليها في النظام خلال مدة لا تتجاوز (ثلاثين) يوماً دون تأخير، ولها تمديد ذلك في حال تطلب التنفيذ جهداً إضافياً غير متوقع أو غير معتاد أو في حال تلقيها طلبات متعددة من صاحب البيانات الشخصية، وذلك بما لا يزيد على (ثلاثين) يوماً إضافية، بشرط أن تُشعِر صاحب البيانات الشخصية مسبقا بالتمديد ومبرراته. ب-تبني الوسائل التقنية والإدارية والتنظيمية اللازمة لضمان سرعة الاستجابة لطلبات ممارسة الحقوق. ج-اتخاذ الإجراءات والتدابير المناسبة للتحقق من هوية مُقدم الطلب قبل تنفيذه بما يتوافق مع الأحكام النظامية ذوات العلاقة. د-اتخاذ الوسائل اللازمة لتوثيق وحفظ كافة الطلبات المقدمة لها، بما في ذلك الطلبات الشفهية. 2. في حال كان الطلب متكرراً بشكل غير مبرر أو يتطلب تنفيذه جهداً غير عادي؛ يكون لجهة التحكم عدم معالجة الطلب، على أن يكون ذلك مسبباً ويُشعَر صاحب البيانات الشخصية به.",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q020",
+      "language": "ar",
+      "question": "تعتزم شركة إرسال رسائل ترويجية إلى عملائها عبر وسائل الاتصال الشخصية. ما ضوابط الموافقة على الإرسال، وكيف يمكن للمستلم إيقاف الرسائل؟",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A25-AR",
+        "IR-A28-AR"
+      ],
+      "reference_answer": "الأصل وجوب مراعاة موافقة المتلقي على إرسال المواد الدعائية أو التوعوية إلى وسائل اتصاله الشخصية، مع الاستثناء المنصوص عليه للمواد التوعوية التي ترسلها الجهات العامة. وتوجب المادة 28 من اللائحة توثيق الموافقة عند اقتضائها، وبيان هوية المرسل، وتوفير وسيلة مجانية وسهلة لإيقاف الرسائل، والتوقف عن إرسالها عند طلب المستلم ذلك، مع مراعاة أحكام التسويق المباشر والأنظمة الأخرى ذات العلاقة.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "فيما عدا المواد التوعوية التي ترسلها الجهات العامة، لا يجوز لجهة التحكم استخدام وسائل الاتصال الشخصية -بما فيها العناوين البريدية والإلكترونية- الخاصة بصاحب البيانات الشخصية لأجل إرسال مواد دعائية أو توعوية، إلاَّ وفقاً لما يأتي: 1- أن تؤخذ موافقة المتلقي المستهدف على إرسال هذه المواد إليه. 2- أن يوفر مرسل المواد آلية واضحة -بحسب ما تحدده اللوائح- تُمكن المتلقي المستهدف من إبداء رغبته في التوقف عن إرسالها إليه عند رغبته في ذلك. وتحدد اللوائح الأحكام المتعلقة بالمواد الدعائية والتوعوية المشار إليها في هذه المادة، وشروط وأحوال موافقة المتلقي المستهدف على إرسال هذه المواد إليه.",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q021",
+      "language": "ar",
+      "question": "يرغب فريق بحثي في معالجة بيانات شخصية لأغراض إحصائية دون الحصول على موافقة أصحابها. في أي حالات يسمح النظام بذلك؟",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A27-AR",
+        "IR-A30-AR"
+      ],
+      "reference_answer": "تجيز المادة 27 من النظام جمع البيانات الشخصية أو معالجتها لأغراض علمية أو بحثية أو إحصائية دون موافقة صاحبها إذا لم تتضمن ما يحدد هويته، أو إذا أُزيلت معرّفات الهوية أثناء المعالجة وقبل الإفصاح ولم تكن البيانات حساسة، أو إذا أوجب نظام آخر ذلك أو كان تنفيذاً لاتفاق سابق يكون صاحب البيانات طرفاً فيه. وتفرض المادة 30 من اللائحة توثيق الأغراض، وتقليل البيانات، واتخاذ التدابير المناسبة لحماية الحقوق والمصالح.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "يجوز جمع البيانات الشخصية أو مُعالجتها لأغراض علمية أو بحثية أو إحصائية دون موافقة صاحبها، في الأحوال الآتية: 1- إذا لم تتضمن البيانات الشخصية ما يدل على هوية صاحبها على وجه التحديد. 2- إذا كان سَيُجرى إتلاف ما يدل على هوية صاحب البيانات الشخصية على وجه التحديد خلال عملية مُعالجتها وقبل الإفصاح عنها لأي جهة أُخرى ولم تكن تلك البيانات بيانات حساسة. 3- إذا كان جمع البيانات الشخصية أو معالجتها لهذه الأغراض يقتضيها نظام آخر أو تنفيذاً لاتفاق سابق يكون صاحبها طرفاً فيه. وتحدد اللوائح الضوابط اللازمة لما ورد في هذه المادة.",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q022",
+      "language": "ar",
+      "question": "تعتزم جهة تحكم نقل بيانات شخصية إلى مركز بيانات خارج المملكة. ما الأغراض والشروط النظامية الأساسية لهذا النقل؟",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A29-AR",
+        "TR-A03-AR"
+      ],
+      "reference_answer": "تضع المادة 29 أغراض النقل وشروطه، ومنها ألا يمس النقل الأمن الوطني أو المصالح الحيوية، وأن يتوافر مستوى مناسب من الحماية، والاقتصار على الحد الأدنى اللازم من البيانات، مع حالات وضوابط وإعفاءات محددة في اللائحة. وتتناول مادة 3 من لائحة النقل تقييم مستويات الحماية خارج المملكة.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "2- تكون الشروط الواجب توافرها عند نقل البيانات الشخصية أو الإفصاح عنها -وفق ما ورد في الفقرة (1) من هذه المادة- على النحو الآتي: أ- ألا يترتب على النقل أو الإفصاح مساس بالأمن الوطني أو بمصالح المملكة الحيوية. ب- أن يتوافر مستوى مناسب لحماية البيانات الشخصية في خارج المملكة؛ بما لا يقل عن مستوى الحماية المقرر في النظام واللوائح، وفقاً لنتائج تقويم تجريه الجهة المختصة في هذا الشأن بالتنسيق مع من تراه من الجهات المعنية. ج- أن يقتصر النقل أو الإفصاح على الحد الأدنى من البيانات الشخصية الذي تدعو الحاجة إليه. 3- لا يسري ما ورد في الفقرة (2) من هذه المادة على حالات الضرورة القصوى للمحافظة على حياة صاحب البيانات الشخصية أو مصالحه الحيوية أو الوقاية من عدوى مرضية أو فحصها أو معالجتها.",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q023",
+      "language": "ar",
+      "question": "تدرس شركة تابعة لمجموعة متعددة الجنسيات استخدام ضمانات مناسبة لنقل بيانات شخصية إلى خارج المملكة. ما أنواع الضمانات المحددة في اللائحة، وما القيد الأساسي على استخدامها؟",
+      "answerable": true,
+      "gold_article_ids": [
+        "TR-A04-AR"
+      ],
+      "reference_answer": "تحدد المادة الرابعة من لائحة نقل البيانات الشخصية خارج المملكة ثلاثة أنواع من الضمانات المناسبة: البنود التعاقدية القياسية، والقواعد المشتركة الملزمة، وشهادة الاعتماد. ويكون استخدامها وفق حالات الإعفاء والضوابط المحددة في المادة ذاتها؛ فلا يُعد مجرد وجود أحد هذه الضمانات إذنًا عامًا بالنقل دون استيفاء الشروط المطبقة.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "1. وفقاً لحالات الإعفاء المنصوص عليها في الفقرة (2) من هذه المادة، تقوم جهة التحكم باستخدام الضمانات المناسبة الآتية: ‌أ. البنود التعاقدية القياسية. ‌ب. القواعد المشتركة الملزمة. ‌ج. شهادة الاعتماد.",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q026",
+      "language": "en",
+      "question": "A mobile application collects personal data directly from users during registration. What information must the controller provide to users before or at the time of collection under the Saudi Personal Data Protection Law and its Implementing Regulation?",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A13-EN",
+        "IR-A04-EN"
+      ],
+      "reference_answer": "The controller must inform users of the legal basis and specific purposes of collection, whether providing the data is mandatory or optional, the relevant identities and contact details, the categories of recipients and any transfers outside Saudi Arabia, the potential consequences of not providing the data, the applicable retention period, and the data subjects’ rights and how to exercise them, including withdrawal of consent where applicable. Additional requirements and exceptions under Article 4 of the Implementing Regulation must also be considered.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "When collecting Personal Data directly from the Data Subject, the Controller shall take appropriate measures to inform the Data Subject of the following upon Collection: 1-The legal basis for collecting their Personal Data. 2-The purpose of the Collection, and shall specify the Personal Data whose Collection is mandatory and the Personal Data whose Collection is optional. The Data Subject shall be informed that the Personal Data will not be subsequently processed in a manner inconsistent with the Collection purpose or in cases other than those stated in Article (10) of this Law.",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q027",
+      "language": "en",
+      "question": "What limitations apply when a data subject exercises the right to access personal data?",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A04-EN",
+        "IR-A05-EN"
+      ],
+      "reference_answer": "The right is subject to the law and regulations. Under Implementing Regulation Article 5, access must not adversely affect others’ rights, such as intellectual property or trade secrets, and must not reveal another person’s identifiable data.",
+      "scenario_type": "Direct",
+      "supporting_excerpt": "Data Subject shall have the right to access their Personal Data at the disposal of the Controller, subject to the following: a) Exercising the right to access Personal Data shall not adversely affect the rights of others, such as intellectual property rights or trade secrets. b) Accessing to Personal Data at a request from the Data Subject, or via a channel provided by the Controller to the Data Subject allowing direct access to their Personal Data without the need to make a request.",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q029",
+      "language": "en",
+      "question": "An employee finds incorrect personal details in a controller’s records. May supporting documents be requested for correction?",
+      "answerable": true,
+      "gold_article_ids": [
+        "IR-A07-EN"
+      ],
+      "reference_answer": "The controller may request supporting documents where necessary for correction, completion, or updating; the regulation requires those documents to be destroyed after verification. The data subject may also request processing restriction during accuracy checks, subject to conditions.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "2. Controller may request needed supporting documents or evidence to verify in order to update, correct, or complete the Personal Data, provided that such documents or evidence are destroyed once the verification process is completed. 3. Upon correcting Personal Data, the Controller shall notify without undue delay the parties to whom Personal Data have been previously disclosed.",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q030",
+      "language": "en",
+      "question": "A data subject withdraws consent, which was the sole legal basis for processing their personal data. When must the controller destroy the data, and what related obligations apply?",
+      "answerable": true,
+      "gold_article_ids": [
+        "IR-A08-EN",
+        "PDPL-A18-EN"
+      ],
+      "reference_answer": "Implementing Regulation Article 8 specifies destruction where consent is withdrawn and was the only legal basis, among other cases; the controller must also address disclosed copies and backups subject to statutory retention requirements.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "1. The Controller shall destroy Personal Data in any of the following cases: a) Upon Data Subject's request. b) If the Personal Data are no longer necessary to achieve the purpose for which they were collected. c) If the Data Subject withdraws their consent, and consent is the sole legal basis for Processing. d) If the Controller becomes aware that the Personal Data have been unlawfully processed. 2. When destroying Personal Data, the Controller shall take the following steps: a) Take appropriate measures to notify other parties to whom the Controller has disclosed such Personal Data and request their Destruction.",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q032",
+      "language": "en",
+      "question": "Which communication channels may a controller provide for data subjects to exercise their rights under the Implementing Regulation?",
+      "answerable": true,
+      "gold_article_ids": [
+        "IR-A10-EN"
+      ],
+      "reference_answer": "Article 10 describes suitable channels for exercising rights, including email, text messages, national address, electronic applications, and other lawful contact channels prepared by the controller, based on availability and choice.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "The Controller is required to provide appropriate means to process requests related to Data Subject rights as stipulated in the Law. The Data Subject shall have the choice to use one or many among the following means according to their preference considering options made available by the Controller: 1. E-mail. 2. Text messages. 3. The national address. 4. Communication via electronic applications. 5. Any other lawful communication mean provided by the Controller for this purpose.",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q033",
+      "language": "en",
+      "question": "A digital platform uses a single checkbox to obtain consent for marketing communications and account analytics. If consent is the legal basis for both activities, what requirements must the controller satisfy?",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A05-EN",
+        "PDPL-A07-EN",
+        "IR-A11-EN"
+      ],
+      "reference_answer": "Where consent is the legal basis for both processing activities, the controller must obtain separate consent for each purpose. Consent must be freely given, based on clear and specific information, and documented for future verification. The controller must also comply with the restrictions on making consent a condition for providing a service. Explicit consent is additionally required in the specific cases identified in Article 11 of the Implementing Regulation. The compliance of a particular checkbox design cannot be conclusively determined without examining the full circumstances.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "d) Consent shall be documented through means allowing future verification, such as keeping registers recording Data Subjects’ consent for Processing operations, specifying time and the mean of Consent. e) A separate consent shall be obtained for each Processing purpose. 2. Data Subject's consent shall be explicit in the following cases: a) When the Processing involves Sensitive Data. b) When the Processing involves Credit Data. c) When decisions are made solely based on automated Processing of Personal Data.",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q034",
+      "language": "en",
+      "question": "A data subject withdraws consent to process personal data. What procedures and follow-up actions are required of the controller?",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A05-EN",
+        "IR-A12-EN"
+      ],
+      "reference_answer": "Under Article 12 of the Implementing Regulation, withdrawal must be available through procedures as easy as, or easier than, those used to obtain consent. The controller must cease processing based on that consent without undue delay and take appropriate steps to notify parties to whom the data was disclosed and request its destruction. Withdrawal does not invalidate lawful processing conducted before withdrawal or affect processing supported by another legal basis.",
+      "scenario_type": "Direct",
+      "supporting_excerpt": "the Controller of this through any available mean in accordance with Article (4) of this Regulation. 2. Before requesting consent from the Data Subject, the Controller shall establish procedures that allow for the withdrawal of such consent and take the necessary measures to ensure their implementation, ensuring that consent withdrawal is as or easier than obtaining. 3. In the event of consent withdrawal, the Controller shall cease Processing without undue delay from consent withdrawal request. Consent withdrawal of shall not affect the lawfulness of Processing based on consent before its withdrawal.",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q036",
+      "language": "en",
+      "question": "A private company plans to process non-sensitive customer data based on its legitimate interest. What conditions and prior assessment requirements must it satisfy?",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A06-EN",
+        "IR-A16-EN"
+      ],
+      "reference_answer": "Under Article 16 of the Implementing Regulation, a non-public controller may rely on legitimate interest only where the purpose is lawful, processing does not involve sensitive data, the interests of the controller are balanced against the data subject’s rights and interests, and processing is within the data subject’s reasonable expectations. Before processing, the controller must conduct and document an assessment of its purpose, necessity, potential effects, and safeguards; if the assessment identifies infringements or harm, it must revise the processing or consider another legal basis.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "1. Except Public Entities, a Controller may process Personal Data to achieve a Legitimate Interest provided that the following conditions are met: a) Purpose shall not violate any of the laws in the Kingdom. b) The rights and interests of the Data Subject and the Legitimate Interest of the Controller shall be balanced, so that the interests of the Controller do not affect the rights and interests of the Data Subject. c) Processing shall not include Sensitive Data. d) Processing shall be within the reasonable expectations of the Data Subject.",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q037",
+      "language": "en",
+      "question": "A company collected personal data to fulfil customer orders and now wishes to use it for an unrelated purpose. What must it verify and document before doing so?",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A10-EN",
+        "IR-A18-EN"
+      ],
+      "reference_answer": "The controller must first establish that the proposed further processing is permitted under one of the relevant exceptions in Article 10 of the Law. Under Article 18 of the Implementing Regulation, it must define and document the new purpose, limit the data collected or processed to the minimum necessary, specify the data types, and implement appropriate controls. A change of purpose is not automatically permitted simply because the controller already holds the data.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "1. When the Controller Processes Personal Data for a purpose other than the one for which it was initially collected as provided in Article 10 of the Law, it shall do the following: a) Define clearly and specifically the Processing purposes. b) Document the procedures to fix scope of data to be processed in accordance with specific purposes, including the use of data maps that indicate the need for each processed data and link it to each Processing purpose. c) Take necessary measures to ensure that the Personal Data is collected while respecting data minimization principle to achieve the purposes as set in paragraph (b) above.",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q038",
+      "language": "en",
+      "question": "A controller finds personal data in a publicly available source. Does that permit it to disclose the data without further checks?",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A15-EN",
+        "IR-A20-EN"
+      ],
+      "reference_answer": "No. Article 15 of the Law permits disclosure in specified circumstances, including certain data obtained from publicly available sources, but Article 20(1) of the Implementing Regulation requires that the data must not have been made publicly available in violation of the Law. Other applicable disclosure controls include purpose limitation, data minimisation, privacy safeguards, and documentation of disclosure operations.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "The Controller may not Disclose Personal Data except in the following situations: 1- Data Subject consents to the Disclosure in accordance with the provisions of the Law. 2- Personal Data has been collected from a publicly available source. 3- The entity requesting Disclosure is a Public Entity, and the Collection or Processing of the Personal Data is required for public interest or security purposes, or to implement another law, to fulfill judicial requirements. 4- The Disclosure is necessary to protect public health, public safety, or to protect the lives or health of specific individuals.",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q040",
+      "language": "en",
+      "question": "A controller updates personal information previously disclosed to another organisation. What does it need to consider?",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A17-EN",
+        "IR-A22-EN"
+      ],
+      "reference_answer": "PDPL Article 17 requires notifying recipients of corrections, completion, or updates and making the changed information available; Implementing Regulation Article 22 details correction-related procedures.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "1- If Personal Data is corrected, completed or updated, the Controller shall notify such amendment to all the other entities to which such Personal Data has been transferred and make the amendment available to such entities. 2- The Regulations shall set out the time frames for correction and updating of Personal Data, types of correction, and the procedures required to avoid the consequences of Processing incorrect, inaccurate or outdated Personal Data.",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q041",
+      "language": "en",
+      "question": "After discovering a potentially harmful personal-data breach, how quickly must the controller notify the competent authority when notification is required?",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A20-EN",
+        "IR-A24-EN"
+      ],
+      "reference_answer": "Under Article 24(1) of the Implementing Regulation, the controller must notify the competent authority within 72 hours of becoming aware of a personal-data breach if the incident may harm personal data or data subjects, or conflict with their rights or interests. If the controller cannot provide all required information within that period, the missing information must be provided as soon as possible, with justification for the delay.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "1. The Controller shall notify the Competent Authority within a delay not exceeding (72) hours of becoming aware of the incident, if such incident potentially causes harm to the Personal Data, or to Data Subject or conflict with their rights or interests. the notification shall include the following: a) A description of the Personal Data Breach incident, including the time, date, and circumstances of the breach and the time when the Controller became aware of it. b) Data categories, actual or approximate numbers of impacted Data Subjects, and the type of Personal Data.",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q043",
+      "language": "en",
+      "question": "A lender intends to collect, use, or disclose a customer’s credit data. What consent, notification, and protection requirements apply?",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A24-EN",
+        "IR-A27-EN"
+      ],
+      "reference_answer": "Article 24 of the Law requires safeguards to verify the data subject’s explicit consent when collecting credit data, changing the purpose of collection, or disclosing or publishing the data, in accordance with applicable law. The data subject must be notified when a request to disclose credit data is received. Article 27 of the Implementing Regulation adds safeguards and requires compliance with the Credit Information Law and relevant regulatory controls.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "1. Adopt and implement requirements and controls issued by the Saudi Central Bank and other relevant authorities, which define the roles and responsibilities of employees of establishments providing credit information services and of the parties that have contracts with such establishments to process Credit Data. 2. Controller shall obtain Data Subject consent and notify them of any request to disclose their Credit Data in accordance with the provisions of the Credit Information Law, while considering the provisions stated in subparagraph (d) of paragraph (1) of Article 11 of the Regulation.",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q044",
+      "language": "en",
+      "question": "A retailer wants to send direct-marketing messages to customers using their contact details. What consent, sender-identification, and opt-out requirements apply?",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A25-EN",
+        "PDPL-A26-EN",
+        "IR-A29-EN"
+      ],
+      "reference_answer": "Direct marketing requires the applicable data subject consent, a clearly identified sender, and an easy mechanism to stop further messages. The controller must stop direct-marketing communications without undue delay when consent is withdrawn. Article 26 of the Law permits marketing processing only on its stated conditions, including data collected directly from the data subject and the exclusion of sensitive data; Article 29 of the Implementing Regulation adds consent and opt-out safeguards.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "1. Without prejudice to the Telecommunication and Information Technology Act or any other related laws, before Processing Personal Data for Direct Marketing purposes, the Controller shall abide by to the following: a) Obtain consent from the Data Subject in accordance with the provisions of Article (11) of this Regulation. b) Provide a mechanism that enables the Data Subject to halt the reception of marketing material whenever desired, and ensure that the procedure for halting the reception such material are as simple and easy the procedure to obtain the consent to receive the material.",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q045",
+      "language": "en",
+      "question": "A public entity provides services processing personal data at large scale. When is a Data Protection Officer required?",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A30-EN",
+        "IR-A32-EN"
+      ],
+      "reference_answer": "Implementing Regulation Article 32 identifies circumstances requiring a data protection officer, including a public entity providing services that process personal data on a large scale, as well as specified monitoring and sensitive-data activities.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "1. The Controller shall appoint one or more individuals to be responsible for the protection of Personal Data in any of the following cases: a) The Controller is a Public Entity that provides services involving Processing of Personal Data on a large scale. b)The controller’s primary activities are based on processing operations that, by their nature, require regular and systematic monitoring of Data Subjects. c) Core activities of the Controller are based on processing sensitive Personal Data.",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q047",
+      "language": "en",
+      "question": "Personal data has already been transferred from Saudi Arabia to an overseas recipient, which proposes a further transfer to another party. What legal framework governs this onward transfer?",
+      "answerable": true,
+      "gold_article_ids": [
+        "TR-A05-EN"
+      ],
+      "reference_answer": "Article 5 of the transfer regulation states that the law and regulations also apply to subsequent onward transfers of personal data transferred or disclosed outside the Kingdom, without prejudice to the cross-referenced provisions.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "Without prejudice to the provisions of Articles (8) and (15) of the Law and Article (17) of the Implementing Regulations, the Law and Regulations shall apply to subsequent transfers of personal data that has been transferred or disclosed to a party outside the Kingdom.",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q048",
+      "language": "en",
+      "question": "A controller plans to transfer sensitive personal data outside Saudi Arabia on a continuous basis. Is a transfer-risk assessment required, and when must it be conducted?",
+      "answerable": true,
+      "gold_article_ids": [
+        "TR-A07-EN"
+      ],
+      "reference_answer": "Yes. Under Article 7 of the Regulation on Personal Data Transfer Outside the Kingdom, the controller must conduct a risk assessment before transferring or disclosing sensitive personal data outside the Kingdom on a continuous or widespread basis. A prior risk assessment is also required for transfers or disclosures carried out under Article 4 of the Regulation. The assessment must address the transfer’s purpose and legal basis, nature and scope, applicable safeguards, potential impacts and risk-mitigation measures.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "1. The controller shall conduct a risk assessment before transferring or disclosing personal data to a party outside the Kingdom in the following cases: A.Transfer or disclosure of personal data to a party outside the Kingdom in accordance with Article (4) of the Regulation. B.Transferring or disclosing sensitive data to entities outside the Kingdom on a continuous or widespread basis. 2. Risk assessment of transferring or disclosing personal data to a party outside the Kingdom should include the following elements: A.The purpose and legal basis for transferring or disclosing personal data to a party outside the Kingdom.",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q049",
+      "language": "ar",
+      "question": "كم عدد الشكاوى المتعلقة بمخالفات نظام حماية البيانات الشخصية التي تلقتها الجهة المختصة خلال سبتمبر 2026؟",
+      "answerable": false,
+      "gold_article_ids": [],
+      "reference_answer": "غير مغطى ضمن PDPL Corpus المرفق؛ لا يمكن تقديم إجابة موثقة من الوثائق الثلاث.",
+      "scenario_type": "Direct",
+      "supporting_excerpt": "",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q050",
+      "language": "ar",
+      "question": "ما اسم مسؤول حماية البيانات الحالي لدى شركة الاتصالات السعودية وما رقم هاتفه المباشر؟",
+      "answerable": false,
+      "gold_article_ids": [],
+      "reference_answer": "غير مغطى ضمن PDPL Corpus المرفق؛ لا يمكن تقديم إجابة موثقة من الوثائق الثلاث.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q051",
+      "language": "ar",
+      "question": "ما الحد الأقصى للغرامة المالية المقررة عن مخالفة أحكام قانون خصوصية المستهلك في ولاية كاليفورنيا خلال عام 2026؟",
+      "answerable": false,
+      "gold_article_ids": [],
+      "reference_answer": "غير مغطى ضمن PDPL Corpus المرفق؛ لا يمكن تقديم إجابة موثقة من الوثائق الثلاث.",
+      "scenario_type": "Direct",
+      "supporting_excerpt": "",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q055",
+      "language": "en",
+      "question": "How many PDPL complaints did the competent authority resolve in September 2026?",
+      "answerable": false,
+      "gold_article_ids": [],
+      "reference_answer": "Not covered by the supplied PDPL corpus; no source-grounded answer is available.",
+      "scenario_type": "Direct",
+      "supporting_excerpt": "",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q056",
+      "language": "en",
+      "question": "What is the direct email address of the Data Protection Officer at Jarir Marketing Company as of 19 October 2026?",
+      "answerable": false,
+      "gold_article_ids": [],
+      "reference_answer": "Not covered by the supplied PDPL corpus; no source-grounded answer is available.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q057",
+      "language": "en",
+      "question": "What is the maximum administrative fine under the EU GDPR for breaching the consent requirements in 2026?",
+      "answerable": false,
+      "gold_article_ids": [],
+      "reference_answer": "Not covered by the supplied PDPL corpus; no source-grounded answer is available.",
+      "scenario_type": "Direct",
+      "supporting_excerpt": "",
+      "dataset_split": "development",
+      "review_status": "VERIFIED"
     }
   ]
 }
