@@ -153,7 +153,9 @@ for item in questions:
             rerank_rr = 1 / rank
             break
 
-    rerank_reciprocal_ranks.append(rerank_rr)
+    # Unanswerable questions (no gold article) have no rank to score, so MRR counts answerable questions only
+    if gold_ids:
+        rerank_reciprocal_ranks.append(rerank_rr)
 
     print(f"\nReranking Evaluation for {item['id']}:")
     if gold_ids:
@@ -193,7 +195,8 @@ for item in questions:
     if recall_at_5 is not None:
         recall_scores.append(recall_at_5)
 
-    reciprocal_ranks.append(reciprocal_rank)
+    if gold_ids:
+        reciprocal_ranks.append(reciprocal_rank)
 
 
 # Calculate average evaluation metrics
@@ -209,6 +212,7 @@ mrr = (
 
 print("\n===== Hybrid Evaluation Summary =====")
 print(f"Total Questions: {len(questions)}")
+print(f"Answerable Questions (used for Recall@5 and MRR): {len(reciprocal_ranks)}")
 print(f"Mean Recall@5: {average_recall:.2%}")
 print(f"MRR: {mrr:.4f}")
 # Calculate Reranking averages
