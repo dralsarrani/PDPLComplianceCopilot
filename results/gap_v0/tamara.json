@@ -30,7 +30,7 @@
     "status": "covered",
     "evidence": "To provide our services, we collect several types of personal data, directly or via third parties including: Identity data (such as your name, date of birth, gender and national ID)",
     "evidence_found": true,
-    "reason": "The policy specifically lists the types of personal data collected."
+    "reason": "The policy clearly lists the types of personal data collected."
   },
   {
     "req_id": "R04",
@@ -41,7 +41,7 @@
     "status": "covered",
     "evidence": "We collect personal data: Directly from you when you register or use our services",
     "evidence_found": true,
-    "reason": "The policy clearly states the means used to collect personal data."
+    "reason": "The policy specifies the means used to collect personal data."
   },
   {
     "req_id": "R05",
@@ -52,7 +52,7 @@
     "status": "covered",
     "evidence": "We use your personal data to: Deliver our financing services and process transactions including providing customer support and enforcing our terms",
     "evidence_found": true,
-    "reason": "The policy explicitly states the purposes for collecting and processing personal data."
+    "reason": "The policy clearly states the purposes for collecting and processing personal data."
   },
   {
     "req_id": "R06",
@@ -63,7 +63,7 @@
     "status": "covered",
     "evidence": "We process your personal data depending on the purpose of processing, including: To perform our contract with you",
     "evidence_found": true,
-    "reason": "The policy outlines the legal bases for processing personal data."
+    "reason": "The policy outlines the legal basis for collecting personal data."
   },
   {
     "req_id": "R07",
@@ -96,7 +96,7 @@
     "status": "covered",
     "evidence": "We may share your personal data with: Merchants you transact with",
     "evidence_found": true,
-    "reason": "The policy specifies the parties with whom personal data is shared."
+    "reason": "The policy clearly states the parties with whom personal data is shared."
   },
   {
     "req_id": "R10",
@@ -107,7 +107,7 @@
     "status": "covered",
     "evidence": "Your personal data may be transferred, accessed, hosted, supported, or processed outside the Kingdom of Saudi Arabia",
     "evidence_found": true,
-    "reason": "The policy clearly states that personal data may be processed outside the Kingdom."
+    "reason": "The policy explicitly mentions the transfer of personal data outside the Kingdom."
   },
   {
     "req_id": "R11",
@@ -118,7 +118,7 @@
     "status": "covered",
     "evidence": "We retain your personal data only for as long as necessary to fulfill the purposes outlined in this notice",
     "evidence_found": true,
-    "reason": "The policy describes how long personal data is kept."
+    "reason": "The policy specifies how long personal data is kept."
   },
   {
     "req_id": "R12",
@@ -140,7 +140,7 @@
     "status": "covered",
     "evidence": "Under applicable data protection laws, you have the right to: Be informed about how your personal data is processed.",
     "evidence_found": true,
-    "reason": "The policy outlines the rights of the data subjects."
+    "reason": "The policy outlines the data subject's rights."
   },
   {
     "req_id": "R14",
@@ -151,7 +151,7 @@
     "status": "covered",
     "evidence": "To exercise your rights, contact: [email protected]",
     "evidence_found": true,
-    "reason": "The policy provides a way for data subjects to exercise their rights."
+    "reason": "The policy explains how data subjects can exercise their rights."
   },
   {
     "req_id": "R15",
@@ -162,7 +162,7 @@
     "status": "covered",
     "evidence": "You may withdraw your consent related to marketing communications at any time through your account settings or by contacting us.",
     "evidence_found": true,
-    "reason": "The policy explains how to withdraw consent."
+    "reason": "The policy provides information on how to withdraw consent."
   },
   {
     "req_id": "R16",
@@ -184,6 +184,6 @@
     "status": "covered",
     "evidence": "We use automated systems to support credit assessment and fraud detection.",
     "evidence_found": true,
-    "reason": "The policy mentions the use of automated processing."
+    "reason": "The policy states that decisions may be made solely by automated processing."
   }
 ]
