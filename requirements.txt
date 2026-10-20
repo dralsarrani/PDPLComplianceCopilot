@@ -20,7 +20,6 @@ openai
 
 # App
 streamlit
-streamlit-option-menu==0.4.0
 plotly==7.1.0
 python-dotenv
 pypdf
