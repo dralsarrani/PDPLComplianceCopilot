@@ -1,0 +1,66 @@
+/* Night look: always loaded after style.css, and used while the page's <html> has the
+   class pdpl-dark (the moon button switches it in the browser, without a rerun).
+   The same names as in style.css, with darker surfaces and lighter text. */
+html.pdpl-dark {
+  --green: #23875A;
+  --green-mid: #46B07C;
+  --green-soft: #173A2B;
+  --amber: #E3B25A;
+  --amber-mid: #E3A43A;
+  --amber-soft: #3A2E14;
+  --red: #C24141;
+  --red-soft: #3D1D1D;
+  --ink: #E6ECE9;
+  --ink-2: #C3CEC8;
+  --muted: #94A39B;
+  --line: #2A3631;
+  --panel: #0E1512;
+  --card: #16201C;
+  --card-2: #1B2722;
+  --green-text: #6FCF9C;
+  --amber-text: #E8B65C;
+  --red-text: #F08A8A;
+  --line-2: #2F4A3D;
+  --red-line: #6B2E2E;
+  --track: #26332D;
+  --tone-ok: #4CC38A;
+  --tone-warn: #E3A43A;
+  --tone-bad: #F07070;
+  --nav-on: #23875A;
+  color-scheme: dark;
+}
+/* Streamlit's own parts follow its light theme, so they are recoloured here */
+html.pdpl-dark .stApp,
+html.pdpl-dark .stApp p,
+html.pdpl-dark .stApp li,
+html.pdpl-dark .stApp label,
+html.pdpl-dark [data-testid="stMarkdownContainer"],
+html.pdpl-dark [data-testid="stCaptionContainer"],
+html.pdpl-dark [data-testid="stWidgetLabel"] { color: var(--ink); }
+html.pdpl-dark .stApp input,
+html.pdpl-dark .stApp textarea { color: var(--ink) !important; caret-color: var(--ink); }
+html.pdpl-dark .stApp input::placeholder,
+html.pdpl-dark .stApp textarea::placeholder { color: var(--muted) !important; }
+html.pdpl-dark .stTextInput [data-baseweb="input"],
+html.pdpl-dark .stTextArea [data-baseweb="textarea"],
+html.pdpl-dark [data-baseweb="select"] > div { background: var(--card) !important; border-color: var(--line-2) !important; }
+html.pdpl-dark [class*="st-key-askbox"] .stTextInput [data-baseweb="input"] { background: var(--panel) !important; }
+html.pdpl-dark [class*="st-key-askbox"] { box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45); }
+html.pdpl-dark [data-testid="stFileUploaderDropzone"] { background: var(--card-2); border: 1px dashed var(--line-2); }
+html.pdpl-dark [data-testid="stFileUploaderDropzone"] *,
+html.pdpl-dark [data-testid="stFileUploaderFile"] * { color: var(--ink-2); }
+html.pdpl-dark [data-testid="stFileUploaderDropzone"] button { background: var(--card); color: var(--ink); border-color: var(--line-2); }
+html.pdpl-dark [data-testid="stExpander"] details { background: var(--card); border-color: var(--line); }
+html.pdpl-dark [data-testid="stExpander"] summary,
+html.pdpl-dark [data-testid="stExpander"] summary * { color: var(--ink); }
+html.pdpl-dark [data-testid="stExpander"] summary:hover { background: var(--card-2); }
+html.pdpl-dark [data-testid="stButtonGroup"] button { background: var(--card); color: var(--ink); border-color: var(--line-2); }
+html.pdpl-dark [data-testid="stAlertContainer"] { background: var(--amber-soft); }
+html.pdpl-dark [data-testid="stAlertContainer"] * { color: var(--amber-text) !important; }
+html.pdpl-dark [data-testid="stToast"] { background: var(--card); color: var(--ink); border: 1px solid var(--line); }
+html.pdpl-dark [data-testid="stTooltipContent"],
+html.pdpl-dark [data-baseweb="tooltip"] div { background: var(--card-2); color: var(--ink); }
+html.pdpl-dark .stButton button[kind="secondary"]:hover { background: var(--green-soft); }
+html.pdpl-dark .answer-card .side-title { color: var(--green-text); }
+html.pdpl-dark .hero { background: linear-gradient(135deg, #071F17 0%, #0D3A27 55%, #13583A 100%); }
+html.pdpl-dark section[data-testid="stSidebar"] [data-testid="stSidebarCollapseButton"] button { color: var(--ink); }

@@ -1,0 +1,26 @@
+/* English page: left-to-right. Loaded after style.css and dark.css only when the page is in English;
+   it mirrors the places where style.css says right or left. */
+.stApp, .main, [data-testid="stAppViewContainer"] { direction: ltr; }
+[data-testid="stMarkdownContainer"] { direction: ltr; text-align: left; }
+.app-subtitle { text-align: left; }
+.paste-steps { direction: ltr; }
+
+/* history panel opens on the left, with its button at the top left */
+[data-testid="stExpandSidebarButton"] { right: auto; left: 1rem; }
+section[data-testid="stSidebar"] { border-left: none; border-right: 1px solid var(--line); }
+.st-key-history .stButton button { text-align: left; }
+
+/* page switch on the right of the hero's top row, round buttons in the far right corner */
+.st-key-navbar { left: auto; right: 9rem; }
+.st-key-navbar [data-testid="stElementContainer"]:has(.theme-btn) { left: auto; right: -8rem; }
+.st-key-navbar .st-key-lang_toggle { left: auto; right: calc(-8rem + 2.6rem + 8px); }
+
+/* coloured edges sit on the reading side */
+.evidence-quote { border-right: none; border-left: 3px solid var(--line-2); }
+.answer-side { border-right: none; border-left: 1px solid var(--line-2); }
+@media (max-width: 900px) { .answer-side { border-left: none; } }
+.req-card { border-right-width: 1px; border-left: 4px solid; }
+.req-card.ok { border-right-color: var(--line); border-left-color: var(--green); }
+.req-card.warn { border-right-color: var(--line); border-left-color: var(--amber-mid); }
+.req-card.bad { border-right-color: var(--line); border-left-color: var(--red); }
+.gaps li .why::before { content: "Why it matters: "; }
