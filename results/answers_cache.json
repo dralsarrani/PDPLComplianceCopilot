@@ -216,5 +216,4144 @@
       }
     ],
     "from_cache": false
+  },
+  "هل يحق للشركات اخذ بيناتي ؟": {
+    "question": "هل يحق للشركات اخذ بيناتي ؟\n",
+    "covered": false,
+    "answer": "غير مشمول: لم أجد في نصوص النظام ما يجيب على هذا السؤال.",
+    "citations": [],
+    "problems": [],
+    "citation_check": [],
+    "retrieved": [
+      {
+        "record_id": "IR-A06-AR",
+        "score": 0.0062
+      },
+      {
+        "record_id": "IR-A05-AR",
+        "score": 0.0021
+      },
+      {
+        "record_id": "PDPL-A24-AR",
+        "score": 0.0012
+      },
+      {
+        "record_id": "TR-A04-AR",
+        "score": 0.0012
+      },
+      {
+        "record_id": "IR-A07-AR",
+        "score": 0.0009
+      }
+    ],
+    "from_cache": false
+  },
+  "هل عادي الشركات تاخذ بياناتي؟": {
+    "question": "هل عادي الشركات تاخذ بياناتي؟\n",
+    "covered": true,
+    "answer": "يجوز جمع البيانات الشخصية أو مُعالجتها لأغراض علمية أو بحثية أو إحصائية دون موافقة صاحبها في بعض الحالات المحددة. على جهة التحكم، في حالة جمع البيانات الشخصية من صاحبها مباشرةً، اتخاذ الوسائل الكافية لإحاطته علماً بالعناصر المتعلقة بجمع بياناته.",
+    "citations": [
+      "PDPL-A27-AR",
+      "PDPL-A13-AR"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "يجوز جمع البيانات الشخصية أو مُعالجتها لأغراض علمية أو بحثية أو إحصائية دون موافقة صاحبها في بعض الحالات المحددة.",
+        "citations": [
+          {
+            "id": "PDPL-A27-AR",
+            "status": "supported",
+            "reason": "The article clearly states the conditions under which personal data can be collected or processed without consent for scientific, research, or statistical purposes."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "على جهة التحكم، في حالة جمع البيانات الشخصية من صاحبها مباشرةً، اتخاذ الوسائل الكافية لإحاطته علماً بالعناصر المتعلقة بجمع بياناته.",
+        "citations": [
+          {
+            "id": "PDPL-A13-AR",
+            "status": "supported",
+            "reason": "The article specifies the necessary elements that the data controller must inform the individual about when collecting personal data directly."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "PDPL-A13-AR",
+        "score": 0.0053
+      },
+      {
+        "record_id": "PDPL-A27-AR",
+        "score": 0.0041
+      },
+      {
+        "record_id": "PDPL-A19-AR",
+        "score": 0.0032
+      },
+      {
+        "record_id": "IR-A27-AR",
+        "score": 0.0028
+      },
+      {
+        "record_id": "IR-A03-AR",
+        "score": 0.0021
+      }
+    ],
+    "from_cache": false
+  },
+  "ما ابيانات اللتي يحق للشرمات التسويق اخذها؟": {
+    "question": "ما ابيانات اللتي يحق للشرمات التسويق اخذها؟",
+    "covered": true,
+    "answer": "يجوز معالجة البيانات الشخصية لأغراض تسويقية، إذا جرى جمعها من صاحبها مباشرةً ووافق على ذلك وفق أحكام النظام.",
+    "citations": [
+      "PDPL-A26-AR"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "يجوز معالجة البيانات الشخصية لأغراض تسويقية، إذا جرى جمعها من صاحبها مباشرةً ووافق على ذلك وفق أحكام النظام.",
+        "citations": [
+          {
+            "id": "PDPL-A26-AR",
+            "status": "supported",
+            "reason": "The article clearly states that personal data can be processed for marketing purposes if collected directly from the owner with their consent."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "PDPL-A26-AR",
+        "score": 0.024
+      },
+      {
+        "record_id": "IR-A29-AR",
+        "score": 0.0037
+      },
+      {
+        "record_id": "PDPL-A25-AR",
+        "score": 0.001
+      },
+      {
+        "record_id": "PDPL-A33-AR",
+        "score": 0.0001
+      },
+      {
+        "record_id": "PDPL-A09-AR",
+        "score": 0.0001
+      }
+    ],
+    "from_cache": false
+  },
+  "ما ابيانات اللتي يحق للشركات التسويق اخذها؟": {
+    "question": "ما ابيانات اللتي يحق للشركات التسويق اخذها؟",
+    "covered": true,
+    "answer": "يجوز معالجة البيانات الشخصية لأغراض تسويقية، إذا جرى جمعها من صاحبها مباشرةً ووافق على ذلك وفق أحكام النظام.",
+    "citations": [
+      "PDPL-A26-AR"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "يجوز معالجة البيانات الشخصية لأغراض تسويقية، إذا جرى جمعها من صاحبها مباشرةً ووافق على ذلك وفق أحكام النظام.",
+        "citations": [
+          {
+            "id": "PDPL-A26-AR",
+            "status": "supported",
+            "reason": "The article clearly states that personal data can be processed for marketing purposes if collected directly from the owner with their consent."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "PDPL-A26-AR",
+        "score": 0.1151
+      },
+      {
+        "record_id": "IR-A29-AR",
+        "score": 0.0091
+      },
+      {
+        "record_id": "PDPL-A19-AR",
+        "score": 0.0004
+      },
+      {
+        "record_id": "TR-A04-AR",
+        "score": 0.0003
+      },
+      {
+        "record_id": "PDPL-A24-AR",
+        "score": 0.0002
+      }
+    ],
+    "from_cache": false
+  },
+  "ما البيانات التي يحق لشركات التسويق اخذها؟": {
+    "question": "ما البيانات التي يحق لشركات التسويق اخذها؟",
+    "covered": true,
+    "answer": "يجوز معالجة البيانات الشخصية لأغراض تسويقية إذا جرى جمعها من صاحبها مباشرةً ووافق على ذلك وفق أحكام النظام.",
+    "citations": [
+      "PDPL-A26-AR"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "يجوز معالجة البيانات الشخصية لأغراض تسويقية إذا جرى جمعها من صاحبها مباشرةً ووافق على ذلك وفق أحكام النظام.",
+        "citations": [
+          {
+            "id": "PDPL-A26-AR",
+            "status": "supported",
+            "reason": "The article clearly states that personal data can be processed for marketing purposes if collected directly from the owner with their consent."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "PDPL-A26-AR",
+        "score": 0.7967
+      },
+      {
+        "record_id": "IR-A29-AR",
+        "score": 0.1606
+      },
+      {
+        "record_id": "PDPL-A27-AR",
+        "score": 0.0048
+      },
+      {
+        "record_id": "PDPL-A13-AR",
+        "score": 0.0017
+      },
+      {
+        "record_id": "PDPL-A19-AR",
+        "score": 0.0016
+      }
+    ],
+    "from_cache": false
+  },
+  "can a company transfer my personal data outside saudi arabia?": {
+    "question": "Can a company transfer my personal data outside Saudi Arabia?",
+    "covered": true,
+    "answer": "A Controller may transfer Personal Data outside the Kingdom under certain conditions, such as performing an obligation under an agreement or serving the interests of the Kingdom. The transfer must not cause prejudice to national security and must ensure an adequate level of protection for Personal Data.",
+    "citations": [
+      "PDPL-A29-EN"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "A Controller may transfer Personal Data outside the Kingdom under certain conditions, such as performing an obligation under an agreement or serving the interests of the Kingdom.",
+        "citations": [
+          {
+            "id": "PDPL-A29-EN",
+            "status": "supported",
+            "reason": "The article clearly states the conditions for transferring Personal Data, including performing obligations under an agreement and serving the interests of the Kingdom."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "The transfer must not cause prejudice to national security and must ensure an adequate level of protection for Personal Data.",
+        "citations": [
+          {
+            "id": "PDPL-A29-EN",
+            "status": "supported",
+            "reason": "The article explicitly mentions that the transfer must not cause prejudice to national security and must ensure an adequate level of protection for Personal Data."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "PDPL-A29-EN",
+        "score": 0.3586
+      },
+      {
+        "record_id": "TR-A02-EN",
+        "score": 0.1112
+      },
+      {
+        "record_id": "TR-A07-EN",
+        "score": 0.1058
+      },
+      {
+        "record_id": "TR-A05-EN",
+        "score": 0.1017
+      },
+      {
+        "record_id": "TR-A01-EN",
+        "score": 0.0951
+      }
+    ],
+    "from_cache": false
+  },
+  "إذا تسرّبت بياناتي من شركة، خلال كم ساعة لازم تبلّغ عن التسريب؟": {
+    "question": "إذا تسرّبت بياناتي من شركة، خلال كم ساعة لازم تبلّغ عن التسريب؟",
+    "covered": true,
+    "answer": "يجب على جهة التحكم أن تُشعر الجهة المختصة في حالة وقوع حادثة تسرّب للبيانات الشخصية خلال مدة لا تتجاوز (72) ساعة من وقت علمها بالحادثة.",
+    "citations": [
+      "IR-A24-AR"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "يجب على جهة التحكم أن تُشعر الجهة المختصة في حالة وقوع حادثة تسرّب للبيانات الشخصية خلال مدة لا تتجاوز (72) ساعة من وقت علمها بالحادثة.",
+        "citations": [
+          {
+            "id": "IR-A24-AR",
+            "status": "supported",
+            "reason": "The article clearly states that the data controller must notify the relevant authority within 72 hours of becoming aware of a personal data breach."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "IR-A24-AR",
+        "score": 0.871
+      },
+      {
+        "record_id": "IR-A04-AR",
+        "score": 0.0119
+      },
+      {
+        "record_id": "PDPL-A20-AR",
+        "score": 0.0093
+      },
+      {
+        "record_id": "IR-A03-AR",
+        "score": 0.0025
+      },
+      {
+        "record_id": "PDPL-A18-AR",
+        "score": 0.0014
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 29.9,
+      "answer": 3.0,
+      "check": 2.2
+    }
+  },
+  "when does a company need to appoint a data protection officer?": {
+    "question": "When does a company need to appoint a data protection officer?",
+    "covered": true,
+    "answer": "A company must appoint a data protection officer if it is a Public Entity providing services involving large-scale processing of Personal Data, if its primary activities require regular and systematic monitoring of Data Subjects, or if its core activities involve processing sensitive Personal Data.",
+    "citations": [
+      "IR-A32-EN"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "A company must appoint a data protection officer if it is a Public Entity providing services involving large-scale processing of Personal Data, if its primary activities require regular and systematic monitoring of Data Subjects, or if its core activities involve processing sensitive Personal Data.",
+        "citations": [
+          {
+            "id": "IR-A32-EN",
+            "status": "supported",
+            "reason": "The article clearly states the conditions under which a data protection officer must be appointed."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "IR-A32-EN",
+        "score": 0.7267
+      },
+      {
+        "record_id": "PDPL-A30-EN",
+        "score": 0.2958
+      },
+      {
+        "record_id": "IR-A04-EN",
+        "score": 0.0663
+      },
+      {
+        "record_id": "IR-A33-EN",
+        "score": 0.0144
+      },
+      {
+        "record_id": "IR-A24-EN",
+        "score": 0.0049
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 20.5,
+      "answer": 2.9,
+      "check": 1.5
+    }
+  },
+  "هل يجوز معالجة البيانات الصحية بدون موافقة صاحبها؟": {
+    "question": "هل يجوز معالجة البيانات الصحية بدون موافقة صاحبها؟",
+    "covered": true,
+    "answer": "يجوز معالجة البيانات الصحية بدون موافقة صاحبها في حالات معينة، مثل إذا كانت معالجة البيانات ضرورية لتحقيق مصالح مشروعة لجهة التحكم، ما لم يخل ذلك بحقوق صاحب البيانات الشخصية أو يتعارض مع مصالحه.",
+    "citations": [
+      "PDPL-A10-AR"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "يجوز معالجة البيانات الصحية بدون موافقة صاحبها في حالات معينة، مثل إذا كانت معالجة البيانات ضرورية لتحقيق مصالح مشروعة لجهة التحكم، ما لم يخل ذلك بحقوق صاحب البيانات الشخصية أو يتعارض مع مصالحه.",
+        "citations": [
+          {
+            "id": "PDPL-A10-AR",
+            "status": "supported",
+            "reason": "The article states that processing health data without consent is allowed under certain conditions, including for legitimate interests."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "PDPL-A27-AR",
+        "score": 3.8509
+      },
+      {
+        "record_id": "PDPL-A10-AR",
+        "score": 2.9877
+      },
+      {
+        "record_id": "PDPL-A26-AR",
+        "score": 1.6945
+      },
+      {
+        "record_id": "PDPL-A07-AR",
+        "score": 0.6584
+      },
+      {
+        "record_id": "PDPL-A23-AR",
+        "score": 0.5967
+      },
+      {
+        "record_id": "PDPL-A15-AR",
+        "score": 0.1308
+      },
+      {
+        "record_id": "PDPL-A34-AR",
+        "score": -1.8152
+      },
+      {
+        "record_id": "IR-A13-AR",
+        "score": -1.8395
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 2.7,
+      "answer": 3.6,
+      "check": 1.2
+    }
+  },
+  "هل يحق لي أطلب من الشركة تحذف بياناتي؟": {
+    "question": "هل يحق لي أطلب من الشركة تحذف بياناتي؟",
+    "covered": true,
+    "answer": "يحق لصاحب البيانات الشخصية طلب إتلاف بياناته الشخصية المتوافرة لدى جهة التحكم مما انتهت الحاجة إليه منها.",
+    "citations": [
+      "PDPL-A04-AR"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "يحق لصاحب البيانات الشخصية طلب إتلاف بياناته الشخصية المتوافرة لدى جهة التحكم مما انتهت الحاجة إليه منها.",
+        "citations": [
+          {
+            "id": "PDPL-A04-AR",
+            "status": "supported",
+            "reason": "The article explicitly states the right to request the destruction of personal data when it is no longer needed."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "IR-A08-AR",
+        "score": -0.0936
+      },
+      {
+        "record_id": "PDPL-A04-AR",
+        "score": -1.4779
+      },
+      {
+        "record_id": "PDPL-A15-AR",
+        "score": -1.5102
+      },
+      {
+        "record_id": "IR-A07-AR",
+        "score": -1.527
+      },
+      {
+        "record_id": "PDPL-A18-AR",
+        "score": -2.4816
+      },
+      {
+        "record_id": "IR-A06-AR",
+        "score": -2.5623
+      },
+      {
+        "record_id": "IR-A04-AR",
+        "score": -2.6934
+      },
+      {
+        "record_id": "PDPL-A21-AR",
+        "score": -2.7534
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 7.5,
+      "answer": 3.0,
+      "check": 1.8
+    }
+  },
+  "شركة تبي ترسل بيانات عملائها لشركة تابعة لها في دبي، وش الشروط اللي لازم تتحقق؟": {
+    "question": "شركة تبي ترسل بيانات عملائها لشركة تابعة لها في دبي، وش الشروط اللي لازم تتحقق؟",
+    "covered": true,
+    "answer": "يجب أن يتوافر مستوى مناسب لحماية البيانات الشخصية في خارج المملكة، بما لا يقل عن مستوى الحماية المقرر في النظام واللوائح. يجب أن يقتصر النقل أو الإفصاح على الحد الأدنى من البيانات الشخصية الذي تدعو الحاجة إليه. إذا كان النقل أو الإفصاح عن البيانات الشخصية ضرورياً لإجراء العمليات التشغيلية المركزية وكانت جهة التحكم ضمن مجموعة كيانات متعددة الجنسيات، يجب الالتزام بقواعد مشتركة ملزمة أو البنود التعاقدية القياسية.",
+    "citations": [
+      "PDPL-A29-AR",
+      "TR-A04-AR"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "يجب أن يتوافر مستوى مناسب لحماية البيانات الشخصية في خارج المملكة، بما لا يقل عن مستوى الحماية المقرر في النظام واللوائح.",
+        "citations": [
+          {
+            "id": "PDPL-A29-AR",
+            "status": "supported",
+            "reason": "The article explicitly states that an appropriate level of protection for personal data must be ensured outside the Kingdom."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "يجب أن يقتصر النقل أو الإفصاح على الحد الأدنى من البيانات الشخصية الذي تدعو الحاجة إليه.",
+        "citations": [
+          {
+            "id": "PDPL-A29-AR",
+            "status": "supported",
+            "reason": "The article clearly states that the transfer or disclosure must be limited to the minimum necessary personal data."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "إذا كان النقل أو الإفصاح عن البيانات الشخصية ضرورياً لإجراء العمليات التشغيلية المركزية وكانت جهة التحكم ضمن مجموعة كيانات متعددة الجنسيات، يجب الالتزام بقواعد مشتركة ملزمة أو البنود التعاقدية القياسية.",
+        "citations": [
+          {
+            "id": "TR-A04-AR",
+            "status": "supported",
+            "reason": "The article confirms that if the transfer or disclosure is necessary for central operational processes within a multinational group, common binding rules or standard contractual clauses must be adhered to."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "TR-A04-AR",
+        "score": -3.2745
+      },
+      {
+        "record_id": "PDPL-A29-AR",
+        "score": -4.1375
+      },
+      {
+        "record_id": "PDPL-A33-AR",
+        "score": -4.8854
+      },
+      {
+        "record_id": "PDPL-A08-AR",
+        "score": -4.958
+      },
+      {
+        "record_id": "PDPL-A26-AR",
+        "score": -5.1887
+      },
+      {
+        "record_id": "IR-A27-AR",
+        "score": -5.2171
+      },
+      {
+        "record_id": "PDPL-A25-AR",
+        "score": -5.2913
+      },
+      {
+        "record_id": "IR-A10-AR",
+        "score": -5.3044
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 3.3,
+      "answer": 3.6,
+      "check": 2.0
+    }
+  },
+  "هل يجوز للشركات تنقل بياتاتي خارج المملكة": {
+    "question": "هل يجوز للشركات تنقل بياتاتي خارج المملكة",
+    "covered": true,
+    "answer": "يجوز لجهة التحكم نقل البيانات الشخصية إلى خارج المملكة أو الإفصاح عنها لجهة خارج المملكة، وذلك لتحقيق أيٍّ من الأغراض الآتية.",
+    "sentences": [
+      {
+        "text": "يجوز لجهة التحكم نقل البيانات الشخصية إلى خارج المملكة أو الإفصاح عنها لجهة خارج المملكة، وذلك لتحقيق أيٍّ من الأغراض الآتية.",
+        "citations": [
+          "PDPL-A29-AR"
+        ],
+        "evidence": {
+          "id": "PDPL-A29-AR",
+          "quote": "يجوز لجهة التحكم نقل البيانات الشخصية إلى خارج المملكة أو الإفصاح عنها لجهة خارج المملكة، وذلك لتحقيق أيٍّ من الأغراض الآتية:"
+        }
+      }
+    ],
+    "citations": [
+      "PDPL-A29-AR"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "يجوز لجهة التحكم نقل البيانات الشخصية إلى خارج المملكة أو الإفصاح عنها لجهة خارج المملكة، وذلك لتحقيق أيٍّ من الأغراض الآتية.",
+        "citations": [
+          {
+            "id": "PDPL-A29-AR",
+            "status": "supported",
+            "reason": "The article clearly states that data controllers may transfer personal data outside the Kingdom for specified purposes."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "PDPL-A29-AR",
+        "score": 2.427
+      },
+      {
+        "record_id": "TR-A04-AR",
+        "score": 0.4053
+      },
+      {
+        "record_id": "TR-A01-AR",
+        "score": -0.1021
+      },
+      {
+        "record_id": "TR-A05-AR",
+        "score": -0.6124
+      },
+      {
+        "record_id": "TR-A02-AR",
+        "score": -0.7612
+      },
+      {
+        "record_id": "TR-A07-AR",
+        "score": -1.5806
+      },
+      {
+        "record_id": "TR-A03-AR",
+        "score": -3.4264
+      },
+      {
+        "record_id": "PDPL-A19-AR",
+        "score": -4.1679
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 3.4,
+      "answer": 4.0,
+      "check": 1.3
+    }
+  },
+  "كيف يعرّف نظام حماية البيانات الشخصية «البيانات الشخصية»؟": {
+    "question": "كيف يعرّف نظام حماية البيانات الشخصية «البيانات الشخصية»؟",
+    "covered": true,
+    "answer": "يُعرّف نظام حماية البيانات الشخصية \"البيانات الشخصية\" بأنها \"كل بيان -مهما كان مصدره أو شكله- من شأنه أن يؤدي إلى معرفة الفرد على وجه التحديد، أو يجعل التعرف عليه ممكنًا بصفة مباشرة أو غير مباشرة\".",
+    "sentences": [
+      {
+        "text": "يُعرّف نظام حماية البيانات الشخصية \"البيانات الشخصية\" بأنها \"كل بيان -مهما كان مصدره أو شكله- من شأنه أن يؤدي إلى معرفة الفرد على وجه التحديد، أو يجعل التعرف عليه ممكنًا بصفة مباشرة أو غير مباشرة\".",
+        "citations": [
+          "PDPL-A01-AR"
+        ],
+        "evidence": {
+          "id": "PDPL-A01-AR",
+          "quote": "كل بيان -مهما كان مصدره أو شكله- من شأنه أن يؤدي إلى معرفة الفرد على وجه التحديد، أو يجعل التعرف عليه ممكنًا بصفة مباشرة أو غير مباشرة"
+        }
+      }
+    ],
+    "citations": [
+      "PDPL-A01-AR"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "يُعرّف نظام حماية البيانات الشخصية \"البيانات الشخصية\" بأنها \"كل بيان -مهما كان مصدره أو شكله- من شأنه أن يؤدي إلى معرفة الفرد على وجه التحديد، أو يجعل التعرف عليه ممكنًا بصفة مباشرة أو غير مباشرة\".",
+        "citations": [
+          {
+            "id": "PDPL-A01-AR",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "PDPL-A01-AR",
+        "score": 0.2406
+      },
+      {
+        "record_id": "PDPL-A02-AR",
+        "score": -0.1357
+      },
+      {
+        "record_id": "IR-A32-AR",
+        "score": -2.7739
+      },
+      {
+        "record_id": "IR-A04-AR",
+        "score": -2.8036
+      },
+      {
+        "record_id": "IR-A06-AR",
+        "score": -3.2511
+      },
+      {
+        "record_id": "IR-A02-AR",
+        "score": -3.2852
+      },
+      {
+        "record_id": "PDPL-A04-AR",
+        "score": -3.3595
+      },
+      {
+        "record_id": "PDPL-A31-AR",
+        "score": -3.373
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.7,
+      "answer": 2.8,
+      "check": 0.0
+    }
+  },
+  "ما حقوق صاحب البيانات الشخصية الأساسية وفق النظام؟": {
+    "question": "ما حقوق صاحب البيانات الشخصية الأساسية وفق النظام؟",
+    "covered": true,
+    "answer": "يكون لصاحب البيانات الشخصية -وفقاً للأحكام الواردة في النظام وما تحدده اللوائح- الحقوق الآتية: 1- الحق في العلم، 2- الحق في وصوله إلى بياناته الشخصية، 3- الحق في طلب الحصول على بياناته الشخصية، 4- الحق في طلب تصحيح بياناته الشخصية، 5- الحق في طلب إتلاف بياناته الشخصية.",
+    "sentences": [
+      {
+        "text": "يكون لصاحب البيانات الشخصية -وفقاً للأحكام الواردة في النظام وما تحدده اللوائح- الحقوق الآتية: 1- الحق في العلم، 2- الحق في وصوله إلى بياناته الشخصية، 3- الحق في طلب الحصول على بياناته الشخصية، 4- الحق في طلب تصحيح بياناته الشخصية، 5- الحق في طلب إتلاف بياناته الشخصية.",
+        "citations": [
+          "PDPL-A04-AR"
+        ],
+        "evidence": {
+          "id": "PDPL-A04-AR",
+          "quote": "يكون لصاحب البيانات الشخصية -وفقاً للأحكام الواردة في النظام وما تحدده اللوائح- الحقوق الآتية: 1- الحق في العلم، ويشمل ذلك إحاطته علماً بالمسوغ النظامي لجمع بياناته الشخصية والغرض من جمعها"
+        }
+      }
+    ],
+    "citations": [
+      "PDPL-A04-AR"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "يكون لصاحب البيانات الشخصية -وفقاً للأحكام الواردة في النظام وما تحدده اللوائح- الحقوق الآتية: 1- الحق في العلم، 2- الحق في وصوله إلى بياناته الشخصية، 3- الحق في طلب الحصول على بياناته الشخصية، 4- الحق في طلب تصحيح بياناته الشخصية، 5- الحق في طلب إتلاف بياناته الشخصية.",
+        "citations": [
+          {
+            "id": "PDPL-A04-AR",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "PDPL-A04-AR",
+        "score": 7.1836
+      },
+      {
+        "record_id": "IR-A03-AR",
+        "score": 1.9575
+      },
+      {
+        "record_id": "IR-A06-AR",
+        "score": 1.1443
+      },
+      {
+        "record_id": "IR-A05-AR",
+        "score": 0.5165
+      },
+      {
+        "record_id": "PDPL-A24-AR",
+        "score": 0.3508
+      },
+      {
+        "record_id": "IR-A04-AR",
+        "score": -0.3928
+      },
+      {
+        "record_id": "PDPL-A21-AR",
+        "score": -0.558
+      },
+      {
+        "record_id": "IR-A10-AR",
+        "score": -0.8665
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.9,
+      "answer": 3.0,
+      "check": 0.0
+    }
+  },
+  "عميل وافق على معالجة بياناته ثم تراجع عن الموافقة؛ هل يستطيع العدول عنها، وما أثر ذلك؟": {
+    "question": "عميل وافق على معالجة بياناته ثم تراجع عن الموافقة؛ هل يستطيع العدول عنها، وما أثر ذلك؟",
+    "covered": true,
+    "answer": "يجوز لصاحب البيانات الشخصية الرجوع عن الموافقة المشار إليها في الفقرة (1) من هذه المادة في أي وقت.",
+    "sentences": [
+      {
+        "text": "يجوز لصاحب البيانات الشخصية الرجوع عن الموافقة المشار إليها في الفقرة (1) من هذه المادة في أي وقت.",
+        "citations": [
+          "PDPL-A05-AR"
+        ],
+        "evidence": {
+          "id": "PDPL-A05-AR",
+          "quote": "يجوز لصاحب البيانات الشخصية الرجوع عن الموافقة المشار إليها في الفقرة (1) من هذه المادة في أي وقت"
+        }
+      }
+    ],
+    "citations": [
+      "PDPL-A05-AR"
+    ],
+    "problems": [
+      {
+        "sentence": 1,
+        "id": "PDPL-A08-AR",
+        "status": "not_retrieved",
+        "reason": "Real article, but not one of the retrieved articles the answer was based on."
+      }
+    ],
+    "citation_check": [
+      {
+        "text": "يجوز لصاحب البيانات الشخصية الرجوع عن الموافقة المشار إليها في الفقرة (1) من هذه المادة في أي وقت.",
+        "citations": [
+          {
+            "id": "PDPL-A05-AR",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "إذا عدل صاحب البيانات الشخصية عن موافقته على جمع بياناته الشخصية، وكانت الموافقة هي المسوغ النظامي الوحيد للمعالجة.",
+        "citations": [
+          {
+            "id": "PDPL-A08-AR",
+            "status": "not_retrieved",
+            "reason": "Real article, but not one of the retrieved articles the answer was based on."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "PDPL-A05-AR",
+        "score": -2.347
+      },
+      {
+        "record_id": "IR-A11-AR",
+        "score": -2.5786
+      },
+      {
+        "record_id": "PDPL-A06-AR",
+        "score": -3.3895
+      },
+      {
+        "record_id": "IR-A13-AR",
+        "score": -3.4225
+      },
+      {
+        "record_id": "IR-A08-AR",
+        "score": -3.9687
+      },
+      {
+        "record_id": "IR-A04-AR",
+        "score": -4.069
+      },
+      {
+        "record_id": "PDPL-A26-AR",
+        "score": -4.4753
+      },
+      {
+        "record_id": "PDPL-A15-AR",
+        "score": -4.7198
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.8,
+      "answer": 2.5,
+      "check": 0.0
+    }
+  },
+  "هل تحتاج جهة التحكم دائمًا إلى موافقة صاحب البيانات لمعالجة بياناته مهما كان المسوغ؟": {
+    "question": "هل تحتاج جهة التحكم دائمًا إلى موافقة صاحب البيانات لمعالجة بياناته مهما كان المسوغ؟",
+    "covered": true,
+    "answer": "لا تخضع معالجة البيانات الشخصية للموافقة المشار إليها في الفقرة (1) من المادة (الخامسة) من النظام، في الأحوال الآتية: 1- عندما تُحقق المعالجة مصلحة متحققة لصاحب البيانات وكان الاتصال به متعذراً أو كان من الصعب تحقيق ذلك.",
+    "sentences": [
+      {
+        "text": "لا تخضع معالجة البيانات الشخصية للموافقة المشار إليها في الفقرة (1) من المادة (الخامسة) من النظام، في الأحوال الآتية: 1- عندما تُحقق المعالجة مصلحة متحققة لصاحب البيانات وكان الاتصال به متعذراً أو كان من الصعب تحقيق ذلك.",
+        "citations": [
+          "PDPL-A06-AR"
+        ],
+        "evidence": {
+          "id": "PDPL-A06-AR",
+          "quote": "لا تخضع معالجة البيانات الشخصية للموافقة المشار إليها في الفقرة (1) من المادة (الخامسة) من النظام، في الأحوال الآتية: 1- عندما تُحقق المعالجة مصلحة متحققة لصاحب البيانات وكان الاتصال به متعذراً أو كان من الصعب تحقيق ذلك"
+        }
+      }
+    ],
+    "citations": [
+      "PDPL-A06-AR"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "لا تخضع معالجة البيانات الشخصية للموافقة المشار إليها في الفقرة (1) من المادة (الخامسة) من النظام، في الأحوال الآتية: 1- عندما تُحقق المعالجة مصلحة متحققة لصاحب البيانات وكان الاتصال به متعذراً أو كان من الصعب تحقيق ذلك.",
+        "citations": [
+          {
+            "id": "PDPL-A06-AR",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "IR-A11-AR",
+        "score": 2.698
+      },
+      {
+        "record_id": "PDPL-A06-AR",
+        "score": 1.8276
+      },
+      {
+        "record_id": "IR-A08-AR",
+        "score": 1.7056
+      },
+      {
+        "record_id": "PDPL-A10-AR",
+        "score": 1.5292
+      },
+      {
+        "record_id": "PDPL-A13-AR",
+        "score": 1.5284
+      },
+      {
+        "record_id": "IR-A04-AR",
+        "score": 0.411
+      },
+      {
+        "record_id": "IR-A13-AR",
+        "score": 0.0875
+      },
+      {
+        "record_id": "IR-A14-AR",
+        "score": -0.3673
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.8,
+      "answer": 4.0,
+      "check": 0.0
+    }
+  },
+  "يشترط تطبيق إلكتروني موافقة المستخدم على معالجة بيانات غير مرتبطة بالخدمة قبل السماح له بإنشاء حساب. هل يجوز ذلك وفق نظام حماية البيانات الشخصية؟": {
+    "question": "يشترط تطبيق إلكتروني موافقة المستخدم على معالجة بيانات غير مرتبطة بالخدمة قبل السماح له بإنشاء حساب. هل يجوز ذلك وفق نظام حماية البيانات الشخصية؟",
+    "covered": true,
+    "answer": "لا يجوز أن تكون الموافقة شرطاً لإسداء خدمة أو تقديم منفعة، ما لم تكن الخدمة أو المنفعة ذات علاقة بمعالجة البيانات الشخصية التي صدرت الموافقة عليها.",
+    "sentences": [
+      {
+        "text": "لا يجوز أن تكون الموافقة شرطاً لإسداء خدمة أو تقديم منفعة، ما لم تكن الخدمة أو المنفعة ذات علاقة بمعالجة البيانات الشخصية التي صدرت الموافقة عليها.",
+        "citations": [
+          "PDPL-A07-AR"
+        ],
+        "evidence": null
+      }
+    ],
+    "citations": [
+      "PDPL-A07-AR"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "لا يجوز أن تكون الموافقة شرطاً لإسداء خدمة أو تقديم منفعة، ما لم تكن الخدمة أو المنفعة ذات علاقة بمعالجة البيانات الشخصية التي صدرت الموافقة عليها.",
+        "citations": [
+          {
+            "id": "PDPL-A07-AR",
+            "status": "supported",
+            "reason": "The article clearly states that consent cannot be a condition for providing a service unless it relates to the processing of personal data for which consent was given."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "PDPL-A07-AR",
+        "score": 2.5031
+      },
+      {
+        "record_id": "IR-A11-AR",
+        "score": 1.3313
+      },
+      {
+        "record_id": "PDPL-A05-AR",
+        "score": -0.0548
+      },
+      {
+        "record_id": "PDPL-A26-AR",
+        "score": -0.8366
+      },
+      {
+        "record_id": "PDPL-A10-AR",
+        "score": -1.6202
+      },
+      {
+        "record_id": "IR-A29-AR",
+        "score": -2.0374
+      },
+      {
+        "record_id": "IR-A04-AR",
+        "score": -2.1635
+      },
+      {
+        "record_id": "PDPL-A15-AR",
+        "score": -2.9045
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.8,
+      "answer": 2.3,
+      "check": 1.3
+    }
+  },
+  "تعتزم شركة جمع بيانات شخصية من جهة أخرى بدلًا من جمعها مباشرة من أصحابها. متى يجوز ذلك، وما القيود النظامية ذات العلاقة؟": {
+    "question": "تعتزم شركة جمع بيانات شخصية من جهة أخرى بدلًا من جمعها مباشرة من أصحابها. متى يجوز ذلك، وما القيود النظامية ذات العلاقة؟",
+    "covered": true,
+    "answer": "يجوز لجهة التحكم جمع البيانات الشخصية من غير صاحبها مباشرةً في عدة حالات، منها إذا وافق صاحب البيانات الشخصية على ذلك. كما يجوز جمع البيانات إذا كانت البيانات الشخصية متاحة للعموم أو جرى جمعها من مصدر متاح للعموم. أيضًا، إذا كانت جهة التحكم جهة عامة وكان جمع البيانات الشخصية أو معالجتها مطلوباً لأغراض المصلحة العامة أو لأغراض أمنية. يجوز أيضًا إذا كان جمع البيانات الشخصية أو معالجتها ضروريًّا لتحقيق مصالح مشروعة لجهة التحكم، ما لم يخل ذلك بحقوق صاحب البيانات الشخصية.",
+    "sentences": [
+      {
+        "text": "يجوز لجهة التحكم جمع البيانات الشخصية من غير صاحبها مباشرةً في عدة حالات، منها إذا وافق صاحب البيانات الشخصية على ذلك.",
+        "citations": [
+          "PDPL-A10-AR"
+        ],
+        "evidence": {
+          "id": "PDPL-A10-AR",
+          "quote": "يجوز لجهة التحكم جمع البيانات الشخصية من غير صاحبها مباشرةً، أو مُعالجتها لغرض آخر غير الذي جمعت من أجله، وذلك في الأحوال الآتية: 1- إذا وافق صاحب البيانات الشخصية على ذلك، وفقاً لأحكام النظام"
+        }
+      },
+      {
+        "text": "كما يجوز جمع البيانات إذا كانت البيانات الشخصية متاحة للعموم أو جرى جمعها من مصدر متاح للعموم.",
+        "citations": [
+          "PDPL-A10-AR"
+        ],
+        "evidence": {
+          "id": "PDPL-A10-AR",
+          "quote": "إذا كانت البيانات الشخصية متاحة للعموم، أو جرى جمعها من مصدر متاح للعموم"
+        }
+      },
+      {
+        "text": "أيضًا، إذا كانت جهة التحكم جهة عامة وكان جمع البيانات الشخصية أو معالجتها مطلوباً لأغراض المصلحة العامة أو لأغراض أمنية.",
+        "citations": [
+          "PDPL-A10-AR"
+        ],
+        "evidence": {
+          "id": "PDPL-A10-AR",
+          "quote": "إذا كانت جهة التحكم جهة عامة، وكان جمع البيانات الشخصية أو معالجتها؛ مطلوباً لأغراض المصلحة العامة أو لأغراض أمنية"
+        }
+      },
+      {
+        "text": "يجوز أيضًا إذا كان جمع البيانات الشخصية أو معالجتها ضروريًّا لتحقيق مصالح مشروعة لجهة التحكم، ما لم يخل ذلك بحقوق صاحب البيانات الشخصية.",
+        "citations": [
+          "PDPL-A10-AR"
+        ],
+        "evidence": {
+          "id": "PDPL-A10-AR",
+          "quote": "إذا كان جمع البيانات أو معالجتها ضروريًّا لتحقيق مصالح مشروعة لجهة التحكم، ما لم يخل ذلك بحقوق صاحب البيانات الشخصية أو يتعارض مع مصالحه"
+        }
+      }
+    ],
+    "citations": [
+      "PDPL-A10-AR"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "يجوز لجهة التحكم جمع البيانات الشخصية من غير صاحبها مباشرةً في عدة حالات، منها إذا وافق صاحب البيانات الشخصية على ذلك.",
+        "citations": [
+          {
+            "id": "PDPL-A10-AR",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "كما يجوز جمع البيانات إذا كانت البيانات الشخصية متاحة للعموم أو جرى جمعها من مصدر متاح للعموم.",
+        "citations": [
+          {
+            "id": "PDPL-A10-AR",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "أيضًا، إذا كانت جهة التحكم جهة عامة وكان جمع البيانات الشخصية أو معالجتها مطلوباً لأغراض المصلحة العامة أو لأغراض أمنية.",
+        "citations": [
+          {
+            "id": "PDPL-A10-AR",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "يجوز أيضًا إذا كان جمع البيانات الشخصية أو معالجتها ضروريًّا لتحقيق مصالح مشروعة لجهة التحكم، ما لم يخل ذلك بحقوق صاحب البيانات الشخصية.",
+        "citations": [
+          {
+            "id": "PDPL-A10-AR",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "PDPL-A10-AR",
+        "score": 5.0467
+      },
+      {
+        "record_id": "PDPL-A13-AR",
+        "score": 2.7779
+      },
+      {
+        "record_id": "PDPL-A26-AR",
+        "score": 2.2899
+      },
+      {
+        "record_id": "IR-A04-AR",
+        "score": 1.9206
+      },
+      {
+        "record_id": "PDPL-A27-AR",
+        "score": 1.208
+      },
+      {
+        "record_id": "PDPL-A18-AR",
+        "score": -0.7544
+      },
+      {
+        "record_id": "PDPL-A12-AR",
+        "score": -1.2597
+      },
+      {
+        "record_id": "PDPL-A15-AR",
+        "score": -1.6384
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.8,
+      "answer": 5.7,
+      "check": 0.0
+    }
+  },
+  "يتطلب نموذج التسجيل بيانات شخصية لا ترتبط بالغرض من تقديم الخدمة. ما الضابط النظامي الذي يحدد مقدار البيانات التي يجوز جمعها؟": {
+    "question": "يتطلب نموذج التسجيل بيانات شخصية لا ترتبط بالغرض من تقديم الخدمة. ما الضابط النظامي الذي يحدد مقدار البيانات التي يجوز جمعها؟",
+    "covered": true,
+    "answer": "على جهة التحكم جمع الحد الأدنى اللازم من البيانات الشخصية لتحقيق الغرض من المعالجة.",
+    "sentences": [
+      {
+        "text": "على جهة التحكم جمع الحد الأدنى اللازم من البيانات الشخصية لتحقيق الغرض من المعالجة.",
+        "citations": [
+          "IR-A19-AR"
+        ],
+        "evidence": {
+          "id": "IR-A19-AR",
+          "quote": "على جهة التحكم جمع الحد الأدنى اللازم من البيانات الشخصية لتحقيق الغرض من المعالجة"
+        }
+      }
+    ],
+    "citations": [
+      "IR-A19-AR"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "على جهة التحكم جمع الحد الأدنى اللازم من البيانات الشخصية لتحقيق الغرض من المعالجة.",
+        "citations": [
+          {
+            "id": "IR-A19-AR",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "PDPL-A14-AR",
+        "score": -0.9885
+      },
+      {
+        "record_id": "PDPL-A27-AR",
+        "score": -1.3397
+      },
+      {
+        "record_id": "PDPL-A10-AR",
+        "score": -1.608
+      },
+      {
+        "record_id": "PDPL-A26-AR",
+        "score": -1.6845
+      },
+      {
+        "record_id": "PDPL-A18-AR",
+        "score": -1.8747
+      },
+      {
+        "record_id": "IR-A18-AR",
+        "score": -2.0207
+      },
+      {
+        "record_id": "IR-A19-AR",
+        "score": -2.1547
+      },
+      {
+        "record_id": "IR-A20-AR",
+        "score": -2.1795
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.8,
+      "answer": 3.3,
+      "check": 0.0
+    }
+  },
+  "عند تسجيل عميل جديد، ما المعلومات الأساسية التي يجب على جهة التحكم إبلاغه بها قبل جمع بياناته الشخصية أو عند جمعها؟": {
+    "question": "عند تسجيل عميل جديد، ما المعلومات الأساسية التي يجب على جهة التحكم إبلاغه بها قبل جمع بياناته الشخصية أو عند جمعها؟",
+    "covered": true,
+    "answer": "يجب على جهة التحكم قبل أو عند جمع البيانات اتخاذ التدابير اللازمة لإبلاغ صاحب البيانات الشخصية بالآتي: الاسم النظامي لجهة التحكم، والغرض من جمع ومعالجة البيانات الشخصية بصورة محددة وواضحة وصريحة، وحقوق صاحب البيانات الشخصية.",
+    "sentences": [
+      {
+        "text": "يجب على جهة التحكم قبل أو عند جمع البيانات اتخاذ التدابير اللازمة لإبلاغ صاحب البيانات الشخصية بالآتي: الاسم النظامي لجهة التحكم، والغرض من جمع ومعالجة البيانات الشخصية بصورة محددة وواضحة وصريحة، وحقوق صاحب البيانات الشخصية.",
+        "citations": [
+          "IR-A04-AR",
+          "PDPL-A13-AR"
+        ],
+        "evidence": null
+      }
+    ],
+    "citations": [
+      "IR-A04-AR",
+      "PDPL-A13-AR"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "يجب على جهة التحكم قبل أو عند جمع البيانات اتخاذ التدابير اللازمة لإبلاغ صاحب البيانات الشخصية بالآتي: الاسم النظامي لجهة التحكم، والغرض من جمع ومعالجة البيانات الشخصية بصورة محددة وواضحة وصريحة، وحقوق صاحب البيانات الشخصية.",
+        "citations": [
+          {
+            "id": "IR-A04-AR",
+            "status": "supported",
+            "reason": "The article clearly states the requirements for informing the data subject, including the identity of the controller, the purpose of data collection, and the rights of the data subject."
+          },
+          {
+            "id": "PDPL-A13-AR",
+            "status": "partial",
+            "reason": "The article mentions some elements that need to be communicated but does not explicitly include all the details mentioned in the sentence."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "IR-A04-AR",
+        "score": 4.0002
+      },
+      {
+        "record_id": "PDPL-A13-AR",
+        "score": 0.0645
+      },
+      {
+        "record_id": "PDPL-A12-AR",
+        "score": -0.9029
+      },
+      {
+        "record_id": "IR-A30-AR",
+        "score": -1.0571
+      },
+      {
+        "record_id": "PDPL-A18-AR",
+        "score": -1.2048
+      },
+      {
+        "record_id": "PDPL-A10-AR",
+        "score": -1.645
+      },
+      {
+        "record_id": "IR-A29-AR",
+        "score": -1.9854
+      },
+      {
+        "record_id": "IR-A19-AR",
+        "score": -2.1274
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.8,
+      "answer": 2.5,
+      "check": 1.8
+    }
+  },
+  "شركة تريد الإفصاح عن بيانات العملاء لشريك تجاري؛ هل الإفصاح متاح دون وجود مسوغ؟": {
+    "question": "شركة تريد الإفصاح عن بيانات العملاء لشريك تجاري؛ هل الإفصاح متاح دون وجود مسوغ؟",
+    "covered": true,
+    "answer": "لا يجوز لجهة التحكم الإفصاح عن البيانات الشخصية إلا في الأحوال الآتية: 1- إذا وافق صاحب البيانات الشخصية على الإفصاح وفقاً لأحكام النظام.",
+    "sentences": [
+      {
+        "text": "لا يجوز لجهة التحكم الإفصاح عن البيانات الشخصية إلا في الأحوال الآتية: 1- إذا وافق صاحب البيانات الشخصية على الإفصاح وفقاً لأحكام النظام.",
+        "citations": [
+          "PDPL-A15-AR"
+        ],
+        "evidence": {
+          "id": "PDPL-A15-AR",
+          "quote": "لا يجوز لجهة التحكم الإفصاح عن البيانات الشخصية إلا في الأحوال الآتية: 1- إذا وافق صاحب البيانات الشخصية على الإفصاح وفقاً لأحكام النظام"
+        }
+      }
+    ],
+    "citations": [
+      "PDPL-A15-AR"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "لا يجوز لجهة التحكم الإفصاح عن البيانات الشخصية إلا في الأحوال الآتية: 1- إذا وافق صاحب البيانات الشخصية على الإفصاح وفقاً لأحكام النظام.",
+        "citations": [
+          {
+            "id": "PDPL-A15-AR",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "PDPL-A15-AR",
+        "score": -3.5002
+      },
+      {
+        "record_id": "PDPL-A41-AR",
+        "score": -4.0115
+      },
+      {
+        "record_id": "PDPL-A18-AR",
+        "score": -4.021
+      },
+      {
+        "record_id": "IR-A20-AR",
+        "score": -4.1305
+      },
+      {
+        "record_id": "PDPL-A13-AR",
+        "score": -4.3527
+      },
+      {
+        "record_id": "IR-A27-AR",
+        "score": -4.8637
+      },
+      {
+        "record_id": "PDPL-A31-AR",
+        "score": -4.9228
+      },
+      {
+        "record_id": "IR-A05-AR",
+        "score": -4.9417
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.8,
+      "answer": 1.7,
+      "check": 0.0
+    }
+  },
+  "صححت جهة تحكم بيانات شخصية سبق أن أفصحت عنها لجهة أخرى. ما التزامها تجاه الجهة التي تلقت البيانات؟": {
+    "question": "صححت جهة تحكم بيانات شخصية سبق أن أفصحت عنها لجهة أخرى. ما التزامها تجاه الجهة التي تلقت البيانات؟",
+    "covered": true,
+    "answer": "على جهة التحكم عند تصحيح البيانات الشخصية الالتزام بإشعار الجهات التي أُفصح لها عن البيانات الشخصية دون تأخير.",
+    "sentences": [
+      {
+        "text": "على جهة التحكم عند تصحيح البيانات الشخصية الالتزام بإشعار الجهات التي أُفصح لها عن البيانات الشخصية دون تأخير.",
+        "citations": [
+          "IR-A22-AR"
+        ],
+        "evidence": {
+          "id": "IR-A22-AR",
+          "quote": "الجهات التي أُفصح لها عن البيانات الشخصية دون تأخير"
+        }
+      }
+    ],
+    "citations": [
+      "IR-A22-AR"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "على جهة التحكم عند تصحيح البيانات الشخصية الالتزام بإشعار الجهات التي أُفصح لها عن البيانات الشخصية دون تأخير.",
+        "citations": [
+          {
+            "id": "IR-A22-AR",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "PDPL-A08-AR",
+        "score": 2.1709
+      },
+      {
+        "record_id": "PDPL-A29-AR",
+        "score": 1.6716
+      },
+      {
+        "record_id": "IR-A22-AR",
+        "score": 1.4101
+      },
+      {
+        "record_id": "TR-A07-AR",
+        "score": 0.9411
+      },
+      {
+        "record_id": "IR-A17-AR",
+        "score": 0.8833
+      },
+      {
+        "record_id": "PDPL-A15-AR",
+        "score": 0.8647
+      },
+      {
+        "record_id": "PDPL-A13-AR",
+        "score": 0.7977
+      },
+      {
+        "record_id": "TR-A02-AR",
+        "score": 0.6629
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.8,
+      "answer": 2.2,
+      "check": 0.0
+    }
+  },
+  "ما التزام جهة التحكم بحماية البيانات الشخصية أثناء معالجتها ونقلها، وفق النظام ولائحته التنفيذية؟": {
+    "question": "ما التزام جهة التحكم بحماية البيانات الشخصية أثناء معالجتها ونقلها، وفق النظام ولائحته التنفيذية؟",
+    "covered": true,
+    "answer": "على جهة التحكم اتخاذ ما يلزم من إجراءات ووسائل تنظيمية وإدارية وتقنية تضمن المحافظة على البيانات الشخصية، بما في ذلك عند نقلها؛ وذلك وفقاً للأحكام والضوابط التي تحددها اللوائح.",
+    "sentences": [
+      {
+        "text": "على جهة التحكم اتخاذ ما يلزم من إجراءات ووسائل تنظيمية وإدارية وتقنية تضمن المحافظة على البيانات الشخصية، بما في ذلك عند نقلها؛ وذلك وفقاً للأحكام والضوابط التي تحددها اللوائح.",
+        "citations": [
+          "PDPL-A19-AR"
+        ],
+        "evidence": {
+          "id": "PDPL-A19-AR",
+          "quote": "على جهة التحكم اتخاذ ما يلزم من إجراءات ووسائل تنظيمية وإدارية وتقنية تضمن المحافظة على البيانات الشخصية، بما في ذلك عند نقلها"
+        }
+      }
+    ],
+    "citations": [
+      "PDPL-A19-AR"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "على جهة التحكم اتخاذ ما يلزم من إجراءات ووسائل تنظيمية وإدارية وتقنية تضمن المحافظة على البيانات الشخصية، بما في ذلك عند نقلها؛ وذلك وفقاً للأحكام والضوابط التي تحددها اللوائح.",
+        "citations": [
+          {
+            "id": "PDPL-A19-AR",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "PDPL-A08-AR",
+        "score": 7.9473
+      },
+      {
+        "record_id": "IR-A17-AR",
+        "score": 7.3555
+      },
+      {
+        "record_id": "PDPL-A19-AR",
+        "score": 6.6499
+      },
+      {
+        "record_id": "IR-A32-AR",
+        "score": 5.1092
+      },
+      {
+        "record_id": "PDPL-A29-AR",
+        "score": 4.4091
+      },
+      {
+        "record_id": "IR-A36-AR",
+        "score": 3.7281
+      },
+      {
+        "record_id": "PDPL-A10-AR",
+        "score": 2.8551
+      },
+      {
+        "record_id": "TR-A07-AR",
+        "score": 2.7653
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.7,
+      "answer": 2.2,
+      "check": 0.0
+    }
+  },
+  "وقعت لدى جهة تحكم حادثة تسرب بيانات شخصية يُحتمل أن تسبب ضررًا. متى يجب إشعار الجهة المختصة، ومتى يجب إبلاغ صاحب البيانات الشخصية؟": {
+    "question": "وقعت لدى جهة تحكم حادثة تسرب بيانات شخصية يُحتمل أن تسبب ضررًا. متى يجب إشعار الجهة المختصة، ومتى يجب إبلاغ صاحب البيانات الشخصية؟",
+    "covered": true,
+    "answer": "يجب على جهة التحكم إشعار الجهة المختصة خلال مدة لا تتجاوز (72) ساعة من وقت علمها بالحادثة. يجب على جهة التحكم إشعار صاحب البيانات الشخصية دون تأخير غير مبرر بحادثة تسرب بياناته الشخصية.",
+    "sentences": [
+      {
+        "text": "يجب على جهة التحكم إشعار الجهة المختصة خلال مدة لا تتجاوز (72) ساعة من وقت علمها بالحادثة.",
+        "citations": [
+          "IR-A24-AR"
+        ],
+        "evidence": {
+          "id": "IR-A24-AR",
+          "quote": "تُشعر جهة التحكم الجهة المختصة في حالة وقوع حادثة تسرّب للبيانات الشخصية خلال مدة لا تتجاوز (72) ساعة من وقت علمها بالحادثة"
+        }
+      },
+      {
+        "text": "يجب على جهة التحكم إشعار صاحب البيانات الشخصية دون تأخير غير مبرر بحادثة تسرب بياناته الشخصية.",
+        "citations": [
+          "IR-A24-AR"
+        ],
+        "evidence": {
+          "id": "IR-A24-AR",
+          "quote": "على جهة التحكم دون تأخير غير مبرر إشعار صاحب البيانات الشخصية بحادثة تسرب بياناته الشخصية"
+        }
+      }
+    ],
+    "citations": [
+      "IR-A24-AR"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "يجب على جهة التحكم إشعار الجهة المختصة خلال مدة لا تتجاوز (72) ساعة من وقت علمها بالحادثة.",
+        "citations": [
+          {
+            "id": "IR-A24-AR",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "يجب على جهة التحكم إشعار صاحب البيانات الشخصية دون تأخير غير مبرر بحادثة تسرب بياناته الشخصية.",
+        "citations": [
+          {
+            "id": "IR-A24-AR",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "IR-A24-AR",
+        "score": 6.5548
+      },
+      {
+        "record_id": "PDPL-A20-AR",
+        "score": 3.9286
+      },
+      {
+        "record_id": "PDPL-A09-AR",
+        "score": -0.0663
+      },
+      {
+        "record_id": "IR-A25-AR",
+        "score": -1.4093
+      },
+      {
+        "record_id": "PDPL-A15-AR",
+        "score": -1.7458
+      },
+      {
+        "record_id": "IR-A22-AR",
+        "score": -2.0345
+      },
+      {
+        "record_id": "IR-A08-AR",
+        "score": -2.7623
+      },
+      {
+        "record_id": "IR-A03-AR",
+        "score": -2.7626
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.8,
+      "answer": 2.7,
+      "check": 0.0
+    }
+  },
+  "قدّم صاحب بيانات شخصية طلبًا لممارسة أحد حقوقه النظامية. ما المدة المحددة للاستجابة لطلبه، وما الحالات التي تجيز تمديدها؟": {
+    "question": "قدّم صاحب بيانات شخصية طلبًا لممارسة أحد حقوقه النظامية. ما المدة المحددة للاستجابة لطلبه، وما الحالات التي تجيز تمديدها؟",
+    "covered": true,
+    "answer": "يجب على جهة التحكم الاستجابة لطلبات صاحب البيانات الشخصية المتعلقة بحقوقه المنصوص عليها في النظام خلال مدة محددة. يمكن تمديد هذه المدة في حال تطلب التنفيذ جهداً إضافياً غير متوقع أو غير معتاد أو في حال تلقيها طلبات متعددة من صاحب البيانات الشخصية.",
+    "sentences": [
+      {
+        "text": "يجب على جهة التحكم الاستجابة لطلبات صاحب البيانات الشخصية المتعلقة بحقوقه المنصوص عليها في النظام خلال مدة محددة.",
+        "citations": [
+          "PDPL-A21-AR"
+        ],
+        "evidence": {
+          "id": "PDPL-A21-AR",
+          "quote": "على جهة التحكم الاستجابة لطلبات صاحب البيانات الشخصية المتعلقة بحقوقه المنصوص عليها في النظام خلال مدة محددة وعبر وسيلة مناسبة تبينهما اللوائح"
+        }
+      },
+      {
+        "text": "يمكن تمديد هذه المدة في حال تطلب التنفيذ جهداً إضافياً غير متوقع أو غير معتاد أو في حال تلقيها طلبات متعددة من صاحب البيانات الشخصية.",
+        "citations": [
+          "IR-A03-AR"
+        ],
+        "evidence": {
+          "id": "IR-A03-AR",
+          "quote": "ولها تمديد ذلك في حال تطلب التنفيذ جهداً إضافياً غير متوقع أو غير معتاد أو في حال تلقيها طلبات متعددة من صاحب البيانات الشخصية"
+        }
+      }
+    ],
+    "citations": [
+      "PDPL-A21-AR",
+      "IR-A03-AR"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "يجب على جهة التحكم الاستجابة لطلبات صاحب البيانات الشخصية المتعلقة بحقوقه المنصوص عليها في النظام خلال مدة محددة.",
+        "citations": [
+          {
+            "id": "PDPL-A21-AR",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "يمكن تمديد هذه المدة في حال تطلب التنفيذ جهداً إضافياً غير متوقع أو غير معتاد أو في حال تلقيها طلبات متعددة من صاحب البيانات الشخصية.",
+        "citations": [
+          {
+            "id": "IR-A03-AR",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "IR-A03-AR",
+        "score": 4.7417
+      },
+      {
+        "record_id": "PDPL-A21-AR",
+        "score": 0.5624
+      },
+      {
+        "record_id": "PDPL-A04-AR",
+        "score": -0.2956
+      },
+      {
+        "record_id": "IR-A06-AR",
+        "score": -0.8161
+      },
+      {
+        "record_id": "PDPL-A09-AR",
+        "score": -1.4902
+      },
+      {
+        "record_id": "IR-A04-AR",
+        "score": -1.6544
+      },
+      {
+        "record_id": "IR-A10-AR",
+        "score": -2.2558
+      },
+      {
+        "record_id": "PDPL-A18-AR",
+        "score": -2.2801
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.8,
+      "answer": 2.6,
+      "check": 0.0
+    }
+  },
+  "تعتزم شركة إرسال رسائل ترويجية إلى عملائها عبر وسائل الاتصال الشخصية. ما ضوابط الموافقة على الإرسال، وكيف يمكن للمستلم إيقاف الرسائل؟": {
+    "question": "تعتزم شركة إرسال رسائل ترويجية إلى عملائها عبر وسائل الاتصال الشخصية. ما ضوابط الموافقة على الإرسال، وكيف يمكن للمستلم إيقاف الرسائل؟",
+    "covered": true,
+    "answer": "يجب على جهة التحكم الحصول على موافقة المتلقي المستهدف قبل إرسال مواد دعائية أو توعوية. يجب توفير آلية تمكن المستلم من إيقاف تلقي الرسائل بسهولة.",
+    "sentences": [
+      {
+        "text": "يجب على جهة التحكم الحصول على موافقة المتلقي المستهدف قبل إرسال مواد دعائية أو توعوية.",
+        "citations": [
+          "IR-A28-AR"
+        ],
+        "evidence": {
+          "id": "IR-A28-AR",
+          "quote": "على جهة التحكم قبل إرسال مواد دعائية أو توعوية الحصول على موافقة المتلقي المستهدف"
+        }
+      },
+      {
+        "text": "يجب توفير آلية تمكن المستلم من إيقاف تلقي الرسائل بسهولة.",
+        "citations": [
+          "IR-A28-AR"
+        ],
+        "evidence": {
+          "id": "IR-A28-AR",
+          "quote": "آلية تمكن صاحب البيانات الشخصية من إيقاف تلقي تلك المواد الدعائية أو التوعوية متى ما رغب في ذلك"
+        }
+      }
+    ],
+    "citations": [
+      "IR-A28-AR"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "يجب على جهة التحكم الحصول على موافقة المتلقي المستهدف قبل إرسال مواد دعائية أو توعوية.",
+        "citations": [
+          {
+            "id": "IR-A28-AR",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "يجب توفير آلية تمكن المستلم من إيقاف تلقي الرسائل بسهولة.",
+        "citations": [
+          {
+            "id": "IR-A28-AR",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "PDPL-A25-AR",
+        "score": -1.8756
+      },
+      {
+        "record_id": "IR-A29-AR",
+        "score": -1.963
+      },
+      {
+        "record_id": "IR-A28-AR",
+        "score": -3.0369
+      },
+      {
+        "record_id": "IR-A10-AR",
+        "score": -3.905
+      },
+      {
+        "record_id": "PDPL-A19-AR",
+        "score": -4.2104
+      },
+      {
+        "record_id": "PDPL-A26-AR",
+        "score": -4.2238
+      },
+      {
+        "record_id": "PDPL-A21-AR",
+        "score": -4.8345
+      },
+      {
+        "record_id": "IR-A11-AR",
+        "score": -5.0262
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.8,
+      "answer": 1.9,
+      "check": 0.0
+    }
+  },
+  "يرغب فريق بحثي في معالجة بيانات شخصية لأغراض إحصائية دون الحصول على موافقة أصحابها. في أي حالات يسمح النظام بذلك؟": {
+    "question": "يرغب فريق بحثي في معالجة بيانات شخصية لأغراض إحصائية دون الحصول على موافقة أصحابها. في أي حالات يسمح النظام بذلك؟",
+    "covered": true,
+    "answer": "يجوز جمع البيانات الشخصية أو مُعالجتها لأغراض علمية أو بحثية أو إحصائية دون موافقة صاحبها، في الأحوال الآتية: 1- إذا لم تتضمن البيانات الشخصية ما يدل على هوية صاحبها على وجه التحديد. يجوز جمع البيانات الشخصية أو مُعالجتها لأغراض علمية أو بحثية أو إحصائية دون موافقة صاحبها، في الأحوال الآتية: 2- إذا كان سَيُجرى إتلاف ما يدل على هوية صاحب البيانات الشخصية على وجه التحديد خلال عملية مُعالجتها وقبل الإفصاح عنها لأي جهة أُخرى ولم تكن تلك البيانات بيانات حساسة. يجوز جمع البيانات الشخصية أو مُعالجتها لأغراض علمية أو بحثية أو إحصائية دون موافقة صاحبها، في الأحوال الآتية: 3- إذا كان جمع البيانات الشخصية أو معالجتها لهذه الأغراض يقتضيها نظام آخر أو تنفيذاً لاتفاق سابق يكون صاحبها طرفاً فيه.",
+    "sentences": [
+      {
+        "text": "يجوز جمع البيانات الشخصية أو مُعالجتها لأغراض علمية أو بحثية أو إحصائية دون موافقة صاحبها، في الأحوال الآتية: 1- إذا لم تتضمن البيانات الشخصية ما يدل على هوية صاحبها على وجه التحديد.",
+        "citations": [
+          "PDPL-A27-AR"
+        ],
+        "evidence": {
+          "id": "PDPL-A27-AR",
+          "quote": "يجوز جمع البيانات الشخصية أو مُعالجتها لأغراض علمية أو بحثية أو إحصائية دون موافقة صاحبها، في الأحوال الآتية: 1- إذا لم تتضمن البيانات الشخصية ما يدل على هوية صاحبها على وجه التحديد"
+        }
+      },
+      {
+        "text": "يجوز جمع البيانات الشخصية أو مُعالجتها لأغراض علمية أو بحثية أو إحصائية دون موافقة صاحبها، في الأحوال الآتية: 2- إذا كان سَيُجرى إتلاف ما يدل على هوية صاحب البيانات الشخصية على وجه التحديد خلال عملية مُعالجتها وقبل الإفصاح عنها لأي جهة أُخرى ولم تكن تلك البيانات بيانات حساسة.",
+        "citations": [
+          "PDPL-A27-AR"
+        ],
+        "evidence": null
+      },
+      {
+        "text": "يجوز جمع البيانات الشخصية أو مُعالجتها لأغراض علمية أو بحثية أو إحصائية دون موافقة صاحبها، في الأحوال الآتية: 3- إذا كان جمع البيانات الشخصية أو معالجتها لهذه الأغراض يقتضيها نظام آخر أو تنفيذاً لاتفاق سابق يكون صاحبها طرفاً فيه.",
+        "citations": [
+          "PDPL-A27-AR"
+        ],
+        "evidence": null
+      }
+    ],
+    "citations": [
+      "PDPL-A27-AR"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "يجوز جمع البيانات الشخصية أو مُعالجتها لأغراض علمية أو بحثية أو إحصائية دون موافقة صاحبها، في الأحوال الآتية: 1- إذا لم تتضمن البيانات الشخصية ما يدل على هوية صاحبها على وجه التحديد.",
+        "citations": [
+          {
+            "id": "PDPL-A27-AR",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "يجوز جمع البيانات الشخصية أو مُعالجتها لأغراض علمية أو بحثية أو إحصائية دون موافقة صاحبها، في الأحوال الآتية: 2- إذا كان سَيُجرى إتلاف ما يدل على هوية صاحب البيانات الشخصية على وجه التحديد خلال عملية مُعالجتها وقبل الإفصاح عنها لأي جهة أُخرى ولم تكن تلك البيانات بيانات حساسة.",
+        "citations": [
+          {
+            "id": "PDPL-A27-AR",
+            "status": "supported",
+            "reason": "The article clearly states the conditions under which personal data can be processed without consent."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "يجوز جمع البيانات الشخصية أو مُعالجتها لأغراض علمية أو بحثية أو إحصائية دون موافقة صاحبها، في الأحوال الآتية: 3- إذا كان جمع البيانات الشخصية أو معالجتها لهذه الأغراض يقتضيها نظام آخر أو تنفيذاً لاتفاق سابق يكون صاحبها طرفاً فيه.",
+        "citations": [
+          {
+            "id": "PDPL-A27-AR",
+            "status": "supported",
+            "reason": "The article clearly states the conditions under which personal data can be processed without consent."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "PDPL-A27-AR",
+        "score": 6.9588
+      },
+      {
+        "record_id": "IR-A30-AR",
+        "score": 6.2944
+      },
+      {
+        "record_id": "PDPL-A06-AR",
+        "score": 2.1672
+      },
+      {
+        "record_id": "PDPL-A26-AR",
+        "score": 1.2267
+      },
+      {
+        "record_id": "PDPL-A10-AR",
+        "score": 0.4332
+      },
+      {
+        "record_id": "PDPL-A14-AR",
+        "score": 0.0555
+      },
+      {
+        "record_id": "IR-A29-AR",
+        "score": -0.0937
+      },
+      {
+        "record_id": "PDPL-A15-AR",
+        "score": -1.8819
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.8,
+      "answer": 5.4,
+      "check": 1.7
+    }
+  },
+  "تعتزم جهة تحكم نقل بيانات شخصية إلى مركز بيانات خارج المملكة. ما الأغراض والشروط النظامية الأساسية لهذا النقل؟": {
+    "question": "تعتزم جهة تحكم نقل بيانات شخصية إلى مركز بيانات خارج المملكة. ما الأغراض والشروط النظامية الأساسية لهذا النقل؟",
+    "covered": true,
+    "answer": "يجوز لجهة التحكم نقل البيانات الشخصية إلى خارج المملكة لتحقيق أغراض معينة، منها تقديم خدمة أو منفعة لصاحب البيانات الشخصية. يجب أن يتوافر مستوى مناسب لحماية البيانات الشخصية في خارج المملكة. يجب أن يقتصر النقل على الحد الأدنى من البيانات الشخصية الذي تدعو الحاجة إليه.",
+    "sentences": [
+      {
+        "text": "يجوز لجهة التحكم نقل البيانات الشخصية إلى خارج المملكة لتحقيق أغراض معينة، منها تقديم خدمة أو منفعة لصاحب البيانات الشخصية.",
+        "citations": [
+          "PDPL-A29-AR"
+        ],
+        "evidence": {
+          "id": "PDPL-A29-AR",
+          "quote": "يجوز لجهة التحكم نقل البيانات الشخصية إلى خارج المملكة أو الإفصاح عنها لجهة خارج المملكة، وذلك لتحقيق أيٍّ من الأغراض الآتية … ب- إذا كان ذلك لخدمة مصالح المملكة"
+        }
+      },
+      {
+        "text": "يجب أن يتوافر مستوى مناسب لحماية البيانات الشخصية في خارج المملكة.",
+        "citations": [
+          "PDPL-A29-AR"
+        ],
+        "evidence": {
+          "id": "PDPL-A29-AR",
+          "quote": "أن يتوافر مستوى مناسب لحماية البيانات الشخصية في خارج المملكة؛ بما لا يقل عن مستوى الحماية المقرر في النظام واللوائح"
+        }
+      },
+      {
+        "text": "يجب أن يقتصر النقل على الحد الأدنى من البيانات الشخصية الذي تدعو الحاجة إليه.",
+        "citations": [
+          "PDPL-A29-AR"
+        ],
+        "evidence": {
+          "id": "PDPL-A29-AR",
+          "quote": "أن يقتصر النقل أو الإفصاح على الحد الأدنى من البيانات الشخصية الذي تدعو الحاجة إليه"
+        }
+      }
+    ],
+    "citations": [
+      "PDPL-A29-AR"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "يجوز لجهة التحكم نقل البيانات الشخصية إلى خارج المملكة لتحقيق أغراض معينة، منها تقديم خدمة أو منفعة لصاحب البيانات الشخصية.",
+        "citations": [
+          {
+            "id": "PDPL-A29-AR",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "يجب أن يتوافر مستوى مناسب لحماية البيانات الشخصية في خارج المملكة.",
+        "citations": [
+          {
+            "id": "PDPL-A29-AR",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "يجب أن يقتصر النقل على الحد الأدنى من البيانات الشخصية الذي تدعو الحاجة إليه.",
+        "citations": [
+          {
+            "id": "PDPL-A29-AR",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "TR-A02-AR",
+        "score": 6.8451
+      },
+      {
+        "record_id": "PDPL-A29-AR",
+        "score": 6.7053
+      },
+      {
+        "record_id": "TR-A07-AR",
+        "score": 4.8772
+      },
+      {
+        "record_id": "PDPL-A13-AR",
+        "score": 2.8912
+      },
+      {
+        "record_id": "PDPL-A31-AR",
+        "score": 2.4396
+      },
+      {
+        "record_id": "PDPL-A19-AR",
+        "score": 2.0992
+      },
+      {
+        "record_id": "TR-A05-AR",
+        "score": 1.3867
+      },
+      {
+        "record_id": "TR-A03-AR",
+        "score": 1.1125
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.8,
+      "answer": 3.2,
+      "check": 0.0
+    }
+  },
+  "تدرس شركة تابعة لمجموعة متعددة الجنسيات استخدام ضمانات مناسبة لنقل بيانات شخصية إلى خارج المملكة. ما أنواع الضمانات المحددة في اللائحة، وما القيد الأساسي على استخدامها؟": {
+    "question": "تدرس شركة تابعة لمجموعة متعددة الجنسيات استخدام ضمانات مناسبة لنقل بيانات شخصية إلى خارج المملكة. ما أنواع الضمانات المحددة في اللائحة، وما القيد الأساسي على استخدامها؟",
+    "covered": true,
+    "answer": "الضمانات المناسبة المحددة في اللائحة تشمل البنود التعاقدية القياسية، القواعد المشتركة الملزمة، وشهادة الاعتماد. القيد الأساسي على استخدامها هو أن تكون الضمانات مناسبة وتضمن التزام جهات التحكم بالأحكام المنصوص عليها في النظام ولوائحه.",
+    "sentences": [
+      {
+        "text": "الضمانات المناسبة المحددة في اللائحة تشمل البنود التعاقدية القياسية، القواعد المشتركة الملزمة، وشهادة الاعتماد.",
+        "citations": [
+          "TR-A04-AR"
+        ],
+        "evidence": {
+          "id": "TR-A04-AR",
+          "quote": "تقوم جهة التحكم باستخدام الضمانات المناسبة الآتية: ‌أ. البنود التعاقدية القياسية. ‌ب. القواعد المشتركة الملزمة. ‌ج. شهادة الاعتماد"
+        }
+      },
+      {
+        "text": "القيد الأساسي على استخدامها هو أن تكون الضمانات مناسبة وتضمن التزام جهات التحكم بالأحكام المنصوص عليها في النظام ولوائحه.",
+        "citations": [
+          "TR-A04-AR"
+        ],
+        "evidence": {
+          "id": "TR-A04-AR",
+          "quote": "يجب أن تضمن الضمانات المناسبة التزام جهات التحكم بالأحكام المنصوص عليها في النظام ولوائحه"
+        }
+      }
+    ],
+    "citations": [
+      "TR-A04-AR"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "الضمانات المناسبة المحددة في اللائحة تشمل البنود التعاقدية القياسية، القواعد المشتركة الملزمة، وشهادة الاعتماد.",
+        "citations": [
+          {
+            "id": "TR-A04-AR",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "القيد الأساسي على استخدامها هو أن تكون الضمانات مناسبة وتضمن التزام جهات التحكم بالأحكام المنصوص عليها في النظام ولوائحه.",
+        "citations": [
+          {
+            "id": "TR-A04-AR",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "TR-A04-AR",
+        "score": -0.8821
+      },
+      {
+        "record_id": "PDPL-A33-AR",
+        "score": -1.9215
+      },
+      {
+        "record_id": "TR-A03-AR",
+        "score": -2.2027
+      },
+      {
+        "record_id": "PDPL-A29-AR",
+        "score": -2.7906
+      },
+      {
+        "record_id": "TR-A07-AR",
+        "score": -3.0549
+      },
+      {
+        "record_id": "PDPL-A02-AR",
+        "score": -3.1199
+      },
+      {
+        "record_id": "TR-A02-AR",
+        "score": -3.842
+      },
+      {
+        "record_id": "PDPL-A09-AR",
+        "score": -3.9719
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.9,
+      "answer": 2.7,
+      "check": 0.0
+    }
+  },
+  "a mobile application collects personal data directly from users during registration. what information must the controller provide to users before or at the time of collection under the saudi personal data protection law and its implementing regulation?": {
+    "question": "A mobile application collects personal data directly from users during registration. What information must the controller provide to users before or at the time of collection under the Saudi Personal Data Protection Law and its Implementing Regulation?",
+    "covered": true,
+    "answer": "The Controller shall, before or when collecting the Data, take the necessary measures to inform the Data Subject of the following: the legal basis and a specific, clear, and explicit purpose for collecting and Processing Personal Data. The Controller shall inform the Data Subject of the period for which the Personal Data will be stored, or if that is not possible, the criteria used to determine that period. The Controller must explain the Data Subject’s rights, as stipulated in Article (4) of the Law and the mechanisms for exercising those rights. The Controller shall explain how to withdraw consent given to process any Personal Data. The Controller must indicate whether collecting or Processing Personal Data is mandatory or optional.",
+    "sentences": [
+      {
+        "text": "The Controller shall, before or when collecting the Data, take the necessary measures to inform the Data Subject of the following: the legal basis and a specific, clear, and explicit purpose for collecting and Processing Personal Data.",
+        "citations": [
+          "IR-A04-EN"
+        ],
+        "evidence": {
+          "id": "IR-A04-EN",
+          "quote": "The legal basis and a specific, clear, and explicit purpose for collecting and Processing Personal Data"
+        }
+      },
+      {
+        "text": "The Controller shall inform the Data Subject of the period for which the Personal Data will be stored, or if that is not possible, the criteria used to determine that period.",
+        "citations": [
+          "IR-A04-EN"
+        ],
+        "evidence": {
+          "id": "IR-A04-EN",
+          "quote": "The period for which the Personal Data will be stored, or if that is not possible, the criteria used to determine that period"
+        }
+      },
+      {
+        "text": "The Controller must explain the Data Subject’s rights, as stipulated in Article (4) of the Law and the mechanisms for exercising those rights.",
+        "citations": [
+          "IR-A04-EN"
+        ],
+        "evidence": {
+          "id": "IR-A04-EN",
+          "quote": "Explanation about Data Subject’s rights, as stipulated in Article (4) of the Law and the mechanisms for exercising those rights"
+        }
+      },
+      {
+        "text": "The Controller shall explain how to withdraw consent given to process any Personal Data.",
+        "citations": [
+          "IR-A04-EN"
+        ],
+        "evidence": {
+          "id": "IR-A04-EN",
+          "quote": "how to withdraw consent given to process of any Personal Data"
+        }
+      },
+      {
+        "text": "The Controller must indicate whether collecting or Processing Personal Data is mandatory or optional.",
+        "citations": [
+          "IR-A04-EN"
+        ],
+        "evidence": {
+          "id": "IR-A04-EN",
+          "quote": "Explaining whether collecting or Processing Personal Data is mandatory or optional"
+        }
+      }
+    ],
+    "citations": [
+      "IR-A04-EN"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "The Controller shall, before or when collecting the Data, take the necessary measures to inform the Data Subject of the following: the legal basis and a specific, clear, and explicit purpose for collecting and Processing Personal Data.",
+        "citations": [
+          {
+            "id": "IR-A04-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "The Controller shall inform the Data Subject of the period for which the Personal Data will be stored, or if that is not possible, the criteria used to determine that period.",
+        "citations": [
+          {
+            "id": "IR-A04-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "The Controller must explain the Data Subject’s rights, as stipulated in Article (4) of the Law and the mechanisms for exercising those rights.",
+        "citations": [
+          {
+            "id": "IR-A04-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "The Controller shall explain how to withdraw consent given to process any Personal Data.",
+        "citations": [
+          {
+            "id": "IR-A04-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "The Controller must indicate whether collecting or Processing Personal Data is mandatory or optional.",
+        "citations": [
+          {
+            "id": "IR-A04-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "IR-A04-EN",
+        "score": 1.6212
+      },
+      {
+        "record_id": "PDPL-A13-EN",
+        "score": 1.3746
+      },
+      {
+        "record_id": "PDPL-A10-EN",
+        "score": 1.163
+      },
+      {
+        "record_id": "IR-A15-EN",
+        "score": -0.0549
+      },
+      {
+        "record_id": "PDPL-A26-EN",
+        "score": -0.0563
+      },
+      {
+        "record_id": "PDPL-A11-EN",
+        "score": -0.3621
+      },
+      {
+        "record_id": "IR-A21-EN",
+        "score": -0.434
+      },
+      {
+        "record_id": "PDPL-A15-EN",
+        "score": -1.489
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.8,
+      "answer": 3.7,
+      "check": 0.0
+    }
+  },
+  "what limitations apply when a data subject exercises the right to access personal data?": {
+    "question": "What limitations apply when a data subject exercises the right to access personal data?",
+    "covered": true,
+    "answer": "The Controller may limit the exercise of the right to access Personal Data in certain cases, such as to protect the Data Subject or others from harm. If the Controller is a Public Entity, access may be restricted for security purposes or to fulfill judicial requirements. The Controller shall prevent the Data Subject from accessing Personal Data in specific situations outlined in Article (16).",
+    "sentences": [
+      {
+        "text": "The Controller may limit the exercise of the right to access Personal Data in certain cases, such as to protect the Data Subject or others from harm.",
+        "citations": [
+          "PDPL-A09-EN"
+        ],
+        "evidence": {
+          "id": "PDPL-A09-EN",
+          "quote": "The Controller may limit the exercise of this right in the following cases: a) If this is necessary to protect the Data Subject or other parties from any harm"
+        }
+      },
+      {
+        "text": "If the Controller is a Public Entity, access may be restricted for security purposes or to fulfill judicial requirements.",
+        "citations": [
+          "PDPL-A09-EN"
+        ],
+        "evidence": {
+          "id": "PDPL-A09-EN",
+          "quote": "If the Controller is a Public Entity and the restriction is required for security purposes, required by another law, or required to fulfill judicial requirements"
+        }
+      },
+      {
+        "text": "The Controller shall prevent the Data Subject from accessing Personal Data in specific situations outlined in Article (16).",
+        "citations": [
+          "PDPL-A09-EN"
+        ],
+        "evidence": {
+          "id": "PDPL-A09-EN",
+          "quote": "Controller shall prevent the Data Subject from accessing Personal Data in any of the situations stated in Paragraphs (1, 2, 3, 4, 5) and (6) of Article (16) herein"
+        }
+      }
+    ],
+    "citations": [
+      "PDPL-A09-EN"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "The Controller may limit the exercise of the right to access Personal Data in certain cases, such as to protect the Data Subject or others from harm.",
+        "citations": [
+          {
+            "id": "PDPL-A09-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "If the Controller is a Public Entity, access may be restricted for security purposes or to fulfill judicial requirements.",
+        "citations": [
+          {
+            "id": "PDPL-A09-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "The Controller shall prevent the Data Subject from accessing Personal Data in specific situations outlined in Article (16).",
+        "citations": [
+          {
+            "id": "PDPL-A09-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "IR-A05-EN",
+        "score": 7.6911
+      },
+      {
+        "record_id": "IR-A06-EN",
+        "score": 7.4596
+      },
+      {
+        "record_id": "PDPL-A09-EN",
+        "score": 6.898
+      },
+      {
+        "record_id": "IR-A07-EN",
+        "score": 6.328
+      },
+      {
+        "record_id": "PDPL-A04-EN",
+        "score": 3.842
+      },
+      {
+        "record_id": "IR-A04-EN",
+        "score": 0.3582
+      },
+      {
+        "record_id": "PDPL-A23-EN",
+        "score": 0.1074
+      },
+      {
+        "record_id": "IR-A13-EN",
+        "score": -0.0652
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.8,
+      "answer": 3.3,
+      "check": 0.0
+    }
+  },
+  "an employee finds incorrect personal details in a controller’s records. may supporting documents be requested for correction?": {
+    "question": "An employee finds incorrect personal details in a controller’s records. May supporting documents be requested for correction?",
+    "covered": true,
+    "answer": "The Controller may request needed supporting documents or evidence to verify in order to update, correct, or complete the Personal Data.",
+    "sentences": [
+      {
+        "text": "The Controller may request needed supporting documents or evidence to verify in order to update, correct, or complete the Personal Data.",
+        "citations": [
+          "IR-A07-EN"
+        ],
+        "evidence": {
+          "id": "IR-A07-EN",
+          "quote": "Controller may request needed supporting documents or evidence to verify in order to update, correct, or complete the Personal Data"
+        }
+      }
+    ],
+    "citations": [
+      "IR-A07-EN"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "The Controller may request needed supporting documents or evidence to verify in order to update, correct, or complete the Personal Data.",
+        "citations": [
+          {
+            "id": "IR-A07-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "IR-A07-EN",
+        "score": 4.0483
+      },
+      {
+        "record_id": "IR-A22-EN",
+        "score": 3.8655
+      },
+      {
+        "record_id": "PDPL-A17-EN",
+        "score": 0.552
+      },
+      {
+        "record_id": "PDPL-A31-EN",
+        "score": -2.4103
+      },
+      {
+        "record_id": "PDPL-A14-EN",
+        "score": -3.0893
+      },
+      {
+        "record_id": "PDPL-A16-EN",
+        "score": -3.2309
+      },
+      {
+        "record_id": "PDPL-A15-EN",
+        "score": -3.6134
+      },
+      {
+        "record_id": "IR-A33-EN",
+        "score": -3.9965
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.9,
+      "answer": 1.3,
+      "check": 0.0
+    }
+  },
+  "a data subject withdraws consent, which was the sole legal basis for processing their personal data. when must the controller destroy the data, and what related obligations apply?": {
+    "question": "A data subject withdraws consent, which was the sole legal basis for processing their personal data. When must the controller destroy the data, and what related obligations apply?",
+    "covered": true,
+    "answer": "The Controller shall destroy Personal Data upon the Data Subject's request, which includes the situation where consent is the sole legal basis for Processing. When the Data Subject withdraws their consent for Processing their data, the Controller shall take appropriate measures to notify those to whom the Personal Data has been disclosed and request its Destruction.",
+    "sentences": [
+      {
+        "text": "The Controller shall destroy Personal Data upon the Data Subject's request, which includes the situation where consent is the sole legal basis for Processing.",
+        "citations": [
+          "IR-A08-EN"
+        ],
+        "evidence": {
+          "id": "IR-A08-EN",
+          "quote": "The Controller shall destroy Personal Data in any of the following cases: a) Upon Data Subject's request"
+        }
+      },
+      {
+        "text": "When the Data Subject withdraws their consent for Processing their data, the Controller shall take appropriate measures to notify those to whom the Personal Data has been disclosed and request its Destruction.",
+        "citations": [
+          "IR-A12-EN"
+        ],
+        "evidence": {
+          "id": "IR-A12-EN",
+          "quote": "When the Data Subject withdraws their consent for Processing their data, the Controller shall take appropriate measures to notify those to whom the Personal Data has been disclosed and request its Destruction through any available means"
+        }
+      }
+    ],
+    "citations": [
+      "IR-A08-EN",
+      "IR-A12-EN"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "The Controller shall destroy Personal Data upon the Data Subject's request, which includes the situation where consent is the sole legal basis for Processing.",
+        "citations": [
+          {
+            "id": "IR-A08-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "When the Data Subject withdraws their consent for Processing their data, the Controller shall take appropriate measures to notify those to whom the Personal Data has been disclosed and request its Destruction.",
+        "citations": [
+          {
+            "id": "IR-A12-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "IR-A08-EN",
+        "score": 9.0431
+      },
+      {
+        "record_id": "IR-A12-EN",
+        "score": 7.3419
+      },
+      {
+        "record_id": "PDPL-A05-EN",
+        "score": 5.3842
+      },
+      {
+        "record_id": "IR-A04-EN",
+        "score": 4.8145
+      },
+      {
+        "record_id": "IR-A29-EN",
+        "score": 4.0339
+      },
+      {
+        "record_id": "PDPL-A27-EN",
+        "score": 3.1894
+      },
+      {
+        "record_id": "IR-A11-EN",
+        "score": 2.158
+      },
+      {
+        "record_id": "PDPL-A10-EN",
+        "score": 2.1118
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.8,
+      "answer": 2.4,
+      "check": 0.0
+    }
+  },
+  "which communication channels may a controller provide for data subjects to exercise their rights under the implementing regulation?": {
+    "question": "Which communication channels may a controller provide for data subjects to exercise their rights under the Implementing Regulation?",
+    "covered": true,
+    "answer": "The Controller shall provide appropriate means to process requests related to Data Subject rights as stipulated in the Law. The Data Subject shall have the choice to use one or many among the following means according to their preference: E-mail, Text messages, The national address, Communication via electronic applications, Any other lawful communication mean provided by the Controller for this purpose.",
+    "sentences": [
+      {
+        "text": "The Controller shall provide appropriate means to process requests related to Data Subject rights as stipulated in the Law.",
+        "citations": [
+          "IR-A10-EN"
+        ],
+        "evidence": {
+          "id": "IR-A10-EN",
+          "quote": "The Controller is required to provide appropriate means to process requests related to Data Subject rights as stipulated in the Law"
+        }
+      },
+      {
+        "text": "The Data Subject shall have the choice to use one or many among the following means according to their preference: E-mail, Text messages, The national address, Communication via electronic applications, Any other lawful communication mean provided by the Controller for this purpose.",
+        "citations": [
+          "IR-A10-EN"
+        ],
+        "evidence": {
+          "id": "IR-A10-EN",
+          "quote": "The Data Subject shall have the choice to use one or many among the following means according to their preference considering options made available by the Controller: 1. E-mail. 2. Text messages. 3. The national address. 4. Communication via electronic applications. 5. Any other lawful communication mean provided by the Controller for this purpose"
+        }
+      }
+    ],
+    "citations": [
+      "IR-A10-EN"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "The Controller shall provide appropriate means to process requests related to Data Subject rights as stipulated in the Law.",
+        "citations": [
+          {
+            "id": "IR-A10-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "The Data Subject shall have the choice to use one or many among the following means according to their preference: E-mail, Text messages, The national address, Communication via electronic applications, Any other lawful communication mean provided by the Controller for this purpose.",
+        "citations": [
+          {
+            "id": "IR-A10-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "IR-A10-EN",
+        "score": 2.755
+      },
+      {
+        "record_id": "IR-A03-EN",
+        "score": 2.4975
+      },
+      {
+        "record_id": "IR-A04-EN",
+        "score": 1.3886
+      },
+      {
+        "record_id": "PDPL-A09-EN",
+        "score": 0.1258
+      },
+      {
+        "record_id": "IR-A05-EN",
+        "score": 0.039
+      },
+      {
+        "record_id": "PDPL-A21-EN",
+        "score": -0.1728
+      },
+      {
+        "record_id": "PDPL-A25-EN",
+        "score": -0.8039
+      },
+      {
+        "record_id": "PDPL-A12-EN",
+        "score": -1.3947
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.8,
+      "answer": 2.5,
+      "check": 0.0
+    }
+  },
+  "a digital platform uses a single checkbox to obtain consent for marketing communications and account analytics. if consent is the legal basis for both activities, what requirements must the controller satisfy?": {
+    "question": "A digital platform uses a single checkbox to obtain consent for marketing communications and account analytics. If consent is the legal basis for both activities, what requirements must the controller satisfy?",
+    "covered": true,
+    "answer": "Consent shall be given freely and not obtained through misleading methods, and obtaining consent shall comply with the provisions of Article (7) of the Law. Consent shall be documented through means allowing future verification, such as keeping registers recording Data Subjects’ consent for Processing operations, specifying time and the mean of Consent. A separate consent shall be obtained for each Processing purpose.",
+    "sentences": [
+      {
+        "text": "Consent shall be given freely and not obtained through misleading methods, and obtaining consent shall comply with the provisions of Article (7) of the Law.",
+        "citations": [
+          "IR-A11-EN"
+        ],
+        "evidence": {
+          "id": "IR-A11-EN",
+          "quote": "Consent shall be given freely and not obtained through misleading methods, and obtaining consent shall comply with the provisions of Article (7) of the Law"
+        }
+      },
+      {
+        "text": "Consent shall be documented through means allowing future verification, such as keeping registers recording Data Subjects’ consent for Processing operations, specifying time and the mean of Consent.",
+        "citations": [
+          "IR-A11-EN"
+        ],
+        "evidence": {
+          "id": "IR-A11-EN",
+          "quote": "Consent shall be documented through means allowing future verification, such as keeping registers recording Data Subjects’ consent for Processing operations, specifying time and the mean of Consent"
+        }
+      },
+      {
+        "text": "A separate consent shall be obtained for each Processing purpose.",
+        "citations": [
+          "IR-A11-EN"
+        ],
+        "evidence": {
+          "id": "IR-A11-EN",
+          "quote": "A separate consent shall be obtained for each Processing purpose"
+        }
+      }
+    ],
+    "citations": [
+      "IR-A11-EN"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "Consent shall be given freely and not obtained through misleading methods, and obtaining consent shall comply with the provisions of Article (7) of the Law.",
+        "citations": [
+          {
+            "id": "IR-A11-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "Consent shall be documented through means allowing future verification, such as keeping registers recording Data Subjects’ consent for Processing operations, specifying time and the mean of Consent.",
+        "citations": [
+          {
+            "id": "IR-A11-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "A separate consent shall be obtained for each Processing purpose.",
+        "citations": [
+          {
+            "id": "IR-A11-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "IR-A28-EN",
+        "score": -5.0576
+      },
+      {
+        "record_id": "IR-A11-EN",
+        "score": -5.75
+      },
+      {
+        "record_id": "IR-A29-EN",
+        "score": -6.8189
+      },
+      {
+        "record_id": "PDPL-A26-EN",
+        "score": -6.8777
+      },
+      {
+        "record_id": "PDPL-A07-EN",
+        "score": -7.0879
+      },
+      {
+        "record_id": "IR-A10-EN",
+        "score": -7.1562
+      },
+      {
+        "record_id": "PDPL-A10-EN",
+        "score": -7.2414
+      },
+      {
+        "record_id": "PDPL-A25-EN",
+        "score": -7.3345
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.8,
+      "answer": 2.6,
+      "check": 0.0
+    }
+  },
+  "a data subject withdraws consent to process personal data. what procedures and follow-up actions are required of the controller?": {
+    "question": "A data subject withdraws consent to process personal data. What procedures and follow-up actions are required of the controller?",
+    "covered": true,
+    "answer": "The Controller shall cease Processing without undue delay from consent withdrawal request. When the Data Subject withdraws their consent for Processing their data, the Controller shall take appropriate measures to notify those to whom the Personal Data has been disclosed and request its Destruction through any available means.",
+    "sentences": [
+      {
+        "text": "The Controller shall cease Processing without undue delay from consent withdrawal request.",
+        "citations": [
+          "IR-A12-EN"
+        ],
+        "evidence": {
+          "id": "IR-A12-EN",
+          "quote": "the Controller shall cease Processing without undue delay from consent withdrawal request"
+        }
+      },
+      {
+        "text": "When the Data Subject withdraws their consent for Processing their data, the Controller shall take appropriate measures to notify those to whom the Personal Data has been disclosed and request its Destruction through any available means.",
+        "citations": [
+          "IR-A12-EN"
+        ],
+        "evidence": {
+          "id": "IR-A12-EN",
+          "quote": "the Controller shall take appropriate measures to notify those to whom the Personal Data has been disclosed and request its Destruction through any available means"
+        }
+      }
+    ],
+    "citations": [
+      "IR-A12-EN"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "The Controller shall cease Processing without undue delay from consent withdrawal request.",
+        "citations": [
+          {
+            "id": "IR-A12-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "When the Data Subject withdraws their consent for Processing their data, the Controller shall take appropriate measures to notify those to whom the Personal Data has been disclosed and request its Destruction through any available means.",
+        "citations": [
+          {
+            "id": "IR-A12-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "IR-A12-EN",
+        "score": 9.0476
+      },
+      {
+        "record_id": "IR-A29-EN",
+        "score": 5.7598
+      },
+      {
+        "record_id": "PDPL-A15-EN",
+        "score": 4.4231
+      },
+      {
+        "record_id": "IR-A04-EN",
+        "score": 4.1664
+      },
+      {
+        "record_id": "IR-A30-EN",
+        "score": 3.9346
+      },
+      {
+        "record_id": "PDPL-A05-EN",
+        "score": 3.8492
+      },
+      {
+        "record_id": "IR-A08-EN",
+        "score": 3.5596
+      },
+      {
+        "record_id": "PDPL-A10-EN",
+        "score": 3.5036
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.8,
+      "answer": 2.2,
+      "check": 0.0
+    }
+  },
+  "a private company plans to process non-sensitive customer data based on its legitimate interest. what conditions and prior assessment requirements must it satisfy?": {
+    "question": "A private company plans to process non-sensitive customer data based on its legitimate interest. What conditions and prior assessment requirements must it satisfy?",
+    "covered": true,
+    "answer": "A Controller may process Personal Data to achieve a Legitimate Interest provided that certain conditions are met. The rights and interests of the Data Subject and the Legitimate Interest of the Controller shall be balanced. Processing shall be within the reasonable expectations of the Data Subject. Before Processing Personal Data for Legitimate Interests, the Controller shall conduct and document an assessment of the proposed Processing and its impact on the rights and interests of Data Subjects.",
+    "sentences": [
+      {
+        "text": "A Controller may process Personal Data to achieve a Legitimate Interest provided that certain conditions are met.",
+        "citations": [
+          "IR-A16-EN"
+        ],
+        "evidence": {
+          "id": "IR-A16-EN",
+          "quote": "Except Public Entities, a Controller may process Personal Data to achieve a Legitimate Interest provided that the following conditions are met: a) Purpose shall not violate any of the laws in the Kingdom"
+        }
+      },
+      {
+        "text": "The rights and interests of the Data Subject and the Legitimate Interest of the Controller shall be balanced.",
+        "citations": [
+          "IR-A16-EN"
+        ],
+        "evidence": {
+          "id": "IR-A16-EN",
+          "quote": "The rights and interests of the Data Subject and the Legitimate Interest of the Controller shall be balanced, so that the interests of the Controller do not affect the rights and interests of the Data Subject"
+        }
+      },
+      {
+        "text": "Processing shall be within the reasonable expectations of the Data Subject.",
+        "citations": [
+          "IR-A16-EN"
+        ],
+        "evidence": {
+          "id": "IR-A16-EN",
+          "quote": "Processing shall be within the reasonable expectations of the Data Subject"
+        }
+      },
+      {
+        "text": "Before Processing Personal Data for Legitimate Interests, the Controller shall conduct and document an assessment of the proposed Processing and its impact on the rights and interests of Data Subjects.",
+        "citations": [
+          "IR-A16-EN"
+        ],
+        "evidence": {
+          "id": "IR-A16-EN",
+          "quote": "the Controller shall conduct and document an assessment of the proposed Processing and its impact on the rights and interests of Data Subjects"
+        }
+      }
+    ],
+    "citations": [
+      "IR-A16-EN"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "A Controller may process Personal Data to achieve a Legitimate Interest provided that certain conditions are met.",
+        "citations": [
+          {
+            "id": "IR-A16-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "The rights and interests of the Data Subject and the Legitimate Interest of the Controller shall be balanced.",
+        "citations": [
+          {
+            "id": "IR-A16-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "Processing shall be within the reasonable expectations of the Data Subject.",
+        "citations": [
+          {
+            "id": "IR-A16-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "Before Processing Personal Data for Legitimate Interests, the Controller shall conduct and document an assessment of the proposed Processing and its impact on the rights and interests of Data Subjects.",
+        "citations": [
+          {
+            "id": "IR-A16-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "IR-A16-EN",
+        "score": 2.1718
+      },
+      {
+        "record_id": "PDPL-A06-EN",
+        "score": -2.3396
+      },
+      {
+        "record_id": "PDPL-A26-EN",
+        "score": -2.8066
+      },
+      {
+        "record_id": "PDPL-A15-EN",
+        "score": -4.0682
+      },
+      {
+        "record_id": "IR-A14-EN",
+        "score": -4.1365
+      },
+      {
+        "record_id": "IR-A21-EN",
+        "score": -4.1433
+      },
+      {
+        "record_id": "IR-A11-EN",
+        "score": -4.6582
+      },
+      {
+        "record_id": "PDPL-A22-EN",
+        "score": -4.8369
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.8,
+      "answer": 3.2,
+      "check": 0.0
+    }
+  },
+  "a company collected personal data to fulfil customer orders and now wishes to use it for an unrelated purpose. what must it verify and document before doing so?": {
+    "question": "A company collected personal data to fulfil customer orders and now wishes to use it for an unrelated purpose. What must it verify and document before doing so?",
+    "covered": true,
+    "answer": "The Controller must define clearly and specifically the Processing purposes and document the procedures to fix the scope of data to be processed in accordance with specific purposes. The Controller must limit the Collection and Processing of the Personal Data to the minimum amount necessary to achieve the new purpose. The Controller must identify the type of Personal Data to be processed and the necessary measures to ensure that such data is processed appropriately.",
+    "sentences": [
+      {
+        "text": "The Controller must define clearly and specifically the Processing purposes and document the procedures to fix the scope of data to be processed in accordance with specific purposes.",
+        "citations": [
+          "IR-A18-EN"
+        ],
+        "evidence": {
+          "id": "IR-A18-EN",
+          "quote": "Define clearly and specifically the Processing purposes"
+        }
+      },
+      {
+        "text": "The Controller must limit the Collection and Processing of the Personal Data to the minimum amount necessary to achieve the new purpose.",
+        "citations": [
+          "IR-A18-EN"
+        ],
+        "evidence": {
+          "id": "IR-A18-EN",
+          "quote": "Limit the Collection and Processing of the Personal Data to the minimum amount necessary to achieve the purpose"
+        }
+      },
+      {
+        "text": "The Controller must identify the type of Personal Data to be processed and the necessary measures to ensure that such data is processed appropriately.",
+        "citations": [
+          "IR-A18-EN"
+        ],
+        "evidence": {
+          "id": "IR-A18-EN",
+          "quote": "Identify the type of Personal Data to be processed and the necessary measures to ensure that such data is processed appropriately"
+        }
+      }
+    ],
+    "citations": [
+      "IR-A18-EN"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "The Controller must define clearly and specifically the Processing purposes and document the procedures to fix the scope of data to be processed in accordance with specific purposes.",
+        "citations": [
+          {
+            "id": "IR-A18-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "The Controller must limit the Collection and Processing of the Personal Data to the minimum amount necessary to achieve the new purpose.",
+        "citations": [
+          {
+            "id": "IR-A18-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "The Controller must identify the type of Personal Data to be processed and the necessary measures to ensure that such data is processed appropriately.",
+        "citations": [
+          {
+            "id": "IR-A18-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "PDPL-A14-EN",
+        "score": -1.4234
+      },
+      {
+        "record_id": "IR-A18-EN",
+        "score": -1.8975
+      },
+      {
+        "record_id": "PDPL-A11-EN",
+        "score": -2.0412
+      },
+      {
+        "record_id": "IR-A21-EN",
+        "score": -2.0476
+      },
+      {
+        "record_id": "IR-A19-EN",
+        "score": -2.5207
+      },
+      {
+        "record_id": "IR-A04-EN",
+        "score": -2.5717
+      },
+      {
+        "record_id": "PDPL-A26-EN",
+        "score": -2.734
+      },
+      {
+        "record_id": "IR-A20-EN",
+        "score": -2.945
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.8,
+      "answer": 2.4,
+      "check": 0.0
+    }
+  },
+  "a controller finds personal data in a publicly available source. does that permit it to disclose the data without further checks?": {
+    "question": "A controller finds personal data in a publicly available source. Does that permit it to disclose the data without further checks?",
+    "covered": true,
+    "answer": "The Controller may disclose Personal Data collected from a publicly available source, but it must ensure that such data has not been made available to the public in violation of the provisions of the Law and its Regulations.",
+    "sentences": [
+      {
+        "text": "The Controller may disclose Personal Data collected from a publicly available source, but it must ensure that such data has not been made available to the public in violation of the provisions of the Law and its Regulations.",
+        "citations": [
+          "IR-A20-EN"
+        ],
+        "evidence": {
+          "id": "IR-A20-EN",
+          "quote": "Disclosure of data collected from publicly available sources … is allowed under the condition that such data have not been made available to the public in violation of the provisions of the Law and its Regulations"
+        }
+      }
+    ],
+    "citations": [
+      "IR-A20-EN"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "The Controller may disclose Personal Data collected from a publicly available source, but it must ensure that such data has not been made available to the public in violation of the provisions of the Law and its Regulations.",
+        "citations": [
+          {
+            "id": "IR-A20-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "PDPL-A15-EN",
+        "score": 5.2967
+      },
+      {
+        "record_id": "IR-A20-EN",
+        "score": 3.8164
+      },
+      {
+        "record_id": "PDPL-A10-EN",
+        "score": 2.6656
+      },
+      {
+        "record_id": "PDPL-A16-EN",
+        "score": 1.317
+      },
+      {
+        "record_id": "IR-A15-EN",
+        "score": -0.2763
+      },
+      {
+        "record_id": "PDPL-A14-EN",
+        "score": -0.4189
+      },
+      {
+        "record_id": "PDPL-A12-EN",
+        "score": -1.0694
+      },
+      {
+        "record_id": "IR-A30-EN",
+        "score": -2.098
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.8,
+      "answer": 1.9,
+      "check": 0.0
+    }
+  },
+  "a controller updates personal information previously disclosed to another organisation. what does it need to consider?": {
+    "question": "A controller updates personal information previously disclosed to another organisation. What does it need to consider?",
+    "covered": true,
+    "answer": "The Controller shall notify such amendment to all the other entities to which such Personal Data has been transferred. The Regulations shall set out the time frames for correction and updating of Personal Data, types of correction, and the procedures required to avoid the consequences of Processing incorrect, inaccurate or outdated Personal Data.",
+    "sentences": [
+      {
+        "text": "The Controller shall notify such amendment to all the other entities to which such Personal Data has been transferred.",
+        "citations": [
+          "PDPL-A17-EN"
+        ],
+        "evidence": {
+          "id": "PDPL-A17-EN",
+          "quote": "the Controller shall notify such amendment to all the other entities to which such Personal Data has been transferred"
+        }
+      },
+      {
+        "text": "The Regulations shall set out the time frames for correction and updating of Personal Data, types of correction, and the procedures required to avoid the consequences of Processing incorrect, inaccurate or outdated Personal Data.",
+        "citations": [
+          "PDPL-A17-EN"
+        ],
+        "evidence": {
+          "id": "PDPL-A17-EN",
+          "quote": "The Regulations shall set out the time frames for correction and updating of Personal Data, types of correction, and the procedures required to avoid the consequences of Processing incorrect, inaccurate or outdated Personal Data"
+        }
+      }
+    ],
+    "citations": [
+      "PDPL-A17-EN"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "The Controller shall notify such amendment to all the other entities to which such Personal Data has been transferred.",
+        "citations": [
+          {
+            "id": "PDPL-A17-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "The Regulations shall set out the time frames for correction and updating of Personal Data, types of correction, and the procedures required to avoid the consequences of Processing incorrect, inaccurate or outdated Personal Data.",
+        "citations": [
+          {
+            "id": "PDPL-A17-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "PDPL-A17-EN",
+        "score": 2.9985
+      },
+      {
+        "record_id": "IR-A22-EN",
+        "score": 2.4873
+      },
+      {
+        "record_id": "IR-A07-EN",
+        "score": 2.0049
+      },
+      {
+        "record_id": "PDPL-A15-EN",
+        "score": 1.1165
+      },
+      {
+        "record_id": "PDPL-A29-EN",
+        "score": 0.1792
+      },
+      {
+        "record_id": "PDPL-A31-EN",
+        "score": 0.0285
+      },
+      {
+        "record_id": "IR-A05-EN",
+        "score": -0.9327
+      },
+      {
+        "record_id": "IR-A15-EN",
+        "score": -1.2311
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.8,
+      "answer": 2.0,
+      "check": 0.0
+    }
+  },
+  "after discovering a potentially harmful personal-data breach, how quickly must the controller notify the competent authority when notification is required?": {
+    "question": "After discovering a potentially harmful personal-data breach, how quickly must the controller notify the competent authority when notification is required?",
+    "covered": true,
+    "answer": "The Controller shall notify the Competent Authority within a delay not exceeding (72) hours of becoming aware of the incident.",
+    "sentences": [
+      {
+        "text": "The Controller shall notify the Competent Authority within a delay not exceeding (72) hours of becoming aware of the incident.",
+        "citations": [
+          "IR-A24-EN"
+        ],
+        "evidence": {
+          "id": "IR-A24-EN",
+          "quote": "The Controller shall notify the Competent Authority within a delay not exceeding (72) hours of becoming aware of the incident"
+        }
+      }
+    ],
+    "citations": [
+      "IR-A24-EN"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "The Controller shall notify the Competent Authority within a delay not exceeding (72) hours of becoming aware of the incident.",
+        "citations": [
+          {
+            "id": "IR-A24-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "IR-A24-EN",
+        "score": 10.6006
+      },
+      {
+        "record_id": "PDPL-A20-EN",
+        "score": 6.6186
+      },
+      {
+        "record_id": "IR-A17-EN",
+        "score": -0.354
+      },
+      {
+        "record_id": "IR-A23-EN",
+        "score": -2.1887
+      },
+      {
+        "record_id": "IR-A37-EN",
+        "score": -2.4797
+      },
+      {
+        "record_id": "PDPL-A17-EN",
+        "score": -2.6708
+      },
+      {
+        "record_id": "IR-A33-EN",
+        "score": -3.0308
+      },
+      {
+        "record_id": "IR-A07-EN",
+        "score": -3.473
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.9,
+      "answer": 1.8,
+      "check": 0.0
+    }
+  },
+  "a lender intends to collect, use, or disclose a customer’s credit data. what consent, notification, and protection requirements apply?": {
+    "question": "A lender intends to collect, use, or disclose a customer’s credit data. What consent, notification, and protection requirements apply?",
+    "covered": true,
+    "answer": "The Controller shall obtain Data Subject consent and notify them of any request to disclose their Credit Data. The Regulations shall set out additional controls and procedures for the Processing of Credit Data in a manner that ensures the privacy of the Data Subject and protects their rights.",
+    "sentences": [
+      {
+        "text": "The Controller shall obtain Data Subject consent and notify them of any request to disclose their Credit Data.",
+        "citations": [
+          "IR-A27-EN"
+        ],
+        "evidence": {
+          "id": "IR-A27-EN",
+          "quote": "Controller shall obtain Data Subject consent and notify them of any request to disclose their Credit Data in accordance with the provisions of the Credit Information Law"
+        }
+      },
+      {
+        "text": "The Regulations shall set out additional controls and procedures for the Processing of Credit Data in a manner that ensures the privacy of the Data Subject and protects their rights.",
+        "citations": [
+          "PDPL-A24-EN"
+        ],
+        "evidence": {
+          "id": "PDPL-A24-EN",
+          "quote": "Such controls and procedures shall include the following: 1- Implementing appropriate measures to verify that the Data Subject has given their explicit consent to the Collection of the Personal Data"
+        }
+      }
+    ],
+    "citations": [
+      "IR-A27-EN",
+      "PDPL-A24-EN"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "The Controller shall obtain Data Subject consent and notify them of any request to disclose their Credit Data.",
+        "citations": [
+          {
+            "id": "IR-A27-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "The Regulations shall set out additional controls and procedures for the Processing of Credit Data in a manner that ensures the privacy of the Data Subject and protects their rights.",
+        "citations": [
+          {
+            "id": "PDPL-A24-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "IR-A27-EN",
+        "score": 2.2337
+      },
+      {
+        "record_id": "PDPL-A24-EN",
+        "score": 0.8745
+      },
+      {
+        "record_id": "PDPL-A15-EN",
+        "score": -2.5503
+      },
+      {
+        "record_id": "PDPL-A29-EN",
+        "score": -3.429
+      },
+      {
+        "record_id": "PDPL-A10-EN",
+        "score": -3.5941
+      },
+      {
+        "record_id": "IR-A04-EN",
+        "score": -3.7772
+      },
+      {
+        "record_id": "PDPL-A26-EN",
+        "score": -4.0563
+      },
+      {
+        "record_id": "PDPL-A12-EN",
+        "score": -4.0794
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.7,
+      "answer": 2.6,
+      "check": 0.0
+    }
+  },
+  "a retailer wants to send direct-marketing messages to customers using their contact details. what consent, sender-identification, and opt-out requirements apply?": {
+    "question": "A retailer wants to send direct-marketing messages to customers using their contact details. What consent, sender-identification, and opt-out requirements apply?",
+    "covered": true,
+    "answer": "The retailer must obtain consent from the Data Subject in accordance with the provisions of Article (11) of this Regulation. The identity of the sending entity shall be clearly stated without any anonymisation. The retailer must provide a mechanism that enables the Data Subject to halt the reception of marketing material whenever desired.",
+    "sentences": [
+      {
+        "text": "The retailer must obtain consent from the Data Subject in accordance with the provisions of Article (11) of this Regulation.",
+        "citations": [
+          "IR-A29-EN"
+        ],
+        "evidence": {
+          "id": "IR-A29-EN",
+          "quote": "Obtain consent from the Data Subject in accordance with the provisions of Article (11) of this Regulation"
+        }
+      },
+      {
+        "text": "The identity of the sending entity shall be clearly stated without any anonymisation.",
+        "citations": [
+          "IR-A29-EN"
+        ],
+        "evidence": {
+          "id": "IR-A29-EN",
+          "quote": "the identity of the sending entity shall be clearly stated without any anonymisation"
+        }
+      },
+      {
+        "text": "The retailer must provide a mechanism that enables the Data Subject to halt the reception of marketing material whenever desired.",
+        "citations": [
+          "IR-A29-EN"
+        ],
+        "evidence": {
+          "id": "IR-A29-EN",
+          "quote": "Provide a mechanism that enables the Data Subject to halt the reception of marketing material whenever desired"
+        }
+      }
+    ],
+    "citations": [
+      "IR-A29-EN"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "The retailer must obtain consent from the Data Subject in accordance with the provisions of Article (11) of this Regulation.",
+        "citations": [
+          {
+            "id": "IR-A29-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "The identity of the sending entity shall be clearly stated without any anonymisation.",
+        "citations": [
+          {
+            "id": "IR-A29-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "The retailer must provide a mechanism that enables the Data Subject to halt the reception of marketing material whenever desired.",
+        "citations": [
+          {
+            "id": "IR-A29-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "IR-A29-EN",
+        "score": -0.8545
+      },
+      {
+        "record_id": "PDPL-A25-EN",
+        "score": -4.0472
+      },
+      {
+        "record_id": "PDPL-A26-EN",
+        "score": -4.1164
+      },
+      {
+        "record_id": "IR-A28-EN",
+        "score": -4.2228
+      },
+      {
+        "record_id": "PDPL-A07-EN",
+        "score": -4.9597
+      },
+      {
+        "record_id": "IR-A01-EN",
+        "score": -4.9918
+      },
+      {
+        "record_id": "IR-A04-EN",
+        "score": -5.6888
+      },
+      {
+        "record_id": "PDPL-A21-EN",
+        "score": -5.6944
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.7,
+      "answer": 2.5,
+      "check": 0.0
+    }
+  },
+  "a public entity provides services processing personal data at large scale. when is a data protection officer required?": {
+    "question": "A public entity provides services processing personal data at large scale. When is a Data Protection Officer required?",
+    "covered": true,
+    "answer": "The Controller shall appoint one or more individuals to be responsible for the protection of Personal Data in any of the following cases: a) The Controller is a Public Entity that provides services involving Processing of Personal Data on a large scale.",
+    "sentences": [
+      {
+        "text": "The Controller shall appoint one or more individuals to be responsible for the protection of Personal Data in any of the following cases: a) The Controller is a Public Entity that provides services involving Processing of Personal Data on a large scale.",
+        "citations": [
+          "IR-A32-EN"
+        ],
+        "evidence": {
+          "id": "IR-A32-EN",
+          "quote": "The Controller shall appoint one or more individuals to be responsible for the protection of Personal Data in any of the following cases: a) The Controller is a Public Entity that provides services involving Processing of Personal Data on a large scale"
+        }
+      }
+    ],
+    "citations": [
+      "IR-A32-EN"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "The Controller shall appoint one or more individuals to be responsible for the protection of Personal Data in any of the following cases: a) The Controller is a Public Entity that provides services involving Processing of Personal Data on a large scale.",
+        "citations": [
+          {
+            "id": "IR-A32-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "IR-A32-EN",
+        "score": 8.7
+      },
+      {
+        "record_id": "IR-A21-EN",
+        "score": 0.0674
+      },
+      {
+        "record_id": "PDPL-A10-EN",
+        "score": -0.1036
+      },
+      {
+        "record_id": "IR-A16-EN",
+        "score": -0.115
+      },
+      {
+        "record_id": "PDPL-A06-EN",
+        "score": -0.1575
+      },
+      {
+        "record_id": "PDPL-A15-EN",
+        "score": -0.772
+      },
+      {
+        "record_id": "IR-A33-EN",
+        "score": -0.9228
+      },
+      {
+        "record_id": "PDPL-A41-EN",
+        "score": -1.5487
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.7,
+      "answer": 2.2,
+      "check": 0.0
+    }
+  },
+  "personal data has already been transferred from saudi arabia to an overseas recipient, which proposes a further transfer to another party. what legal framework governs this onward transfer?": {
+    "question": "Personal data has already been transferred from Saudi Arabia to an overseas recipient, which proposes a further transfer to another party. What legal framework governs this onward transfer?",
+    "covered": true,
+    "answer": "The Law and Regulations shall apply to subsequent transfers of personal data that has been transferred or disclosed to a party outside the Kingdom.",
+    "sentences": [
+      {
+        "text": "The Law and Regulations shall apply to subsequent transfers of personal data that has been transferred or disclosed to a party outside the Kingdom.",
+        "citations": [
+          "TR-A05-EN"
+        ],
+        "evidence": {
+          "id": "TR-A05-EN",
+          "quote": "Without prejudice to the provisions of Articles (8) and (15) of the Law and Article (17) of the Implementing Regulations, the Law and Regulations shall apply to subsequent transfers of personal data that has been transferred or disclosed to a party outside the Kingdom"
+        }
+      }
+    ],
+    "citations": [
+      "TR-A05-EN"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "The Law and Regulations shall apply to subsequent transfers of personal data that has been transferred or disclosed to a party outside the Kingdom.",
+        "citations": [
+          {
+            "id": "TR-A05-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "TR-A05-EN",
+        "score": 1.138
+      },
+      {
+        "record_id": "PDPL-A29-EN",
+        "score": -1.312
+      },
+      {
+        "record_id": "TR-A02-EN",
+        "score": -1.4741
+      },
+      {
+        "record_id": "TR-A07-EN",
+        "score": -2.333
+      },
+      {
+        "record_id": "TR-A04-EN",
+        "score": -2.554
+      },
+      {
+        "record_id": "PDPL-A03-EN",
+        "score": -2.7231
+      },
+      {
+        "record_id": "PDPL-A17-EN",
+        "score": -3.171
+      },
+      {
+        "record_id": "PDPL-A02-EN",
+        "score": -3.2485
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.7,
+      "answer": 2.0,
+      "check": 0.0
+    }
+  },
+  "a controller plans to transfer sensitive personal data outside saudi arabia on a continuous basis. is a transfer-risk assessment required, and when must it be conducted?": {
+    "question": "A controller plans to transfer sensitive personal data outside Saudi Arabia on a continuous basis. Is a transfer-risk assessment required, and when must it be conducted?",
+    "covered": true,
+    "answer": "A risk assessment is required before transferring sensitive personal data outside the Kingdom on a continuous basis.",
+    "sentences": [
+      {
+        "text": "A risk assessment is required before transferring sensitive personal data outside the Kingdom on a continuous basis.",
+        "citations": [
+          "TR-A07-EN"
+        ],
+        "evidence": {
+          "id": "TR-A07-EN",
+          "quote": "The controller shall conduct a risk assessment before transferring or disclosing personal data to a party outside the Kingdom in the following cases … or disclosing sensitive data to entities outside the Kingdom on a continuous or widespread basis"
+        }
+      }
+    ],
+    "citations": [
+      "TR-A07-EN"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "A risk assessment is required before transferring sensitive personal data outside the Kingdom on a continuous basis.",
+        "citations": [
+          {
+            "id": "TR-A07-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "TR-A07-EN",
+        "score": 7.6996
+      },
+      {
+        "record_id": "PDPL-A29-EN",
+        "score": 1.1143
+      },
+      {
+        "record_id": "TR-A04-EN",
+        "score": 0.1904
+      },
+      {
+        "record_id": "PDPL-A19-EN",
+        "score": -0.1675
+      },
+      {
+        "record_id": "IR-A25-EN",
+        "score": -0.3674
+      },
+      {
+        "record_id": "TR-A02-EN",
+        "score": -0.4111
+      },
+      {
+        "record_id": "TR-A01-EN",
+        "score": -0.9783
+      },
+      {
+        "record_id": "PDPL-A31-EN",
+        "score": -1.2545
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.8,
+      "answer": 1.6,
+      "check": 0.0
+    }
+  },
+  "كم عدد الشكاوى المتعلقة بمخالفات نظام حماية البيانات الشخصية التي تلقتها الجهة المختصة خلال سبتمبر 2026؟": {
+    "question": "كم عدد الشكاوى المتعلقة بمخالفات نظام حماية البيانات الشخصية التي تلقتها الجهة المختصة خلال سبتمبر 2026؟",
+    "covered": false,
+    "answer": "غير مشمول: لم أجد في نصوص النظام ما يجيب على هذا السؤال.",
+    "sentences": [],
+    "citations": [],
+    "problems": [],
+    "citation_check": [],
+    "retrieved": [
+      {
+        "record_id": "PDPL-A16-AR",
+        "score": -4.4109
+      },
+      {
+        "record_id": "TR-A03-AR",
+        "score": -4.5376
+      },
+      {
+        "record_id": "IR-A03-AR",
+        "score": -5.1299
+      },
+      {
+        "record_id": "PDPL-A34-AR",
+        "score": -5.4305
+      },
+      {
+        "record_id": "IR-A24-AR",
+        "score": -5.8644
+      },
+      {
+        "record_id": "IR-A20-AR",
+        "score": -7.2388
+      },
+      {
+        "record_id": "PDPL-A31-AR",
+        "score": -7.3185
+      },
+      {
+        "record_id": "IR-A36-AR",
+        "score": -7.5143
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.8,
+      "answer": 1.2,
+      "check": 0.0
+    }
+  },
+  "ما اسم مسؤول حماية البيانات الحالي لدى شركة الاتصالات السعودية وما رقم هاتفه المباشر؟": {
+    "question": "ما اسم مسؤول حماية البيانات الحالي لدى شركة الاتصالات السعودية وما رقم هاتفه المباشر؟",
+    "covered": false,
+    "answer": "غير مشمول: لم أجد في نصوص النظام ما يجيب على هذا السؤال.",
+    "sentences": [],
+    "citations": [],
+    "problems": [],
+    "citation_check": [],
+    "retrieved": [
+      {
+        "record_id": "PDPL-A30-AR",
+        "score": -2.8271
+      },
+      {
+        "record_id": "IR-A32-AR",
+        "score": -3.728
+      },
+      {
+        "record_id": "PDPL-A42-AR",
+        "score": -5.2857
+      },
+      {
+        "record_id": "IR-A27-AR",
+        "score": -5.3104
+      },
+      {
+        "record_id": "IR-A10-AR",
+        "score": -5.6127
+      },
+      {
+        "record_id": "TR-A01-AR",
+        "score": -5.6653
+      },
+      {
+        "record_id": "IR-A04-AR",
+        "score": -5.7063
+      },
+      {
+        "record_id": "IR-A26-AR",
+        "score": -5.9584
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.8,
+      "answer": 1.0,
+      "check": 0.0
+    }
+  },
+  "ما الحد الأقصى للغرامة المالية المقررة عن مخالفة أحكام قانون خصوصية المستهلك في ولاية كاليفورنيا خلال عام 2026؟": {
+    "question": "ما الحد الأقصى للغرامة المالية المقررة عن مخالفة أحكام قانون خصوصية المستهلك في ولاية كاليفورنيا خلال عام 2026؟",
+    "covered": false,
+    "answer": "غير مشمول: لم أجد في نصوص النظام ما يجيب على هذا السؤال.",
+    "sentences": [],
+    "citations": [],
+    "problems": [],
+    "citation_check": [],
+    "retrieved": [
+      {
+        "record_id": "PDPL-A36-AR",
+        "score": -0.8372
+      },
+      {
+        "record_id": "PDPL-A35-AR",
+        "score": -0.9217
+      },
+      {
+        "record_id": "PDPL-A40-AR",
+        "score": -5.2566
+      },
+      {
+        "record_id": "PDPL-A39-AR",
+        "score": -5.4037
+      },
+      {
+        "record_id": "IR-A38-AR",
+        "score": -5.8645
+      },
+      {
+        "record_id": "IR-A03-AR",
+        "score": -6.9044
+      },
+      {
+        "record_id": "PDPL-A16-AR",
+        "score": -7.2833
+      },
+      {
+        "record_id": "PDPL-A23-AR",
+        "score": -7.3021
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.7,
+      "answer": 1.1,
+      "check": 0.0
+    }
+  },
+  "how many pdpl complaints did the competent authority resolve in september 2026?": {
+    "question": "How many PDPL complaints did the competent authority resolve in September 2026?",
+    "covered": false,
+    "answer": "Not covered: the PDPL texts I searched do not answer this question.",
+    "sentences": [],
+    "citations": [],
+    "problems": [],
+    "citation_check": [],
+    "retrieved": [
+      {
+        "record_id": "PDPL-A36-EN",
+        "score": -3.8699
+      },
+      {
+        "record_id": "PDPL-A42-EN",
+        "score": -4.4553
+      },
+      {
+        "record_id": "IR-A37-EN",
+        "score": -5.0121
+      },
+      {
+        "record_id": "TR-A03-EN",
+        "score": -5.4829
+      },
+      {
+        "record_id": "PDPL-A35-EN",
+        "score": -6.0006
+      },
+      {
+        "record_id": "IR-A24-EN",
+        "score": -6.28
+      },
+      {
+        "record_id": "PDPL-A20-EN",
+        "score": -7.335
+      },
+      {
+        "record_id": "PDPL-A38-EN",
+        "score": -7.438
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.8,
+      "answer": 1.1,
+      "check": 0.0
+    }
+  },
+  "what is the direct email address of the data protection officer at jarir marketing company as of 19 october 2026?": {
+    "question": "What is the direct email address of the Data Protection Officer at Jarir Marketing Company as of 19 October 2026?",
+    "covered": false,
+    "answer": "Not covered: the PDPL texts I searched do not answer this question.",
+    "sentences": [],
+    "citations": [],
+    "problems": [],
+    "citation_check": [],
+    "retrieved": [
+      {
+        "record_id": "IR-A32-EN",
+        "score": -5.7868
+      },
+      {
+        "record_id": "IR-A29-EN",
+        "score": -6.759
+      },
+      {
+        "record_id": "PDPL-A25-EN",
+        "score": -7.169
+      },
+      {
+        "record_id": "IR-A10-EN",
+        "score": -7.2072
+      },
+      {
+        "record_id": "IR-A01-EN",
+        "score": -7.3504
+      },
+      {
+        "record_id": "PDPL-A10-EN",
+        "score": -7.6637
+      },
+      {
+        "record_id": "PDPL-A30-EN",
+        "score": -7.8654
+      },
+      {
+        "record_id": "IR-A03-EN",
+        "score": -8.0916
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.7,
+      "answer": 1.3,
+      "check": 0.0
+    }
+  },
+  "what is the maximum administrative fine under the eu gdpr for breaching the consent requirements in 2026?": {
+    "question": "What is the maximum administrative fine under the EU GDPR for breaching the consent requirements in 2026?",
+    "covered": false,
+    "answer": "Not covered: the PDPL texts I searched do not answer this question.",
+    "sentences": [],
+    "citations": [],
+    "problems": [],
+    "citation_check": [],
+    "retrieved": [
+      {
+        "record_id": "PDPL-A36-EN",
+        "score": -2.2318
+      },
+      {
+        "record_id": "PDPL-A35-EN",
+        "score": -2.7259
+      },
+      {
+        "record_id": "IR-A12-EN",
+        "score": -4.6012
+      },
+      {
+        "record_id": "TR-A04-EN",
+        "score": -5.0549
+      },
+      {
+        "record_id": "IR-A11-EN",
+        "score": -5.1255
+      },
+      {
+        "record_id": "PDPL-A33-EN",
+        "score": -5.2023
+      },
+      {
+        "record_id": "PDPL-A38-EN",
+        "score": -5.2191
+      },
+      {
+        "record_id": "IR-A03-EN",
+        "score": -5.4219
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 1.8,
+      "answer": 1.2,
+      "check": 0.0
+    }
   }
 }

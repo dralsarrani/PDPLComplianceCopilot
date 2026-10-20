@@ -1,0 +1,200 @@
+{
+  "company_id": "samsung",
+  "name": "Samsung",
+  "name_ar": "سامسونج",
+  "site": "samsung.com",
+  "sector": "Shopping",
+  "url": "https://www.samsung.com/sa/info/privacy/",
+  "fetched_on": "2026-10-19",
+  "analysed_on": "2026-10-20",
+  "text_key": "04ee996ce7a2e249",
+  "report": [
+    {
+      "req_id": "R01",
+      "requirement": "The controller's identity and how to contact it about personal data",
+      "articles": "IR-A04(1a); PDPL-A13(3)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "شركة سامسونج للإلكترونيات هي المتحكم في بياناتك الشخصية كما هو موضح أعلاه",
+      "evidence_found": true,
+      "reason": "The policy clearly identifies the controller."
+    },
+    {
+      "req_id": "R02",
+      "requirement": "Contact details of the data protection officer (DPO)",
+      "articles": "IR-A04(1b)",
+      "applies": "conditional",
+      "condition": "The controller has appointed a DPO",
+      "status": "missing",
+      "evidence": "",
+      "evidence_found": false,
+      "reason": "The policy does not mention contact details for the DPO."
+    },
+    {
+      "req_id": "R03",
+      "requirement": "The personal data that is collected",
+      "articles": "PDPL-A12",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "نحصل على المعلومات الشخصية الوارد ذكرها أدناه عنك عند تفاعلك معنا",
+      "evidence_found": true,
+      "reason": "The policy clearly states the personal data collected."
+    },
+    {
+      "req_id": "R04",
+      "requirement": "The means used to collect personal data",
+      "articles": "PDPL-A12",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "نقوم بجمع معلوماتك الشخصية بطرق متنوعة",
+      "evidence_found": true,
+      "reason": "The policy specifies the means used to collect personal data."
+    },
+    {
+      "req_id": "R05",
+      "requirement": "The purpose of collecting and processing personal data",
+      "articles": "PDPL-A12; PDPL-A13(2); IR-A04(1c)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "كيف نستخدم المعلومات التي نحصل عليها",
+      "evidence_found": true,
+      "reason": "The policy clearly outlines the purposes for collecting and processing personal data."
+    },
+    {
+      "req_id": "R06",
+      "requirement": "The legal basis for collecting personal data (e.g. consent, contract, legal obligation)",
+      "articles": "PDPL-A13(1); PDPL-A04(1); IR-A04(1c)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "يتضمن الأساس القانوني لشركة سامسونج لمعالجة المعلومات الشخصية ما يلي",
+      "evidence_found": true,
+      "reason": "The policy clearly states the legal basis for processing personal data."
+    },
+    {
+      "req_id": "R07",
+      "requirement": "Which personal data is mandatory and which is optional",
+      "articles": "PDPL-A13(2); IR-A04(1g)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "نحصل على المعلومات الشخصية الوارد ذكرها أدناه عنك عند تفاعلك معنا",
+      "evidence_found": true,
+      "reason": "The policy specifies which personal data is collected."
+    },
+    {
+      "req_id": "R08",
+      "requirement": "The consequences of not providing personal data",
+      "articles": "PDPL-A13(5)",
+      "applies": "always",
+      "condition": "",
+      "status": "partial",
+      "evidence": "يمكنك اختيار عدم تزويدنا بأنواع معينة من المعلومات",
+      "evidence_found": true,
+      "reason": "The policy mentions consequences but does not elaborate fully."
+    },
+    {
+      "req_id": "R09",
+      "requirement": "The parties personal data is disclosed or shared with, and their capacity",
+      "articles": "PDPL-A13(4)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "سنقوم بالإفصاح عن معلوماتك داخليا داخل شركتنا، وكذلك إلى الكيانات التالية",
+      "evidence_found": true,
+      "reason": "The policy clearly states the parties with whom data is shared."
+    },
+    {
+      "req_id": "R10",
+      "requirement": "Whether personal data is transferred, disclosed or processed outside the Kingdom",
+      "articles": "PDPL-A13(4)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "ينطوي استخدامك لخدماتنا على نقل معلوماتك الشخصية وتخزينها ومعالجتها داخل بلد إقامتك وخارجه",
+      "evidence_found": true,
+      "reason": "The policy clearly states that personal data may be transferred outside the Kingdom."
+    },
+    {
+      "req_id": "R11",
+      "requirement": "How long personal data is kept, or the criteria used to decide",
+      "articles": "IR-A04(1d)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "لن نحتفظ بمعلوماتك الشخصية لفترة أطول مما هو ضروري للأغراض التي جُمعت من أجلها",
+      "evidence_found": true,
+      "reason": "The policy clearly states how long personal data is kept."
+    },
+    {
+      "req_id": "R12",
+      "requirement": "How personal data is stored and destroyed",
+      "articles": "PDPL-A12",
+      "applies": "always",
+      "condition": "",
+      "status": "partial",
+      "evidence": "تتخذ شركة سامسونج إجراءات لضمان مسح جميع الأجهزة المعيبة من البيانات الشخصية قبل تحليل هذه الأجهزة",
+      "evidence_found": true,
+      "reason": "The policy mentions destruction of data but lacks detail on storage methods."
+    },
+    {
+      "req_id": "R13",
+      "requirement": "The data subject's rights: to be informed, access, obtain a copy, correct, and request destruction",
+      "articles": "PDPL-A04; PDPL-A12; PDPL-A13(6); IR-A04(1e)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "يجوز لك (1) طلب الوصول إلى المعلومات الشخصية التي نحتفظ بها عنك أو تصحيحها أو حذفها",
+      "evidence_found": true,
+      "reason": "The policy clearly outlines the data subject's rights."
+    },
+    {
+      "req_id": "R14",
+      "requirement": "How the data subject can exercise their rights",
+      "articles": "PDPL-A12; IR-A04(1e)",
+      "applies": "always",
+      "condition": "",
+      "status": "partial",
+      "evidence": "لتقديم طلب يتعلق بحقوقك أو لتقديم استفسار، يُرجى الاتصال بنا",
+      "evidence_found": true,
+      "reason": "The policy mentions how to exercise rights but lacks specific procedures."
+    },
+    {
+      "req_id": "R15",
+      "requirement": "How to withdraw consent",
+      "articles": "IR-A04(1f)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "عندما نطلب موافقتك، سنقدم لك معلومات حول المعلومات التي نستخدمها وكيف يمكنك إلغاء موافقتك",
+      "evidence_found": true,
+      "reason": "The policy clearly states how to withdraw consent."
+    },
+    {
+      "req_id": "R16",
+      "requirement": "The measures taken to protect personal data",
+      "articles": "IR-A04(5b)",
+      "applies": "conditional",
+      "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
+      "status": "covered",
+      "evidence": "نتخذ خطوات مناسبة لضمان معالجة معلوماتك الشخصية والاحتفاظ بها بناء على المنطق التالي",
+      "evidence_found": false,
+      "reason": "The policy clearly states the measures taken to protect personal data."
+    },
+    {
+      "req_id": "R17",
+      "requirement": "Whether decisions are made solely by automated processing",
+      "articles": "IR-A04(5c)",
+      "applies": "conditional",
+      "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
+      "status": "missing",
+      "evidence": "",
+      "evidence_found": false,
+      "reason": "The policy does not mention anything about decisions made solely by automated processing."
+    }
+  ]
+}

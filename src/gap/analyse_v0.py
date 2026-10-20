@@ -11,6 +11,9 @@ model then mixed the condition into the requirement. A conditional requirement
 that is missing is kept as missing and printed with its condition, so a person
 can decide whether the condition applies to the company.
 
+The requirements are sent in 4 groups at the same time (4 parallel OpenAI calls),
+instead of one long call that writes all 17 answers.
+
 Every quote is checked against the policy text: if the model returns a quote
 that is not in the policy, evidence_found is False and the result should not
 be trusted.
@@ -27,6 +30,7 @@ import json
 import os
 import re
 import sys
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 import pandas as pd
@@ -38,6 +42,7 @@ OUTPUT_DIR = Path("results/gap_v0")
 DEFAULT_MODEL = "gpt-4o-mini"
 MAX_POLICY_CHARS = 60000
 STATUSES = ["covered", "partial", "missing"]
+GROUPS = 4  # parallel OpenAI calls, each judging a quarter of the requirements
 
 SYSTEM_PROMPT = """You check privacy policies against the Saudi Personal Data Protection Law (PDPL).
 For each requirement you get, decide what the policy says about it:
@@ -85,14 +90,21 @@ def analyse(policy_text, checklist=None, model=None):
     checklist = load_checklist() if checklist is None else checklist
     model = model or os.environ.get("OPENAI_MODEL", DEFAULT_MODEL)
     client = OpenAI()
-    response = client.chat.completions.create(
-        model=model,
-        temperature=0,
-        response_format={"type": "json_object"},
-        messages=[{"role": "system", "content": SYSTEM_PROMPT},
-                  {"role": "user", "content": build_prompt(policy_text, checklist)}],
-    )
-    answers = {a.get("req_id"): a for a in json.loads(response.choices[0].message.content).get("results", [])}
+
+    def ask(group):
+        response = client.chat.completions.create(
+            model=model,
+            temperature=0,
+            response_format={"type": "json_object"},
+            messages=[{"role": "system", "content": SYSTEM_PROMPT},
+                      {"role": "user", "content": build_prompt(policy_text, group)}],
+        )
+        return json.loads(response.choices[0].message.content).get("results", [])
+
+    size = -(-len(checklist) // GROUPS)  # rounded up
+    groups = [checklist.iloc[i:i + size] for i in range(0, len(checklist), size)]
+    with ThreadPoolExecutor(max_workers=len(groups)) as pool:
+        answers = {a.get("req_id"): a for results in pool.map(ask, groups) for a in results}
 
     policy_norm = normalise(policy_text)
     report = []

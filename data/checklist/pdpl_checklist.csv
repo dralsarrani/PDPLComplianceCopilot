@@ -1,18 +1,18 @@
-req_id,requirement_en,requirement_ar,articles,applies,condition,opp115_categories
-R01,"The controller's identity and how to contact it about personal data","اسم الجهة وطريقة التواصل معها بخصوص البيانات","IR-A04(1a); PDPL-A13(3)",always,,Other
-R02,"Contact details of the data protection officer (DPO)","بيانات التواصل مع مسؤول حماية البيانات","IR-A04(1b)",conditional,"The controller has appointed a DPO",Other
-R03,"The personal data that is collected","البيانات الشخصية اللي تُجمع","PDPL-A12",always,,First Party Collection/Use
-R04,"The means used to collect personal data","طرق جمع البيانات","PDPL-A12",always,,First Party Collection/Use
-R05,"The purpose of collecting and processing personal data","الغرض من جمع البيانات ومعالجتها","PDPL-A12; PDPL-A13(2); IR-A04(1c)",always,,First Party Collection/Use
-R06,"The legal basis for collecting personal data (e.g. consent, contract, legal obligation)","الأساس النظامي لجمع البيانات","PDPL-A13(1); PDPL-A04(1); IR-A04(1c)",always,,First Party Collection/Use; User Choice/Control
-R07,"Which personal data is mandatory and which is optional","أي البيانات إلزامية وأيها اختيارية","PDPL-A13(2); IR-A04(1g)",always,,User Choice/Control; First Party Collection/Use
-R08,"The consequences of not providing personal data","العواقب لو ما قدّم الشخص بياناته","PDPL-A13(5)",always,,User Choice/Control
-R09,"The parties personal data is disclosed or shared with, and their capacity","الجهات اللي تُشارَك معها البيانات وصفتها","PDPL-A13(4)",always,,Third Party Sharing/Collection
-R10,"Whether personal data is transferred, disclosed or processed outside the Kingdom","هل البيانات تنتقل أو تُعالج خارج المملكة","PDPL-A13(4)",always,,Third Party Sharing/Collection; International and Specific Audiences
-R11,"How long personal data is kept, or the criteria used to decide","مدة حفظ البيانات أو المعيار اللي تتحدد فيه","IR-A04(1d)",always,,Data Retention
-R12,"How personal data is stored and destroyed","طريقة حفظ البيانات وإتلافها","PDPL-A12",always,,Data Retention; Data Security
-R13,"The data subject's rights: to be informed, access, obtain a copy, correct, and request destruction","حقوق صاحب البيانات: العلم والوصول والنسخة والتصحيح والإتلاف","PDPL-A04; PDPL-A12; PDPL-A13(6); IR-A04(1e)",always,,"User Access, Edit and Deletion"
-R14,"How the data subject can exercise their rights","طريقة استخدام صاحب البيانات لحقوقه","PDPL-A12; IR-A04(1e)",always,,"User Access, Edit and Deletion"
-R15,"How to withdraw consent","طريقة سحب الموافقة","IR-A04(1f)",always,,User Choice/Control
-R16,"The measures taken to protect personal data","إجراءات حماية البيانات","IR-A04(5b)",conditional,"Large-scale or continuous processing, monitoring, new technologies, or automated decisions",Data Security
-R17,"Whether decisions are made solely by automated processing","هل فيه قرارات آلية بالكامل","IR-A04(5c)",conditional,"Large-scale or continuous processing, monitoring, new technologies, or automated decisions",First Party Collection/Use
+req_id,requirement_en,requirement_ar,articles,applies,condition,opp115_categories,condition_ar
+R01,"The controller's identity and how to contact it about personal data","اسم الجهة وطريقة التواصل معها بخصوص البيانات","IR-A04(1a); PDPL-A13(3)",always,,Other,
+R02,"Contact details of the data protection officer (DPO)","بيانات التواصل مع مسؤول حماية البيانات","IR-A04(1b)",conditional,"The controller has appointed a DPO",Other,"عيّنت الجهة مسؤولاً لحماية البيانات"
+R03,"The personal data that is collected","البيانات الشخصية اللي تُجمع","PDPL-A12",always,,First Party Collection/Use,
+R04,"The means used to collect personal data","طرق جمع البيانات","PDPL-A12",always,,First Party Collection/Use,
+R05,"The purpose of collecting and processing personal data","الغرض من جمع البيانات ومعالجتها","PDPL-A12; PDPL-A13(2); IR-A04(1c)",always,,First Party Collection/Use,
+R06,"The legal basis for collecting personal data (e.g. consent, contract, legal obligation)","الأساس النظامي لجمع البيانات","PDPL-A13(1); PDPL-A04(1); IR-A04(1c)",always,,First Party Collection/Use; User Choice/Control,
+R07,"Which personal data is mandatory and which is optional","أي البيانات إلزامية وأيها اختيارية","PDPL-A13(2); IR-A04(1g)",always,,User Choice/Control; First Party Collection/Use,
+R08,"The consequences of not providing personal data","العواقب لو ما قدّم الشخص بياناته","PDPL-A13(5)",always,,User Choice/Control,
+R09,"The parties personal data is disclosed or shared with, and their capacity","الجهات اللي تُشارَك معها البيانات وصفتها","PDPL-A13(4)",always,,Third Party Sharing/Collection,
+R10,"Whether personal data is transferred, disclosed or processed outside the Kingdom","هل البيانات تنتقل أو تُعالج خارج المملكة","PDPL-A13(4)",always,,Third Party Sharing/Collection; International and Specific Audiences,
+R11,"How long personal data is kept, or the criteria used to decide","مدة حفظ البيانات أو المعيار اللي تتحدد فيه","IR-A04(1d)",always,,Data Retention,
+R12,"How personal data is stored and destroyed","طريقة حفظ البيانات وإتلافها","PDPL-A12",always,,Data Retention; Data Security,
+R13,"The data subject's rights: to be informed, access, obtain a copy, correct, and request destruction","حقوق صاحب البيانات: العلم والوصول والنسخة والتصحيح والإتلاف","PDPL-A04; PDPL-A12; PDPL-A13(6); IR-A04(1e)",always,,"User Access, Edit and Deletion",
+R14,"How the data subject can exercise their rights","طريقة استخدام صاحب البيانات لحقوقه","PDPL-A12; IR-A04(1e)",always,,"User Access, Edit and Deletion",
+R15,"How to withdraw consent","طريقة سحب الموافقة","IR-A04(1f)",always,,User Choice/Control,
+R16,"The measures taken to protect personal data","إجراءات حماية البيانات","IR-A04(5b)",conditional,"Large-scale or continuous processing, monitoring, new technologies, or automated decisions",Data Security,"معالجة واسعة أو مستمرة، أو مراقبة، أو تقنيات حديثة، أو قرارات آلية"
+R17,"Whether decisions are made solely by automated processing","هل فيه قرارات آلية بالكامل","IR-A04(5c)",conditional,"Large-scale or continuous processing, monitoring, new technologies, or automated decisions",First Party Collection/Use,"معالجة واسعة أو مستمرة، أو مراقبة، أو تقنيات حديثة، أو قرارات آلية"

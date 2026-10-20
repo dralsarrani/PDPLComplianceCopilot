@@ -1,0 +1,200 @@
+{
+  "company_id": "amazon",
+  "name": "Amazon",
+  "name_ar": "أمازون",
+  "site": "amazon.com",
+  "sector": "Shopping",
+  "url": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010",
+  "fetched_on": "2026-10-19",
+  "analysed_on": "2026-10-20",
+  "text_key": "6dea22cadae63df7",
+  "report": [
+    {
+      "req_id": "R01",
+      "requirement": "The controller's identity and how to contact it about personal data",
+      "articles": "IR-A04(1a); PDPL-A13(3)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "this Privacy Notice describes how Amazon.com and its affiliates (collectively \"Amazon\") collect and process your personal information",
+      "evidence_found": true,
+      "reason": "The policy clearly identifies the controller as Amazon."
+    },
+    {
+      "req_id": "R02",
+      "requirement": "Contact details of the data protection officer (DPO)",
+      "articles": "IR-A04(1b)",
+      "applies": "conditional",
+      "condition": "The controller has appointed a DPO",
+      "status": "missing",
+      "evidence": "",
+      "evidence_found": false,
+      "reason": "The policy does not mention a data protection officer or their contact details."
+    },
+    {
+      "req_id": "R03",
+      "requirement": "The personal data that is collected",
+      "articles": "PDPL-A12",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "Here are the types of personal information we collect",
+      "evidence_found": true,
+      "reason": "The policy explicitly lists the types of personal information collected."
+    },
+    {
+      "req_id": "R04",
+      "requirement": "The means used to collect personal data",
+      "articles": "PDPL-A12",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "We automatically collect and store certain types of information about your use of Amazon Services",
+      "evidence_found": true,
+      "reason": "The policy specifies the means used to collect personal data."
+    },
+    {
+      "req_id": "R05",
+      "requirement": "The purpose of collecting and processing personal data",
+      "articles": "PDPL-A12; PDPL-A13(2); IR-A04(1c)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "We use your personal information to operate, provide, develop, and improve the products and services that we offer our customers",
+      "evidence_found": true,
+      "reason": "The policy clearly states the purposes for collecting and processing personal data."
+    },
+    {
+      "req_id": "R06",
+      "requirement": "The legal basis for collecting personal data (e.g. consent, contract, legal obligation)",
+      "articles": "PDPL-A13(1); PDPL-A04(1); IR-A04(1c)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "By using Amazon Services, you are consenting to the practices described in this Privacy Notice",
+      "evidence_found": true,
+      "reason": "The policy clearly states that consent is obtained by using Amazon Services."
+    },
+    {
+      "req_id": "R07",
+      "requirement": "Which personal data is mandatory and which is optional",
+      "articles": "PDPL-A13(2); IR-A04(1g)",
+      "applies": "always",
+      "condition": "",
+      "status": "partial",
+      "evidence": "You can choose not to provide certain information, but then you might not be able to take advantage of many of our Amazon Services",
+      "evidence_found": true,
+      "reason": "The policy mentions that some information is optional but does not specify which data is mandatory or optional."
+    },
+    {
+      "req_id": "R08",
+      "requirement": "The consequences of not providing personal data",
+      "articles": "PDPL-A13(5)",
+      "applies": "always",
+      "condition": "",
+      "status": "partial",
+      "evidence": "you might not be able to take advantage of many of our Amazon Services",
+      "evidence_found": true,
+      "reason": "The policy implies consequences for not providing data but does not detail them."
+    },
+    {
+      "req_id": "R09",
+      "requirement": "The parties personal data is disclosed or shared with, and their capacity",
+      "articles": "PDPL-A13(4)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "we share customers' personal information related to those transactions with that third party",
+      "evidence_found": true,
+      "reason": "The policy specifies that personal data is shared with third parties involved in transactions."
+    },
+    {
+      "req_id": "R10",
+      "requirement": "Whether personal data is transferred, disclosed or processed outside the Kingdom",
+      "articles": "PDPL-A13(4)",
+      "applies": "always",
+      "condition": "",
+      "status": "partial",
+      "evidence": "Amazon.com, Inc. participates in the EU-US Data Privacy Framework",
+      "evidence_found": true,
+      "reason": "The policy mentions participation in frameworks that imply data transfer but does not explicitly state if data is processed outside the Kingdom."
+    },
+    {
+      "req_id": "R11",
+      "requirement": "How long personal data is kept, or the criteria used to decide",
+      "articles": "IR-A04(1d)",
+      "applies": "always",
+      "condition": "",
+      "status": "missing",
+      "evidence": "",
+      "evidence_found": false,
+      "reason": "The policy does not specify how long personal data is kept or the criteria used to decide."
+    },
+    {
+      "req_id": "R12",
+      "requirement": "How personal data is stored and destroyed",
+      "articles": "PDPL-A12",
+      "applies": "always",
+      "condition": "",
+      "status": "partial",
+      "evidence": "We maintain physical, electronic, and procedural safeguards in connection with the collection, storage, and disclosure of customer personal information",
+      "evidence_found": true,
+      "reason": "The policy mentions storage safeguards but does not detail destruction methods."
+    },
+    {
+      "req_id": "R13",
+      "requirement": "The data subject's rights: to be informed, access, obtain a copy, correct, and request destruction",
+      "articles": "PDPL-A04; PDPL-A12; PDPL-A13(6); IR-A04(1e)",
+      "applies": "always",
+      "condition": "",
+      "status": "partial",
+      "evidence": "you may have the right to request access to or delete your personal information",
+      "evidence_found": true,
+      "reason": "The policy mentions some rights but does not fully detail all rights like correction and obtaining a copy."
+    },
+    {
+      "req_id": "R14",
+      "requirement": "How the data subject can exercise their rights",
+      "articles": "PDPL-A12; IR-A04(1e)",
+      "applies": "always",
+      "condition": "",
+      "status": "partial",
+      "evidence": "If you wish to do any of these things, you may go to Data Privacy Queries",
+      "evidence_found": true,
+      "reason": "The policy provides a vague reference to exercising rights without clear instructions."
+    },
+    {
+      "req_id": "R15",
+      "requirement": "How to withdraw consent",
+      "articles": "IR-A04(1f)",
+      "applies": "always",
+      "condition": "",
+      "status": "missing",
+      "evidence": "",
+      "evidence_found": false,
+      "reason": "The policy does not mention how to withdraw consent."
+    },
+    {
+      "req_id": "R16",
+      "requirement": "The measures taken to protect personal data",
+      "articles": "IR-A04(5b)",
+      "applies": "conditional",
+      "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
+      "status": "covered",
+      "evidence": "We maintain physical, electronic, and procedural safeguards in connection with the collection, storage, and disclosure of customer personal information",
+      "evidence_found": true,
+      "reason": "The policy clearly outlines the security measures in place to protect personal data."
+    },
+    {
+      "req_id": "R17",
+      "requirement": "Whether decisions are made solely by automated processing",
+      "articles": "IR-A04(5c)",
+      "applies": "conditional",
+      "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
+      "status": "missing",
+      "evidence": "",
+      "evidence_found": false,
+      "reason": "The policy does not mention anything about decisions made solely by automated processing."
+    }
+  ]
+}

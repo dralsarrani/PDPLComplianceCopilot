@@ -1,0 +1,34 @@
+company_id,name,name_ar,site,sector
+amazon,Amazon,أمازون,amazon.com,Shopping
+noon,Noon,نون,noon.com,Shopping
+shein,Shein,شي إن,shein.com,Shopping
+temu,Temu,تيمو,temu.com,Shopping
+aliexpress,AliExpress,علي إكسبريس,aliexpress.com,Shopping
+ikea,IKEA السعودية,ايكيا,ikea.com/sa,Shopping
+apple,Apple,أبل,apple.com,Shopping
+samsung,Samsung,سامسونج,samsung.com,Shopping
+netflix,Netflix,نتفلكس,netflix.com,Streaming
+shahid,Shahid,شاهد,shahid.mbc.net,Streaming
+spotify,Spotify,سبوتيفاي,spotify.com,Streaming
+anghami,Anghami,أنغامي,anghami.com,Streaming
+google,YouTube / Google,قوقل يوتيوب,policies.google.com,Streaming
+osnplus,OSN+,او اس ان,osnplus.com,Streaming
+snap,Snapchat,سناب شات,snap.com,Social media
+tiktok,TikTok,تيك توك,tiktok.com,Social media
+facebook,Instagram / Facebook (Meta),فيسبوك انستقرام ميتا,facebook.com,Social media
+whatsapp,WhatsApp,واتساب,whatsapp.com,Social media
+x_twitter,X (تويتر),إكس تويتر,x.com,Social media
+linkedin,LinkedIn,لينكدإن,linkedin.com,Social media
+uber,Uber,أوبر,uber.com,Delivery and transport
+talabat,Talabat,طلبات,talabat.com,Delivery and transport
+keeta,Keeta,كيتا,keeta.com,Delivery and transport
+bolt,Bolt,بولت,bolt.eu,Delivery and transport
+booking,Booking.com,بوكينج,booking.com,Travel
+airbnb,Airbnb,إير بي إن بي,airbnb.com,Travel
+emirates,Emirates,طيران الإمارات,emirates.com,Travel
+almosafer,Almosafer,المسافر,almosafer.com,Travel
+paypal,PayPal,باي بال,paypal.com,Payments and tech
+tabby,Tabby,تابي,tabby.ai,Payments and tech
+microsoft,Microsoft,مايكروسوفت,microsoft.com,Payments and tech
+zoom,Zoom,زوم,zoom.us,Payments and tech
+openai,OpenAI (ChatGPT),شات جي بي تي اوبن اي اي,openai.com,Payments and tech

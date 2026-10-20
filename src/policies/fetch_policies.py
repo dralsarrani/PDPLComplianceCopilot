@@ -9,6 +9,10 @@ Policies with method=manual are skipped: their page blocks scripts or loads
 the text with JavaScript, so it is copied by hand from the browser into
 data/policies/<policy_id>.txt.
 
+The script says honestly who it is (USER_AGENT) and follows each site's
+robots.txt: a page the site does not allow scripts to read is skipped
+(status "blocked by robots.txt") and has to be copied by hand.
+
 start_line / stop_line (optional) trim leftover menus: the text starts at the
 first line that begins with start_line and stops before the first line that
 begins with stop_line.
@@ -20,7 +24,10 @@ Run from the project root:
 import csv
 import re
 from datetime import date
+from functools import lru_cache
 from pathlib import Path
+from urllib.parse import urlparse
+from urllib.robotparser import RobotFileParser
 
 import requests
 from bs4 import BeautifulSoup, NavigableString
@@ -29,14 +36,10 @@ POLICY_DIR = Path("data/policies")
 SOURCES = POLICY_DIR / "sources.csv"
 OUTPUT = POLICY_DIR / "policies.csv"
 
-# Some sites refuse requests that do not look like a normal browser.
-HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
-    ),
-    "Accept-Language": "en,ar;q=0.9",
-}
+# Says honestly that this is a script from an educational project.
+USER_AGENT = "PDPLComplianceCopilot/1.0 (educational project; reads public privacy policies)"
+HEADERS = {"User-Agent": USER_AGENT, "Accept-Language": "en,ar;q=0.9"}
+TIMEOUT = (6, 15)  # seconds to connect, seconds to wait for the page
 
 # Tags that start a new line. Everything else (span, a, b...) stays inline.
 BLOCK_TAGS = ["p", "div", "li", "ul", "ol", "tr", "table", "section", "article",
@@ -95,8 +98,39 @@ def find_line(lines, prefix):
     return None
 
 
+class Blocked(Exception):
+    """The site's robots.txt does not allow this page to be read by scripts."""
+
+
+@lru_cache(maxsize=64)
+def robots(base):
+    """The rules in a site's robots.txt, read once per site: a RobotFileParser,
+    True (no rules) or False (scripts may not read the site)."""
+    try:
+        r = requests.get(base + "/robots.txt", headers=HEADERS, timeout=TIMEOUT)
+    except requests.RequestException:
+        return True  # no answer about robots.txt: the page request itself will tell
+    if r.status_code in (401, 403):
+        return False
+    if r.status_code >= 400:
+        return True  # no robots.txt: no rules
+    rules = RobotFileParser()
+    rules.parse(r.text.splitlines())
+    return rules
+
+
+def allowed(url):
+    """True if the site's robots.txt lets USER_AGENT read this page (or has no robots.txt)."""
+    parts = urlparse(url)
+    rules = robots(f"{parts.scheme}://{parts.netloc}")
+    return rules if isinstance(rules, bool) else rules.can_fetch(USER_AGENT, url)
+
+
 def fetch(url):
-    r = requests.get(url, headers=HEADERS, timeout=30)
+    """The text of a page. Raises Blocked if robots.txt does not allow it."""
+    if not allowed(url):
+        raise Blocked(url)
+    r = requests.get(url, headers=HEADERS, timeout=TIMEOUT)
     r.raise_for_status()
     if not r.encoding or r.encoding.lower() == "iso-8859-1":
         r.encoding = r.apparent_encoding  # fixes garbled Arabic
@@ -125,6 +159,8 @@ def main():
                 out_path.write_text(text, encoding="utf-8")
                 n_chars = len(text)
                 status = "ok" if n_chars >= MIN_CHARS else "too short, check by hand"
+            except Blocked:
+                status = "blocked by robots.txt, copy by hand"
             except requests.RequestException as e:
                 status = f"failed: {type(e).__name__}"
 

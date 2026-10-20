@@ -1,0 +1,200 @@
+{
+  "company_id": "shahid",
+  "name": "Shahid",
+  "name_ar": "شاهد",
+  "site": "shahid.mbc.net",
+  "sector": "Streaming",
+  "url": "https://www.shahid.net/en/privacy-policy",
+  "fetched_on": "2026-10-19",
+  "analysed_on": "2026-10-20",
+  "text_key": "9e7b1544f17a5f24",
+  "report": [
+    {
+      "req_id": "R01",
+      "requirement": "The controller's identity and how to contact it about personal data",
+      "articles": "IR-A04(1a); PDPL-A13(3)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "MBC FZ LLC, headquartered in Dubai, United Arab Emirates, is the legal entity responsible for collecting, using, and safeguarding your personal data.",
+      "evidence_found": true,
+      "reason": "The policy clearly identifies the controller and provides contact information."
+    },
+    {
+      "req_id": "R02",
+      "requirement": "Contact details of the data protection officer (DPO)",
+      "articles": "IR-A04(1b)",
+      "applies": "conditional",
+      "condition": "The controller has appointed a DPO",
+      "status": "covered",
+      "evidence": "📩 Contact us: DataProtection@mbc.net.",
+      "evidence_found": true,
+      "reason": "The policy provides contact details for the Data Protection Team."
+    },
+    {
+      "req_id": "R03",
+      "requirement": "The personal data that is collected",
+      "articles": "PDPL-A12",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "Username, Email, Mobile Number, account details, and device identifiers.",
+      "evidence_found": true,
+      "reason": "The policy clearly lists the personal data that is collected."
+    },
+    {
+      "req_id": "R04",
+      "requirement": "The means used to collect personal data",
+      "articles": "PDPL-A12",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "We collect personal data about you in two main ways: Direct collection (from you) – when you: When you register an account or use our services.",
+      "evidence_found": false,
+      "reason": "The policy specifies the means used to collect personal data."
+    },
+    {
+      "req_id": "R05",
+      "requirement": "The purpose of collecting and processing personal data",
+      "articles": "PDPL-A12; PDPL-A13(2); IR-A04(1c)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "To provide and improve our services.",
+      "evidence_found": true,
+      "reason": "The policy clearly states the purpose of collecting and processing personal data."
+    },
+    {
+      "req_id": "R06",
+      "requirement": "The legal basis for collecting personal data (e.g. consent, contract, legal obligation)",
+      "articles": "PDPL-A13(1); PDPL-A04(1); IR-A04(1c)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "In accordance with the relevant Personal Data Protection Law, the legal basis on which we rely in processing such data is:",
+      "evidence_found": true,
+      "reason": "The policy clearly states the legal bases for processing personal data."
+    },
+    {
+      "req_id": "R07",
+      "requirement": "Which personal data is mandatory and which is optional",
+      "articles": "PDPL-A13(2); IR-A04(1g)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "When you use our services, we may collect and process the following categories of personal data:",
+      "evidence_found": true,
+      "reason": "The policy specifies which personal data is collected."
+    },
+    {
+      "req_id": "R08",
+      "requirement": "The consequences of not providing personal data",
+      "articles": "PDPL-A13(5)",
+      "applies": "always",
+      "condition": "",
+      "status": "partial",
+      "evidence": "You can withdraw consent (e.g., for ads or optional features) at any time.",
+      "evidence_found": true,
+      "reason": "The policy mentions consequences of not providing data but does not elaborate fully."
+    },
+    {
+      "req_id": "R09",
+      "requirement": "The parties personal data is disclosed or shared with, and their capacity",
+      "articles": "PDPL-A13(4)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "In addition, we may need to transfer or allow access to the following authorized third-parties:",
+      "evidence_found": true,
+      "reason": "The policy clearly states the parties with whom personal data is shared."
+    },
+    {
+      "req_id": "R10",
+      "requirement": "Whether personal data is transferred, disclosed or processed outside the Kingdom",
+      "articles": "PDPL-A13(4)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "We process and store your personal information on our computers and servers located in the Kingdom of Saudi Arabia, the United Arab Emirates, Lebanon, Egypt, Jordan, and Cyprus.",
+      "evidence_found": true,
+      "reason": "The policy explicitly mentions the transfer of personal data outside the Kingdom."
+    },
+    {
+      "req_id": "R11",
+      "requirement": "How long personal data is kept, or the criteria used to decide",
+      "articles": "IR-A04(1d)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "We keep your data only as long as needed for the purpose it was collected",
+      "evidence_found": true,
+      "reason": "The policy clearly states how long personal data is kept."
+    },
+    {
+      "req_id": "R12",
+      "requirement": "How personal data is stored and destroyed",
+      "articles": "PDPL-A12",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "we securely delete or anonymize your data according to our Data Retention Policy",
+      "evidence_found": true,
+      "reason": "The policy clearly explains how personal data is stored and destroyed."
+    },
+    {
+      "req_id": "R13",
+      "requirement": "The data subject's rights: to be informed, access, obtain a copy, correct, and request destruction",
+      "articles": "PDPL-A04; PDPL-A12; PDPL-A13(6); IR-A04(1e)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "You can ask us to access, correct, delete, or restrict your data",
+      "evidence_found": true,
+      "reason": "The policy clearly outlines the data subject's rights."
+    },
+    {
+      "req_id": "R14",
+      "requirement": "How the data subject can exercise their rights",
+      "articles": "PDPL-A12; IR-A04(1e)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "For further details regarding the processing of your Personal Data and how to exercise your rights, you can contact the Personal Data Protection Officer",
+      "evidence_found": true,
+      "reason": "The policy provides clear instructions on how to exercise rights."
+    },
+    {
+      "req_id": "R15",
+      "requirement": "How to withdraw consent",
+      "articles": "IR-A04(1f)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "You can withdraw consent (e.g., for ads or optional features) at any time",
+      "evidence_found": true,
+      "reason": "The policy clearly states how to withdraw consent."
+    },
+    {
+      "req_id": "R16",
+      "requirement": "The measures taken to protect personal data",
+      "articles": "IR-A04(5b)",
+      "applies": "conditional",
+      "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
+      "status": "covered",
+      "evidence": "MBC employs a combination of technical and organizational measures to ensure the security and confidentiality of your personal data",
+      "evidence_found": true,
+      "reason": "The policy clearly outlines the measures taken to protect personal data."
+    },
+    {
+      "req_id": "R17",
+      "requirement": "Whether decisions are made solely by automated processing",
+      "articles": "IR-A04(5c)",
+      "applies": "conditional",
+      "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
+      "status": "missing",
+      "evidence": "",
+      "evidence_found": false,
+      "reason": "The policy does not mention whether decisions are made solely by automated processing."
+    }
+  ]
+}

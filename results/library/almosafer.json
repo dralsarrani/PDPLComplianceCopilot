@@ -1,0 +1,200 @@
+{
+  "company_id": "almosafer",
+  "name": "Almosafer",
+  "name_ar": "المسافر",
+  "site": "almosafer.com",
+  "sector": "Travel",
+  "url": "https://www.almosafer.com/ar/privacy-policy",
+  "fetched_on": "2026-10-19",
+  "analysed_on": "2026-10-20",
+  "text_key": "07a1172fac78b59b",
+  "report": [
+    {
+      "req_id": "R01",
+      "requirement": "The controller's identity and how to contact it about personal data",
+      "articles": "IR-A04(1a); PDPL-A13(3)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "المسافر هي الجهة المتحكمة في البيانات والمسؤولة عن بياناتك الشخصية",
+      "evidence_found": false,
+      "reason": "The policy clearly identifies the controller."
+    },
+    {
+      "req_id": "R02",
+      "requirement": "Contact details of the data protection officer (DPO)",
+      "articles": "IR-A04(1b)",
+      "applies": "conditional",
+      "condition": "The controller has appointed a DPO",
+      "status": "covered",
+      "evidence": "البريد الإلكتروني: dpo@almosafer.com",
+      "evidence_found": true,
+      "reason": "The policy provides contact details for the DPO."
+    },
+    {
+      "req_id": "R03",
+      "requirement": "The personal data that is collected",
+      "articles": "PDPL-A12",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "بيانات الهوية: مثل الاسم، تاريخ الميلاد، الصور وبيانات جواز السفر",
+      "evidence_found": true,
+      "reason": "The policy specifies the types of personal data collected."
+    },
+    {
+      "req_id": "R04",
+      "requirement": "The means used to collect personal data",
+      "articles": "PDPL-A12",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "نقوم بجمع البيانات الشخصية عندما تقوم بـ:: عند تعبئة نموذج تواصل عبر الإنترنت",
+      "evidence_found": true,
+      "reason": "The policy describes the means used to collect personal data."
+    },
+    {
+      "req_id": "R05",
+      "requirement": "The purpose of collecting and processing personal data",
+      "articles": "PDPL-A12; PDPL-A13(2); IR-A04(1c)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "نستخدم بياناتك الشخصية للأغراض التالية: تقديم المعلومات التي طلبتها",
+      "evidence_found": true,
+      "reason": "The policy clearly states the purposes of collecting and processing personal data."
+    },
+    {
+      "req_id": "R06",
+      "requirement": "The legal basis for collecting personal data (e.g. consent, contract, legal obligation)",
+      "articles": "PDPL-A13(1); PDPL-A04(1); IR-A04(1c)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "نقوم بمعالجة بياناتك الشخصية استناداً إلى الأسس القانونية التالية",
+      "evidence_found": true,
+      "reason": "The policy clearly states the legal bases for processing personal data."
+    },
+    {
+      "req_id": "R07",
+      "requirement": "Which personal data is mandatory and which is optional",
+      "articles": "PDPL-A13(2); IR-A04(1g)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "بيانات الهوية: مثل الاسم، تاريخ الميلاد، الصور وبيانات جواز السفر.",
+      "evidence_found": true,
+      "reason": "The policy specifies which personal data is collected."
+    },
+    {
+      "req_id": "R08",
+      "requirement": "The consequences of not providing personal data",
+      "articles": "PDPL-A13(5)",
+      "applies": "always",
+      "condition": "",
+      "status": "partial",
+      "evidence": "نحن بحاجة إلى بيانات شخصية محددة منك لتقديم خدماتنا.",
+      "evidence_found": false,
+      "reason": "The policy mentions the need for personal data but does not detail the consequences of not providing it."
+    },
+    {
+      "req_id": "R09",
+      "requirement": "The parties personal data is disclosed or shared with, and their capacity",
+      "articles": "PDPL-A13(4)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "قد نقوم بمشاركة بياناتك الشخصية مع : شركاء تقديم الخدمات (مثل شركات الطيران والفنادق وغيرها)",
+      "evidence_found": true,
+      "reason": "The policy clearly states the parties with whom personal data may be shared."
+    },
+    {
+      "req_id": "R10",
+      "requirement": "Whether personal data is transferred, disclosed or processed outside the Kingdom",
+      "articles": "PDPL-A13(4)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "قد يتم نقل بياناتك الشخصية ومعالجتها في دول خارج المملكة العربية السعودية.",
+      "evidence_found": true,
+      "reason": "The policy explicitly mentions the transfer of personal data outside the Kingdom."
+    },
+    {
+      "req_id": "R11",
+      "requirement": "How long personal data is kept, or the criteria used to decide",
+      "articles": "IR-A04(1d)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "نحتفظ بالبيانات الشخصية فقط للمدة اللازمة لتحقيق الأغراض التالية",
+      "evidence_found": true,
+      "reason": "The policy clearly states how long personal data is kept."
+    },
+    {
+      "req_id": "R12",
+      "requirement": "How personal data is stored and destroyed",
+      "articles": "PDPL-A12",
+      "applies": "always",
+      "condition": "",
+      "status": "missing",
+      "evidence": "",
+      "evidence_found": false,
+      "reason": "The policy does not mention how personal data is stored and destroyed."
+    },
+    {
+      "req_id": "R13",
+      "requirement": "The data subject's rights: to be informed, access, obtain a copy, correct, and request destruction",
+      "articles": "PDPL-A04; PDPL-A12; PDPL-A13(6); IR-A04(1e)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "تشمل حقوقك ما يلي: حق العلم (الإحاطة): الحق في معرفة كيفية وأسباب جمع واستخدام بياناتك الشخصية.",
+      "evidence_found": true,
+      "reason": "The policy clearly outlines the data subject's rights."
+    },
+    {
+      "req_id": "R14",
+      "requirement": "How the data subject can exercise their rights",
+      "articles": "PDPL-A12; IR-A04(1e)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "يجوز لك في أي وقت طلب ممارسة حقوقك من خلال التواصل معنا",
+      "evidence_found": true,
+      "reason": "The policy specifies how the data subject can exercise their rights."
+    },
+    {
+      "req_id": "R15",
+      "requirement": "How to withdraw consent",
+      "articles": "IR-A04(1f)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "حق سحب الموافقة: الحق في سحب موافقتك في أي وقت عندما تعتمد المعالجة على الموافقة.",
+      "evidence_found": true,
+      "reason": "The policy clearly states how to withdraw consent."
+    },
+    {
+      "req_id": "R16",
+      "requirement": "The measures taken to protect personal data",
+      "articles": "IR-A04(5b)",
+      "applies": "conditional",
+      "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
+      "status": "covered",
+      "evidence": "نلتزم بأفضل الممارسات والمعايير الأمنية المعتمدة في القطاع",
+      "evidence_found": true,
+      "reason": "The policy clearly states the security measures taken to protect personal data."
+    },
+    {
+      "req_id": "R17",
+      "requirement": "Whether decisions are made solely by automated processing",
+      "articles": "IR-A04(5c)",
+      "applies": "conditional",
+      "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
+      "status": "covered",
+      "evidence": "لا نستخدم أي عمليات آلية لاتخاذ قرارات بشأنك قد تُنتج آثارًا قانونية أو آثارًا جوهرية تؤثر عليك",
+      "evidence_found": true,
+      "reason": "The policy explicitly states that no automated decision-making is used that has legal effects."
+    }
+  ]
+}

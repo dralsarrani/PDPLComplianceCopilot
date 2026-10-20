@@ -1,0 +1,200 @@
+{
+  "company_id": "openai",
+  "name": "OpenAI (ChatGPT)",
+  "name_ar": "شات جي بي تي اوبن اي اي",
+  "site": "openai.com",
+  "sector": "Payments and tech",
+  "url": "https://openai.com/policies/privacy-policy/",
+  "fetched_on": "2026-10-19",
+  "analysed_on": "2026-10-20",
+  "text_key": "e8fcdc26f3aad368",
+  "report": [
+    {
+      "req_id": "R01",
+      "requirement": "The controller's identity and how to contact it about personal data",
+      "articles": "IR-A04(1a); PDPL-A13(3)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "OpenAI OpCo, LLC, with its registered office at 1455 Third Street, San Francisco, California 94158, United States, is the controller",
+      "evidence_found": true,
+      "reason": "The policy clearly identifies the data controller and provides contact information."
+    },
+    {
+      "req_id": "R02",
+      "requirement": "Contact details of the data protection officer (DPO)",
+      "articles": "IR-A04(1b)",
+      "applies": "conditional",
+      "condition": "The controller has appointed a DPO",
+      "status": "covered",
+      "evidence": "you can contact our data protection officer at dpo@openai.com",
+      "evidence_found": true,
+      "reason": "The policy provides specific contact details for the Data Protection Officer."
+    },
+    {
+      "req_id": "R03",
+      "requirement": "The personal data that is collected",
+      "articles": "PDPL-A12",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "We collect Personal Data relating to you",
+      "evidence_found": true,
+      "reason": "The policy clearly states the types of personal data collected."
+    },
+    {
+      "req_id": "R04",
+      "requirement": "The means used to collect personal data",
+      "articles": "PDPL-A12",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "We collect Personal Data if you create an account to use our Services or communicate with us",
+      "evidence_found": true,
+      "reason": "The policy specifies the means used to collect personal data."
+    },
+    {
+      "req_id": "R05",
+      "requirement": "The purpose of collecting and processing personal data",
+      "articles": "PDPL-A12; PDPL-A13(2); IR-A04(1c)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "We use Personal Data for the following purposes",
+      "evidence_found": true,
+      "reason": "The policy clearly outlines the purposes for collecting and processing personal data."
+    },
+    {
+      "req_id": "R06",
+      "requirement": "The legal basis for collecting personal data (e.g. consent, contract, legal obligation)",
+      "articles": "PDPL-A13(1); PDPL-A04(1); IR-A04(1c)",
+      "applies": "always",
+      "condition": "",
+      "status": "partial",
+      "evidence": "to comply with legal obligations and to protect the rights, privacy, safety, or property of our users",
+      "evidence_found": true,
+      "reason": "The policy mentions legal obligations but does not specify all legal bases."
+    },
+    {
+      "req_id": "R07",
+      "requirement": "Which personal data is mandatory and which is optional",
+      "articles": "PDPL-A13(2); IR-A04(1g)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "We collect Personal Data if you create an account to use our Services",
+      "evidence_found": true,
+      "reason": "The policy clearly states the types of personal data collected."
+    },
+    {
+      "req_id": "R08",
+      "requirement": "The consequences of not providing personal data",
+      "articles": "PDPL-A13(5)",
+      "applies": "always",
+      "condition": "",
+      "status": "missing",
+      "evidence": "",
+      "evidence_found": false,
+      "reason": "The policy does not mention the consequences of not providing personal data."
+    },
+    {
+      "req_id": "R09",
+      "requirement": "The parties personal data is disclosed or shared with, and their capacity",
+      "articles": "PDPL-A13(4)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "we disclose Personal Data to vendors, service providers, and marketing partners",
+      "evidence_found": true,
+      "reason": "The policy clearly states the parties with whom personal data is shared."
+    },
+    {
+      "req_id": "R10",
+      "requirement": "Whether personal data is transferred, disclosed or processed outside the Kingdom",
+      "articles": "PDPL-A13(4)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "OpenAI processes your Personal Data for the purposes described in this policy on servers located in various jurisdictions",
+      "evidence_found": true,
+      "reason": "The policy clearly states that personal data may be processed outside the Kingdom."
+    },
+    {
+      "req_id": "R11",
+      "requirement": "How long personal data is kept, or the criteria used to decide",
+      "articles": "IR-A04(1d)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "We’ll retain your Personal Data for only as long as we need in order to provide our Services to you",
+      "evidence_found": true,
+      "reason": "The policy clearly states how long personal data is kept."
+    },
+    {
+      "req_id": "R12",
+      "requirement": "How personal data is stored and destroyed",
+      "articles": "PDPL-A12",
+      "applies": "always",
+      "condition": "",
+      "status": "partial",
+      "evidence": "we implement commercially reasonable technical, administrative, and organizational measures designed to protect Personal Data from loss, misuse, and unauthorized access",
+      "evidence_found": true,
+      "reason": "The policy mentions storage security but does not specify destruction methods."
+    },
+    {
+      "req_id": "R13",
+      "requirement": "The data subject's rights: to be informed, access, obtain a copy, correct, and request destruction",
+      "articles": "PDPL-A04; PDPL-A12; PDPL-A13(6); IR-A04(1e)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "you may have the right to: Access your Personal Data and information relating to how it is processed.",
+      "evidence_found": true,
+      "reason": "The policy clearly outlines the data subject's rights."
+    },
+    {
+      "req_id": "R14",
+      "requirement": "How the data subject can exercise their rights",
+      "articles": "PDPL-A12; IR-A04(1e)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "You can exercise some of these rights through your OpenAI account using the tools described in the Data controls section",
+      "evidence_found": true,
+      "reason": "The policy specifies how the data subject can exercise their rights."
+    },
+    {
+      "req_id": "R15",
+      "requirement": "How to withdraw consent",
+      "articles": "IR-A04(1f)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "Withdraw your consent—where we rely on consent as the legal basis for processing.",
+      "evidence_found": true,
+      "reason": "The policy clearly states how to withdraw consent."
+    },
+    {
+      "req_id": "R16",
+      "requirement": "The measures taken to protect personal data",
+      "articles": "IR-A04(5b)",
+      "applies": "conditional",
+      "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
+      "status": "covered",
+      "evidence": "we implement commercially reasonable technical, administrative, and organizational measures designed to protect Personal Data from loss, misuse, and unauthorized access",
+      "evidence_found": true,
+      "reason": "The policy clearly states the measures taken to protect personal data."
+    },
+    {
+      "req_id": "R17",
+      "requirement": "Whether decisions are made solely by automated processing",
+      "articles": "IR-A04(5c)",
+      "applies": "conditional",
+      "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
+      "status": "missing",
+      "evidence": "",
+      "evidence_found": false,
+      "reason": "The policy does not mention anything about decisions made solely by automated processing."
+    }
+  ]
+}

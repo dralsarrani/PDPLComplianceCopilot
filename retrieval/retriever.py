@@ -4,8 +4,8 @@ retrieve(question, k=5): the top PDPL articles for a question.
 Wraps the hybrid pipeline from hybrid_retrieval.py and reranking.py as one
 function the Gap Analyser and the app can import:
     BM25 (tokenize_arabic)  +  dense embeddings stored in ChromaDB
-        -> Reciprocal Rank Fusion (k=60) -> top 10
-        -> reranker (BAAI/bge-reranker-v2-m3) -> top k
+        -> Reciprocal Rank Fusion (k=60) -> top 20 (optionally one language only)
+        -> reranker (mmarco-mMiniLMv2, small and fast) -> top k
 
 The embeddings are computed once and saved in chroma_db/ (ignored by git).
 Delete that folder to rebuild them.
@@ -27,9 +27,18 @@ ARTICLES_PATH = PROJECT_ROOT / "data" / "processed" / "legal_articles_v1.0.json"
 CHROMA_PATH = PROJECT_ROOT / "chroma_db"
 COLLECTION = "pdpl_articles"
 DENSE_MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
-RERANK_MODEL = "BAAI/bge-reranker-v2-m3"
+# Small multilingual reranker. Measured with python -m retrieval.compare_rerankers
+# on the 34 answerable gold questions (laptop CPU, seconds of reranking per question):
+#   BAAI/bge-reranker-v2-m3, 10 candidates, 512 tokens   Recall@5 71.6%  MRR 0.868  ~20 s
+#   this model, 20 candidates, same language, 256 tokens  Recall@5 81.4%  Recall@8 85.8%  MRR 0.877  ~1.7 s
+# answer() passes the top 8 articles to the LLM.
+RERANK_MODEL = "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1"
 RRF_K = 60
-CANDIDATES = 10
+CANDIDATES = 20
+# The reranker reads at most this many tokens of each (question, article) pair:
+# the start of an article states its topic, and 256 was both faster and more
+# accurate than 512 in the comparison above.
+RERANK_MAX_TOKENS = 256
 
 _cache = {}
 
@@ -41,7 +50,7 @@ def _load_dense_model():
 
 def _load_reranker():
     from sentence_transformers import CrossEncoder
-    return CrossEncoder(RERANK_MODEL)
+    return CrossEncoder(RERANK_MODEL, max_length=RERANK_MAX_TOKENS)
 
 
 def _setup():
@@ -80,10 +89,12 @@ def _rrf(rankings):
     return sorted(scores, key=scores.get, reverse=True)
 
 
-def retrieve(question, k=5, rerank=True):
+def retrieve(question, k=5, rerank=True, candidates=CANDIDATES, language=None):
     """Return the top k articles as dicts:
     {record_id, document_code, article_number, article_title, language, official_text, score}
-    score is the reranker score (or the RRF score when rerank=False)."""
+    score is the reranker score (or the RRF score when rerank=False).
+    language ("ar" or "en") keeps only articles in that language, so the Arabic
+    and English copies of one article do not take two of the candidate places."""
     _setup()
     articles = _cache["articles"]
 
@@ -95,7 +106,9 @@ def retrieve(question, k=5, rerank=True):
     dense_ranking = [_cache["by_id"][rid] for rid in dense["ids"][0]]
 
     fused = _rrf([bm25_ranking, dense_ranking])
-    candidates = fused[:CANDIDATES]
+    if language:
+        fused = [i for i in fused if articles[i]["language"] == language]
+    candidates = fused[:candidates]
 
     if rerank:
         if "reranker" not in _cache:
