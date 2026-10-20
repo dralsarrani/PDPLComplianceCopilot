@@ -1,0 +1,200 @@
+{
+  "company_id": "google",
+  "name": "YouTube / Google",
+  "name_ar": "قوقل يوتيوب",
+  "site": "policies.google.com",
+  "sector": "Streaming",
+  "url": "https://www.youtube.com/t/privacy",
+  "fetched_on": "2026-10-19",
+  "analysed_on": "2026-10-20",
+  "text_key": "d4a2431796f9be8d",
+  "report": [
+    {
+      "req_id": "R01",
+      "requirement": "The controller's identity and how to contact it about personal data",
+      "articles": "IR-A04(1a); PDPL-A13(3)",
+      "applies": "always",
+      "condition": "",
+      "status": "missing",
+      "evidence": "",
+      "evidence_found": false,
+      "reason": "The policy does not provide the controller's identity or contact information."
+    },
+    {
+      "req_id": "R02",
+      "requirement": "Contact details of the data protection officer (DPO)",
+      "articles": "IR-A04(1b)",
+      "applies": "conditional",
+      "condition": "The controller has appointed a DPO",
+      "status": "missing",
+      "evidence": "",
+      "evidence_found": false,
+      "reason": "The policy does not mention a data protection officer or their contact details."
+    },
+    {
+      "req_id": "R03",
+      "requirement": "The personal data that is collected",
+      "articles": "PDPL-A12",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "We collect information to provide better services to all our users",
+      "evidence_found": true,
+      "reason": "The policy clearly states the types of personal data collected."
+    },
+    {
+      "req_id": "R04",
+      "requirement": "The means used to collect personal data",
+      "articles": "PDPL-A12",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "We use various technologies to collect and store information, including cookies, pixel tags, local storage",
+      "evidence_found": true,
+      "reason": "The policy specifies the means used to collect personal data."
+    },
+    {
+      "req_id": "R05",
+      "requirement": "The purpose of collecting and processing personal data",
+      "articles": "PDPL-A12; PDPL-A13(2); IR-A04(1c)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "We use data to build better services",
+      "evidence_found": true,
+      "reason": "The policy clearly states the purposes for collecting and processing personal data."
+    },
+    {
+      "req_id": "R06",
+      "requirement": "The legal basis for collecting personal data (e.g. consent, contract, legal obligation)",
+      "articles": "PDPL-A13(1); PDPL-A04(1); IR-A04(1c)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "We’ll ask for your consent before using your information for a purpose that isn’t covered in this Privacy Policy",
+      "evidence_found": true,
+      "reason": "The policy clearly states the requirement for consent."
+    },
+    {
+      "req_id": "R07",
+      "requirement": "Which personal data is mandatory and which is optional",
+      "articles": "PDPL-A13(2); IR-A04(1g)",
+      "applies": "always",
+      "condition": "",
+      "status": "partial",
+      "evidence": "you can also choose to add a phone number or payment information to your account",
+      "evidence_found": true,
+      "reason": "The policy mentions optional data but does not specify mandatory data."
+    },
+    {
+      "req_id": "R08",
+      "requirement": "The consequences of not providing personal data",
+      "articles": "PDPL-A13(5)",
+      "applies": "always",
+      "condition": "",
+      "status": "missing",
+      "evidence": "",
+      "evidence_found": false,
+      "reason": "The policy does not mention consequences of not providing personal data."
+    },
+    {
+      "req_id": "R09",
+      "requirement": "The parties personal data is disclosed or shared with, and their capacity",
+      "articles": "PDPL-A13(4)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "We do not share your personal information with companies, organizations, or individuals outside of Google except in the following cases",
+      "evidence_found": true,
+      "reason": "The policy clearly outlines the parties with whom data is shared."
+    },
+    {
+      "req_id": "R10",
+      "requirement": "Whether personal data is transferred, disclosed or processed outside the Kingdom",
+      "articles": "PDPL-A13(4)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "we maintain servers around the world and your information may be processed on servers located outside of the country where you live",
+      "evidence_found": true,
+      "reason": "The policy explicitly states that data may be processed outside the Kingdom."
+    },
+    {
+      "req_id": "R11",
+      "requirement": "How long personal data is kept, or the criteria used to decide",
+      "articles": "IR-A04(1d)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "We retain the data we collect for different periods of time depending on what it is, how we use it, and how you configure your settings",
+      "evidence_found": true,
+      "reason": "The policy clearly states how long personal data is kept."
+    },
+    {
+      "req_id": "R12",
+      "requirement": "How personal data is stored and destroyed",
+      "articles": "PDPL-A12",
+      "applies": "always",
+      "condition": "",
+      "status": "partial",
+      "evidence": "When you delete data, we follow a deletion process to make sure that your data is safely and completely removed from our servers or retained only in anonymized form",
+      "evidence_found": true,
+      "reason": "The policy mentions data destruction but lacks detail on storage methods."
+    },
+    {
+      "req_id": "R13",
+      "requirement": "The data subject's rights: to be informed, access, obtain a copy, correct, and request destruction",
+      "articles": "PDPL-A04; PDPL-A12; PDPL-A13(6); IR-A04(1e)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "You can also choose to have it deleted automatically after a set period of time",
+      "evidence_found": false,
+      "reason": "The policy clearly outlines the data subject's rights regarding access and deletion."
+    },
+    {
+      "req_id": "R14",
+      "requirement": "How the data subject can exercise their rights",
+      "articles": "PDPL-A12; IR-A04(1e)",
+      "applies": "always",
+      "condition": "",
+      "status": "partial",
+      "evidence": "You can export a copy of content in your Google Account if you want to back it up or use it with a service outside of Google",
+      "evidence_found": true,
+      "reason": "The policy mentions exercising rights but does not provide comprehensive instructions."
+    },
+    {
+      "req_id": "R15",
+      "requirement": "How to withdraw consent",
+      "articles": "IR-A04(1f)",
+      "applies": "always",
+      "condition": "",
+      "status": "missing",
+      "evidence": "",
+      "evidence_found": false,
+      "reason": "The policy does not mention how to withdraw consent."
+    },
+    {
+      "req_id": "R16",
+      "requirement": "The measures taken to protect personal data",
+      "articles": "IR-A04(5b)",
+      "applies": "conditional",
+      "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
+      "status": "covered",
+      "evidence": "We build security into our services to protect your information",
+      "evidence_found": true,
+      "reason": "The policy clearly states measures taken to protect personal data."
+    },
+    {
+      "req_id": "R17",
+      "requirement": "Whether decisions are made solely by automated processing",
+      "articles": "IR-A04(5c)",
+      "applies": "conditional",
+      "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
+      "status": "partial",
+      "evidence": "We use automated systems that analyze your content to provide you with things like tailored search results",
+      "evidence_found": true,
+      "reason": "The policy mentions automated processing but does not clarify if decisions are made solely by it."
+    }
+  ]
+}

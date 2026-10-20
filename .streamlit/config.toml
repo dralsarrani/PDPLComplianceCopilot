@@ -1,0 +1,14 @@
+[theme]
+base = "light"
+primaryColor = "#0F5132"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F7F8F7"
+textColor = "#1F2937"
+
+[client]
+toolbarMode = "minimal"
+
+[server]
+# Streamlit's file watcher scans every imported module and trips over parts of
+# the transformers library we do not use (torchvision error in the terminal).
+fileWatcherType = "none"

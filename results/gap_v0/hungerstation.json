@@ -1,0 +1,189 @@
+[
+  {
+    "req_id": "R01",
+    "requirement": "The controller's identity and how to contact it about personal data",
+    "articles": "IR-A04(1a); PDPL-A13(3)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "evidence": "We are HungerStation LLC and we are located at King Abdulaziz Road, Alyasmin, Riyadh, Saudi Arabia.",
+    "evidence_found": true,
+    "reason": "The policy clearly states the controller's identity and contact information."
+  },
+  {
+    "req_id": "R02",
+    "requirement": "Contact details of the data protection officer (DPO)",
+    "articles": "IR-A04(1b)",
+    "applies": "conditional",
+    "condition": "The controller has appointed a DPO",
+    "status": "covered",
+    "evidence": "If you would like to reach our data protection officer, please contact dpo@deliveryhero.com.",
+    "evidence_found": true,
+    "reason": "The policy provides specific contact details for the DPO."
+  },
+  {
+    "req_id": "R03",
+    "requirement": "The personal data that is collected",
+    "articles": "PDPL-A12",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "evidence": "we process personal data actively provided by you, collected from your device when you interact with us, or obtained from third parties.",
+    "evidence_found": true,
+    "reason": "The policy clearly lists the types of personal data collected."
+  },
+  {
+    "req_id": "R04",
+    "requirement": "The means used to collect personal data",
+    "articles": "PDPL-A12",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "evidence": "we process personal data actively provided by you, collected from your device when you interact with us, or obtained from third parties.",
+    "evidence_found": true,
+    "reason": "The policy specifies the means used to collect personal data."
+  },
+  {
+    "req_id": "R05",
+    "requirement": "The purpose of collecting and processing personal data",
+    "articles": "PDPL-A12; PDPL-A13(2); IR-A04(1c)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "evidence": "The information we request during the account creation process is necessary to take the first step in establishing a customer relationship with you.",
+    "evidence_found": true,
+    "reason": "The policy clearly states the purpose of collecting personal data."
+  },
+  {
+    "req_id": "R06",
+    "requirement": "The legal basis for collecting personal data (e.g. consent, contract, legal obligation)",
+    "articles": "PDPL-A13(1); PDPL-A04(1); IR-A04(1c)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "evidence": "The legal basis for this processing is our and your legitimate interest in concluding an agreement on the provision of our delivery services to you.",
+    "evidence_found": true,
+    "reason": "The policy specifies the legal basis for collecting personal data."
+  },
+  {
+    "req_id": "R07",
+    "requirement": "Which personal data is mandatory and which is optional",
+    "articles": "PDPL-A13(2); IR-A04(1g)",
+    "applies": "always",
+    "condition": "",
+    "status": "partial",
+    "evidence": "The information we request during the account creation process is necessary to take the first step in establishing a customer relationship with you.",
+    "evidence_found": true,
+    "reason": "The policy mentions that some data is necessary but does not clearly distinguish between mandatory and optional data."
+  },
+  {
+    "req_id": "R08",
+    "requirement": "The consequences of not providing personal data",
+    "articles": "PDPL-A13(5)",
+    "applies": "always",
+    "condition": "",
+    "status": "partial",
+    "evidence": "Without this process, we cannot provide our services to you.",
+    "evidence_found": true,
+    "reason": "The policy implies consequences of not providing data but does not specify them clearly."
+  },
+  {
+    "req_id": "R09",
+    "requirement": "The parties personal data is disclosed or shared with, and their capacity",
+    "articles": "PDPL-A13(4)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "evidence": "we share your order data with the vendor (e.g. restaurants, shops) preparing your order.",
+    "evidence_found": true,
+    "reason": "The policy clearly states the parties with whom personal data is shared."
+  },
+  {
+    "req_id": "R10",
+    "requirement": "Whether personal data is transferred, disclosed or processed outside the Kingdom",
+    "articles": "PDPL-A13(4)",
+    "applies": "always",
+    "condition": "",
+    "status": "partial",
+    "evidence": "we take appropriate measures to ensure that your data is always afforded an adequate level of protection in the countries to which it is transferred.",
+    "evidence_found": true,
+    "reason": "The policy mentions data transfer outside the Kingdom but lacks specific details."
+  },
+  {
+    "req_id": "R11",
+    "requirement": "How long personal data is kept, or the criteria used to decide",
+    "articles": "IR-A04(1d)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "evidence": "We store this personal data as long as you remain our customer and in the ordinary course of things we delete it when you close your account, or after 3 years of inactivity.",
+    "evidence_found": true,
+    "reason": "The policy clearly states how long personal data is kept."
+  },
+  {
+    "req_id": "R12",
+    "requirement": "How personal data is stored and destroyed",
+    "articles": "PDPL-A12",
+    "applies": "always",
+    "condition": "",
+    "status": "partial",
+    "evidence": "All types of personal information you provide and the information we collect about you is stored and protected within the secure environment of our platform.",
+    "evidence_found": true,
+    "reason": "The policy mentions storage and protection but does not detail destruction methods."
+  },
+  {
+    "req_id": "R13",
+    "requirement": "The data subject's rights: to be informed, access, obtain a copy, correct, and request destruction",
+    "articles": "PDPL-A04; PDPL-A12; PDPL-A13(6); IR-A04(1e)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "evidence": "You have the right to access your personal data and obtain additional information on how we process it.",
+    "evidence_found": true,
+    "reason": "The policy clearly outlines the data subject's rights."
+  },
+  {
+    "req_id": "R14",
+    "requirement": "How the data subject can exercise their rights",
+    "articles": "PDPL-A12; IR-A04(1e)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "evidence": "To exercise your rights, we encourage you to use the functions available in your account at any time.",
+    "evidence_found": true,
+    "reason": "The policy provides clear instructions on how to exercise rights."
+  },
+  {
+    "req_id": "R15",
+    "requirement": "How to withdraw consent",
+    "articles": "IR-A04(1f)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "evidence": "If you have already given your consent and would like to revoke it for the future, please let us know by contacting us.",
+    "evidence_found": true,
+    "reason": "The policy clearly states how to withdraw consent."
+  },
+  {
+    "req_id": "R16",
+    "requirement": "The measures taken to protect personal data",
+    "articles": "IR-A04(5b)",
+    "applies": "conditional",
+    "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
+    "status": "covered",
+    "evidence": "We use state of the art servers, network equipment and cloud services to deliver our platform, to ensure high performance and uninterrupted service.",
+    "evidence_found": true,
+    "reason": "The policy clearly describes measures taken to protect personal data."
+  },
+  {
+    "req_id": "R17",
+    "requirement": "Whether decisions are made solely by automated processing",
+    "articles": "IR-A04(5c)",
+    "applies": "conditional",
+    "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
+    "status": "partial",
+    "evidence": "we may use automation for certain functions.",
+    "evidence_found": true,
+    "reason": "The policy mentions automated processing but does not clarify if decisions are solely automated."
+  }
+]

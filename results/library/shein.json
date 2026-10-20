@@ -1,0 +1,200 @@
+{
+  "company_id": "shein",
+  "name": "Shein",
+  "name_ar": "شي إن",
+  "site": "shein.com",
+  "sector": "Shopping",
+  "url": "https://www.shein.com/Privacy-Policy-a-21.html",
+  "fetched_on": "2026-10-19",
+  "analysed_on": "2026-10-20",
+  "text_key": "8965af6fdfde4a51",
+  "report": [
+    {
+      "req_id": "R01",
+      "requirement": "The controller's identity and how to contact it about personal data",
+      "articles": "IR-A04(1a); PDPL-A13(3)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "شركة Infinite Styles Services Co., Limited (\"ISSL\")، وهي المتحكم في البيانات الشخصية المُجمَّعة والمسؤولة عن معالجة هذه البيانات الشخصية وحمايتها",
+      "evidence_found": true,
+      "reason": "The policy clearly states the identity of the data controller."
+    },
+    {
+      "req_id": "R02",
+      "requirement": "Contact details of the data protection officer (DPO)",
+      "articles": "IR-A04(1b)",
+      "applies": "conditional",
+      "condition": "The controller has appointed a DPO",
+      "status": "covered",
+      "evidence": "يمكن الاتصال بمسؤول حماية البيانات في الاتحاد الأوروبي لدينا عبر عنوان البريد الإلكتروني أدناه أو عبر عنواننا البريدي أدناه كتابيًا",
+      "evidence_found": true,
+      "reason": "The policy provides contact details for the Data Protection Officer."
+    },
+    {
+      "req_id": "R03",
+      "requirement": "The personal data that is collected",
+      "articles": "PDPL-A12",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "بعض البيانات الشخصية التي نجمعها منك ضرورية لنا لتقديم خدماتنا، على سبيل المثال، نحتاج إلى اسمك وعنوان التسليم لشحن طردك",
+      "evidence_found": true,
+      "reason": "The policy specifies the personal data that is collected."
+    },
+    {
+      "req_id": "R04",
+      "requirement": "The means used to collect personal data",
+      "articles": "PDPL-A12",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "نعالج البيانات الشخصية عندما تُقدّمها لنا، وعندما نجمعها تلقائيًا، وعندما يتم توليدها من خلال استخدامك لخدماتنا",
+      "evidence_found": true,
+      "reason": "The policy describes the means used to collect personal data."
+    },
+    {
+      "req_id": "R05",
+      "requirement": "The purpose of collecting and processing personal data",
+      "articles": "PDPL-A12; PDPL-A13(2); IR-A04(1c)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "لإنشاء حسابك- لتسهيل إدارة حسابك ووصولك إليه",
+      "evidence_found": true,
+      "reason": "The policy outlines the purpose of collecting and processing personal data."
+    },
+    {
+      "req_id": "R06",
+      "requirement": "The legal basis for collecting personal data (e.g. consent, contract, legal obligation)",
+      "articles": "PDPL-A13(1); PDPL-A04(1); IR-A04(1c)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "ضروري لتنفيذ عقد معنا أو مع بائع آخر",
+      "evidence_found": true,
+      "reason": "The policy clearly states the legal basis for data processing."
+    },
+    {
+      "req_id": "R07",
+      "requirement": "Which personal data is mandatory and which is optional",
+      "articles": "PDPL-A13(2); IR-A04(1g)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "بعض البيانات الشخصية التي نجمعها منك ضرورية لنا لتقديم خدماتنا",
+      "evidence_found": true,
+      "reason": "The policy specifies which personal data is mandatory and which is optional."
+    },
+    {
+      "req_id": "R08",
+      "requirement": "The consequences of not providing personal data",
+      "articles": "PDPL-A13(5)",
+      "applies": "always",
+      "condition": "",
+      "status": "partial",
+      "evidence": "رفض تقديمها لنا لن يمنعك من استخدام خدماتنا",
+      "evidence_found": true,
+      "reason": "The policy mentions consequences but does not elaborate fully."
+    },
+    {
+      "req_id": "R09",
+      "requirement": "The parties personal data is disclosed or shared with, and their capacity",
+      "articles": "PDPL-A13(4)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "قد نشارك بياناتك الشخصية مع شركات المجموعة المرتبطة بنا",
+      "evidence_found": true,
+      "reason": "The policy clearly states the parties with whom data is shared."
+    },
+    {
+      "req_id": "R10",
+      "requirement": "Whether personal data is transferred, disclosed or processed outside the Kingdom",
+      "articles": "PDPL-A13(4)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "بعض الشركات التي يتم الإفصاح عن بياناتك الشخصية لها تقع، أو تصل إلى بياناتك الشخصية، خارج المنطقة الاقتصادية الأوروبية",
+      "evidence_found": true,
+      "reason": "The policy explicitly mentions international data transfers."
+    },
+    {
+      "req_id": "R11",
+      "requirement": "How long personal data is kept, or the criteria used to decide",
+      "articles": "IR-A04(1d)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "سيتم الحذف خلال 5 أيام، باستثناء الحالات التي تكون فيها البيانات مطلوبة من أجل: - معالجة أي طلبات غير مُنفَّذة",
+      "evidence_found": true,
+      "reason": "The policy clearly states the retention period for personal data."
+    },
+    {
+      "req_id": "R12",
+      "requirement": "How personal data is stored and destroyed",
+      "articles": "PDPL-A12",
+      "applies": "always",
+      "condition": "",
+      "status": "partial",
+      "evidence": "نحتفظ بضمانات مادية وإلكترونية وإجرائية معقولة مُصمَّمة لحماية بياناتك الشخصية",
+      "evidence_found": true,
+      "reason": "The policy mentions security measures but does not specify destruction methods."
+    },
+    {
+      "req_id": "R13",
+      "requirement": "The data subject's rights: to be informed, access, obtain a copy, correct, and request destruction",
+      "articles": "PDPL-A04; PDPL-A12; PDPL-A13(6); IR-A04(1e)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "لديك الحق في حذف بياناتك عندما لم تعد مطلوبة لدينا لغرض مشروع",
+      "evidence_found": true,
+      "reason": "The policy explicitly outlines the rights of the data subject."
+    },
+    {
+      "req_id": "R14",
+      "requirement": "How the data subject can exercise their rights",
+      "articles": "PDPL-A12; IR-A04(1e)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "لممارسة حقوقك، يمكنك إجراء تحديثات ضمن حساب العميل الخاص بك على الموقع أو التطبيق",
+      "evidence_found": true,
+      "reason": "The policy provides clear instructions on how to exercise rights."
+    },
+    {
+      "req_id": "R15",
+      "requirement": "How to withdraw consent",
+      "articles": "IR-A04(1f)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "لديك الحق في سحب تلك الموافقة في أي وقت",
+      "evidence_found": true,
+      "reason": "The policy clearly states how to withdraw consent."
+    },
+    {
+      "req_id": "R16",
+      "requirement": "The measures taken to protect personal data",
+      "articles": "IR-A04(5b)",
+      "applies": "conditional",
+      "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
+      "status": "covered",
+      "evidence": "نحتفظ بضمانات مادية وإلكترونية وإجرائية معقولة مُصمَّمة لحماية بياناتك الشخصية من المعالجة أو الاستخدام أو الإفصاح غير المصرح به",
+      "evidence_found": true,
+      "reason": "The policy clearly states the measures taken to protect personal data."
+    },
+    {
+      "req_id": "R17",
+      "requirement": "Whether decisions are made solely by automated processing",
+      "articles": "IR-A04(5c)",
+      "applies": "conditional",
+      "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
+      "status": "partial",
+      "evidence": "حيث يُجري التأكد من العمر قبل السماح لك بالوصول إلى منتجات معينة أو شرائها حيث يكون تقييد هذه المنتجات للبالغين مطلوبًا",
+      "evidence_found": true,
+      "reason": "The policy mentions automated processing related to age verification but does not fully clarify if all decisions are made solely by automated processing."
+    }
+  ]
+}

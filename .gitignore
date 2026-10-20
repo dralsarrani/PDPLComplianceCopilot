@@ -23,3 +23,12 @@ chroma_db/
 # OS / editor
 .DS_Store
 Thumbs.db
+
+# App: personal history and local caches
+results/history.json
+results/gap_cache/
+results/archive_index/
+results/web_policies/
+
+# Full texts of company policies: copyright, keep them local (links and results are enough)
+data/library/texts/

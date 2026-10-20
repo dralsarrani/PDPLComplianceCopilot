@@ -8,6 +8,8 @@ For each sentence of the answer and each article it cites:
                                                                           partial /
                                                                           unsupported
 A sentence with no citation at all is flagged as uncited.
+Step 3 is skipped for a citation whose quote answer() already found word for word
+in the article (quoted): that one is supported, which saves an LLM call.
 
 Only supported and partial citations are valid. Everything else is a problem,
 so an invented or unrelated article is never shown to the user as evidence.
@@ -84,9 +86,10 @@ def judge(pairs, client=None, model=None):
     return results
 
 
-def check_citations(sentences, retrieved_ids, client=None, model=None):
+def check_citations(sentences, retrieved_ids, client=None, model=None, quoted=None):
     """sentences: [{"text": "...", "citations": ["PDPL-A15-AR", ...]}]
     retrieved_ids: record ids returned by retrieve()
+    quoted: {(sentence index, id)} whose quote was found in the article text
 
     Returns {"sentences": [{text, uncited, citations: [{id, status, reason}]}],
              "valid_citations": [...], "problems": [{sentence, id, status, reason}], "ok": bool}"""
@@ -94,7 +97,8 @@ def check_citations(sentences, retrieved_ids, client=None, model=None):
     retrieved = {normalise_id(r) for r in retrieved_ids}
     report, to_judge = [], []
 
-    for s in sentences:
+    quoted = quoted or set()
+    for i, s in enumerate(sentences):
         row = {"text": s.get("text", ""), "citations": []}
         for raw in s.get("citations", []):
             cid = normalise_id(raw)
@@ -103,6 +107,8 @@ def check_citations(sentences, retrieved_ids, client=None, model=None):
             elif cid not in retrieved:
                 c = {"id": cid, "status": "not_retrieved",
                      "reason": "Real article, but not one of the retrieved articles the answer was based on."}
+            elif (i, cid) in quoted:
+                c = {"id": cid, "status": "supported", "reason": "Quote found word for word in the article."}
             else:
                 c = {"id": cid, "status": "pending", "reason": ""}
                 to_judge.append((c, row["text"], articles[cid]["official_text"]))

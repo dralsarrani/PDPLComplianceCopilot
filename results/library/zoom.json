@@ -1,0 +1,200 @@
+{
+  "company_id": "zoom",
+  "name": "Zoom",
+  "name_ar": "زوم",
+  "site": "zoom.us",
+  "sector": "Payments and tech",
+  "url": "https://zoom.us/privacy",
+  "fetched_on": "2026-10-19",
+  "analysed_on": "2026-10-20",
+  "text_key": "8800cf1a39862de2",
+  "report": [
+    {
+      "req_id": "R01",
+      "requirement": "The controller's identity and how to contact it about personal data",
+      "articles": "IR-A04(1a); PDPL-A13(3)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "Zoom Communications, Inc.",
+      "evidence_found": true,
+      "reason": "The policy clearly states the identity of the controller."
+    },
+    {
+      "req_id": "R02",
+      "requirement": "Contact details of the data protection officer (DPO)",
+      "articles": "IR-A04(1b)",
+      "applies": "conditional",
+      "condition": "The controller has appointed a DPO",
+      "status": "covered",
+      "evidence": "You can contact our Data Protection Officer by sending an email to privacy@zoom.us.",
+      "evidence_found": true,
+      "reason": "The policy provides contact details for the Data Protection Officer."
+    },
+    {
+      "req_id": "R03",
+      "requirement": "The personal data that is collected",
+      "articles": "PDPL-A12",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "we may collect, or process on behalf of our customers, the following categories of personal data",
+      "evidence_found": true,
+      "reason": "The policy specifies the categories of personal data collected."
+    },
+    {
+      "req_id": "R04",
+      "requirement": "The means used to collect personal data",
+      "articles": "PDPL-A12",
+      "applies": "always",
+      "condition": "",
+      "status": "partial",
+      "evidence": "we receive information from sources as described in the 'What Personal Data Do We Receive?' section",
+      "evidence_found": false,
+      "reason": "The policy mentions means of collection but does not detail all methods."
+    },
+    {
+      "req_id": "R05",
+      "requirement": "The purpose of collecting and processing personal data",
+      "articles": "PDPL-A12; PDPL-A13(2); IR-A04(1c)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "Zoom uses personal data for the following business and commercial purposes: to provide Zoom Products and Services",
+      "evidence_found": true,
+      "reason": "The policy clearly states the purposes for collecting and processing personal data."
+    },
+    {
+      "req_id": "R06",
+      "requirement": "The legal basis for collecting personal data (e.g. consent, contract, legal obligation)",
+      "articles": "PDPL-A13(1); PDPL-A04(1); IR-A04(1c)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "we rely on the following legal bases as applicable in your jurisdiction",
+      "evidence_found": true,
+      "reason": "The policy clearly states the legal bases for processing personal data."
+    },
+    {
+      "req_id": "R07",
+      "requirement": "Which personal data is mandatory and which is optional",
+      "articles": "PDPL-A13(2); IR-A04(1g)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "we may collect, or process on behalf of our customers, the following categories of personal data",
+      "evidence_found": true,
+      "reason": "The policy specifies categories of personal data collected, indicating which may be mandatory or optional."
+    },
+    {
+      "req_id": "R08",
+      "requirement": "The consequences of not providing personal data",
+      "articles": "PDPL-A13(5)",
+      "applies": "always",
+      "condition": "",
+      "status": "partial",
+      "evidence": "some usage data collection is optional and may be controlled by your Diagnostic Data Preferences Setting",
+      "evidence_found": true,
+      "reason": "The policy mentions optional data but does not clearly outline consequences of not providing data."
+    },
+    {
+      "req_id": "R09",
+      "requirement": "The parties personal data is disclosed or shared with, and their capacity",
+      "articles": "PDPL-A13(4)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "Zoom provides personal data to third parties only with consent or in one of the following circumstances",
+      "evidence_found": true,
+      "reason": "The policy clearly states the parties with whom personal data is shared."
+    },
+    {
+      "req_id": "R10",
+      "requirement": "Whether personal data is transferred, disclosed or processed outside the Kingdom",
+      "articles": "PDPL-A13(4)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "your personal data may be transferred to or stored in the United States where we are established, as well as in other countries outside of the EEA",
+      "evidence_found": true,
+      "reason": "The policy explicitly mentions the transfer of personal data outside the Kingdom."
+    },
+    {
+      "req_id": "R11",
+      "requirement": "How long personal data is kept, or the criteria used to decide",
+      "articles": "IR-A04(1d)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "We retain personal data for as long as required to engage in the uses described in this Privacy Statement",
+      "evidence_found": true,
+      "reason": "The policy clearly states how long personal data is kept."
+    },
+    {
+      "req_id": "R12",
+      "requirement": "How personal data is stored and destroyed",
+      "articles": "PDPL-A12",
+      "applies": "always",
+      "condition": "",
+      "status": "missing",
+      "evidence": "",
+      "evidence_found": false,
+      "reason": "The policy does not mention how personal data is stored and destroyed."
+    },
+    {
+      "req_id": "R13",
+      "requirement": "The data subject's rights: to be informed, access, obtain a copy, correct, and request destruction",
+      "articles": "PDPL-A04; PDPL-A12; PDPL-A13(6); IR-A04(1e)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "your rights in relation to your personal data processed by us as a controller specifically include: Right of access and/or portability",
+      "evidence_found": true,
+      "reason": "The policy clearly outlines the data subject's rights."
+    },
+    {
+      "req_id": "R14",
+      "requirement": "How the data subject can exercise their rights",
+      "articles": "PDPL-A12; IR-A04(1e)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "To exercise your rights, please click here.",
+      "evidence_found": true,
+      "reason": "The policy provides information on how to exercise rights."
+    },
+    {
+      "req_id": "R15",
+      "requirement": "How to withdraw consent",
+      "articles": "IR-A04(1f)",
+      "applies": "always",
+      "condition": "",
+      "status": "partial",
+      "evidence": "You have the right to withdraw your consent at any time by visiting our cookie management tool",
+      "evidence_found": true,
+      "reason": "The policy mentions withdrawal of consent but only in the context of cookies."
+    },
+    {
+      "req_id": "R16",
+      "requirement": "The measures taken to protect personal data",
+      "articles": "IR-A04(5b)",
+      "applies": "conditional",
+      "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
+      "status": "partial",
+      "evidence": "Zoom uses advanced tools to automatically scan certain types of content such as virtual backgrounds, profile images, incoming emails to Zoom’s native email service",
+      "evidence_found": true,
+      "reason": "The policy mentions measures for content scanning but lacks detail on overall data protection measures."
+    },
+    {
+      "req_id": "R17",
+      "requirement": "Whether decisions are made solely by automated processing",
+      "articles": "IR-A04(5c)",
+      "applies": "conditional",
+      "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
+      "status": "missing",
+      "evidence": "",
+      "evidence_found": false,
+      "reason": "The policy does not address whether decisions are made solely by automated processing."
+    }
+  ]
+}

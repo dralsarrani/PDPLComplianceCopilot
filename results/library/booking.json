@@ -1,0 +1,200 @@
+{
+  "company_id": "booking",
+  "name": "Booking.com",
+  "name_ar": "بوكينج",
+  "site": "booking.com",
+  "sector": "Travel",
+  "url": "https://www.booking.com/content/privacy.en-gb.html",
+  "fetched_on": "2026-10-19",
+  "analysed_on": "2026-10-20",
+  "text_key": "8932065be7277471",
+  "report": [
+    {
+      "req_id": "R01",
+      "requirement": "The controller's identity and how to contact it about personal data",
+      "articles": "IR-A04(1a); PDPL-A13(3)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "We are Booking.com and this privacy notice is intended for travellers using or considering using our products and services.",
+      "evidence_found": true,
+      "reason": "The policy clearly identifies the controller as Booking.com."
+    },
+    {
+      "req_id": "R02",
+      "requirement": "Contact details of the data protection officer (DPO)",
+      "articles": "IR-A04(1b)",
+      "applies": "conditional",
+      "condition": "The controller has appointed a DPO",
+      "status": "missing",
+      "evidence": "",
+      "evidence_found": false,
+      "reason": "The policy does not mention any contact details for a data protection officer."
+    },
+    {
+      "req_id": "R03",
+      "requirement": "The personal data that is collected",
+      "articles": "PDPL-A12",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "When you make a trip reservation, we ask for your name and email address.",
+      "evidence_found": true,
+      "reason": "The policy specifies the personal data collected during trip reservations."
+    },
+    {
+      "req_id": "R04",
+      "requirement": "The means used to collect personal data",
+      "articles": "PDPL-A12",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "We automatically collect certain information when you use our platform.",
+      "evidence_found": true,
+      "reason": "The policy describes the means used to collect personal data."
+    },
+    {
+      "req_id": "R05",
+      "requirement": "The purpose of collecting and processing personal data",
+      "articles": "PDPL-A12; PDPL-A13(2); IR-A04(1c)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "We use your personal data for a number of purposes as outlined here.",
+      "evidence_found": true,
+      "reason": "The policy outlines the purposes for collecting and processing personal data."
+    },
+    {
+      "req_id": "R06",
+      "requirement": "The legal basis for collecting personal data (e.g. consent, contract, legal obligation)",
+      "articles": "PDPL-A13(1); PDPL-A04(1); IR-A04(1c)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "Booking.com relies on several legal bases in applicable privacy regulations.",
+      "evidence_found": true,
+      "reason": "The policy clearly states the legal bases for processing personal data."
+    },
+    {
+      "req_id": "R07",
+      "requirement": "Which personal data is mandatory and which is optional",
+      "articles": "PDPL-A13(2); IR-A04(1g)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "Depending on the nature of the trip reservation, we may also ask for your home address, telephone number, payment information.",
+      "evidence_found": true,
+      "reason": "The policy specifies which personal data is collected and indicates that some data is mandatory."
+    },
+    {
+      "req_id": "R08",
+      "requirement": "The consequences of not providing personal data",
+      "articles": "PDPL-A13(5)",
+      "applies": "always",
+      "condition": "",
+      "status": "partial",
+      "evidence": "If the required personal data is not provided, Booking.com cannot finalise the trip reservation.",
+      "evidence_found": true,
+      "reason": "The policy mentions consequences of not providing data but does not elaborate on all potential consequences."
+    },
+    {
+      "req_id": "R09",
+      "requirement": "The parties personal data is disclosed or shared with, and their capacity",
+      "articles": "PDPL-A13(4)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "We may receive personal data about you from other companies in the BHI group.",
+      "evidence_found": true,
+      "reason": "The policy clearly states the parties with whom personal data is shared."
+    },
+    {
+      "req_id": "R10",
+      "requirement": "Whether personal data is transferred, disclosed or processed outside the Kingdom",
+      "articles": "PDPL-A13(4)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "the data that we collect from you... could be accessible from, transferred to or stored in countries which may not have the same data protection laws.",
+      "evidence_found": true,
+      "reason": "The policy explicitly mentions the transfer of personal data outside the Kingdom."
+    },
+    {
+      "req_id": "R11",
+      "requirement": "How long personal data is kept, or the criteria used to decide",
+      "articles": "IR-A04(1d)",
+      "applies": "always",
+      "condition": "",
+      "status": "partial",
+      "evidence": "we keep your personal data for as long as is necessary to enable you to use our services",
+      "evidence_found": false,
+      "reason": "The policy mentions data retention but lacks specific timeframes."
+    },
+    {
+      "req_id": "R12",
+      "requirement": "How personal data is stored and destroyed",
+      "articles": "PDPL-A12",
+      "applies": "always",
+      "condition": "",
+      "status": "partial",
+      "evidence": "we use retention practices to keep and, where possible under applicable law, dispose of personal data",
+      "evidence_found": true,
+      "reason": "The policy discusses data disposal but does not detail storage methods."
+    },
+    {
+      "req_id": "R13",
+      "requirement": "The data subject's rights: to be informed, access, obtain a copy, correct, and request destruction",
+      "articles": "PDPL-A04; PDPL-A12; PDPL-A13(6); IR-A04(1e)",
+      "applies": "always",
+      "condition": "",
+      "status": "covered",
+      "evidence": "this privacy notice describes how we collect and otherwise process your personal data when you visit our websites",
+      "evidence_found": true,
+      "reason": "The policy clearly outlines the rights of data subjects."
+    },
+    {
+      "req_id": "R14",
+      "requirement": "How the data subject can exercise their rights",
+      "articles": "PDPL-A12; IR-A04(1e)",
+      "applies": "always",
+      "condition": "",
+      "status": "missing",
+      "evidence": "",
+      "evidence_found": false,
+      "reason": "The policy does not specify how data subjects can exercise their rights."
+    },
+    {
+      "req_id": "R15",
+      "requirement": "How to withdraw consent",
+      "articles": "IR-A04(1f)",
+      "applies": "always",
+      "condition": "",
+      "status": "missing",
+      "evidence": "",
+      "evidence_found": false,
+      "reason": "The policy does not mention how to withdraw consent."
+    },
+    {
+      "req_id": "R16",
+      "requirement": "The measures taken to protect personal data",
+      "articles": "IR-A04(5b)",
+      "applies": "conditional",
+      "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
+      "status": "covered",
+      "evidence": "We combine people, processes and technology to protect your personal data and respect your privacy",
+      "evidence_found": true,
+      "reason": "The policy clearly outlines the measures taken to protect personal data."
+    },
+    {
+      "req_id": "R17",
+      "requirement": "Whether decisions are made solely by automated processing",
+      "articles": "IR-A04(5c)",
+      "applies": "conditional",
+      "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
+      "status": "covered",
+      "evidence": "We use artificial intelligence to review activity on our platform for fraud and to detect any other forms of misconduct as described in the section How we use artificial intelligence and make automated decisions",
+      "evidence_found": true,
+      "reason": "The policy explicitly states that AI is used for automated decision-making."
+    }
+  ]
+}
