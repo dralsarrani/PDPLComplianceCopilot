@@ -271,7 +271,7 @@ def warm_up():
     than the others. Returns the thread; ask() waits for it."""
     def load():
         from retrieval.retriever import retrieve
-        retrieve("ما هي البيانات الشخصية؟")
+        retrieve("ما هي البيانات الشخصية؟", llm_rerank=False)
     thread = threading.Thread(target=load, daemon=True)
     thread.start()
     return thread

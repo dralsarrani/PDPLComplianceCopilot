@@ -4355,5 +4355,291 @@
       "answer": 1.2,
       "check": 0.0
     }
+  },
+  "وش يصير لو سحبت موافقتي على معالجة بياناتي؟": {
+    "question": "وش يصير لو سحبت موافقتي على معالجة بياناتي؟",
+    "covered": true,
+    "answer": "يحق لصاحب البيانات الشخصية العدول عن موافقته على معالجة بياناته الشخصية في أي وقت. يجب على جهة التحكم إيقاف المعالجة دون تأخير غير مبرر. على جهة التحكم اتخاذ الإجراءات الملائمة لإشعار من تم الإفصاح لهم عن البيانات الشخصية وطلب إتلافها.",
+    "sentences": [
+      {
+        "text": "يحق لصاحب البيانات الشخصية العدول عن موافقته على معالجة بياناته الشخصية في أي وقت.",
+        "citations": [
+          "IR-A12-AR"
+        ],
+        "evidence": {
+          "id": "IR-A12-AR",
+          "quote": "لصاحب البيانات الشخصية العدول عن موافقته على معالجة بياناته الشخصية في أي وقت، وله إبلاغ جهة التحكم بذلك بأي من الوسائل المتاحة وفقاً للمادة (الرابعة) من هذه اللائحة"
+        }
+      },
+      {
+        "text": "يجب على جهة التحكم إيقاف المعالجة دون تأخير غير مبرر.",
+        "citations": [
+          "IR-A12-AR"
+        ],
+        "evidence": {
+          "id": "IR-A12-AR",
+          "quote": "في حال العدول عن الموافقة، فيجب على جهة التحكم إيقاف المعالجة دون تأخير غير مبرر"
+        }
+      },
+      {
+        "text": "على جهة التحكم اتخاذ الإجراءات الملائمة لإشعار من تم الإفصاح لهم عن البيانات الشخصية وطلب إتلافها.",
+        "citations": [
+          "IR-A12-AR"
+        ],
+        "evidence": {
+          "id": "IR-A12-AR",
+          "quote": "جهة التحكم عند عدول صاحب البيانات الشخصية عن موافقته على معالجة بياناته؛ اتخاذ الإجراءات الملائمة لإشعار من تم الإفصاح لهم عن البيانات الشخصية -بأي وسيلة كانت- وطلب إتلافها"
+        }
+      }
+    ],
+    "citations": [
+      "IR-A12-AR"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "يحق لصاحب البيانات الشخصية العدول عن موافقته على معالجة بياناته الشخصية في أي وقت.",
+        "citations": [
+          {
+            "id": "IR-A12-AR",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "يجب على جهة التحكم إيقاف المعالجة دون تأخير غير مبرر.",
+        "citations": [
+          {
+            "id": "IR-A12-AR",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "على جهة التحكم اتخاذ الإجراءات الملائمة لإشعار من تم الإفصاح لهم عن البيانات الشخصية وطلب إتلافها.",
+        "citations": [
+          {
+            "id": "IR-A12-AR",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "IR-A12-AR",
+        "score": -0.4004
+      },
+      {
+        "record_id": "PDPL-A05-AR",
+        "score": -1.534
+      },
+      {
+        "record_id": "IR-A08-AR",
+        "score": -2.8694
+      },
+      {
+        "record_id": "IR-A11-AR",
+        "score": -1.7985
+      },
+      {
+        "record_id": "PDPL-A07-AR",
+        "score": -1.4635
+      },
+      {
+        "record_id": "PDPL-A06-AR",
+        "score": -1.4876
+      },
+      {
+        "record_id": "IR-A30-AR",
+        "score": -2.7283
+      },
+      {
+        "record_id": "PDPL-A26-AR",
+        "score": -2.7547
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 8.5,
+      "answer": 3.2,
+      "check": 0.0
+    }
+  },
+  "هل يجوز لشركة تنقل بيانات عملائها لدولة ثانية برا المملكة؟": {
+    "question": "هل يجوز لشركة تنقل بيانات عملائها لدولة ثانية برا المملكة؟",
+    "covered": true,
+    "answer": "يجوز لجهة التحكم نقل البيانات الشخصية إلى خارج المملكة أو الإفصاح عنها لجهة خارج المملكة، وذلك لتحقيق أيٍّ من الأغراض الآتية.",
+    "sentences": [
+      {
+        "text": "يجوز لجهة التحكم نقل البيانات الشخصية إلى خارج المملكة أو الإفصاح عنها لجهة خارج المملكة، وذلك لتحقيق أيٍّ من الأغراض الآتية.",
+        "citations": [
+          "PDPL-A29-AR"
+        ],
+        "evidence": {
+          "id": "PDPL-A29-AR",
+          "quote": "يجوز لجهة التحكم نقل البيانات الشخصية إلى خارج المملكة أو الإفصاح عنها لجهة خارج المملكة، وذلك لتحقيق أيٍّ من الأغراض الآتية"
+        }
+      }
+    ],
+    "citations": [
+      "PDPL-A29-AR"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "يجوز لجهة التحكم نقل البيانات الشخصية إلى خارج المملكة أو الإفصاح عنها لجهة خارج المملكة، وذلك لتحقيق أيٍّ من الأغراض الآتية.",
+        "citations": [
+          {
+            "id": "PDPL-A29-AR",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "PDPL-A29-AR",
+        "score": 1.6901
+      },
+      {
+        "record_id": "TR-A02-AR",
+        "score": -0.2858
+      },
+      {
+        "record_id": "TR-A04-AR",
+        "score": -1.1446
+      },
+      {
+        "record_id": "TR-A07-AR",
+        "score": -1.1917
+      },
+      {
+        "record_id": "PDPL-A03-AR",
+        "score": -3.9193
+      },
+      {
+        "record_id": "PDPL-A19-AR",
+        "score": -4.0757
+      },
+      {
+        "record_id": "TR-A05-AR",
+        "score": -0.3305
+      },
+      {
+        "record_id": "PDPL-A13-AR",
+        "score": -3.0695
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 7.8,
+      "answer": 1.9,
+      "check": 0.0
+    }
+  },
+  "how long can a company keep my personal data?": {
+    "question": "How long can a company keep my personal data?",
+    "covered": true,
+    "answer": "The Controller shall, without undue delay, Destroy the Personal Data when no longer necessary for the purpose for which they were collected. The expected period for which Personal Data shall be retained.",
+    "sentences": [
+      {
+        "text": "The Controller shall, without undue delay, Destroy the Personal Data when no longer necessary for the purpose for which they were collected.",
+        "citations": [
+          "PDPL-A18-EN"
+        ],
+        "evidence": {
+          "id": "PDPL-A18-EN",
+          "quote": "The Controller shall, without undue delay, Destroy the Personal Data when no longer necessary for the purpose for which they were collected"
+        }
+      },
+      {
+        "text": "The expected period for which Personal Data shall be retained.",
+        "citations": [
+          "PDPL-A31-EN"
+        ],
+        "evidence": {
+          "id": "PDPL-A31-EN",
+          "quote": "the Kingdom. 6-The expected period for which Personal Data shall be retained"
+        }
+      }
+    ],
+    "citations": [
+      "PDPL-A18-EN",
+      "PDPL-A31-EN"
+    ],
+    "problems": [],
+    "citation_check": [
+      {
+        "text": "The Controller shall, without undue delay, Destroy the Personal Data when no longer necessary for the purpose for which they were collected.",
+        "citations": [
+          {
+            "id": "PDPL-A18-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      },
+      {
+        "text": "The expected period for which Personal Data shall be retained.",
+        "citations": [
+          {
+            "id": "PDPL-A31-EN",
+            "status": "supported",
+            "reason": "Quote found word for word in the article."
+          }
+        ],
+        "uncited": false
+      }
+    ],
+    "retrieved": [
+      {
+        "record_id": "PDPL-A18-EN",
+        "score": -4.8843
+      },
+      {
+        "record_id": "IR-A33-EN",
+        "score": -0.5743
+      },
+      {
+        "record_id": "PDPL-A31-EN",
+        "score": -4.9327
+      },
+      {
+        "record_id": "PDPL-A41-EN",
+        "score": -4.9324
+      },
+      {
+        "record_id": "IR-A03-EN",
+        "score": -3.1085
+      },
+      {
+        "record_id": "IR-A24-EN",
+        "score": -3.8622
+      },
+      {
+        "record_id": "IR-A37-EN",
+        "score": -3.1565
+      },
+      {
+        "record_id": "PDPL-A15-EN",
+        "score": -6.396
+      }
+    ],
+    "from_cache": false,
+    "timings": {
+      "retrieve": 8.0,
+      "answer": 1.9,
+      "check": 0.0
+    }
   }
 }

@@ -32,7 +32,7 @@ def pct(part, whole):
 
 def main():
     questions = json.loads(GOLD_PATH.read_text(encoding="utf-8"))["questions"]
-    retrieve("warm up")  # load the models first so their loading time is not counted
+    retrieve("warm up", llm_rerank=False)  # load the models first so their loading time is not counted
     rows = []
     for n, q in enumerate(questions, start=1):
         start = time.perf_counter()
