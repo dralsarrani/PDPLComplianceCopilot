@@ -246,6 +246,7 @@ div[role="radiogroup"] { gap: 0.4rem; }
 .req-card.ok { border-right-color: var(--green); }
 .req-card.warn { border-right-color: var(--amber-mid); }
 .req-card.bad { border-right-color: var(--red); }
+.req-card.unsure { border-right-color: var(--muted); }
 .req-head { display: flex; align-items: center; gap: 0.6rem; }
 .req-id { color: var(--muted); font-size: 0.78rem; direction: ltr; background: var(--panel); border-radius: 4px; padding: 0.05rem 0.4rem; }
 .req-title { font-weight: 600; color: var(--ink); flex: 1; }
@@ -256,6 +257,7 @@ div[role="radiogroup"] { gap: 0.4rem; }
 .badge.ok { color: var(--green); background: var(--green-soft); }
 .badge.warn { color: var(--amber); background: var(--amber-soft); }
 .badge.bad { color: var(--red); background: var(--red-soft); }
+.badge.unsure { color: var(--muted); background: var(--panel); }
 .evidence {
   color: var(--ink); font-size: 0.88rem; margin-top: 0.55rem; line-height: 1.7;
   background: var(--panel); border-radius: 6px; padding: 0.45rem 0.7rem;
@@ -413,10 +415,12 @@ section[data-testid="stSidebar"][data-collapsed="true"] { display: none; }
 .req-bar i.ok { background: #1F7A4D; }
 .req-bar i.warn { background: #E0A43A; }
 .req-bar i.bad { background: #D14343; }
+.req-bar i.unsure { background: #B8BEC6; }
 .req-legend { font-size: 0.9rem; color: var(--ink-2); margin-top: 0.45rem; }
 .req-legend b.ok { color: var(--green-text); }
 .req-legend b.warn { color: var(--amber-text); }
 .req-legend b.bad { color: var(--red-text); }
+.req-legend b.unsure { color: var(--muted); }
 @media (max-width: 640px) { .req-bar { margin-inline: auto; } }
 
 /* the small × beside each history item */

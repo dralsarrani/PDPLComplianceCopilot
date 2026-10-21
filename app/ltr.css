@@ -23,4 +23,5 @@ section[data-testid="stSidebar"] { border-left: none; border-right: 1px solid va
 .req-card.ok { border-right-color: var(--line); border-left-color: var(--green); }
 .req-card.warn { border-right-color: var(--line); border-left-color: var(--amber-mid); }
 .req-card.bad { border-right-color: var(--line); border-left-color: var(--red); }
+.req-card.unsure { border-right-color: var(--line); border-left-color: var(--muted); }
 .gaps li .why::before { content: "Why it matters: "; }
