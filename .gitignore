@@ -32,3 +32,4 @@ results/web_policies/
 
 # Full texts of company policies: copyright, keep them local (links and results are enough)
 data/library/texts/
+data/labels/*.xlsx

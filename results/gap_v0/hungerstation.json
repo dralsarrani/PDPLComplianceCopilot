@@ -28,9 +28,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "we process personal data actively provided by you, collected from your device when you interact with us, or obtained from third parties.",
+    "evidence": "we will process the following categories of personal data: Account data including your name, email address, password, telephone number, country, user ID, language, communication, and other profile settings.",
     "evidence_found": true,
-    "reason": "The policy clearly lists the types of personal data collected."
+    "reason": "The policy clearly lists the personal data categories collected."
   },
   {
     "req_id": "R04",
@@ -50,9 +50,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "The information we request during the account creation process is necessary to take the first step in establishing a customer relationship with you.",
+    "evidence": "The information we request during the account creation process is necessary to take the first step in establishing a customer relationship with you so that we can provide you with our services.",
     "evidence_found": true,
-    "reason": "The policy clearly states the purpose of collecting personal data."
+    "reason": "The policy clearly states the purpose of collecting and processing personal data."
   },
   {
     "req_id": "R06",
@@ -61,9 +61,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "The legal basis for this processing is our and your legitimate interest in concluding an agreement on the provision of our delivery services to you.",
+    "evidence": "The legal basis for this processing is our and your legitimate interest in concluding an agreement on the provision of our delivery services to you",
     "evidence_found": true,
-    "reason": "The policy specifies the legal basis for collecting personal data."
+    "reason": "The policy clearly states the legal basis for processing personal data."
   },
   {
     "req_id": "R07",
@@ -71,10 +71,10 @@
     "articles": "PDPL-A13(2); IR-A04(1g)",
     "applies": "always",
     "condition": "",
-    "status": "partial",
-    "evidence": "The information we request during the account creation process is necessary to take the first step in establishing a customer relationship with you.",
+    "status": "covered",
+    "evidence": "we will process the following categories of personal data: Account data including your name, email address, password, telephone number, country, user ID, language, communication, and other profile settings",
     "evidence_found": true,
-    "reason": "The policy mentions that some data is necessary but does not clearly distinguish between mandatory and optional data."
+    "reason": "The policy specifies which personal data is mandatory and optional."
   },
   {
     "req_id": "R08",
@@ -83,9 +83,9 @@
     "applies": "always",
     "condition": "",
     "status": "partial",
-    "evidence": "Without this process, we cannot provide our services to you.",
+    "evidence": "Without this information, we would be unable to take necessary steps to fulfill our contractual obligations to you",
     "evidence_found": true,
-    "reason": "The policy implies consequences of not providing data but does not specify them clearly."
+    "reason": "The policy mentions consequences but does not detail them fully."
   },
   {
     "req_id": "R09",
@@ -94,7 +94,7 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "we share your order data with the vendor (e.g. restaurants, shops) preparing your order.",
+    "evidence": "we share your order data with the vendor (e.g. restaurants, shops) preparing your order",
     "evidence_found": true,
     "reason": "The policy clearly states the parties with whom personal data is shared."
   },
@@ -104,10 +104,10 @@
     "articles": "PDPL-A13(4)",
     "applies": "always",
     "condition": "",
-    "status": "partial",
-    "evidence": "we take appropriate measures to ensure that your data is always afforded an adequate level of protection in the countries to which it is transferred.",
+    "status": "covered",
+    "evidence": "we take appropriate measures to ensure that your data is always afforded an adequate level of protection in the countries to which it is transferred",
     "evidence_found": true,
-    "reason": "The policy mentions data transfer outside the Kingdom but lacks specific details."
+    "reason": "The policy clearly states that personal data may be transferred outside the Kingdom."
   },
   {
     "req_id": "R11",
@@ -116,9 +116,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "We store this personal data as long as you remain our customer and in the ordinary course of things we delete it when you close your account, or after 3 years of inactivity.",
+    "evidence": "we store this personal data as long as you remain our customer and in the ordinary course of things we delete it when you close your account, or after 3 years of inactivity",
     "evidence_found": true,
-    "reason": "The policy clearly states how long personal data is kept."
+    "reason": "The policy clearly states the retention period for personal data."
   },
   {
     "req_id": "R12",
@@ -127,9 +127,9 @@
     "applies": "always",
     "condition": "",
     "status": "partial",
-    "evidence": "All types of personal information you provide and the information we collect about you is stored and protected within the secure environment of our platform.",
+    "evidence": "we delete daily backups after 90 days",
     "evidence_found": true,
-    "reason": "The policy mentions storage and protection but does not detail destruction methods."
+    "reason": "The policy mentions data destruction but does not provide details on storage methods."
   },
   {
     "req_id": "R13",
@@ -138,9 +138,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "You have the right to access your personal data and obtain additional information on how we process it.",
+    "evidence": "you have the right to ask us to delete your personal data",
     "evidence_found": true,
-    "reason": "The policy clearly outlines the data subject's rights."
+    "reason": "The policy explicitly outlines the data subject's rights."
   },
   {
     "req_id": "R14",
@@ -149,7 +149,7 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "To exercise your rights, we encourage you to use the functions available in your account at any time.",
+    "evidence": "To exercise your rights, we encourage you to use the functions available in your account at any time",
     "evidence_found": true,
     "reason": "The policy provides clear instructions on how to exercise rights."
   },
@@ -159,10 +159,10 @@
     "articles": "IR-A04(1f)",
     "applies": "always",
     "condition": "",
-    "status": "covered",
-    "evidence": "If you have already given your consent and would like to revoke it for the future, please let us know by contacting us.",
-    "evidence_found": true,
-    "reason": "The policy clearly states how to withdraw consent."
+    "status": "partial",
+    "evidence": "you can revoke it for the future, please let us know by contacting us",
+    "evidence_found": false,
+    "reason": "The policy mentions withdrawal of consent but lacks detailed procedures."
   },
   {
     "req_id": "R16",
@@ -173,7 +173,7 @@
     "status": "covered",
     "evidence": "We use state of the art servers, network equipment and cloud services to deliver our platform, to ensure high performance and uninterrupted service.",
     "evidence_found": true,
-    "reason": "The policy clearly describes measures taken to protect personal data."
+    "reason": "The policy clearly describes the measures taken to protect personal data."
   },
   {
     "req_id": "R17",
@@ -182,8 +182,8 @@
     "applies": "conditional",
     "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
     "status": "partial",
-    "evidence": "we may use automation for certain functions.",
+    "evidence": "we will ensure that you have the right not to be subject to the algorithmic decision making processes",
     "evidence_found": true,
-    "reason": "The policy mentions automated processing but does not clarify if decisions are solely automated."
+    "reason": "The policy mentions automated processing but does not clarify if decisions are made solely by it."
   }
 ]
