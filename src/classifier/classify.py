@@ -10,6 +10,7 @@ import torch
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 import numpy as np
 from src.classifier.data import CATEGORIES, clean_text
+import warnings
 
 MODEL_ID = os.environ.get("CLASSIFIER_MODEL", "dralsarrani/opp115-bert")
 _cache = {}
@@ -38,11 +39,12 @@ def _bert_probs(texts, batch_size, max_len):
 
 
 def _baseline_probs(texts):
-    global _baseline
-    if _baseline is None:
-        _baseline = joblib.load(BASELINE_PATH)
-    return _baseline.predict_proba(texts)
-
+    if "baseline" not in _cache:
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore")      # hides the sklearn version warning
+            _cache["baseline"] = joblib.load(BASELINE_PATH)
+    b = _cache["baseline"]
+    return b["clf"].predict_proba(b["vec"].transform(texts))
 
 def classify(paragraphs, threshold=0.5, batch_size=16, max_len=256):
     """Return one dict per paragraph:
