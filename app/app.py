@@ -45,6 +45,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 
 from retrieval.citation_check import load_articles  # noqa: E402
 from src.gap.analyse_v0 import analyse  # noqa: E402
+from src.gap.evidence_labels import label_evidence  # noqa: E402
 from src.policies.archive import from_archive  # noqa: E402
 from src.policies.find_policy import find_policy, guess_website, looks_like_site  # noqa: E402
 from src.policies.web_search import from_web_search  # noqa: E402
@@ -413,7 +414,20 @@ GAP_STEPS = {"guess": tr("البحث عن موقع الشركة...", "Finding th
              "archive": tr("البحث عن نسخة السياسة في الأرشيف العام...", "Looking for a copy in the public archives..."),
              "web": tr("البحث عن السياسة في الإنترنت...", "Searching the web for the policy..."),
              "analyse": tr("مقارنة السياسة بـ17 متطلباً من النظام...", "Comparing the policy with the law's 17 requirements..."),
-             "check": tr("التحقق من أن كل اقتباس موجود في نص السياسة...", "Checking that every quote is in the policy...")}
+             "check": tr("التحقق من أن كل اقتباس موجود في نص السياسة...", "Checking that every quote is in the policy..."),
+             "classify": tr("تصنيف كل دليل بمصنّف OPP-115...", "Labelling each piece of evidence with the OPP-115 classifier...")}
+
+# OPP-115 categories of the 3A classifier, in Arabic
+OPP115_AR = {"First Party Collection/Use": "جمع الجهة للبيانات واستخدامها",
+             "Third Party Sharing/Collection": "مشاركة البيانات مع طرف ثالث",
+             "User Choice/Control": "خيارات المستخدم وتحكمه",
+             "User Access, Edit and Deletion": "وصول المستخدم لبياناته وتعديلها وحذفها",
+             "Data Retention": "مدة حفظ البيانات",
+             "Data Security": "أمن البيانات",
+             "Policy Change": "تغيير السياسة",
+             "Do Not Track": "عدم التتبع",
+             "International and Specific Audiences": "فئات خاصة ودول أخرى",
+             "Other": "أخرى"}
 
 
 def text_key(text):
@@ -531,6 +545,16 @@ def run_analysis(source):
                                        str(error))
                     report = json.loads(fallback.read_text(encoding="utf-8"))
                     st.session_state.gap_cached = True
+            if any(r.get("evidence") and "opp115" not in r for r in report):
+                status.update(label=GAP_STEPS["classify"])
+                try:  # the analysis is still shown if the classifier or OpenAI cannot run
+                    label_evidence(report)
+                    if saved.exists() and not st.session_state.gap_cached:
+                        cached = json.loads(saved.read_text(encoding="utf-8"))
+                        saved.write_text(json.dumps({"date": cached["date"], "report": report},
+                                                    ensure_ascii=False, indent=2), encoding="utf-8")
+                except Exception as error:
+                    print(f"[app] OPP-115 labels skipped: {error}")
     except GapError as error:  # shown under the search box instead of the steps
         progress.empty()
         st.session_state.gap_error = error.args
@@ -625,6 +649,12 @@ def requirement_card(r, checklist, i=0):
         lines.append(f'<div class="evidence" dir="auto">"{esc(r["evidence"])}"</div>')
         if not r["evidence_found"]:
             lines.append(f'<div class="meta bad-text">{tr("تنبيه: النص المقتبس غير موجود في السياسة", "Warning: the quoted text is not in the policy")}</div>')
+        if r.get("opp115"):
+            category = r["opp115"] if EN else OPP115_AR.get(r["opp115"], r["opp115"])
+            match = (tr("يطابق المتطلب", "matches the requirement") if r["opp115_match"]
+                     else tr("لا يطابق تصنيفات المتطلب", "not one of the requirement's categories"))
+            lines.append(f'<div class="meta">{tr("تصنيف المصنّف (OPP-115)", "Classifier label (OPP-115)")}: '
+                         f'{esc(category)} · {match}</div>')
     if r.get("applies") == "conditional" and r["status"] == "missing" and row is not None:
         lines.append(f'<div class="meta">{tr("مطلوب فقط إذا", "Only required if")}: {esc(row.condition if EN else row.condition_ar)}</div>')
     lines.append(f'<div class="meta">{tr("المرجع", "Source")}: {esc(articles_short(r["articles"]))}</div>')
