@@ -1,0 +1,280 @@
+{
+  "questions": [
+    {
+      "id": "Q002",
+      "language": "ar",
+      "question": "تقوم شركة يقع مقرها خارج المملكة العربية السعودية بمعالجة بيانات شخصية لأفراد مقيمين داخل المملكة. هل تسري أحكام نظام حماية البيانات الشخصية على هذه المعالجة؟ وما السند النظامي لذلك؟",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A02-AR"
+      ],
+      "reference_answer": "نعم، تسري أحكام نظام حماية البيانات الشخصية على معالجة البيانات الشخصية المتعلقة بالأفراد المقيمين في المملكة العربية السعودية، حتى لو تمت المعالجة بواسطة جهة تقع خارج المملكة، وذلك وفقًا للمادة الثانية من النظام، مع مراعاة الاستثناءات المنصوص عليها فيه.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "1- يُطبق النظام على أي عملية مُعالجة لبيانات شخصية تتعلق بالأفراد تتم في المملكة بأي وسيلة كانت، بما في ذلك معالجة البيانات الشخصية المتعلقة بالأفراد المقيمين في المملكة بأي وسيلة كانت من أي جهة خارج المملكة. ويشمل ذلك بيانات المتوفى إذا كانت ستؤدي إلى معرفته أو معرفة أحد أفراد أُسرته على وجه التحديد. 2- يُستثنى من نطاق تطبيق النظام، قيام الفرد بمعالجة البيانات الشخصية لأغراض لا تتجاوز الاستخدام الشخصي أو العائلي، ما دام أنه لم ينشرها أو يفصح عنها للغير. وتحدد اللوائح المقصود بالاستخدام الشخصي والعائلي المنصوص عليهما في هذه الفقرة.",
+      "dataset_split": "test",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q007",
+      "language": "ar",
+      "question": "تعتزم جهة تحكم إسناد معالجة بيانات العملاء إلى مزود خدمة خارجي. ما التزاماتها عند اختيار جهة المعالجة والتعاقد معها؟",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A08-AR",
+        "IR-A17-AR"
+      ],
+      "reference_answer": "يلزم النظام جهة التحكم باختيار جهة معالجة توفر الضمانات اللازمة والقدرة على الالتزام بأحكام النظام واللوائح ومراقبة التزامها؛ وتفصّل المادة 17 من اللائحة متطلبات العلاقة والاتفاق مع جهة المعالجة.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "مع مراعاة ما ينص عليه النظام واللوائح في شأن الإفصاح عن البيانات الشخصية، على جهة التحكم عند اختيارها جهة المعالجة أن تلتزم باختيار الجهة التي توفر الضمانات اللازمة لتنفيذ أحكام النظام واللوائح، وعليها التحقق من التزام تلك الجهة بأحكام النظام واللوائح، ولا يخل ذلك بمسؤولياتها تجاه صاحب البيانات الشخصية أو الجهة المختصة بحسب الأحوال. وتحدد اللوائح الأحكام اللازمة لذلك، على أن تشتمل على الأحكام المتعلقة بأي تعاقدات لاحقة تقوم بها جهة المعالجة.",
+      "dataset_split": "test",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q010",
+      "language": "ar",
+      "question": "ما المعلومات التي يتعين أن تتضمنها سياسة الخصوصية بحسب المادة الثانية عشرة؟",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A12-AR"
+      ],
+      "reference_answer": "تتطلب المادة الثانية عشرة إتاحة سياسة خصوصية تحدد الغرض من جمع البيانات ومحتواها وطريقة جمعها ووسيلة حفظها وكيفية معالجتها وإتلافها وحقوق صاحبها وكيفية ممارستها.",
+      "scenario_type": "Direct",
+      "supporting_excerpt": "على جهة التحكم أن تعتمد سياسة للخصوصية، وأن تجعلها متاحة لأصحاب البيانات الشخصية ليطلعوا عليها عند جمع بياناتهم. على أن تشتمل تلك السياسة على تحديد الغرض من جمعها، ومُحتوى البيانات الشخصية المطلوب جمعها، وطريقة جمعها، ووسيلة حفظها، وكيفية معالجتها، وكيفية إتلافها، وحقوق صاحبها فيما يتعلق بها، وكيفية ممارسة هذه الحقوق.",
+      "dataset_split": "test",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q012",
+      "language": "ar",
+      "question": "اكتشفت جهة تحكم أن بعض البيانات الشخصية التي تعالجها قديمة أو غير دقيقة. ما التزامها النظامي بشأن دقة تلك البيانات؟",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A14-AR"
+      ],
+      "reference_answer": "توجب المادة 14 اتخاذ خطوات كافية للتحقق من دقة البيانات الشخصية واكتمالها وحداثتها وارتباطها بالغرض الذي جمعت من أجله قبل معالجتها.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "لا يجوز لجهة التحكم أن تعالج البيانات الشخصية دون اتخاذ خطوات كافية للتحقق من دقتها واكتمالها وحداثتها وارتباطها بالغرض الذي جُمعت من أجله وفقاً لأحكام النظام.",
+      "dataset_split": "test",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q015",
+      "language": "ar",
+      "question": "انتهى الغرض الذي جُمعت بيانات مستخدم من أجله؛ هل يجوز الاحتفاظ بها بلا نهاية؟",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A18-AR"
+      ],
+      "reference_answer": "الأصل في المادة 18 إتلاف البيانات بعد انتهاء الغرض دون تأخير، مع استثناءات محددة منها مسوغ نظامي لاحتفاظ مدة معينة أو الارتباط بقضية قضائية، وإمكانية الاحتفاظ بالبيانات بعد إزالة ما يكشف الهوية وفق الضوابط.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "1- على جهة التحكم إتلاف البيانات الشخصية بعد انتهاء الغرض من جمعها دون تأخير. ومع ذلك، يجوز لها الاحتفاظ بتلك البيانات بعد انتهاء الغرض من جمعها إذا تمت إزالة كل ما يؤدي إلى معرفة صاحبها على وجه التحديد وفق الضوابط التي تحددها اللوائح. 2- على جهة التحكم الاحتفاظ بالبيانات الشخصية حتى بعد انتهاء الغرض من جمعها في الحالتين الآتيتين: أ- إذا توافر مسوغ نظامي يوجب الاحتفاظ بها مدة مُحددة، وفي هذه الحالة يُجرى إتلافها بعد انتهاء هذه المدة أو انتهاء الغرض من جمعها، أيهما أطول.",
+      "dataset_split": "test",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q019",
+      "language": "ar",
+      "question": "تعتزم جهة تحكم إطلاق خدمة تتضمن معالجة بيانات شخصية. متى يلزم إجراء تقويم لأثر المعالجة، وما أبرز متطلباته؟",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A22-AR",
+        "IR-A25-AR"
+      ],
+      "reference_answer": "تنص المادة 22 من النظام على تقويم آثار معالجة البيانات الشخصية للمنتجات أو الخدمات المقدمة للعموم بحسب طبيعة نشاط جهة التحكم. وتوجب المادة 25 من اللائحة تقويمًا مكتوبًا وموثقًا في الحالات المحددة، ومنها معالجة البيانات الحساسة، وربط مجموعات بيانات من مصادر مختلفة، وبعض صور المعالجة الواسعة أو المستمرة أو الآلية، والخدمات التي قد تحدث ضررًا جسيمًا للخصوصية. ويشمل التقويم الغرض والمسوغ، وطبيعة المعالجة ونطاقها، والآثار والمخاطر المحتملة، والتدابير الوقائية والحد من المخاطر.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "على جهة التحكم إجراء تقويم للآثار المترتبة على معالجة البيانات الشخصية لأي منتج أو خدمة تقدم للعموم بحسب طبيعة النشاط الذي تمارسه جهة التحكم، وتحدد اللوائح الأحكام اللازمة لذلك.",
+      "dataset_split": "test",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q024",
+      "language": "ar",
+      "question": "علم صاحب بيانات شخصية بوقوع مخالفة لنظام حماية البيانات الشخصية ويرغب في تقديم شكوى. ما المهلة المحددة لتقديمها، وما البيانات الواجب تضمينها، وهل يمكن قبولها بعد انتهاء المهلة؟",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A34-AR",
+        "IR-A37-AR"
+      ],
+      "reference_answer": "يحق لصاحب البيانات الشخصية تقديم شكوى إلى الجهة المختصة خلال مدة لا تتجاوز 90 يومًا من تاريخ الحادثة أو تاريخ علمه بها. ويجب أن تتضمن الشكوى مكان المخالفة وزمانها، واسم مقدمها وهويته وعنوانه ورقم هاتفه، وبيانات الجهة المشتكى ضدها، ووصف الفعل المخالف بصورة واضحة ومحددة، والأدلة والمعلومات المؤيدة، وأي متطلبات إضافية تحددها الجهة المختصة. ويجوز للجهة المختصة تقدير قبول الشكوى المتأخرة عند وجود أسباب واقعية حالت دون تقديمها خلال المدة؛ وفق المادة 37 من اللائحة التنفيذية والمادة 34 من النظام.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "1. لصاحب البيانات الشخصية تقديم شكوى إلى الجهة المختصة خلال مدة لا تتجاوز (90) يوماً من تاريخ الحادثة محل الشكوى أو علم صاحب البيانات الشخصية بها، وللجهة المختصة تقدير قبول الشكوى من عدمه بعد تجاوز هذه المدة في الحالات التي يتبين لها وجود أسباب واقعية منعت صاحب البيانات الشخصية من تقديم شكواه خلال هذه الفترة. 2. تتلقى الجهة المختصة الشكاوى الواردة إليها من خلال الوسيلة التي تبيّنها، وذلك وفق إجراءات تكفل السرعة والجودة في التعامل معها. 3. تقيد الجهة المختصة الشكاوى المقدمة في سجل يعد لهذا الغرض. 4. يجب أن تتضمن الشكوى البيانات التالية: أ-مكان وزمان المخالفة. ب-اسم مقدمها، وهويته، وعنوانه، ورقم هاتفه. ج-بيانات الجهة المشتكى ضدها.",
+      "dataset_split": "test",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q025",
+      "language": "en",
+      "question": "A person keeps relatives’ phone numbers in a private family group. When does the PDPL personal-use exception cease to apply?",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A02-EN",
+        "IR-A02-EN"
+      ],
+      "reference_answer": "The personal or family-use exception applies only within the limited personal or family sphere. The implementing regulation excludes public disclosure outside that sphere and professional, commercial, or nonprofit uses.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "Personal Data for purposes not exceeding personal or family use. 2. Personal or family use, as referred to in Article 2 of the Law, means that an individual Processing Personal Data within their family or limited social circle as part of any social or family activity. 3. The following shall not be considered personal or family use: a) An individual publishing Personal Data to the public or disclosing it to any person outside the scope specified in paragraph (2) of this article. b) Using Personal Data for professional, commercial, or non-profit purposes.",
+      "dataset_split": "test",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q028",
+      "language": "en",
+      "question": "A customer requests a copy of their personal data in a commonly used electronic format. What requirements govern providing that copy?",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A04-EN",
+        "IR-A06-EN"
+      ],
+      "reference_answer": "The regulation provides for obtaining a clear, readable copy in a commonly used electronic format and allows a printed copy when feasible, while protecting third-party rights and preventing disclosure of other individuals’ personal data.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "Data Subject shall have the right to request a copy of their Personal Data in a readable and clear format, subject to the following: 1. Exercising the right to access Personal Data shall not adversely affect the rights of others, such as intellectual property rights or trade secrets. 2. Personal Data shall be provided to the Data Subject in a commonly used electronic format and the Data Subject may request a printed hard copy if feasible. 3. When granting a Data Subject access to their Personal Data, the Controller shall ensure that it does not involve disclosing Personal Data that identifies another individual.",
+      "dataset_split": "test",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q031",
+      "language": "en",
+      "question": "What safeguards must a controller apply to ensure personal data cannot be re-identified after anonymisation?",
+      "answerable": true,
+      "gold_article_ids": [
+        "IR-A09-EN"
+      ],
+      "reference_answer": "Article 9 requires measures to prevent re-identification, evaluate relevant risks, maintain appropriate safeguards, and reassess anonymisation techniques. Data properly anonymised as specified by the regulation is not treated as personal data.",
+      "scenario_type": "Direct",
+      "supporting_excerpt": "1. When a Controller anonymizes the Personal Data of a Data Subject, it shall comply with the following: a)Ensure that re-identification of the Data Subject is impossible after Anonymisation. b) Evaluate the impact, including the possibility of re-identifying the Data Subject, in the circumstances specified in Paragraph (1) of Article 25 of this Regulation. c) Take the necessary organizational, administrative, and technical measures to avoid risks, taking into account technological developments and methods of Anonymisation, and update those methods considering such developments.",
+      "dataset_split": "test",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q035",
+      "language": "en",
+      "question": "An online service processes data for a person who lacks legal capacity. What does the implementing regulation require concerning a legal guardian?",
+      "answerable": true,
+      "gold_article_ids": [
+        "IR-A13-EN"
+      ],
+      "reference_answer": "The legal guardian may exercise rights and consent on behalf of a person lacking legal capacity, subject to safeguards, including verifying guardianship and acting in the person’s best interests.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "1. Considering applicable legal requirements, the legal guardian of a Data Subject that lacks full or partial legal capacity shall act in the best interests of the Data Subject and for this purpose, they have the following options: a) Exercise the rights granted to the Data Subject under the Law and this Regulation. b) Consent to the Processing of the Data Subject's Personal Data in accordance with the provisions of the Law and this Regulation.",
+      "dataset_split": "test",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q039",
+      "language": "en",
+      "question": "A public entity wants to process personal data for a public-interest purpose. What requirements must it meet beyond stating that the processing serves the public interest?",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A10-EN",
+        "IR-A21-EN"
+      ],
+      "reference_answer": "The public entity must verify that processing is necessary for a clearly defined public interest and relates to its statutory mandate. Under Article 21 of the Implementing Regulation, it must take measures to minimise harm and protect data, record the relevant operations, and limit collection or processing to the minimum personal data needed. These controls apply in the specified circumstances of collection from third parties, processing for a new purpose, or requests for disclosure in the public interest.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "Public Entity collects Personal Data not directly from the Data Subject, processes it for a purpose other than the one for which it was initially collected, or requests Disclosure of such data to achieve a public interest, the Public Entity shall comply with the following: a) Ensure that this is necessary to achieve a clearly defined public interest. b) The public interest related to Public Entity’s mandate as specified in the regulation.",
+      "dataset_split": "test",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q042",
+      "language": "en",
+      "question": "A hospital allows staff who are not involved in a patient’s care to access complete medical files. What restrictions on access to and processing of health data apply?",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A23-EN",
+        "IR-A26-EN"
+      ],
+      "reference_answer": "Articles 23 of the Law and 26 of the Implementing Regulation require access to health data, including medical files, to be limited to the minimum number of authorised personnel and the extent necessary for health services or relevant insurance functions. Controllers must apply organisational, technical, and administrative safeguards, assign responsibilities and access levels, document processing stages, and limit health-data processing to what is necessary for the relevant service.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "1. Adopt and implement the requirements and controls issued by the Ministry of Health, the Saudi Health Council, the Saudi Central Bank, the Council of Health Insurance, and other related entities involved in regulating Health Services and health insurance services, that specify the tasks and responsibilities of employees of health care providers, health insurance companies, health insurance claims management companies and those which are contracted by them carrying out the Processing of Health Data. 2. Adopt the provisions of the Law and its Regulations into the internal policies of the Controller.",
+      "dataset_split": "test",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q046",
+      "language": "en",
+      "question": "For how long does the implementing regulation require a controller to retain records of processing activities?",
+      "answerable": true,
+      "gold_article_ids": [
+        "PDPL-A31-EN",
+        "IR-A33-EN"
+      ],
+      "reference_answer": "Article 33 of the implementing regulation requires retaining processing-activity records throughout the relevant processing and for five years beginning after processing activity ends, subject to the records requirements described in the article.",
+      "scenario_type": "Direct",
+      "supporting_excerpt": "1. The Controller shall keep a record of Personal Data Processing activities during all the period Personal Data is being processed, and till to five years after the date of end of any Personal Data Processing activity. 2. Records of Personal Data Processing activities shall be written. 3. Controller shall ensure that the records of Personal Data Processing activities are accurate and up to date. 4. Controller shall provide access to the records of Personal Data Processing activities to the Competent Authority upon request.",
+      "dataset_split": "test",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q052",
+      "language": "ar",
+      "question": "هل كانت دولة الإمارات العربية المتحدة مدرجة في قائمة الدول ذات مستوى الحماية المناسب المنشورة من الجهة المختصة بتاريخ 19 أكتوبر 2026؟",
+      "answerable": false,
+      "gold_article_ids": [],
+      "reference_answer": "غير مغطى ضمن PDPL Corpus المرفق؛ لا يمكن تقديم إجابة موثقة من الوثائق الثلاث.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "",
+      "dataset_split": "test",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q053",
+      "language": "ar",
+      "question": "في أي يوم من عام 2027 ستصدر الجهة المختصة التعديل القادم على اللائحة التنفيذية؟",
+      "answerable": false,
+      "gold_article_ids": [],
+      "reference_answer": "غير مغطى ضمن PDPL Corpus المرفق؛ لا يمكن تقديم إجابة موثقة من الوثائق الثلاث.",
+      "scenario_type": "Direct",
+      "supporting_excerpt": "",
+      "dataset_split": "test",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q054",
+      "language": "ar",
+      "question": "كم حادثة تسرب بيانات شخصية سُجّلت لدى بنك الرياض خلال الربع الثالث من عام 2026؟",
+      "answerable": false,
+      "gold_article_ids": [],
+      "reference_answer": "غير مغطى ضمن PDPL Corpus المرفق؛ لا يمكن تقديم إجابة موثقة من الوثائق الثلاث.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "",
+      "dataset_split": "test",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q058",
+      "language": "en",
+      "question": "As of 19 October 2026, which countries are included on the competent authority’s published list of jurisdictions providing an adequate level of personal-data protection?",
+      "answerable": false,
+      "gold_article_ids": [],
+      "reference_answer": "The supplied legal corpus requires the competent authority to publish such a list but does not contain the list itself. The countries cannot be identified from these documents alone.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "",
+      "dataset_split": "test",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q059",
+      "language": "en",
+      "question": "On what exact date will a future amendment to the PDPL implementing regulation be published in 2027?",
+      "answerable": false,
+      "gold_article_ids": [],
+      "reference_answer": "Not covered by the supplied PDPL corpus; no source-grounded answer is available.",
+      "scenario_type": "Direct",
+      "supporting_excerpt": "",
+      "dataset_split": "test",
+      "review_status": "VERIFIED"
+    },
+    {
+      "id": "Q060",
+      "language": "en",
+      "question": "How many personal-data breach incidents, if any, were recorded by Saudi National Bank between July and September 2026?",
+      "answerable": false,
+      "gold_article_ids": [],
+      "reference_answer": "Not covered by the supplied PDPL corpus; no source-grounded answer is available.",
+      "scenario_type": "Scenario",
+      "supporting_excerpt": "",
+      "dataset_split": "test",
+      "review_status": "VERIFIED"
+    }
+  ]
+}
