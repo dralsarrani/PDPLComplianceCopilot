@@ -45,6 +45,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 
 from retrieval.citation_check import load_articles  # noqa: E402
 from src.gap.analyse_v0 import analyse  # noqa: E402
+from src.gap.evidence_labels import label_evidence  # noqa: E402
 from src.policies.archive import from_archive  # noqa: E402
 from src.policies.find_policy import find_policy, guess_website, looks_like_site  # noqa: E402
 from src.policies.web_search import from_web_search  # noqa: E402
@@ -86,9 +87,11 @@ SHORT_DOCUMENTS = {"PDPL": tr("النظام", "PDPL"), "IR": tr("اللائحة"
 STATUS = {"covered": (tr("مغطى", "Covered"), "ok"),
           "partial": (tr("مغطى جزئياً", "Partly covered"), "warn"),
           "missing": (tr("غير مغطى", "Missing"), "bad"),
-          "error": (tr("تعذر التحليل", "Could not check"), "bad")}
+          "error": (tr("تعذر التحليل", "Could not check"), "bad"),
+          # web-search copy only: not in the copy, but may be in the original policy
+          "unsure": (tr("ما لقيناه في النسخة", "Not in this copy"), "unsure")}
 FILTERS = {"all": tr("الكل", "All"), "missing": STATUS["missing"][0], "partial": STATUS["partial"][0],
-           "covered": STATUS["covered"][0]}
+           "covered": STATUS["covered"][0], "unsure": STATUS["unsure"][0]}
 PROBLEM_LABELS = {"not_in_corpus": tr("مادة غير موجودة في النظام", "Article not in the law"),
                   "not_retrieved": tr("مادة لم يسترجعها البحث", "Article not found by the search"),
                   "unsupported": tr("المادة لا تدعم الجملة", "Article does not support the sentence"),
@@ -413,7 +416,20 @@ GAP_STEPS = {"guess": tr("البحث عن موقع الشركة...", "Finding th
              "archive": tr("البحث عن نسخة السياسة في الأرشيف العام...", "Looking for a copy in the public archives..."),
              "web": tr("البحث عن السياسة في الإنترنت...", "Searching the web for the policy..."),
              "analyse": tr("مقارنة السياسة بـ17 متطلباً من النظام...", "Comparing the policy with the law's 17 requirements..."),
-             "check": tr("التحقق من أن كل اقتباس موجود في نص السياسة...", "Checking that every quote is in the policy...")}
+             "check": tr("التحقق من أن كل اقتباس موجود في نص السياسة...", "Checking that every quote is in the policy..."),
+             "classify": tr("تصنيف كل دليل بمصنّف OPP-115...", "Labelling each piece of evidence with the OPP-115 classifier...")}
+
+# OPP-115 categories of the 3A classifier, in Arabic
+OPP115_AR = {"First Party Collection/Use": "جمع الجهة للبيانات واستخدامها",
+             "Third Party Sharing/Collection": "مشاركة البيانات مع طرف ثالث",
+             "User Choice/Control": "خيارات المستخدم وتحكمه",
+             "User Access, Edit and Deletion": "وصول المستخدم لبياناته وتعديلها وحذفها",
+             "Data Retention": "مدة حفظ البيانات",
+             "Data Security": "أمن البيانات",
+             "Policy Change": "تغيير السياسة",
+             "Do Not Track": "عدم التتبع",
+             "International and Specific Audiences": "فئات خاصة ودول أخرى",
+             "Other": "أخرى"}
 
 
 def text_key(text):
@@ -531,6 +547,16 @@ def run_analysis(source):
                                        str(error))
                     report = json.loads(fallback.read_text(encoding="utf-8"))
                     st.session_state.gap_cached = True
+            if any(r.get("evidence") and "opp115" not in r for r in report):
+                status.update(label=GAP_STEPS["classify"])
+                try:  # the analysis is still shown if the classifier or OpenAI cannot run
+                    label_evidence(report)
+                    if saved.exists() and not st.session_state.gap_cached:
+                        cached = json.loads(saved.read_text(encoding="utf-8"))
+                        saved.write_text(json.dumps({"date": cached["date"], "report": report},
+                                                    ensure_ascii=False, indent=2), encoding="utf-8")
+                except Exception as error:
+                    print(f"[app] OPP-115 labels skipped: {error}")
     except GapError as error:  # shown under the search box instead of the steps
         progress.empty()
         st.session_state.gap_error = error.args
@@ -625,6 +651,12 @@ def requirement_card(r, checklist, i=0):
         lines.append(f'<div class="evidence" dir="auto">"{esc(r["evidence"])}"</div>')
         if not r["evidence_found"]:
             lines.append(f'<div class="meta bad-text">{tr("تنبيه: النص المقتبس غير موجود في السياسة", "Warning: the quoted text is not in the policy")}</div>')
+        if r.get("opp115"):
+            category = r["opp115"] if EN else OPP115_AR.get(r["opp115"], r["opp115"])
+            match = (tr("يطابق المتطلب", "matches the requirement") if r["opp115_match"]
+                     else tr("لا يطابق تصنيفات المتطلب", "not one of the requirement's categories"))
+            lines.append(f'<div class="meta">{tr("تصنيف المصنّف (OPP-115)", "Classifier label (OPP-115)")}: '
+                         f'{esc(category)} · {match}</div>')
     if r.get("applies") == "conditional" and r["status"] == "missing" and row is not None:
         lines.append(f'<div class="meta">{tr("مطلوب فقط إذا", "Only required if")}: {esc(row.condition if EN else row.condition_ar)}</div>')
     lines.append(f'<div class="meta">{tr("المرجع", "Source")}: {esc(articles_short(r["articles"]))}</div>')
@@ -721,15 +753,29 @@ def page_gap():
     if st.session_state.get("gap_cached"):
         st.markdown(f'<div class="note">{tr("تحليل محفوظ مسبقاً: تعذر الاتصال بـ OpenAI.", "A saved analysis: OpenAI could not be reached.")}</div>',
                     unsafe_allow_html=True)
+    if source.get("via") == "web":
+        # The web search writes the policy out and can leave parts out, so a requirement
+        # it did not find is "not in this copy", not "missing", and is not held against them.
+        report = [dict(r, status="unsure") if r["status"] == "missing" else r for r in report]
     counts = pd.Series([r["status"] for r in report]).value_counts()
     total = len(report)
     parts = [("ok", int(counts.get("covered", 0)), STATUS["covered"][0]),
              ("warn", int(counts.get("partial", 0)), STATUS["partial"][0]),
-             ("bad", int(counts.get("missing", 0)), STATUS["missing"][0])]
-    percent = round(100 * parts[0][1] / total)
+             ("bad", int(counts.get("missing", 0)), STATUS["missing"][0]),
+             ("unsure", int(counts.get("unsure", 0)), STATUS["unsure"][0])]
+    checked = total - parts[3][1]
+    percent = round(100 * parts[0][1] / checked) if checked else 0
     checklist = load_checklist_ar()
     st.markdown(verdict_card(source["name"], percent, parts, total, report, checklist)
                 + source_note(source, st.session_state.get("gap_saved_on")), unsafe_allow_html=True)
+    if parts[3][1]:
+        unsure = parts[3][1]
+        st.markdown(f'<div class="note">{tr(f"هالنص جمعه بحث الإنترنت وممكن يكون ناقص: {unsure} متطلبات ما لقيناها فيه، وممكن تكون موجودة في سياستهم الأصلية، فما حسبناها عليهم. للنتيجة الأكيدة الصق نص السياسة الأصلي:", f"This text was gathered by a web search and may be incomplete: {unsure} requirements are not in it but may be in the original policy, so they are not counted against them. For a sure result, paste the original policy:")}</div>',
+                    unsafe_allow_html=True)
+        pasted = paste_help(source["name"], source.get("url") or policy_help(source)[1])
+        if pasted:
+            run_analysis(pasted)
+            st.rerun()
 
     with st.expander(tr("عرض كل التفاصيل: المتطلبات الـ17 والاقتباسات من السياسة",
                         "Show all details: the 17 requirements and the quotes from the policy")):
@@ -818,6 +864,12 @@ def verdict_card(name, percent, parts, total, report, checklist):
     """The whole result in one look: a verdict word with its colour, and the
     three most important gaps in plain words."""
     tone, word, meaning = next((t, w, m) for limit, t, w, m in VERDICTS if percent >= limit)
+    unsure = sum(n for t, n, _ in parts if t == "unsure")
+    if unsure:  # part of the policy is not in the web-search copy: no verdict on what we could not check
+        checked = total - unsure
+        tone, word = "warn", tr("نتيجة غير مكتملة", "Incomplete result")
+        meaning = tr(f"قدرنا نتحقق من {checked} متطلبات بس من {total}، والنسبة عليها هي بس",
+                     f"we could check only {checked} of the {total} requirements, and the score is on those only")
     order = {("missing", "always"): 0, ("missing", "conditional"): 1, ("partial", "always"): 2,
              ("partial", "conditional"): 3}
     gaps = sorted((r for r in report if r["status"] in ("missing", "partial")),
@@ -830,7 +882,8 @@ def verdict_card(name, percent, parts, total, report, checklist):
         + (f'<em class="why">{esc((WHY_EN if EN else WHY_AR)[r["req_id"]])}</em>' if r["req_id"] in WHY_AR else "")
         + '</span></li>'
         for r in gaps)
-    words = {"ok": tr("واضحة", "clear"), "warn": tr("ناقصة", "incomplete"), "bad": tr("ما ذكروها", "not mentioned")}
+    words = {"ok": tr("واضحة", "clear"), "warn": tr("ناقصة", "incomplete"), "bad": tr("ما ذكروها", "not mentioned"),
+             "unsure": tr("ما لقيناها في النسخة", "not in this copy")}
     segments = "".join(f'<i class="{t}"></i>' * n for t, n, _ in parts)
     legend = tr("، ", ", ").join(f'<b class="{t}">{n} {words[t]}</b>' for t, n, _ in parts if n)
     bar = (f'<div class="req-bar" title="{tr("كل مربع متطلب واحد", "Each square is one requirement")}">{segments}</div>'
@@ -848,9 +901,10 @@ def verdict_card(name, percent, parts, total, report, checklist):
 
 
 def details(report, checklist, source):
-    shown = st.radio(tr("عرض", "Show"), list(FILTERS), format_func=FILTERS.get, horizontal=True,
+    options = [k for k in FILTERS if k != "unsure" or any(r["status"] == "unsure" for r in report)]
+    shown = st.radio(tr("عرض", "Show"), options, format_func=FILTERS.get, horizontal=True,
                      label_visibility="collapsed", key="gap_filter")
-    order = {"missing": 0, "error": 0, "partial": 1, "covered": 2}
+    order = {"missing": 0, "error": 0, "unsure": 1, "partial": 2, "covered": 3}
     rows = sorted(report, key=lambda r: (order.get(r["status"], 0), r["req_id"]))
     if shown != "all":
         rows = [r for r in rows if r["status"] == shown]
