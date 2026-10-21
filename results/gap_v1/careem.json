@@ -1,0 +1,260 @@
+[
+  {
+    "req_id": "R01",
+    "requirement": "The controller's identity and how to contact it about personal data",
+    "articles": "IR-A04(1a); PDPL-A13(3)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "answers": [
+      "yes",
+      "yes"
+    ],
+    "evidence": "Careem Technologies will be the data controller for the Personal Data",
+    "evidence_found": true,
+    "reason": "The policy clearly identifies Careem Technologies as the data controller and provides a contact address."
+  },
+  {
+    "req_id": "R02",
+    "requirement": "Contact details of the data protection officer (DPO)",
+    "articles": "IR-A04(1b)",
+    "applies": "conditional",
+    "condition": "The controller has appointed a DPO",
+    "status": "missing",
+    "answers": [
+      "no",
+      "no"
+    ],
+    "evidence": "",
+    "evidence_found": false,
+    "reason": "The policy does not mention a data protection officer or provide contact details for one."
+  },
+  {
+    "req_id": "R03",
+    "requirement": "The personal data that is collected",
+    "articles": "PDPL-A12",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "answers": [
+      "yes",
+      "yes"
+    ],
+    "evidence": "The Personal Data collected in these processes may include your: name; email address; phone number",
+    "evidence_found": false,
+    "reason": "The policy lists types of personal data collected and provides examples."
+  },
+  {
+    "req_id": "R04",
+    "requirement": "The means used to collect personal data",
+    "articles": "PDPL-A12",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "answers": [
+      "yes",
+      "yes"
+    ],
+    "evidence": "we collect Personal Data that you provide directly to us",
+    "evidence_found": true,
+    "reason": "The policy states that data is collected directly from users and mentions other sources."
+  },
+  {
+    "req_id": "R05",
+    "requirement": "The purpose of collecting and processing personal data",
+    "articles": "PDPL-A12; PDPL-A13(2); IR-A04(1c)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "answers": [
+      "yes",
+      "yes"
+    ],
+    "evidence": "We may use Personal Data collected in the manners described above to: Provide, maintain, and improve our Services",
+    "evidence_found": true,
+    "reason": "The policy states specific purposes for collecting data and provides clear details."
+  },
+  {
+    "req_id": "R06",
+    "requirement": "The legal basis for collecting personal data (e.g. consent, contract, legal obligation)",
+    "articles": "PDPL-A13(1); PDPL-A04(1); IR-A04(1c)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "answers": [
+      "yes",
+      "yes"
+    ],
+    "evidence": "Uber relies on the following legal basis for processing your data",
+    "evidence_found": true,
+    "reason": "The policy clearly states multiple legal bases for processing personal data."
+  },
+  {
+    "req_id": "R07",
+    "requirement": "Which personal data is mandatory and which is optional",
+    "articles": "PDPL-A13(2); IR-A04(1g)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "answers": [
+      "yes",
+      "yes"
+    ],
+    "evidence": "The Personal Data collected in these processes may include your: name; email address; phone number",
+    "evidence_found": false,
+    "reason": "The policy specifies both mandatory and optional personal data."
+  },
+  {
+    "req_id": "R08",
+    "requirement": "The consequences of not providing personal data",
+    "articles": "PDPL-A13(5)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "answers": [
+      "yes",
+      "yes"
+    ],
+    "evidence": "if you choose not to provide us with some of this Personal Data, or request that we erase some or all of it, we may not be able to provide you with our Services",
+    "evidence_found": true,
+    "reason": "The policy states the consequences of not providing personal data."
+  },
+  {
+    "req_id": "R09",
+    "requirement": "The parties personal data is disclosed or shared with, and their capacity",
+    "articles": "PDPL-A13(4)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "answers": [
+      "yes",
+      "yes"
+    ],
+    "evidence": "we may share your Personal Data: With Uber Affiliates; With third parties that we use to carry out work on our behalf",
+    "evidence_found": true,
+    "reason": "The policy names parties with whom data is shared and explains their roles."
+  },
+  {
+    "req_id": "R10",
+    "requirement": "Whether personal data is transferred, disclosed or processed outside the Kingdom",
+    "articles": "PDPL-A13(4)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "answers": [
+      "yes",
+      "yes"
+    ],
+    "evidence": "we may also transfer personal data to countries other than the one where you live or use the Services",
+    "evidence_found": false,
+    "reason": "The policy states that data may be transferred outside the country and explains the context."
+  },
+  {
+    "req_id": "R11",
+    "requirement": "How long personal data is kept, or the criteria used to decide",
+    "articles": "IR-A04(1d)",
+    "applies": "always",
+    "condition": "",
+    "status": "partial",
+    "answers": [
+      "yes",
+      "no"
+    ],
+    "evidence": "We will store and retain your Personal Data for the period of time necessary for the purpose for which the data has been collected",
+    "evidence_found": true,
+    "reason": "The policy mentions how long data is kept but does not clarify the criteria used."
+  },
+  {
+    "req_id": "R12",
+    "requirement": "How personal data is stored and destroyed",
+    "articles": "PDPL-A12",
+    "applies": "always",
+    "condition": "",
+    "status": "partial",
+    "answers": [
+      "yes",
+      "no"
+    ],
+    "evidence": "Uber makes every effort to ensure that your Personal Data is secure",
+    "evidence_found": true,
+    "reason": "The policy states how data is stored but does not specify how it is destroyed."
+  },
+  {
+    "req_id": "R13",
+    "requirement": "The data subject's rights: to be informed, access, obtain a copy, correct, and request destruction",
+    "articles": "PDPL-A04; PDPL-A12; PDPL-A13(6); IR-A04(1e)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "answers": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ],
+    "evidence": "you may have some or all of the following rights under applicable law",
+    "evidence_found": true,
+    "reason": "The policy clearly outlines the rights of the data subjects."
+  },
+  {
+    "req_id": "R14",
+    "requirement": "How the data subject can exercise their rights",
+    "articles": "PDPL-A12; IR-A04(1e)",
+    "applies": "always",
+    "condition": "",
+    "status": "partial",
+    "answers": [
+      "yes",
+      "no"
+    ],
+    "evidence": "please contact us by completing the Subject Access Request form",
+    "evidence_found": true,
+    "reason": "The policy provides a way to submit a request but does not explain the steps or response time."
+  },
+  {
+    "req_id": "R15",
+    "requirement": "How to withdraw consent",
+    "articles": "IR-A04(1f)",
+    "applies": "always",
+    "condition": "",
+    "status": "partial",
+    "answers": [
+      "yes",
+      "no"
+    ],
+    "evidence": "you have the right to withdraw your consent at any time",
+    "evidence_found": true,
+    "reason": "The policy states that users can withdraw consent but does not specify how."
+  },
+  {
+    "req_id": "R16",
+    "requirement": "The measures taken to protect personal data",
+    "articles": "IR-A04(5b)",
+    "applies": "conditional",
+    "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
+    "status": "partial",
+    "answers": [
+      "yes",
+      "no"
+    ],
+    "evidence": "Uber makes every effort to ensure that your Personal Data is secure",
+    "evidence_found": true,
+    "reason": "The policy mentions measures to protect personal data but does not specify what those measures are."
+  },
+  {
+    "req_id": "R17",
+    "requirement": "Whether decisions are made solely by automated processing",
+    "articles": "IR-A04(5c)",
+    "applies": "conditional",
+    "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
+    "status": "covered",
+    "answers": [
+      "yes",
+      "yes"
+    ],
+    "evidence": "We use personal data to make automated decisions relating to use of our Services",
+    "evidence_found": true,
+    "reason": "The policy states that automated decisions are made and explains what those decisions are."
+  }
+]

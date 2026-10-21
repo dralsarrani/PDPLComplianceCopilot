@@ -1,0 +1,52 @@
+﻿policy,req,labeller,team,analyser,evidence,reason,team_note
+tamara,R02,أحلام,covered,missing,,The policy does not mention a data protection officer.,
+tamara,R12,أحلام,partial,missing,,The policy does not provide details on how data is stored or destroyed.,
+hungerstation,R07,أحلام,partial,covered,The information we request during the account creation process is necessary to take the first step in establishing a customer relationship with you,The policy specifies which personal data is mandatory and which is optional.,شرحه Claude في المحادثة بكلام أبسط، والإجابة لأحلام.
+hungerstation,R08,أحلام,partial,covered,"Without this process, we cannot provide our services to you",The policy states the consequences of not providing data and specifies which data is necessary.,شرحه Claude في المحادثة بكلام أبسط، والإجابة لأحلام.
+hungerstation,R12,أحلام,covered,partial,"we use state of the art servers, network equipment and cloud services to deliver our platform",The policy describes how data is stored but does not specify how it is destroyed.,
+hungerstation,R14,أحلام,missing,partial,you can directly do so by following the relevant steps in your profile,The policy provides a way to submit requests but does not explain the response time.,
+hungerstation,R15,أحلام,covered,partial,"you would like to revoke it for the future, please let us know by contacting us",The policy states that users can withdraw consent but does not specify how.,
+jarir,R03,مثايل,covered,partial,"This data may include, but is not limited to, your name, contact information, payment details, purchase history, and browsing behaviour",The policy lists types of personal data but does not provide clear examples for each type.,
+jarir,R06,مثايل,covered,partial,We obtain your consent before processing any personal data for purposes that require it under the PDPL,The policy states consent as a legal basis but does not specify it clearly.,
+jarir,R09,مثايل,partial,missing,,The policy does not name any parties with whom data is shared.,
+jarir,R13,مثايل,partial,covered,"You have rights concerning your personal data, including",The policy clearly outlines the rights of data subjects regarding their personal data.,
+nahdi,R02,مثايل,partial,missing,,The policy does not mention a specific data protection officer.,
+nahdi,R07,مثايل,covered,partial,"Collecting from you your name, phone number, email, gender and address",The policy specifies some mandatory personal data but does not clarify which data is optional.,
+nahdi,R11,مثايل,covered,missing,,The policy does not specify how long data is kept or the criteria used to decide.,
+ksu,R01,مثايل,partial,covered,King Saud University is committed to ensuring the confidentiality and privacy of its website users’ data,The policy names King Saud University as the responsible entity and provides contact details.,
+ksu,R02,مثايل,covered,missing,,The policy does not mention a specific data protection officer.,
+ksu,R03,مثايل,covered,partial,The University collects the following personal data upon service: Username Authorization type Registration date Last access date,The policy lists types of personal data but does not provide clear examples for each type.,
+ksu,R04,مثايل,covered,partial,Personal data is collected only upon the user’s approval when requesting services,The policy states that data is collected directly from the user.,
+ksu,R06,مثايل,missing,partial,Collecting personal data is based on legitimate interests,The policy states that data collection is based on legitimate interests or legal obligations.,
+ksu,R07,مثايل,missing,partial,The University collects the following personal data upon service,The policy specifies the personal data that must be provided.,الصفحة ما عرضت نص (ما لقينا شي عنه في السياسة)؛ قاعدة الفريق: ما ينذكر = ناقص (أحلام 2026-10-21)
+ksu,R08,مثايل,missing,partial,Data is disclosed to third parties only with prior consent or as required by law,"The policy mentions that there are consequences for not providing data, specifically regarding consent.",الصفحة ما عرضت نص (ما لقينا شي عنه في السياسة)؛ قاعدة الفريق: ما ينذكر = ناقص (أحلام 2026-10-21)
+ksu,R09,مثايل,covered,missing,,The policy does not name specific parties with whom data is shared or explain their roles.,
+ksu,R10,مثايل,missing,partial,Data is disclosed to third parties only with prior consent or as required by law,The policy indicates that data may be shared but does not specify details about transfers outside the Kingdom.,الصفحة ما عرضت نص (ما لقينا شي عنه في السياسة)؛ قاعدة الفريق: ما ينذكر = ناقص (أحلام 2026-10-21)
+alrajhi,R06,رنا,covered,partial,we may only process your Personal Data where we have a valid legal basis to do so,The policy states the legal bases for processing personal data but does not specify which one applies in each case.,
+alrajhi,R07,رنا,missing,covered,Certain Personal Data is required for us to provide our services,The policy specifies that certain data is mandatory while also indicating that other data may be optional.,
+alrajhi,R08,رنا,missing,covered,"If you do not provide the required information, we may not be able to provide you with the relevant products or services",The policy clearly states the consequences of not providing required data.,
+alrajhi,R10,رنا,partial,covered,"Personal Data may be shared with recipients located within or, where permitted by applicable law, outside the Kingdom of Saudi Arabia",The policy states that data may be transferred outside the Kingdom and explains the conditions under which this occurs.,
+alrajhi,R11,رنا,missing,covered,We will not retain your Personal Data for longer than is necessary to fulfil the purposes for which it was collected,The policy clearly states how long data is kept and the criteria for retention.,
+alrajhi,R17,رنا,partial,covered,"We will not make decisions that significantly affect you based solely on automated processing unless permitted by law and, where required, based on your explicit consent",The policy mentions automated processing and explains the user's rights regarding such decisions.,
+alinma,R05,رنا,partial,covered,نقوم بمعالجة بياناتك الشخصية للأغراض التالية,The policy states specific purposes for collecting data.,
+alinma,R06,رنا,covered,partial,الأساس القانوني لجمع ومعالجة بياناتك الشخصية وفقاً لقانون حماية البيانات الشخصية، الأساس القانوني الذي نعتمد عليه في معالجة البيانات يشمل,The policy states the legal basis for data processing but does not specify it clearly.,
+alinma,R08,رنا,missing,covered,قد يؤدي عدم تقديم هذه البيانات إلى عدم قدرتنا على تقديم بعض الخدمات,The policy states the consequences of not providing data and specifies which data affects service availability.,
+alinma,R09,رنا,partial,covered,قد يتم مشاركة البيانات الشخصية مع الشركات التابعة لمصرف الإنماء,The policy names parties with whom data is shared and explains their role.,
+alinma,R10,رنا,partial,covered,عندما نقوم بنقل بياناتك خارج المملكة العربية السعودية، نحرص على توفير ضمانات مناسبة,The policy states that data may be transferred outside the Kingdom and explains the conditions.,
+stc,R09,رنا,missing,covered,عندما نشارك المعلومات مع أطراف ثالثة موثوقة تدعمنا في تشغيل موقعنا الإلكتروني,The policy names the parties with whom data is shared and explains their role.,
+stc,R11,رنا,missing,covered,يتم الاحتفاظ ببياناتك الشخصية فقط للمدة اللازمة لتحقيق الأغراض التي تم جمعها من أجلها,The policy states how long personal data is kept and the criteria for retention.,
+stc,R12,رنا,covered,missing,,The policy does not specify how data is stored or how it is destroyed.,
+stc,R14,رنا,covered,partial,يمكنك التواصل معنا عبر الدردشة من خلال بوابة mystc,The policy provides a way to submit requests but does not explain the steps or response time.,المدة لا
+careem,R07,danah,partial,covered,The Personal Data collected in these processes may include your: name; email address; phone number,The policy specifies both mandatory and optional personal data.,
+careem,R11,danah,covered,partial,We will store and retain your Personal Data for the period of time necessary for the purpose for which the data has been collected,The policy mentions how long data is kept but does not clarify the criteria used.,
+careem,R14,danah,covered,partial,please contact us by completing the Subject Access Request form,The policy provides a way to submit a request but does not explain the steps or response time.,
+careem,R15,danah,covered,partial,you have the right to withdraw your consent at any time,The policy states that users can withdraw consent but does not specify how.,
+saudia,R07,danah,partial,covered,you will need to provide us with your personal details or the details of those individual(s) who will be travelling,The policy specifies that certain personal data must be provided.,
+saudia,R08,danah,covered,partial,"if you withdraw your full consent, in some circumstances, it may mean we will not be able to provide all or parts of the services you have requested from us",The policy states consequences of withdrawing consent but does not specify which data is mandatory for service use.,
+saudia,R17,danah,partial,missing,,The policy does not state whether decisions are made solely by automated processing or explain those decisions.,
+kfupm,R02,danah,covered,missing,,The policy does not mention a specific data protection officer.,
+kfupm,R06,danah,covered,partial,The collection and processing of personal data are based on the data subject’s consent,The policy states consent as the legal basis but does not specify other legal bases clearly.,
+kfupm,R07,danah,missing,partial,KFUPM may collect and process different types of personal data,The policy lists types of personal data but does not specify which are mandatory or optional.,الصفحة ما عرضت نص (ما لقينا شي عنه في السياسة)؛ قاعدة الفريق: ما ينذكر = ناقص (أحلام 2026-10-21)
+kfupm,R08,danah,missing,partial,KFUPM may share personal data under the following conditions,The policy mentions sharing data but does not specify consequences for not providing data.,الصفحة ما عرضت نص (ما لقينا شي عنه في السياسة)؛ قاعدة الفريق: ما ينذكر = ناقص (أحلام 2026-10-21)
+kfupm,R11,danah,covered,missing,,The policy does not specify how long data is kept or the criteria used to decide.,
+kfupm,R12,danah,covered,partial,"data is securely deleted, anonymized, or archived in accordance with legal obligations",The policy does not specify how data is stored but does mention how it is destroyed.,

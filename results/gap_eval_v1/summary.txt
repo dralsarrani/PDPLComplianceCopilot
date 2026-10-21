@@ -1,0 +1,16 @@
+Policies: 11   pairs (policy x requirement): 187
+Accuracy (3 classes): 72.7%
+Accuracy (mentioned vs missing): 87.2%
+Cohen's kappa (3 classes): 0.445
+
+Confusion matrix (rows = team, columns = analyser):
+analyser  covered  partial  missing
+team                               
+covered       106       16        7
+partial        11       17        4
+missing         6        7       13
+
+Per class        precision  recall  F1     team count
+covered               0.86    0.82   0.84   129
+partial               0.42    0.53   0.47   32
+missing               0.54    0.50   0.52   26

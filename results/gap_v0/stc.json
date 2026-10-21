@@ -30,7 +30,7 @@
     "status": "covered",
     "evidence": "البيانات المطلوبة عند التسجيل في خدماتنا (مثل الاسم وعنوان البريد الإلكتروني والعنوان ورقم الهاتف وتاريخ الميلاد والجنسية)",
     "evidence_found": true,
-    "reason": "The policy specifies the personal data that is collected."
+    "reason": "The policy specifies the types of personal data collected."
   },
   {
     "req_id": "R04",
@@ -39,7 +39,7 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "قد يتم جمع البيانات الشخصية بطرق مختلفة، بما في ذلك: المنتجات والخدمات - عند التسجيل أو استخدام أو توقيع عقد",
+    "evidence": "قد يتم جمع البيانات الشخصية بطرق مختلفة، بما في ذلك: المنتجات والخدمات - عند التسجيل أو استخدام أو توقيع عقد لتصبح عميلاً لدينا",
     "evidence_found": true,
     "reason": "The policy describes the means used to collect personal data."
   },
@@ -52,7 +52,7 @@
     "status": "covered",
     "evidence": "نجمع بياناتك الشخصية ونستخدمها لتقديم أعلى مستوى من الخدمة والمنتجات",
     "evidence_found": true,
-    "reason": "The policy states the purpose of collecting and processing personal data."
+    "reason": "The policy clearly states the purpose of collecting and processing personal data."
   },
   {
     "req_id": "R06",
@@ -61,9 +61,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "الأساس القانوني لمعالجة بياناتك الشخصية هو: تعاقدي - للوفاء بالتزامات الخدمة تجاهك",
+    "evidence": "الأساس القانوني لمعالجة بياناتك الشخصية هو: تعاقدي - للوفاء بالتزامات الخدمة تجاهك.",
     "evidence_found": true,
-    "reason": "The policy outlines the legal basis for collecting personal data."
+    "reason": "The policy clearly states the legal basis for processing personal data."
   },
   {
     "req_id": "R07",
@@ -71,10 +71,10 @@
     "articles": "PDPL-A13(2); IR-A04(1g)",
     "applies": "always",
     "condition": "",
-    "status": "partial",
-    "evidence": "يرجى ملاحظة أن توفير البيانات الشخصية شرط مسبق للتعاقد",
+    "status": "covered",
+    "evidence": "البيانات المطلوبة عند التسجيل في خدماتنا (مثل الاسم وعنوان البريد الإلكتروني والعنوان ورقم الهاتف وتاريخ الميلاد والجنسية).",
     "evidence_found": true,
-    "reason": "The policy mentions mandatory data but does not specify which data is optional."
+    "reason": "The policy specifies which personal data is mandatory."
   },
   {
     "req_id": "R08",
@@ -83,7 +83,7 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "عدم إكمال جمع البيانات الشخصية كما هو مطلوب في stc سيؤثر على توفير الخدمات المطلوبة",
+    "evidence": "لذلك، فإن عدم إكمال جمع البيانات الشخصية كما هو مطلوب في stc سيؤثر على توفير الخدمات المطلوبة.",
     "evidence_found": true,
     "reason": "The policy explains the consequences of not providing personal data."
   },
@@ -94,9 +94,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "عندما نشارك المعلومات مع أطراف ثالثة موثوقة تدعمنا في تشغيل موقعنا الإلكتروني",
-    "evidence_found": true,
-    "reason": "The policy specifies the parties with whom personal data is shared."
+    "evidence": "لن تقوم stc بالكشف عن بياناتك الشخصية دون موافقتك باستثناء: عندما تكون الجهة الذي تطلب المشاركة جهة عامة.",
+    "evidence_found": false,
+    "reason": "The policy details the parties with whom personal data may be shared."
   },
   {
     "req_id": "R10",
@@ -105,7 +105,7 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "قد يتم نقل البيانات الشخصية خارج المملكة للأغراض المذكورة أعلاه",
+    "evidence": "قد يتم نقل البيانات الشخصية خارج المملكة للأغراض المذكورة أعلاه.",
     "evidence_found": true,
     "reason": "The policy states that personal data may be transferred outside the Kingdom."
   },
@@ -118,7 +118,7 @@
     "status": "covered",
     "evidence": "يتم الاحتفاظ ببياناتك الشخصية فقط للمدة اللازمة لتحقيق الأغراض التي تم جمعها من أجلها",
     "evidence_found": true,
-    "reason": "The policy describes how long personal data is kept."
+    "reason": "The policy clearly states how long personal data is kept."
   },
   {
     "req_id": "R12",
@@ -129,7 +129,7 @@
     "status": "covered",
     "evidence": "سنقوم بإتلاف بياناتك الشخصية بشكل آمن وفقاً للأنظمة واللوائح المعمول بها",
     "evidence_found": true,
-    "reason": "The policy explains how personal data is stored and destroyed."
+    "reason": "The policy clearly explains how personal data is destroyed."
   },
   {
     "req_id": "R13",
@@ -138,9 +138,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "الحق في العلم: يحق للعملاء أن يكونوا على علم بالغرض ونوع البيانات الشخصية التي تمتلكها stc عنهم",
-    "evidence_found": false,
-    "reason": "The policy outlines the data subject's rights."
+    "evidence": "الحق في العلم: يحق للعملاء أن يكونوا على علم بالغرض ونوع البيانات الشخصية التي تمتلكهاstc عنهم",
+    "evidence_found": true,
+    "reason": "The policy clearly outlines the data subject's rights."
   },
   {
     "req_id": "R14",
@@ -149,9 +149,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "يحق للعملاء الوصول إلى بياناتهم الشخصية التي تحتفظ بها stc أو الحصول على نسخة منها",
-    "evidence_found": false,
-    "reason": "The policy explains how the data subject can exercise their rights."
+    "evidence": "يحق للعملاء الوصول إلى بياناتهم الشخصية التي تحتفظ بهاstc أو الحصول على نسخة منها",
+    "evidence_found": true,
+    "reason": "The policy clearly states how the data subject can exercise their rights."
   },
   {
     "req_id": "R15",
@@ -162,7 +162,7 @@
     "status": "covered",
     "evidence": "يحق للعميل إلغاء موافقته أو حظر المكالمات التسويقية",
     "evidence_found": true,
-    "reason": "The policy describes how to withdraw consent."
+    "reason": "The policy clearly explains how to withdraw consent."
   },
   {
     "req_id": "R16",
@@ -173,7 +173,7 @@
     "status": "covered",
     "evidence": "نتخذ الوسائل والضوابط والإجراءات الإدارية والتقنية المناسبة لحماية بياناتك والمحافظة عليها",
     "evidence_found": true,
-    "reason": "The policy outlines the measures taken to protect personal data."
+    "reason": "The policy clearly states the measures taken to protect personal data."
   },
   {
     "req_id": "R17",

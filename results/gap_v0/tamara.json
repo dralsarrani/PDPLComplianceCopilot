@@ -16,10 +16,10 @@
     "articles": "IR-A04(1b)",
     "applies": "conditional",
     "condition": "The controller has appointed a DPO",
-    "status": "missing",
-    "evidence": "",
-    "evidence_found": false,
-    "reason": "The policy does not mention a data protection officer or their contact details."
+    "status": "covered",
+    "evidence": "If you have any questions, you can reach our data privacy team at: [email protected]",
+    "evidence_found": true,
+    "reason": "The policy provides contact details for the data privacy team."
   },
   {
     "req_id": "R03",
@@ -30,7 +30,7 @@
     "status": "covered",
     "evidence": "To provide our services, we collect several types of personal data, directly or via third parties including: Identity data (such as your name, date of birth, gender and national ID)",
     "evidence_found": true,
-    "reason": "The policy clearly lists the types of personal data collected."
+    "reason": "The policy specifies the types of personal data collected."
   },
   {
     "req_id": "R04",
@@ -41,7 +41,7 @@
     "status": "covered",
     "evidence": "We collect personal data: Directly from you when you register or use our services",
     "evidence_found": true,
-    "reason": "The policy specifies the means used to collect personal data."
+    "reason": "The policy clearly states the means used to collect personal data."
   },
   {
     "req_id": "R05",
@@ -52,7 +52,7 @@
     "status": "covered",
     "evidence": "We use your personal data to: Deliver our financing services and process transactions including providing customer support and enforcing our terms",
     "evidence_found": true,
-    "reason": "The policy clearly states the purposes for collecting and processing personal data."
+    "reason": "The policy explicitly states the purposes for collecting and processing personal data."
   },
   {
     "req_id": "R06",
@@ -61,9 +61,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "We process your personal data depending on the purpose of processing, including: To perform our contract with you",
+    "evidence": "We process your personal data depending on the purpose of processing, including",
     "evidence_found": true,
-    "reason": "The policy outlines the legal basis for collecting personal data."
+    "reason": "The policy clearly states the legal basis for processing personal data."
   },
   {
     "req_id": "R07",
@@ -72,9 +72,9 @@
     "applies": "always",
     "condition": "",
     "status": "partial",
-    "evidence": "If we are required to collect personal data under applicable laws or as part of a contract with you and you do not provide it, we may not be able to provide our services",
+    "evidence": "To provide our services, we collect several types of personal data",
     "evidence_found": true,
-    "reason": "The policy mentions mandatory data but does not specify which data is optional."
+    "reason": "The policy mentions types of personal data but does not specify which are mandatory or optional."
   },
   {
     "req_id": "R08",
@@ -83,9 +83,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "If we are required to collect personal data under applicable laws or as part of a contract with you and you do not provide it, we may not be able to provide our services",
+    "evidence": "If we are required to collect personal data under applicable laws or as part of a contract with you and you do not provide it, we may not be able to provide our services.",
     "evidence_found": true,
-    "reason": "The policy explains the consequences of not providing personal data."
+    "reason": "The policy clearly states the consequences of not providing personal data."
   },
   {
     "req_id": "R09",
@@ -107,7 +107,7 @@
     "status": "covered",
     "evidence": "Your personal data may be transferred, accessed, hosted, supported, or processed outside the Kingdom of Saudi Arabia",
     "evidence_found": true,
-    "reason": "The policy explicitly mentions the transfer of personal data outside the Kingdom."
+    "reason": "The policy clearly states that personal data may be processed outside the Kingdom."
   },
   {
     "req_id": "R11",
@@ -126,10 +126,10 @@
     "articles": "PDPL-A12",
     "applies": "always",
     "condition": "",
-    "status": "partial",
-    "evidence": "We implement appropriate technical and organizational measures to protect your personal data, including: Encryption of data in transit and at rest",
-    "evidence_found": true,
-    "reason": "The policy mentions security measures but does not detail how data is destroyed."
+    "status": "missing",
+    "evidence": "",
+    "evidence_found": false,
+    "reason": "The policy does not mention how personal data is stored and destroyed."
   },
   {
     "req_id": "R13",
@@ -140,7 +140,7 @@
     "status": "covered",
     "evidence": "Under applicable data protection laws, you have the right to: Be informed about how your personal data is processed.",
     "evidence_found": true,
-    "reason": "The policy outlines the data subject's rights."
+    "reason": "The policy clearly outlines the data subject's rights."
   },
   {
     "req_id": "R14",
@@ -151,7 +151,7 @@
     "status": "covered",
     "evidence": "To exercise your rights, contact: [email protected]",
     "evidence_found": true,
-    "reason": "The policy explains how data subjects can exercise their rights."
+    "reason": "The policy specifies how the data subject can exercise their rights."
   },
   {
     "req_id": "R15",
@@ -162,7 +162,7 @@
     "status": "covered",
     "evidence": "You may withdraw your consent related to marketing communications at any time through your account settings or by contacting us.",
     "evidence_found": true,
-    "reason": "The policy provides information on how to withdraw consent."
+    "reason": "The policy clearly states how to withdraw consent."
   },
   {
     "req_id": "R16",
@@ -171,9 +171,9 @@
     "applies": "conditional",
     "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
     "status": "covered",
-    "evidence": "We implement appropriate technical and organizational measures to protect your personal data, including: Encryption of data in transit and at rest",
+    "evidence": "We implement appropriate technical and organizational measures to protect your personal data",
     "evidence_found": true,
-    "reason": "The policy describes measures taken to protect personal data."
+    "reason": "The policy clearly states the measures taken to protect personal data."
   },
   {
     "req_id": "R17",
@@ -182,8 +182,8 @@
     "applies": "conditional",
     "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
     "status": "covered",
-    "evidence": "We use automated systems to support credit assessment and fraud detection.",
+    "evidence": "We use automated systems to support credit assessment and fraud detection",
     "evidence_found": true,
-    "reason": "The policy states that decisions may be made solely by automated processing."
+    "reason": "The policy clearly states that decisions can be made solely by automated processing."
   }
 ]

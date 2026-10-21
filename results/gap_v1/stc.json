@@ -1,0 +1,260 @@
+[
+  {
+    "req_id": "R01",
+    "requirement": "The controller's identity and how to contact it about personal data",
+    "articles": "IR-A04(1a); PDPL-A13(3)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "answers": [
+      "yes",
+      "yes"
+    ],
+    "evidence": "اسم الشركة: stc(شركة الاتصالات السعودية)",
+    "evidence_found": true,
+    "reason": "The policy clearly states the company's name and provides contact details."
+  },
+  {
+    "req_id": "R02",
+    "requirement": "Contact details of the data protection officer (DPO)",
+    "articles": "IR-A04(1b)",
+    "applies": "conditional",
+    "condition": "The controller has appointed a DPO",
+    "status": "covered",
+    "answers": [
+      "yes",
+      "yes"
+    ],
+    "evidence": "البريد الإلكتروني: DPO@stc.com.sa",
+    "evidence_found": true,
+    "reason": "The policy mentions a data protection officer and provides a contact email."
+  },
+  {
+    "req_id": "R03",
+    "requirement": "The personal data that is collected",
+    "articles": "PDPL-A12",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "answers": [
+      "yes",
+      "yes"
+    ],
+    "evidence": "البيانات المطلوبة عند التسجيل في خدماتنا (مثل الاسم وعنوان البريد الإلكتروني والعنوان ورقم الهاتف وتاريخ الميلاد والجنسية)",
+    "evidence_found": true,
+    "reason": "The policy lists types of personal data collected and provides examples."
+  },
+  {
+    "req_id": "R04",
+    "requirement": "The means used to collect personal data",
+    "articles": "PDPL-A12",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "answers": [
+      "yes",
+      "yes"
+    ],
+    "evidence": "قد يتم جمع البيانات الشخصية بطرق مختلفة",
+    "evidence_found": true,
+    "reason": "The policy states that data is collected directly from users and mentions other sources."
+  },
+  {
+    "req_id": "R05",
+    "requirement": "The purpose of collecting and processing personal data",
+    "articles": "PDPL-A12; PDPL-A13(2); IR-A04(1c)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "answers": [
+      "yes",
+      "yes"
+    ],
+    "evidence": "نجمع بياناتك الشخصية ونستخدمها لتقديم أعلى مستوى من الخدمة والمنتجات",
+    "evidence_found": true,
+    "reason": "The policy states the purposes of collecting data and they are clear and specific."
+  },
+  {
+    "req_id": "R06",
+    "requirement": "The legal basis for collecting personal data (e.g. consent, contract, legal obligation)",
+    "articles": "PDPL-A13(1); PDPL-A04(1); IR-A04(1c)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "answers": [
+      "yes",
+      "yes"
+    ],
+    "evidence": "الأساس القانوني لمعالجة بياناتك الشخصية هو",
+    "evidence_found": true,
+    "reason": "The policy clearly states the legal basis for processing personal data."
+  },
+  {
+    "req_id": "R07",
+    "requirement": "Which personal data is mandatory and which is optional",
+    "articles": "PDPL-A13(2); IR-A04(1g)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "answers": [
+      "yes",
+      "yes"
+    ],
+    "evidence": "البيانات المطلوبة عند التسجيل في خدماتنا",
+    "evidence_found": true,
+    "reason": "The policy specifies which personal data is required and which is optional."
+  },
+  {
+    "req_id": "R08",
+    "requirement": "The consequences of not providing personal data",
+    "articles": "PDPL-A13(5)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "answers": [
+      "yes",
+      "yes"
+    ],
+    "evidence": "عدم إكمال جمع البيانات الشخصية كما هو مطلوب في stc سيؤثر على توفير الخدمات المطلوبة",
+    "evidence_found": true,
+    "reason": "The policy states the consequences of not providing personal data."
+  },
+  {
+    "req_id": "R09",
+    "requirement": "The parties personal data is disclosed or shared with, and their capacity",
+    "articles": "PDPL-A13(4)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "answers": [
+      "yes",
+      "yes"
+    ],
+    "evidence": "عندما نشارك المعلومات مع أطراف ثالثة موثوقة تدعمنا في تشغيل موقعنا الإلكتروني",
+    "evidence_found": true,
+    "reason": "The policy names the parties with whom data is shared and explains their role."
+  },
+  {
+    "req_id": "R10",
+    "requirement": "Whether personal data is transferred, disclosed or processed outside the Kingdom",
+    "articles": "PDPL-A13(4)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "answers": [
+      "yes",
+      "yes"
+    ],
+    "evidence": "قد يتم نقل البيانات الشخصية خارج المملكة للأغراض المذكورة أعلاه",
+    "evidence_found": true,
+    "reason": "The policy states that personal data may be transferred outside the Kingdom and explains the circumstances."
+  },
+  {
+    "req_id": "R11",
+    "requirement": "How long personal data is kept, or the criteria used to decide",
+    "articles": "IR-A04(1d)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "answers": [
+      "yes",
+      "yes"
+    ],
+    "evidence": "يتم الاحتفاظ ببياناتك الشخصية فقط للمدة اللازمة لتحقيق الأغراض التي تم جمعها من أجلها",
+    "evidence_found": true,
+    "reason": "The policy states how long personal data is kept and the criteria for retention."
+  },
+  {
+    "req_id": "R12",
+    "requirement": "How personal data is stored and destroyed",
+    "articles": "PDPL-A12",
+    "applies": "always",
+    "condition": "",
+    "status": "missing",
+    "answers": [
+      "no",
+      "no"
+    ],
+    "evidence": "",
+    "evidence_found": false,
+    "reason": "The policy does not specify how data is stored or how it is destroyed."
+  },
+  {
+    "req_id": "R13",
+    "requirement": "The data subject's rights: to be informed, access, obtain a copy, correct, and request destruction",
+    "articles": "PDPL-A04; PDPL-A12; PDPL-A13(6); IR-A04(1e)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "answers": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ],
+    "evidence": "الحق في العلم: يحق للعملاء أن يكونوا على علم بالغرض ونوع البيانات الشخصية التي تمتلكهاstc عنهم",
+    "evidence_found": true,
+    "reason": "The policy clearly outlines the rights of the data subjects."
+  },
+  {
+    "req_id": "R14",
+    "requirement": "How the data subject can exercise their rights",
+    "articles": "PDPL-A12; IR-A04(1e)",
+    "applies": "always",
+    "condition": "",
+    "status": "partial",
+    "answers": [
+      "yes",
+      "no"
+    ],
+    "evidence": "يمكنك التواصل معنا عبر الدردشة من خلال بوابة mystc",
+    "evidence_found": true,
+    "reason": "The policy provides a way to submit requests but does not explain the steps or response time."
+  },
+  {
+    "req_id": "R15",
+    "requirement": "How to withdraw consent",
+    "articles": "IR-A04(1f)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "answers": [
+      "yes",
+      "yes"
+    ],
+    "evidence": "يحق للعميل إلغاء موافقته أو حظر المكالمات التسويقية",
+    "evidence_found": true,
+    "reason": "The policy states that users can withdraw consent and explains how to do it."
+  },
+  {
+    "req_id": "R16",
+    "requirement": "The measures taken to protect personal data",
+    "articles": "IR-A04(5b)",
+    "applies": "conditional",
+    "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
+    "status": "partial",
+    "answers": [
+      "yes",
+      "no"
+    ],
+    "evidence": "نحن نأخذ حماية بياناتك على محمل الجد ونتخذ الوسائل والضوابط والإجراءات الإدارية والتقنية المناسبة لحماية بياناتك والمحافظة عليها",
+    "evidence_found": true,
+    "reason": "The policy mentions measures taken to protect personal data."
+  },
+  {
+    "req_id": "R17",
+    "requirement": "Whether decisions are made solely by automated processing",
+    "articles": "IR-A04(5c)",
+    "applies": "conditional",
+    "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
+    "status": "missing",
+    "answers": [
+      "no",
+      "no"
+    ],
+    "evidence": "",
+    "evidence_found": false,
+    "reason": "The policy does not specify whether decisions are made solely by automated processing or explain those decisions."
+  }
+]

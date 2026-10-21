@@ -1,0 +1,73 @@
+{
+ "R01": [
+  "Does it name the company or organisation responsible for the data?",
+  "Does it give a way to contact it (email, phone or address)?"
+ ],
+ "R02": [
+  "Does it mention a data protection officer (a person or team appointed for this role)?",
+  "Does it give a way to contact that officer specifically?"
+ ],
+ "R03": [
+  "Does it list the types of personal data collected?",
+  "Does it give clear examples for each type?"
+ ],
+ "R04": [
+  "Does it say data is collected directly from the user?",
+  "Does it name other sources (third parties, or automatic collection)?"
+ ],
+ "R05": [
+  "Does it state the purposes of collecting the data?",
+  "Are the purposes clear and specific, not general wording?"
+ ],
+ "R06": [
+  "Does it state a legal basis (consent, contract, legal obligation, legitimate interest...)?",
+  "Is the legal basis clear and specific?"
+ ],
+ "R07": [
+  "Does it say which personal data the user must provide?",
+  "Does it say which personal data is optional?"
+ ],
+ "R08": [
+  "Does it state what happens if the user does not provide data?",
+  "Does it say exactly which data, if not provided, prevents using the service?"
+ ],
+ "R09": [
+  "Does it name the parties the data is shared with?",
+  "Does it explain their role or capacity (service provider, government body...)?"
+ ],
+ "R10": [
+  "Does it say whether data is transferred or processed outside the country?",
+  "Does it explain when, why or to where?"
+ ],
+ "R11": [
+  "Does it mention how long data is kept?",
+  "Is the period, or the way it is decided, clear?"
+ ],
+ "R12": [
+  "Does it say how data is stored?",
+  "Does it say how data is destroyed or deleted when no longer needed?"
+ ],
+ "R13": [
+  "Right to be informed?",
+  "Right of access?",
+  "Right to obtain a copy?",
+  "Right to correction?",
+  "Right to destruction or deletion?"
+ ],
+ "R14": [
+  "Does it give a way to submit a request (email, form...)?",
+  "Does it explain the steps or the response time?"
+ ],
+ "R15": [
+  "Does it say the user can withdraw consent?",
+  "Does it say how to withdraw it?"
+ ],
+ "R16": [
+  "Does it mention measures to protect the data?",
+  "Does it say specifically what they do (for example encryption, access control)?"
+ ],
+ "R17": [
+  "Does it say whether decisions are made solely by automated processing?",
+  "Does it explain what those decisions are or the user's rights about them?"
+ ]
+}
