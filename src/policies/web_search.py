@@ -35,7 +35,7 @@ from src.policies.fetch_policies import MIN_CHARS
 SAVED_DIR = Path("results/web_policies")
 WEB_DAYS = 30
 TOOLS = ["web_search", "web_search_preview"]  # newer name first; older models know only the second
-NOT_FOUND = "ما لقينا سياسة الخصوصية حتى بالبحث في الإنترنت."
+NOT_FOUND = "تعذّر العثور على سياسة الخصوصية حتى بالبحث في الإنترنت."
 
 # One answer cannot hold a whole policy (it stops mid-way), so the policy is
 # asked for in parts, each covering some of its sections, all at the same time.
