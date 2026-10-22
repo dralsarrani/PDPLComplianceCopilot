@@ -13,8 +13,11 @@ results/answer_eval.json. Uses OpenAI (one or two calls per question).
 
 Run from the project root:
     python -m retrieval.evaluate_answers
+Add --test to run the 20 held-out test questions (data/evaluation/gold_qa_test.json)
+instead; details then go to results/answer_eval_test.json.
 """
 import json
+import sys
 import time
 from pathlib import Path
 
@@ -22,8 +25,9 @@ from retrieval.answer import answer
 from retrieval.retriever import retrieve
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-GOLD_PATH = PROJECT_ROOT / "data" / "evaluation" / "gold_qa.json"
-OUT_PATH = PROJECT_ROOT / "results" / "answer_eval.json"
+TEST = "--test" in sys.argv
+GOLD_PATH = PROJECT_ROOT / "data" / "evaluation" / ("gold_qa_test.json" if TEST else "gold_qa.json")
+OUT_PATH = PROJECT_ROOT / "results" / ("answer_eval_test.json" if TEST else "answer_eval.json")
 
 
 def pct(part, whole):

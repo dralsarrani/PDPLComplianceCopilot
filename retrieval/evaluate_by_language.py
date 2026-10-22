@@ -15,10 +15,13 @@ Prints a table and saves it to results/retrieval_by_language.csv.
 
 Run from the project root:
     python -m retrieval.evaluate_by_language
+Add --test to score the 20 held-out test questions (data/evaluation/gold_qa_test.json)
+instead; the table is then saved to results/retrieval_by_language_test.csv.
 """
 import csv
 import json
 import os
+import sys
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -27,8 +30,9 @@ from retrieval import retriever
 from retrieval.text_processing import tokenize_arabic
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-GOLD_PATH = PROJECT_ROOT / "data" / "evaluation" / "gold_qa.json"
-OUT_PATH = PROJECT_ROOT / "results" / "retrieval_by_language.csv"
+TEST = "--test" in sys.argv
+GOLD_PATH = PROJECT_ROOT / "data" / "evaluation" / ("gold_qa_test.json" if TEST else "gold_qa.json")
+OUT_PATH = PROJECT_ROOT / "results" / ("retrieval_by_language_test.csv" if TEST else "retrieval_by_language.csv")
 
 
 def rankings(question, language):

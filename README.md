@@ -103,6 +103,7 @@ All commands run from the project root. Those marked 🔑 call OpenAI.
 | Quick check that the system works (no OpenAI, a few seconds) | `python -m unittest discover tests -v` | 8 tests, `OK` |
 | Retrieval per method and language | `python -m retrieval.evaluate_by_language` 🔑 (Final row only) | `results/retrieval_by_language.csv` |
 | Full Q&A on the gold set | `python -m retrieval.evaluate_answers` 🔑 | `results/answer_eval.json` |
+| Same two on the 20 test questions | add `--test` to the two commands above | `results/retrieval_by_language_test.csv`, `results/answer_eval_test.json` |
 | Citation checker on hand-made cases | `python -m retrieval.evaluate_citation_check` 🔑 | `results/citation_check_eval.json` |
 | Reranker comparison | `python -m retrieval.compare_rerankers --fast` | printed |
 | Gap Analyser vs team labels | `python -m src.gap.evaluate_gap` (add `--v1` for v1) | `results/gap_eval/`, `results/gap_eval_v1/` |
@@ -126,6 +127,19 @@ The classifier split is by policy (70/15/15) with seed 42 (`configs/split.json`)
 | **Final (app): + LLM pick** | **90.2** | **88.2** | **92.2** | **0.929** |
 
 The multilingual MiniLM embeddings are weak in Arabic (32.4); the reranker closes most of that gap.
+
+### Held-out test set (20 questions never used for tuning: 14 answerable, 7 AR + 7 EN, and 6 unanswerable)
+
+| Metric | Result |
+|---|---|
+| Retrieval Recall@5 / MRR, Final (app) | 100% / 1.0 (BM25 85.7% / 0.811, hybrid + reranker 96.4% / 0.929) |
+| Answerable questions citing a correct gold article | 92.9% (13/14) |
+| Answer sentences whose quote was found word for word | 96.7% |
+| Unanswerable questions answered "not covered" | 83.3% (5/6) |
+| Answerable questions wrongly answered "not covered" | 0% (0/14) |
+| Average seconds per question | 11.1 |
+
+Two errors: Q012 cited IR-A22 instead of PDPL-A14, and Q053 (unanswerable) was answered with PDPL-A42. With only 20 questions, one error moves a score by 5 to 17 points.
 
 ### Answers (40 development questions)
 
@@ -180,7 +194,7 @@ The link holds for collection, sharing, retention and security (R03 to R05, R07,
 
 ## Limitations and future work
 
-- The retrieval settings were tuned on the same 40 development questions they are scored on, so those numbers are optimistic. Results on the 20 held-out test questions (`data/evaluation/gold_qa_test.json`) are still pending. Those questions are in this public repository, so they are not a fully blind holdout.
+- The retrieval settings were tuned on the same 40 development questions they are scored on, so those numbers are optimistic. The 20 held-out test questions (`data/evaluation/gold_qa_test.json`) were scored once, after tuning; they are in this public repository, so they are not a fully blind holdout.
 - E2 and E5 were run with BM25 or retrieval scores, not the full pipeline. In the LLM-only run, a citation counts as right if it names the gold article in either language, which favours that run.
 - E2 found fixed-length chunks slightly better than article chunks under BM25. The app keeps article chunks because every citation must point to one whole article.
 - Each Saudi policy was labelled by one team member only, so there is no inter-annotator agreement on the labels. The team rule was: a requirement the policy never mentions is *missing*.
