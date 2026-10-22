@@ -1,0 +1,16 @@
+method,language,questions,recall_at_5,mrr
+BM25,ar,7,78.6,0.621
+BM25,en,7,92.9,1.0
+BM25,all,14,85.7,0.811
+Embeddings,ar,7,71.4,0.61
+Embeddings,en,7,78.6,1.0
+Embeddings,all,14,75.0,0.805
+Hybrid,ar,7,78.6,0.792
+Hybrid,en,7,85.7,1.0
+Hybrid,all,14,82.1,0.896
+Hybrid+rerank,ar,7,92.9,0.929
+Hybrid+rerank,en,7,100.0,0.929
+Hybrid+rerank,all,14,96.4,0.929
+Final (app),ar,7,100.0,1.0
+Final (app),en,7,100.0,1.0
+Final (app),all,14,100.0,1.0

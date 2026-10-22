@@ -1,0 +1,348 @@
+[
+  {
+    "id": "Q002",
+    "language": "ar",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "PDPL-A02-AR"
+    ],
+    "cited": [
+      "PDPL-A02-AR"
+    ],
+    "right_source": true,
+    "cited_in_gold": 1,
+    "sentences": 1,
+    "quotes_found": 1,
+    "seconds": 9.3,
+    "answer": "نعم، تسري أحكام نظام حماية البيانات الشخصية على معالجة البيانات الشخصية لأفراد مقيمين داخل المملكة حتى لو كانت الجهة المعالجة خارج المملكة."
+  },
+  {
+    "id": "Q007",
+    "language": "ar",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "IR-A17-AR",
+      "PDPL-A08-AR"
+    ],
+    "cited": [
+      "IR-A17-AR"
+    ],
+    "right_source": true,
+    "cited_in_gold": 1,
+    "sentences": 4,
+    "quotes_found": 4,
+    "seconds": 12.7,
+    "answer": "على جهة التحكم عند اختيار جهة المعالجة الالتزام باختيار جهة معالجة تقدم ضمانات كافية لحماية البيانات الشخصية. يجب أن يتضمن الاتفاق مع جهة المعالجة غرض المعالجة وفئات البيانات الشخصية المعالجة والمدة الزمنية للمعالجة. على جهة التحكم إصدار التعليمات لجهة المعالجة بشكل واضح. تكون جهة التحكم مسؤولة عن التحقق من التزام جهة المعالجة -بشكل دوري- بإجراء عمليات المعالجة وفقاً لأحكام النظام."
+  },
+  {
+    "id": "Q010",
+    "language": "ar",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "PDPL-A12-AR"
+    ],
+    "cited": [
+      "PDPL-A12-AR"
+    ],
+    "right_source": true,
+    "cited_in_gold": 1,
+    "sentences": 1,
+    "quotes_found": 1,
+    "seconds": 8.4,
+    "answer": "يجب أن تشمل سياسة الخصوصية تحديد الغرض من جمع البيانات ومحتوى البيانات الشخصية المطلوب جمعها وطريقة جمعها ووسيلة حفظها وكيفية معالجتها وكيفية إتلافها وحقوق صاحبها."
+  },
+  {
+    "id": "Q012",
+    "language": "ar",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "PDPL-A14-AR"
+    ],
+    "cited": [
+      "IR-A22-AR"
+    ],
+    "right_source": false,
+    "cited_in_gold": 0,
+    "sentences": 1,
+    "quotes_found": 1,
+    "seconds": 12.1,
+    "answer": "على جهة التحكم عند علمها بعدم صحة أو حداثة البيانات الشخصية العمل على تصحيحها أو إتمامها أو تحديثها وفق الوسائل المتاحة لديها دون تأخر."
+  },
+  {
+    "id": "Q015",
+    "language": "ar",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "PDPL-A18-AR"
+    ],
+    "cited": [
+      "PDPL-A18-AR"
+    ],
+    "right_source": true,
+    "cited_in_gold": 1,
+    "sentences": 1,
+    "quotes_found": 1,
+    "seconds": 10.8,
+    "answer": "لا يجوز الاحتفاظ بالبيانات الشخصية بعد انتهاء الغرض من جمعها دون تأخير."
+  },
+  {
+    "id": "Q019",
+    "language": "ar",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "IR-A25-AR",
+      "PDPL-A22-AR"
+    ],
+    "cited": [
+      "IR-A25-AR"
+    ],
+    "right_source": true,
+    "cited_in_gold": 1,
+    "sentences": 2,
+    "quotes_found": 1,
+    "seconds": 17.1,
+    "answer": "يلزم إجراء تقويم لأثر المعالجة في حالات معينة، مثل معالجة البيانات الشخصية الحساسة أو تقديم خدمة قد تشكل أضراراً جسيمة على خصوصية أصحاب البيانات الشخصية. أبرز متطلبات تقويم الأثر تشمل تحديد الغرض من المعالجة، وصف طبيعة المعالجة، والآثار المترتبة على المعالجة."
+  },
+  {
+    "id": "Q024",
+    "language": "ar",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "IR-A37-AR",
+      "PDPL-A34-AR"
+    ],
+    "cited": [
+      "IR-A37-AR"
+    ],
+    "right_source": true,
+    "cited_in_gold": 1,
+    "sentences": 3,
+    "quotes_found": 3,
+    "seconds": 14.3,
+    "answer": "يجب على صاحب البيانات الشخصية تقديم شكوى إلى الجهة المختصة خلال مدة لا تتجاوز (90) يوماً من تاريخ الحادثة محل الشكوى أو علم صاحب البيانات الشخصية بها. يجب أن تتضمن الشكوى البيانات التالية: مكان وزمان المخالفة، اسم مقدمها، وهويته، وعنوانه، ورقم هاتفه، بيانات الجهة المشتكى ضدها، وصف الفعل المخالف بشكل واضح ومحدد، والأدلة والمعلومات المقدمة مع الشكوى. يمكن للجهة المختصة تقدير قبول الشكوى من عدمه بعد تجاوز هذه المدة في الحالات التي يتبين لها وجود أسباب واقعية منعت صاحب البيانات الشخصية من تقديم شكواه خلال هذه الفترة."
+  },
+  {
+    "id": "Q025",
+    "language": "en",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "IR-A02-EN",
+      "PDPL-A02-EN"
+    ],
+    "cited": [
+      "IR-A02-EN"
+    ],
+    "right_source": true,
+    "cited_in_gold": 1,
+    "sentences": 1,
+    "quotes_found": 1,
+    "seconds": 10.1,
+    "answer": "The PDPL personal-use exception ceases to apply if an individual publishes Personal Data to the public or discloses it to any person outside their family or limited social circle."
+  },
+  {
+    "id": "Q028",
+    "language": "en",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "IR-A06-EN",
+      "PDPL-A04-EN"
+    ],
+    "cited": [
+      "IR-A06-EN"
+    ],
+    "right_source": true,
+    "cited_in_gold": 1,
+    "sentences": 3,
+    "quotes_found": 3,
+    "seconds": 11.4,
+    "answer": "The Data Subject shall have the right to request a copy of their Personal Data in a readable and clear format. Personal Data shall be provided to the Data Subject in a commonly used electronic format. The Controller shall ensure that it does not involve disclosing Personal Data that identifies another individual."
+  },
+  {
+    "id": "Q031",
+    "language": "en",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "IR-A09-EN"
+    ],
+    "cited": [
+      "IR-A09-EN"
+    ],
+    "right_source": true,
+    "cited_in_gold": 1,
+    "sentences": 2,
+    "quotes_found": 2,
+    "seconds": 11.6,
+    "answer": "The Controller shall take the necessary organizational, administrative, and technical measures to avoid risks, taking into account technological developments and methods of Anonymisation. The Controller shall evaluate the effectiveness of the applied techniques for Personal Data Anonymization and make necessary adjustments to ensure that re-identification of Data Subject is impossible."
+  },
+  {
+    "id": "Q035",
+    "language": "en",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "IR-A13-EN"
+    ],
+    "cited": [
+      "IR-A13-EN"
+    ],
+    "right_source": true,
+    "cited_in_gold": 1,
+    "sentences": 3,
+    "quotes_found": 3,
+    "seconds": 16.7,
+    "answer": "The legal guardian of a Data Subject that lacks full or partial legal capacity shall act in the best interests of the Data Subject and for this purpose, they have the following options: a) Exercise the rights granted to the Data Subject under the Law and this Regulation. Obtaining the consent of the legal guardian shall be conditioned upon taking appropriate measures to verify guardianship validity over the Data Subject. Consent given by legal guardian shall not cause any harm to the interests of the Data Subject."
+  },
+  {
+    "id": "Q039",
+    "language": "en",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "IR-A21-EN",
+      "PDPL-A10-EN"
+    ],
+    "cited": [
+      "IR-A21-EN"
+    ],
+    "right_source": true,
+    "cited_in_gold": 1,
+    "sentences": 5,
+    "quotes_found": 5,
+    "seconds": 15.1,
+    "answer": "The Public Entity shall ensure that this is necessary to achieve a clearly defined public interest. The public interest must be related to the Public Entity’s mandate as specified in the regulation. The Public Entity must take suitable measures to limit the damage that may result. The Public Entity must record those operations in the records of Personal Data Processing activities. The Public Entity must collect and process the minimum necessary Personal Data to achieve the data Processing purpose."
+  },
+  {
+    "id": "Q042",
+    "language": "en",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "IR-A26-EN",
+      "PDPL-A23-EN"
+    ],
+    "cited": [
+      "PDPL-A23-EN"
+    ],
+    "right_source": true,
+    "cited_in_gold": 1,
+    "sentences": 2,
+    "quotes_found": 2,
+    "seconds": 11.8,
+    "answer": "Access to Health Data should be restricted to the minimum number of employees or workers necessary to provide Health Services. Health Data Processing procedures should be limited to the minimum extent possible of employees and workers necessary to provide Health Services."
+  },
+  {
+    "id": "Q046",
+    "language": "en",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "IR-A33-EN",
+      "PDPL-A31-EN"
+    ],
+    "cited": [
+      "IR-A33-EN"
+    ],
+    "right_source": true,
+    "cited_in_gold": 1,
+    "sentences": 1,
+    "quotes_found": 1,
+    "seconds": 10.6,
+    "answer": "The Controller shall keep a record of Personal Data Processing activities during all the period Personal Data is being processed, and till to five years after the date of end of any Personal Data Processing activity."
+  },
+  {
+    "id": "Q052",
+    "language": "ar",
+    "answerable": false,
+    "covered": false,
+    "gold": [],
+    "cited": [],
+    "right_source": false,
+    "cited_in_gold": 0,
+    "sentences": 0,
+    "quotes_found": 0,
+    "seconds": 10.4,
+    "answer": "غير مشمول: لم أجد في نصوص النظام ما يجيب على هذا السؤال."
+  },
+  {
+    "id": "Q053",
+    "language": "ar",
+    "answerable": false,
+    "covered": true,
+    "gold": [],
+    "cited": [
+      "PDPL-A42-AR"
+    ],
+    "right_source": false,
+    "cited_in_gold": 0,
+    "sentences": 1,
+    "quotes_found": 1,
+    "seconds": 10.5,
+    "answer": "ستصدر الجهة المختصة اللوائح في مدة لا تتجاوز (سبعمائة وعشرين) يوماً من تاريخ صدور النظام."
+  },
+  {
+    "id": "Q054",
+    "language": "ar",
+    "answerable": false,
+    "covered": false,
+    "gold": [],
+    "cited": [],
+    "right_source": false,
+    "cited_in_gold": 0,
+    "sentences": 0,
+    "quotes_found": 0,
+    "seconds": 8.4,
+    "answer": "غير مشمول: لم أجد في نصوص النظام ما يجيب على هذا السؤال."
+  },
+  {
+    "id": "Q058",
+    "language": "en",
+    "answerable": false,
+    "covered": false,
+    "gold": [],
+    "cited": [],
+    "right_source": false,
+    "cited_in_gold": 0,
+    "sentences": 0,
+    "quotes_found": 0,
+    "seconds": 8.4,
+    "answer": "Not covered: the PDPL texts I searched do not answer this question."
+  },
+  {
+    "id": "Q059",
+    "language": "en",
+    "answerable": false,
+    "covered": false,
+    "gold": [],
+    "cited": [],
+    "right_source": false,
+    "cited_in_gold": 0,
+    "sentences": 0,
+    "quotes_found": 0,
+    "seconds": 6.3,
+    "answer": "Not covered: the PDPL texts I searched do not answer this question."
+  },
+  {
+    "id": "Q060",
+    "language": "en",
+    "answerable": false,
+    "covered": false,
+    "gold": [],
+    "cited": [],
+    "right_source": false,
+    "cited_in_gold": 0,
+    "sentences": 0,
+    "quotes_found": 0,
+    "seconds": 6.1,
+    "answer": "Not covered: the PDPL texts I searched do not answer this question."
+  }
+]
