@@ -100,6 +100,7 @@ All commands run from the project root. Those marked 🔑 call OpenAI.
 
 | What | Command | Output |
 |---|---|---|
+| Quick check that the system works (no OpenAI, a few seconds) | `python -m unittest discover tests -v` | 8 tests, `OK` |
 | Retrieval per method and language | `python -m retrieval.evaluate_by_language` 🔑 (Final row only) | `results/retrieval_by_language.csv` |
 | Full Q&A on the gold set | `python -m retrieval.evaluate_answers` 🔑 | `results/answer_eval.json` |
 | Citation checker on hand-made cases | `python -m retrieval.evaluate_citation_check` 🔑 | `results/citation_check_eval.json` |
@@ -202,6 +203,7 @@ notebooks/           corpus visualisation, classifier experiments (E4), error an
 configs/split.json   classifier train/val/test split (seed 42)
 artifacts/           saved TF-IDF baseline
 results/             evaluation outputs used in the report
+tests/               quick checks of data, citation checking and quote matching
 ```
 
 ## Licence
