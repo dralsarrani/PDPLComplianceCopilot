@@ -1,0 +1,6 @@
+﻿,LLM only (no retrieval),Full system (retrieval + rerank + citation check)
+Answerable questions answered,70.6%,100.0%
+Right source (a gold article cited),14.7%,97.1%
+Quotes found word for word,0.0%,93.8%
+Unanswerable questions said not covered,100.0%,100.0%
+Cited ids that do not exist,0.0%,0% (checked)
