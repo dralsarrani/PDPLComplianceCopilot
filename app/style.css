@@ -406,7 +406,7 @@ section[data-testid="stSidebar"][data-collapsed="true"] { display: none; }
 .policy-text { max-height: 320px; overflow-y: auto; }
 @media (max-width: 640px) { .verdict-head { flex-direction: column; text-align: center; } .chips { justify-content: center; } }
 .gaps li .why { display: block; font-style: normal; color: var(--ink-2); font-size: 0.85rem; margin-top: 0.25rem; }
-.gaps li .why::before { content: "ليش يهمك: "; color: var(--tone); font-weight: 600; }
+.gaps li .why::before { content: "الأثر على صاحب البيانات: "; color: var(--tone); font-weight: 600; }
 .verdict-meaning { font-size: 1.05rem; font-weight: 600; color: var(--ink); margin-bottom: 0.2rem; }
 
 /* One square per requirement, so "out of 17" is visible at a glance */

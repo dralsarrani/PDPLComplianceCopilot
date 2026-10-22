@@ -26,11 +26,11 @@ def read_pdf(data):
     try:
         pages = PdfReader(io.BytesIO(data)).pages
     except Exception:
-        raise ValueError("ما قدرنا نفتح ملف الـ PDF. تأكد إنه سليم ومو محمي بكلمة سر.")
+        raise ValueError("تعذّر فتح ملف PDF. يُرجى التأكد من سلامته وعدم حمايته بكلمة مرور.")
     text = "\n".join(page.extract_text() or "" for page in pages)
     if len(PRESENTATION_FORMS.findall(text)) > 50:
         # Arabic saved this way comes out with letters in the wrong order
-        raise ValueError("النص العربي في هذا الـ PDF ما ينقرأ صح. ارفع السياسة كملف Word، أو الصق نصها.")
+        raise ValueError("تعذّرت قراءة النص العربي في ملف PDF بصورة صحيحة. يُرجى رفع السياسة بصيغة Word أو لصق نصها.")
     return text
 
 
@@ -38,7 +38,7 @@ def read_docx(data):
     try:
         xml = zipfile.ZipFile(io.BytesIO(data)).read("word/document.xml").decode("utf-8")
     except (zipfile.BadZipFile, KeyError):
-        raise ValueError("ما قدرنا نفتح ملف الـ Word. احفظه بصيغة docx وجرب مرة ثانية.")
+        raise ValueError("تعذّر فتح ملف Word. يُرجى حفظه بصيغة docx وإعادة المحاولة.")
     paragraphs = []
     for paragraph in re.findall(r"<w:p[ >].*?</w:p>", xml, re.DOTALL):
         words = re.findall(r"<w:t(?: [^>]*)?>(.*?)</w:t>", paragraph, re.DOTALL)
@@ -59,5 +59,5 @@ def read_policy_file(name, data):
     else:
         raise ValueError("نوع الملف غير مدعوم. ارفع PDF أو Word أو TXT.")
     if len(text.strip()) < 300:
-        raise ValueError("الملف ما فيه نص كافٍ. إذا كان PDF مصوّر (صور بدون نص)، انسخ النص والصقه.")
+        raise ValueError("لا يتضمن الملف نصاً كافياً. إذا كان ملف PDF مصوّراً (صوراً دون نص)، يُرجى نسخ النص ولصقه.")
     return text

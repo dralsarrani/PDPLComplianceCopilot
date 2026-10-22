@@ -70,7 +70,7 @@ def tr(ar, en):
     return en if EN else ar
 
 
-GAP_MODES = {"search": tr("ابحث عن شركة", "Search a company"), "file": tr("ارفع ملف", "Upload a file")}
+GAP_MODES = {"search": tr("البحث عن جهة", "Search a company"), "file": tr("رفع ملف", "Upload a file")}
 MIN_PASTED = 300  # a search longer than this is a pasted policy, not a name
 NAMES_AR = {"hungerstation": "هنقرستيشن", "careem": "كريم", "alrajhi": "مصرف الراجحي", "alinma": "مصرف الإنماء",
             "tamara": "تمارا", "jarir": "مكتبة جرير", "stc": "إس تي سي", "saudia": "الخطوط السعودية",
@@ -89,7 +89,7 @@ STATUS = {"covered": (tr("مغطى", "Covered"), "ok"),
           "missing": (tr("غير مغطى", "Missing"), "bad"),
           "error": (tr("تعذر التحليل", "Could not check"), "bad"),
           # web-search copy only: not in the copy, but may be in the original policy
-          "unsure": (tr("ما لقيناه في النسخة", "Not in this copy"), "unsure")}
+          "unsure": (tr("لم يرد في النسخة المتاحة", "Not in this copy"), "unsure")}
 FILTERS = {"all": tr("الكل", "All"), "missing": STATUS["missing"][0], "partial": STATUS["partial"][0],
            "covered": STATUS["covered"][0], "unsure": STATUS["unsure"][0]}
 PROBLEM_LABELS = {"not_in_corpus": tr("مادة غير موجودة في النظام", "Article not in the law"),
@@ -100,20 +100,20 @@ PROBLEM_LABELS = {"not_in_corpus": tr("مادة غير موجودة في الن�
 # Messages from src/policies/ are written in Arabic; their English for the English page.
 MESSAGES_EN = {
     "الموقع لا يسمح بقراءة صفحاته آلياً، ونحترم ذلك.": "The site does not allow its pages to be read by programs, and we respect that.",
-    "ما لقينا صفحة سياسة الخصوصية في موقع الشركة.": "We could not find the privacy policy page on the company's site.",
-    "موقع الشركة ما رد على طلبنا.": "The company's site did not answer.",
-    "صفحة سياسة الخصوصية ما فيها نص كافٍ، غالباً الموقع يعرضها بـ JavaScript.":
+    "تعذّر العثور على صفحة سياسة الخصوصية في موقع الجهة.": "We could not find the privacy policy page on the company's site.",
+    "لم يستجب موقع الجهة للطلب.": "The company's site did not answer.",
+    "لا تتضمن صفحة سياسة الخصوصية نصاً كافياً، ويُرجّح أن الموقع يعرضها باستخدام JavaScript.":
         "The privacy page has too little text; the site probably shows it with JavaScript.",
-    "ما لقينا نسخة من السياسة في الأرشيف العام.": "No copy of the policy was found in the public archives.",
-    "ما لقينا سياسة الخصوصية حتى بالبحث في الإنترنت.": "The privacy policy was not found even with a web search.",
-    "ما قدرنا نفتح ملف الـ PDF. تأكد إنه سليم ومو محمي بكلمة سر.":
+    "تعذّر العثور على نسخة من السياسة في الأرشيف العام.": "No copy of the policy was found in the public archives.",
+    "تعذّر العثور على سياسة الخصوصية حتى بالبحث في الإنترنت.": "The privacy policy was not found even with a web search.",
+    "تعذّر فتح ملف PDF. يُرجى التأكد من سلامته وعدم حمايته بكلمة مرور.":
         "We could not open the PDF. Check that it is not damaged or password-protected.",
-    "النص العربي في هذا الـ PDF ما ينقرأ صح. ارفع السياسة كملف Word، أو الصق نصها.":
+    "تعذّرت قراءة النص العربي في ملف PDF بصورة صحيحة. يُرجى رفع السياسة بصيغة Word أو لصق نصها.":
         "The Arabic text in this PDF cannot be read correctly. Upload the policy as a Word file, or paste its text.",
-    "ما قدرنا نفتح ملف الـ Word. احفظه بصيغة docx وجرب مرة ثانية.":
+    "تعذّر فتح ملف Word. يُرجى حفظه بصيغة docx وإعادة المحاولة.":
         "We could not open the Word file. Save it as .docx and try again.",
     "نوع الملف غير مدعوم. ارفع PDF أو Word أو TXT.": "This file type is not supported. Upload a PDF, Word or TXT file.",
-    "الملف ما فيه نص كافٍ. إذا كان PDF مصوّر (صور بدون نص)، انسخ النص والصقه.":
+    "لا يتضمن الملف نصاً كافياً. إذا كان ملف PDF مصوّراً (صوراً دون نص)، يُرجى نسخ النص ولصقه.":
         "The file has too little text. If it is a scanned PDF (pictures, no text), copy the text and paste it.",
 }
 
@@ -240,8 +240,8 @@ def count_articles(n):
 HERO = {"qa": (tr("وش تبي تعرف عن حماية بياناتك؟", "What do you want to know about your data?"),
                tr("إجابات من نصوص النظام واللوائح، مع رقم المادة",
                   "Answers from the text of the law and its regulations, with the article number")),
-        "gap": (tr("حلّل سياسة الخصوصية لأي شركة", "Check any company's privacy policy"),
-                tr("نقارن السياسة بمتطلبات النظام، ونعرض الدليل من نصها",
+        "gap": (tr("تحليل سياسة الخصوصية لأي جهة", "Check any company's privacy policy"),
+                tr("مقارنة السياسة بمتطلبات نظام حماية البيانات الشخصية، مع الاستشهاد بنصوصها",
                    "We compare the policy with what the law requires, and show the proof from its text"))}
 
 
@@ -304,9 +304,25 @@ def ask(question):
 
 
 def short_article(record_id):
-    """'PDPL-A29-AR' -> 'النظام م29'"""
+    """'PDPL-A29-AR' -> 'المادة 29 من النظام'"""
     doc, number, _ = record_id.split("-")
-    return tr(f"{SHORT_DOCUMENTS.get(doc, doc)} م{int(number[1:])}", f"{SHORT_DOCUMENTS.get(doc, doc)} Art. {int(number[1:])}")
+    return tr(f"المادة {int(number[1:])} من {SHORT_DOCUMENTS.get(doc, doc)}", f"{SHORT_DOCUMENTS.get(doc, doc)} Art. {int(number[1:])}")
+
+
+def official_sources_note(citations):
+    """Under the answer, like the policy page: where the cited texts come from, one link per document."""
+    articles = load_articles()
+    links = {}
+    for cid in citations:
+        doc = cid.split("-")[0]
+        url = articles.get(cid, {}).get("source_url")
+        if url and doc not in links:
+            links[doc] = f'<a href="{esc(url)}" target="_blank" rel="noopener">{esc(DOCUMENTS.get(doc, doc))}</a>'
+    if not links:
+        return ""
+    text = tr("النصوص منقولة من الموقع الرسمي للهيئة السعودية للبيانات والذكاء الاصطناعي (سدايا)، وللاطلاع على النص الرسمي:",
+              "The texts are taken from the official website of SDAIA. Read the official text:")
+    return f'<div class="source-note">{ICONS["info"]}{text} {tr("، ", ", ").join(links.values())}</div>'
 
 
 def answer_sentences(result):
@@ -357,19 +373,23 @@ def page_qa():
     sources = []
     for cid in result["citations"]:
         doc, number, _ = cid.split("-")
-        text = articles[cid]["official_text"]
-        sources.append(f'<div class="source"><div class="source-num"><small>{tr("مادة", "Art.")}</small>{int(number[1:])}</div><div>'
-                       f'<div class="source-title">{esc(DOCUMENTS.get(doc, doc))}</div>'
-                       f'<div class="source-doc" dir="auto">{esc(text[:90])}...</div></div></div>')
+        article = articles[cid]
+        # IR and TR articles have titles; PDPL articles have none, so their opening words are shown
+        title = article.get("article_title") or f'{article["official_text"][:90]}...'
+        inner = (f'<div class="source-num"><small>{tr("مادة", "Art.")}</small>{int(number[1:])}</div><div>'
+                 f'<div class="source-title">{esc(DOCUMENTS.get(doc, doc))}، {tr("المادة", "Article")} {int(number[1:])}</div>'
+                 f'<div class="source-doc" dir="auto">{esc(title)}</div></div>')
+        sources.append(f'<div class="source">{inner}</div>')
     st.markdown('<div class="answer-card split"><div class="answer-main">'
                 f'<div class="answer-title">{tr("الإجابة", "Answer")}</div>'
                 f'{answer_sentences(result)}'
                 f'<span class="verified">{ICONS["check"]}{tr("مستندة إلى", "Based on")} {count_articles(n)}</span></div>'
-                f'<div class="answer-side"><div class="side-title">{tr("المصادر", "Sources")}</div>{"".join(sources)}</div></div>',
-                unsafe_allow_html=True)
+                f'<div class="answer-side"><div class="side-title">{tr("المصادر", "Sources")}</div>{"".join(sources)}</div></div>'
+                + official_sources_note(result["citations"]), unsafe_allow_html=True)
     with st.expander(tr("عرض نص المواد كاملاً", "Show the full text of the articles")):
         for cid in result["citations"]:
-            st.markdown(f'<div class="label">{esc(article_label(cid))}</div>'
+            heading = article_label(cid) + (f' – {articles[cid]["article_title"]}' if articles[cid].get("article_title") else "")
+            st.markdown(f'<div class="label">{esc(heading)}</div>'
                         f'<div class="article-text" dir="auto">{esc(articles[cid]["official_text"])}</div>',
                         unsafe_allow_html=True)
 
@@ -453,9 +473,9 @@ def paste_help(name, url):
     """When the site cannot be read for us: the user opens the policy in their own
     browser and pastes it right here. Returns a paste source, or None."""
     with st.container(key="pastehelp"):
-        steps = [tr("افتح السياسة من الزر تحت", "Open the policy with the button below"),
-                 tr("انسخ نصها كله: <kbd>Ctrl+A</kbd> ثم <kbd>Ctrl+C</kbd>", "Copy all its text: <kbd>Ctrl+A</kbd> then <kbd>Ctrl+C</kbd>"),
-                 tr("الصقه في الخانة: <kbd>Ctrl+V</kbd>، واضغط حلّل", "Paste it in the box: <kbd>Ctrl+V</kbd>, then press Check")]
+        steps = [tr("افتح السياسة من الزر أدناه", "Open the policy with the button below"),
+                 tr("انسخ نصها كاملاً: <kbd>Ctrl+A</kbd> ثم <kbd>Ctrl+C</kbd>", "Copy all its text: <kbd>Ctrl+A</kbd> then <kbd>Ctrl+C</kbd>"),
+                 tr("الصقه في الحقل: <kbd>Ctrl+V</kbd>، ثم اضغط «حلّل»", "Paste it in the box: <kbd>Ctrl+V</kbd>, then press Check")]
         st.markdown('<div class="paste-steps">' + "".join(f'<div><span class="num">{i}</span>{step}</div>'
                                                           for i, step in enumerate(steps, 1)) + "</div>",
                     unsafe_allow_html=True)
@@ -467,7 +487,7 @@ def paste_help(name, url):
     if not submitted:
         return None
     if len(text.strip()) < 300:
-        st.warning(tr("النص قصير جداً. الصق نص السياسة كاملاً.", "The text is too short. Paste the whole policy."))
+        st.warning(tr("النص قصير جداً. يُرجى لصق نص السياسة كاملاً.", "The text is too short. Paste the whole policy."))
         return None
     return {"kind": "paste", "name": name, "text": text, "date": date.today().isoformat()}
 
@@ -658,7 +678,7 @@ def requirement_card(r, checklist, i=0):
             lines.append(f'<div class="meta">{tr("تصنيف المصنّف (OPP-115)", "Classifier label (OPP-115)")}: '
                          f'{esc(category)} · {match}</div>')
     if r.get("applies") == "conditional" and r["status"] == "missing" and row is not None:
-        lines.append(f'<div class="meta">{tr("مطلوب فقط إذا", "Only required if")}: {esc(row.condition if EN else row.condition_ar)}</div>')
+        lines.append(f'<div class="meta">{tr("يُشترط في حال", "Only required if")}: {esc(row.condition if EN else row.condition_ar)}</div>')
     lines.append(f'<div class="meta">{tr("المرجع", "Source")}: {esc(articles_short(r["articles"]))}</div>')
     return (f'<div class="req-card {tone}" style="animation-delay:{i * 50}ms">'
             f'<div class="req-head"><span class="req-id">{esc(r["req_id"])}</span>'
@@ -693,7 +713,7 @@ def page_gap():
             if mode == "search":
                 text_col, button_col = st.columns([6, 1], vertical_alignment="center")
                 query = text_col.text_input(tr("الشركة", "Company"), label_visibility="collapsed",
-                                            placeholder=tr("اكتب اسم الشركة أو الصق رابط موقعها، مثل: الراجحي أو stc.com.sa",
+                                            placeholder=tr("أدخل اسم الجهة أو رابط موقعها، مثل: الراجحي أو stc.com.sa",
                                                            "Type a company name or paste its website, e.g. Al Rajhi or stc.com.sa"))
                 submitted = button_col.form_submit_button(tr("حلّل", "Check"), type="primary", use_container_width=True)
             else:
@@ -701,7 +721,7 @@ def page_gap():
                 submitted = st.form_submit_button(tr("حلّل", "Check"), type="primary")
     if submitted and mode == "file":
         if upload is None:
-            st.warning(tr("اختر ملف السياسة أولاً.", "Choose the policy file first."))
+            st.warning(tr("يُرجى اختيار ملف السياسة أولاً.", "Choose the policy file first."))
         else:
             try:
                 text = read_policy_file(upload.name, upload.getvalue())
@@ -719,7 +739,7 @@ def page_gap():
             source = example_source(matches[0][1], policies)
         elif matches:
             names = tr("، ", ", ").join(name for _, _, name in matches)
-            note = tr(f"لقينا أكثر من شركة تطابق بحثك: {esc(names)}. اكتب اسم الشركة كامل.",
+            note = tr(f"توجد أكثر من جهة مطابقة لبحثك: {esc(names)}. يُرجى إدخال الاسم كاملاً.",
                       f"More than one company matches: {esc(names)}. Type the full company name.")
             st.markdown(f'<div class="note">{note}</div>',
                         unsafe_allow_html=True)
@@ -732,7 +752,7 @@ def page_gap():
         else:  # a company that is not an example: find its website from the name
             source = {"kind": "site", "site": "", "date": today, "name": query.strip()}
     elif submitted:
-        st.warning(tr("اكتب اسم الشركة أو موقعها أولاً.", "Type a company name or website first."))
+        st.warning(tr("يُرجى إدخال اسم الجهة أو موقعها أولاً.", "Type a company name or website first."))
 
     if source:
         run_analysis(source)
@@ -770,42 +790,42 @@ def page_gap():
                 + source_note(source, st.session_state.get("gap_saved_on")), unsafe_allow_html=True)
     if parts[3][1]:
         unsure = parts[3][1]
-        st.markdown(f'<div class="note">{tr(f"هالنص جمعه بحث الإنترنت وممكن يكون ناقص: {unsure} متطلبات ما لقيناها فيه، وممكن تكون موجودة في سياستهم الأصلية، فما حسبناها عليهم. للنتيجة الأكيدة الصق نص السياسة الأصلي:", f"This text was gathered by a web search and may be incomplete: {unsure} requirements are not in it but may be in the original policy, so they are not counted against them. For a sure result, paste the original policy:")}</div>',
+        st.markdown(f'<div class="note">{tr(f"جُمع هذا النص عبر البحث في الإنترنت وقد يكون منقوصاً: لم يرد فيه {unsure} من المتطلبات، وقد تكون واردة في السياسة الأصلية، لذا لم تُحتسب على الجهة. وللحصول على نتيجة دقيقة يُرجى لصق نص السياسة الأصلي:", f"This text was gathered by a web search and may be incomplete: {unsure} requirements are not in it but may be in the original policy, so they are not counted against them. For a sure result, paste the original policy:")}</div>',
                     unsafe_allow_html=True)
         pasted = paste_help(source["name"], source.get("url") or policy_help(source)[1])
         if pasted:
             run_analysis(pasted)
             st.rerun()
 
-    with st.expander(tr("عرض كل التفاصيل: المتطلبات الـ17 والاقتباسات من السياسة",
+    with st.expander(tr("عرض التفاصيل: المتطلبات السبعة عشر والشواهد من نص السياسة",
                         "Show all details: the 17 requirements and the quotes from the policy")):
         details(report, checklist, source)
 
 
-VERDICTS = [(80, "ok", tr("جيدة", "Good"), tr("سياستهم توضح لك أغلب اللي يهمك عن بياناتك",
+VERDICTS = [(80, "ok", tr("جيدة", "Good"), tr("تُفصح السياسة عن أغلب ما يتعلق ببياناتك الشخصية",
                                               "Their policy tells you most of what matters about your data")),
-            (50, "warn", tr("متوسطة", "Fair"), tr("سياستهم توضح أشياء وتسكت عن أشياء مهمة عن بياناتك",
+            (50, "warn", tr("متوسطة", "Fair"), tr("تُفصح السياسة عن بعض الجوانب وتُغفل جوانب جوهرية تتعلق ببياناتك الشخصية",
                                                   "Their policy explains some things and is silent on others that matter")),
-            (0, "bad", tr("ضعيفة", "Weak"), tr("سياستهم ما توضح لك أشياء مهمة عن بياناتك",
+            (0, "bad", tr("ضعيفة", "Weak"), tr("لا تُفصح السياسة عن جوانب جوهرية تتعلق ببياناتك الشخصية",
                                                "Their policy leaves out important things about your data"))]
 # Each requirement as the plain question a person would ask about their data.
-QUESTION_AR = {"R01": "مين الجهة المسؤولة عن بياناتك وكيف تتواصل معها؟",
-               "R02": "مين الشخص المسؤول عن حماية بياناتك عندهم؟",
-               "R03": "وش البيانات اللي ياخذونها منك؟",
-               "R04": "كيف ياخذون بياناتك؟",
-               "R05": "ليش يبون بياناتك؟",
-               "R06": "بأي حق يجمعون بياناتك؟",
-               "R07": "وش اللي لازم تعطيهم، ووش اللي لك الخيار فيه؟",
-               "R08": "وش يصير لو ما عطيتهم بياناتك؟",
-               "R09": "مع مين يشاركون بياناتك؟",
-               "R10": "هل بياناتك تطلع برا السعودية؟",
-               "R11": "كم يحتفظون ببياناتك؟",
-               "R12": "كيف يحفظون بياناتك وكيف يحذفونها؟",
-               "R13": "وش حقوقك على بياناتك؟",
-               "R14": "كيف تطلب حقوقك منهم؟",
-               "R15": "كيف تسحب موافقتك؟",
-               "R16": "كيف يحمون بياناتك؟",
-               "R17": "هل فيه برنامج يقرر عنك بدون إنسان؟"}
+QUESTION_AR = {"R01": "ما الجهة المسؤولة عن بياناتك، وما وسيلة التواصل معها؟",
+               "R02": "من مسؤول حماية البيانات الشخصية لدى الجهة؟",
+               "R03": "ما البيانات الشخصية التي تجمعها الجهة؟",
+               "R04": "ما وسائل جمع بياناتك الشخصية؟",
+               "R05": "ما الغرض من جمع بياناتك الشخصية؟",
+               "R06": "ما المسوّغ النظامي لجمع بياناتك الشخصية؟",
+               "R07": "ما البيانات الإلزامية، وما البيانات الاختيارية؟",
+               "R08": "ما الآثار المترتبة على عدم تقديم بياناتك؟",
+               "R09": "ما الجهات التي يُفصح لها عن بياناتك؟",
+               "R10": "هل تُنقل بياناتك أو تُعالَج خارج المملكة؟",
+               "R11": "ما مدة الاحتفاظ ببياناتك؟",
+               "R12": "ما طريقة حفظ بياناتك وإتلافها؟",
+               "R13": "ما حقوقك بصفتك صاحب البيانات؟",
+               "R14": "ما آلية ممارسة حقوقك؟",
+               "R15": "ما آلية الرجوع عن الموافقة؟",
+               "R16": "ما الإجراءات المتخذة لحماية بياناتك؟",
+               "R17": "هل تُتخذ بشأنك قرارات بمعالجة آلية بالكامل؟"}
 QUESTION_EN = {"R01": "Who is responsible for your data, and how do you reach them?",
                "R02": "Who is their data protection officer?",
                "R03": "What data do they take from you?",
@@ -824,23 +844,23 @@ QUESTION_EN = {"R01": "Who is responsible for your data, and how do you reach th
                "R16": "How do they protect your data?",
                "R17": "Does a program decide about you without a person?"}
 # What can happen to the person when the policy leaves this out, in plain words.
-WHY_AR = {"R01": "بدونها ما تعرف مين تكلم لو صار شي ببياناتك",
-          "R02": "هو اللي ترجع له لو صار تسريب أو مشكلة ببياناتك",
-          "R03": "بدونها ما تعرف وش بالضبط صار عندهم عنك",
-          "R04": "ممكن ياخذون بياناتك من جهات ثانية بدون ما تدري",
-          "R05": "بدونها ممكن يستخدمون بياناتك لأغراض ما وافقت عليها",
-          "R06": "النظام ما يسمح بجمع بياناتك إلا بسبب واضح، مثل موافقتك",
-          "R07": "تعرف وش اللي تقدر ترفضه بدون ما تخسر الخدمة",
-          "R08": "تعرف وش تخسر لو رفضت، قبل ما تقرر",
-          "R09": "ممكن توصل بياناتك لشركات ما تعرفها",
-          "R10": "لو تطلع برا المملكة، ممكن ما تكون محمية بنفس الدرجة",
-          "R11": "بدونها ممكن تبقى بياناتك عندهم بدون نهاية",
-          "R12": "تعرف إن بياناتك تنحذف صح لما ما يحتاجونها",
-          "R13": "من حقك تشوف بياناتك وتصححها وتطلب حذفها",
-          "R14": "الحق ما ينفعك إذا ما تعرف كيف تطلبه",
-          "R15": "من حقك توقفهم عن استخدام بياناتك متى ما بغيت",
-          "R16": "تعرف هل بياناتك في أمان من التسريب",
-          "R17": "ممكن برنامج يرفض طلبك، مثل طلب تمويل، بدون ما يراجعه إنسان"}
+WHY_AR = {"R01": "يتعذّر دونها معرفة الجهة التي تتواصل معها عند المساس ببياناتك",
+          "R02": "هو المرجع عند حدوث تسرّب لبياناتك أو أي إشكال يتعلق بها",
+          "R03": "يتعذّر دونها معرفة البيانات التي تحتفظ بها الجهة عنك",
+          "R04": "قد تُجمع بياناتك من مصادر أخرى دون علمك",
+          "R05": "قد تُستخدم بياناتك لأغراض لم توافق عليها",
+          "R06": "لا يجيز النظام جمع البيانات الشخصية إلا بمسوّغ نظامي، كموافقة صاحبها",
+          "R07": "تعرف ما يمكنك الامتناع عن تقديمه دون الحرمان من الخدمة",
+          "R08": "تعرف ما يترتب على امتناعك قبل اتخاذ قرارك",
+          "R09": "قد تصل بياناتك إلى جهات لا تعلم عنها",
+          "R10": "قد لا تحظى بياناتك خارج المملكة بمستوى الحماية نفسه",
+          "R11": "قد تبقى بياناتك لدى الجهة دون مدة محددة",
+          "R12": "تتحقق من إتلاف بياناتك على النحو الصحيح عند انتفاء الحاجة إليها",
+          "R13": "يحق لك العلم بمعالجة بياناتك والوصول إليها وطلب تصحيحها وإتلافها",
+          "R14": "لا يتحقق الانتفاع بالحق دون معرفة آلية المطالبة به",
+          "R15": "يحق لك الرجوع عن موافقتك على معالجة بياناتك في أي وقت",
+          "R16": "تتحقق من مدى حماية بياناتك من التسرّب",
+          "R17": "قد يُرفض طلبك، كطلب التمويل، بقرار آلي دون مراجعة بشرية"}
 WHY_EN = {"R01": "Without it you do not know who to contact if something happens to your data",
           "R02": "This is who you turn to after a leak or a problem with your data",
           "R03": "Without it you do not know exactly what they hold about you",
@@ -868,7 +888,7 @@ def verdict_card(name, percent, parts, total, report, checklist):
     if unsure:  # part of the policy is not in the web-search copy: no verdict on what we could not check
         checked = total - unsure
         tone, word = "warn", tr("نتيجة غير مكتملة", "Incomplete result")
-        meaning = tr(f"قدرنا نتحقق من {checked} متطلبات بس من {total}، والنسبة عليها هي بس",
+        meaning = tr(f"تعذّر التحقق إلا من {checked} من أصل {total} متطلباً، والنسبة محسوبة عليها فقط",
                      f"we could check only {checked} of the {total} requirements, and the score is on those only")
     order = {("missing", "always"): 0, ("missing", "conditional"): 1, ("partial", "always"): 2,
              ("partial", "conditional"): 3}
@@ -878,24 +898,24 @@ def verdict_card(name, percent, parts, total, report, checklist):
         f'<li class="{"bad" if r["status"] == "missing" else "warn"}">'
         f'<span class="gap-mark">{"✗" if r["status"] == "missing" else "!"}</span>'
         f'<span>{esc((QUESTION_EN if EN else QUESTION_AR).get(r["req_id"], r["requirement"]))}'
-        f'<small>{tr("سياستهم ما تجاوب عليه", "Their policy does not answer this") if r["status"] == "missing" else tr("سياستهم تجاوب عليه بشكل ناقص", "Their policy answers this only in part")}</small>'
+        f'<small>{tr("لم تتناوله السياسة", "Their policy does not answer this") if r["status"] == "missing" else tr("تناولته السياسة بصورة جزئية", "Their policy answers this only in part")}</small>'
         + (f'<em class="why">{esc((WHY_EN if EN else WHY_AR)[r["req_id"]])}</em>' if r["req_id"] in WHY_AR else "")
         + '</span></li>'
         for r in gaps)
-    words = {"ok": tr("واضحة", "clear"), "warn": tr("ناقصة", "incomplete"), "bad": tr("ما ذكروها", "not mentioned"),
-             "unsure": tr("ما لقيناها في النسخة", "not in this copy")}
+    words = {"ok": tr("مستوفاة", "clear"), "warn": tr("مستوفاة جزئياً", "incomplete"), "bad": tr("غير مذكورة", "not mentioned"),
+             "unsure": tr("لم ترد في النسخة المتاحة", "not in this copy")}
     segments = "".join(f'<i class="{t}"></i>' * n for t, n, _ in parts)
     legend = tr("، ", ", ").join(f'<b class="{t}">{n} {words[t]}</b>' for t, n, _ in parts if n)
     bar = (f'<div class="req-bar" title="{tr("كل مربع متطلب واحد", "Each square is one requirement")}">{segments}</div>'
-           f'<div class="req-legend">{tr(f"من {total} شي يطلبه نظام حماية البيانات الشخصية", f"Of the {total} things the Personal Data Protection Law requires")}: {legend}</div>')
-    gaps_html = (f'<div class="gaps-title">{tr("أهم أسئلة عن بياناتك ما تجاوب عليها سياستهم:", "Top questions about your data their policy leaves open:")}</div>'
+           f'<div class="req-legend">{tr(f"من أصل {total} متطلباً يشترطها نظام حماية البيانات الشخصية", f"Of the {total} things the Personal Data Protection Law requires")}: {legend}</div>')
+    gaps_html = (f'<div class="gaps-title">{tr("أبرز الجوانب المتعلقة ببياناتك التي لم تستوفها السياسة:", "Top questions about your data their policy leaves open:")}</div>'
                  f'<ul class="gaps">{items}</ul>'
-                 if gaps else f'<div class="gaps-title">{tr("السياسة تغطي كل المتطلبات", "The policy covers every requirement")} 🎉</div>')
+                 if gaps else f'<div class="gaps-title">{tr("تستوفي السياسة جميع المتطلبات", "The policy covers every requirement")} 🎉</div>')
     return (f'<div class="verdict {tone}">'
             f'<div class="verdict-head"><div class="ring" style="--p:{percent}"><span>{percent}%</span></div>'
             f'<div><div class="verdict-name">{tr(f"سياسة {esc(name)}", f"{esc(name)} privacy policy")}</div>'
             f'<div class="verdict-word">{word}</div>'
-            f'<div class="verdict-meaning">{tr("يعني", "Meaning")}: {meaning}</div>'
+            f'<div class="verdict-meaning">{tr("الخلاصة", "Meaning")}: {meaning}</div>'
             f'{bar}</div></div>'
             f'{gaps_html}</div>')
 
@@ -912,7 +932,7 @@ def details(report, checklist, source):
                 f'<div class="note">{tr("لا توجد متطلبات بهذه الحالة.", "No requirements with this status.")}</div>',
                 unsafe_allow_html=True)
     if source.get("text"):  # a library result on another computer has no text, only its link
-        st.markdown(f'<div class="gaps-title">{tr("نص السياسة اللي تم تحليله", "The policy text that was checked")}</div>'
+        st.markdown(f'<div class="gaps-title">{tr("نص السياسة محل التحليل", "The policy text that was checked")}</div>'
                     f'<div class="article-text policy-text" dir="auto">{esc(source["text"][:8000])}</div>',
                     unsafe_allow_html=True)
 

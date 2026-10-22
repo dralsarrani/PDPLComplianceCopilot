@@ -44,7 +44,7 @@ OTA_FILE = "Privacy Policy.md"
 INDEX_DIR = Path("results/archive_index")  # list of services per collection, kept one day
 INDEX_DAYS = 1
 COMMON_PATHS = ["/privacy", "/privacy-policy", "/legal/privacy", "/privacy-notice"]
-NOT_ARCHIVED = "ما لقينا نسخة من السياسة في الأرشيف العام."
+NOT_ARCHIVED = "تعذّر العثور على نسخة من السياسة في الأرشيف العام."
 
 
 def squash(text):

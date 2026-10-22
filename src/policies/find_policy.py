@@ -42,9 +42,9 @@ the address of its privacy policy page, e.g.
 Leave privacy_url empty if you are not sure of it.
 If you are not sure which company is meant or do not know its website, reply {"name": "", "site": "", "privacy_url": ""}."""
 BLOCKED = "الموقع لا يسمح بقراءة صفحاته آلياً، ونحترم ذلك."
-NOT_FOUND = "ما لقينا صفحة سياسة الخصوصية في موقع الشركة."
-NO_ANSWER = "موقع الشركة ما رد على طلبنا."
-JS_PAGE = "صفحة سياسة الخصوصية ما فيها نص كافٍ، غالباً الموقع يعرضها بـ JavaScript."
+NOT_FOUND = "تعذّر العثور على صفحة سياسة الخصوصية في موقع الجهة."
+NO_ANSWER = "لم يستجب موقع الجهة للطلب."
+JS_PAGE = "لا تتضمن صفحة سياسة الخصوصية نصاً كافياً، ويُرجّح أن الموقع يعرضها باستخدام JavaScript."
 PRIVACY_WORDS = re.compile(r"privacy|الخصوصية|خصوصية", re.IGNORECASE)
 SITEMAP_FILES = 4  # sitemap files read at most per site
 HUB_CHARS = 10000  # a privacy page shorter than this may be a hub that links to the full policy
