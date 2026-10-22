@@ -52,7 +52,7 @@ flowchart LR
 
 | Data | Where | Source and licence |
 |---|---|---|
-| Legal corpus: PDPL 43 + IR 38 + TR 9 articles, AR + EN, one record per article | `data/processed/legal_articles_v1.0.{json,csv}` | Official texts published by SDAIA; scraped with `src/data/build_legal_corpus.py`; manual review in `data/review/` |
+| Legal corpus: PDPL 43 + IR 38 + TR 9 articles, AR + EN, one record per article (document, chapter, article number, language, text) | `data/processed/legal_articles_v1.0.{json,csv}` | Official texts published by SDAIA; scraped with `src/data/build_legal_corpus.py`; manual review in `data/review/` |
 | Gold Q&A: 40 development questions (6 unanswerable) + 20 test questions (6 unanswerable) | `data/evaluation/` | Written and reviewed by the team; see the READMEs in that folder |
 | OPP-115 privacy policy segments | `data/opp115/`, `data/opp115_segments.{csv,parquet}`, split in `configs/split.json` | OPP-115 corpus (Wilson et al., 2016), for research use |
 | 11 Saudi privacy policies + team labels (187 policy × requirement labels) | `data/policies/`, `data/labels/team_labels.csv` | Each policy belongs to its company; texts kept for non-commercial education with source link and download date (`data/policies/README.md`). Re-download with `python -m src.policies.fetch_policies` |
@@ -200,7 +200,7 @@ The link holds for collection, sharing, retention and security (R03 to R05, R07,
 - Each Saudi policy was labelled by one team member only, so there is no inter-annotator agreement on the labels. The team rule was: a requirement the policy never mentions is *missing*.
 - The Gap Analyser does not tell *covered* from *partial* well (partial F1 0.32).
 - The classifier is English only; Arabic evidence is machine-translated before it is labelled. It labels the analyser's evidence but does not yet help choose the verdict.
-- The legal corpus does not yet have the *chapter* field for each article.
+- The *chapter* field is empty: the official texts (SDAIA platform and the Bureau of Experts page) list the articles without chapter headings, so there is no chapter to record. Retrieval and citations use the article number.
 - Future work: a second labeller per policy, and using the classifier to pick the policy paragraphs the analyser reads.
 
 ## Repository structure
