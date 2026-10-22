@@ -70,7 +70,7 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-Copy `.env.example` to `.env` and add your own OpenAI key (`.env` is ignored by git; never commit a key):
+Copy `.env.example` to `.env` and add your own OpenAI key :
 
 ```
 OPENAI_API_KEY=your-key-here
