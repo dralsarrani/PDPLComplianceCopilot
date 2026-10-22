@@ -1,0 +1,677 @@
+[
+  {
+    "id": "Q001",
+    "language": "ar",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "PDPL-A01-AR"
+    ],
+    "cited": [
+      "PDPL-A01-AR"
+    ],
+    "right_source": true,
+    "invented": [],
+    "sentences": 1,
+    "quotes_found": 0,
+    "answer": "يعرّف نظام حماية البيانات الشخصية \"البيانات الشخصية\" بأنها أي معلومات تتعلق بشخص طبيعي محدد أو يمكن تحديده."
+  },
+  {
+    "id": "Q003",
+    "language": "ar",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "PDPL-A04-AR"
+    ],
+    "cited": [
+      "PDPL-A15-AR"
+    ],
+    "right_source": false,
+    "invented": [],
+    "sentences": 3,
+    "quotes_found": 0,
+    "answer": "يحق لصاحب البيانات الشخصية الحصول على معلومات حول كيفية معالجة بياناته. يحق له طلب تصحيح بياناته إذا كانت غير دقيقة. يحق له طلب حذف بياناته في حالات معينة."
+  },
+  {
+    "id": "Q004",
+    "language": "ar",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "IR-A12-AR",
+      "PDPL-A05-AR"
+    ],
+    "cited": [
+      "PDPL-A15-AR"
+    ],
+    "right_source": false,
+    "invented": [],
+    "sentences": 2,
+    "quotes_found": 0,
+    "answer": "يمكن للعميل التراجع عن موافقته على معالجة بياناته في أي وقت. عند سحب الموافقة، يجب على الجهة المعالجة التوقف عن معالجة البيانات الشخصية."
+  },
+  {
+    "id": "Q005",
+    "language": "ar",
+    "answerable": true,
+    "covered": false,
+    "gold": [
+      "PDPL-A05-AR",
+      "PDPL-A06-AR"
+    ],
+    "cited": [],
+    "right_source": false,
+    "invented": [],
+    "sentences": 0,
+    "quotes_found": 0,
+    "answer": "not covered"
+  },
+  {
+    "id": "Q006",
+    "language": "ar",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "PDPL-A07-AR"
+    ],
+    "cited": [
+      "PDPL-A07-AR"
+    ],
+    "right_source": true,
+    "invented": [],
+    "sentences": 1,
+    "quotes_found": 0,
+    "answer": "نعم، يجوز ذلك وفق نظام حماية البيانات الشخصية، حيث يتطلب الحصول على موافقة صريحة من المستخدم لمعالجة بياناته الشخصية."
+  },
+  {
+    "id": "Q008",
+    "language": "ar",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "IR-A15-AR",
+      "PDPL-A10-AR"
+    ],
+    "cited": [
+      "PDPL-A15-AR"
+    ],
+    "right_source": false,
+    "invented": [],
+    "sentences": 2,
+    "quotes_found": 0,
+    "answer": "يجوز جمع البيانات الشخصية من جهة أخرى بدلاً من جمعها مباشرة من أصحابها في حالات معينة، مثل وجود مصلحة مشروعة أو موافقة من صاحب البيانات. يجب على الجهة التي تجمع البيانات من مصادر أخرى أن تلتزم بالقيود النظامية، مثل إبلاغ أصحاب البيانات عن جمع بياناتهم."
+  },
+  {
+    "id": "Q009",
+    "language": "ar",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "IR-A19-AR",
+      "PDPL-A11-AR"
+    ],
+    "cited": [
+      "PDPL-A05-AR"
+    ],
+    "right_source": false,
+    "invented": [],
+    "sentences": 1,
+    "quotes_found": 0,
+    "answer": "يجب أن تكون البيانات الشخصية التي يتم جمعها متناسبة مع الغرض من المعالجة."
+  },
+  {
+    "id": "Q011",
+    "language": "ar",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "IR-A04-AR",
+      "PDPL-A13-AR"
+    ],
+    "cited": [
+      "IR-A04-AR",
+      "PDPL-A15-AR"
+    ],
+    "right_source": true,
+    "invented": [],
+    "sentences": 1,
+    "quotes_found": 0,
+    "answer": "يجب على جهة التحكم إبلاغ العميل بالمعلومات الأساسية المتعلقة بجمع بياناته الشخصية، مثل الغرض من جمع البيانات، ومدة الاحتفاظ بها، وحقوقه المتعلقة بالبيانات."
+  },
+  {
+    "id": "Q013",
+    "language": "ar",
+    "answerable": true,
+    "covered": false,
+    "gold": [
+      "IR-A20-AR",
+      "PDPL-A15-AR"
+    ],
+    "cited": [],
+    "right_source": false,
+    "invented": [],
+    "sentences": 0,
+    "quotes_found": 0,
+    "answer": "not covered"
+  },
+  {
+    "id": "Q014",
+    "language": "ar",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "IR-A22-AR",
+      "PDPL-A17-AR"
+    ],
+    "cited": [
+      "PDPL-A15-AR"
+    ],
+    "right_source": false,
+    "invented": [],
+    "sentences": 1,
+    "quotes_found": 0,
+    "answer": "يجب على الجهة التي صححت البيانات الشخصية أن تخطر الجهة التي تلقت البيانات بذلك التصحيح."
+  },
+  {
+    "id": "Q016",
+    "language": "ar",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "IR-A23-AR",
+      "PDPL-A19-AR"
+    ],
+    "cited": [
+      "PDPL-A14-AR",
+      "PDPL-A15-AR",
+      "TR-A05-AR"
+    ],
+    "right_source": false,
+    "invented": [],
+    "sentences": 3,
+    "quotes_found": 0,
+    "answer": "تلتزم جهة التحكم باتخاذ التدابير اللازمة لحماية البيانات الشخصية أثناء معالجتها. يجب على جهة التحكم ضمان أن تكون المعالجة قانونية وعادلة. عند نقل البيانات الشخصية خارج المملكة، يجب على جهة التحكم التأكد من أن الدولة المستقبلة توفر مستوى مناسب من الحماية."
+  },
+  {
+    "id": "Q017",
+    "language": "ar",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "IR-A24-AR",
+      "PDPL-A20-AR"
+    ],
+    "cited": [
+      "PDPL-A15-AR"
+    ],
+    "right_source": false,
+    "invented": [],
+    "sentences": 2,
+    "quotes_found": 0,
+    "answer": "يجب على الجهة المعنية إبلاغ الجهة المختصة عن حادثة تسرب البيانات الشخصية خلال 72 ساعة من علمها بالحادثة. يجب إبلاغ صاحب البيانات الشخصية عن الحادثة في حال كان هناك خطر محتمل على حقوقه."
+  },
+  {
+    "id": "Q018",
+    "language": "ar",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "IR-A03-AR",
+      "PDPL-A21-AR"
+    ],
+    "cited": [
+      "PDPL-A15-AR"
+    ],
+    "right_source": false,
+    "invented": [],
+    "sentences": 2,
+    "quotes_found": 0,
+    "answer": "يجب على الجهة المعنية الاستجابة لطلب صاحب البيانات خلال مدة لا تتجاوز 30 يومًا من تاريخ استلام الطلب. يمكن تمديد هذه المدة لمدة مماثلة في حال كانت هناك حاجة لمزيد من الوقت لمعالجة الطلب."
+  },
+  {
+    "id": "Q020",
+    "language": "ar",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "IR-A28-AR",
+      "PDPL-A25-AR"
+    ],
+    "cited": [
+      "PDPL-A07-AR",
+      "PDPL-A09-AR"
+    ],
+    "right_source": false,
+    "invented": [],
+    "sentences": 2,
+    "quotes_found": 0,
+    "answer": "يجب على الشركة الحصول على موافقة صريحة من العملاء قبل إرسال الرسائل الترويجية. يجب أن تتضمن الرسائل الترويجية وسيلة للمستلم لإلغاء الاشتراك أو إيقاف الرسائل."
+  },
+  {
+    "id": "Q021",
+    "language": "ar",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "IR-A30-AR",
+      "PDPL-A27-AR"
+    ],
+    "cited": [
+      "IR-A04-AR",
+      "PDPL-A15-AR"
+    ],
+    "right_source": false,
+    "invented": [],
+    "sentences": 1,
+    "quotes_found": 0,
+    "answer": "يسمح النظام بمعالجة البيانات الشخصية لأغراض إحصائية دون الحصول على موافقة أصحابها في حالات معينة، مثل عندما تكون المعالجة ضرورية لتحقيق مصلحة عامة أو لأغراض البحث العلمي."
+  },
+  {
+    "id": "Q022",
+    "language": "ar",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "PDPL-A29-AR",
+      "TR-A03-AR"
+    ],
+    "cited": [
+      "TR-A02-AR",
+      "TR-A03-AR",
+      "TR-A05-AR"
+    ],
+    "right_source": true,
+    "invented": [],
+    "sentences": 3,
+    "quotes_found": 0,
+    "answer": "يجب أن يكون نقل البيانات الشخصية إلى خارج المملكة لأغراض مشروعة ومحددة. يجب أن يتم النقل وفقاً للضوابط والشروط المنصوص عليها في النظام. يجب أن تتوفر ضمانات كافية لحماية البيانات الشخصية المنقولة."
+  },
+  {
+    "id": "Q023",
+    "language": "ar",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "TR-A04-AR"
+    ],
+    "cited": [
+      "TR-A02-AR",
+      "TR-A03-AR"
+    ],
+    "right_source": false,
+    "invented": [],
+    "sentences": 2,
+    "quotes_found": 0,
+    "answer": "الضمانات المحددة لنقل البيانات الشخصية تشمل الضمانات القانونية والتعاقدية والتقنية. القيد الأساسي على استخدام هذه الضمانات هو ضرورة التأكد من أن مستوى حماية البيانات الشخصية في الدولة المستقبلة يعادل المستوى المطبق في المملكة."
+  },
+  {
+    "id": "Q026",
+    "language": "en",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "IR-A04-EN",
+      "PDPL-A13-EN"
+    ],
+    "cited": [
+      "PDPL-A15-AR"
+    ],
+    "right_source": false,
+    "invented": [],
+    "sentences": 5,
+    "quotes_found": 0,
+    "answer": "The controller must provide users with information about the purpose of data collection. Users must also be informed about the legal basis for processing their personal data. The controller should inform users about their rights regarding their personal data. Additionally, users must be informed about the identity of the data controller. The controller must also disclose any third parties with whom the data may be shared."
+  },
+  {
+    "id": "Q027",
+    "language": "en",
+    "answerable": true,
+    "covered": false,
+    "gold": [
+      "IR-A05-EN",
+      "PDPL-A04-EN"
+    ],
+    "cited": [],
+    "right_source": false,
+    "invented": [],
+    "sentences": 0,
+    "quotes_found": 0,
+    "answer": "not covered"
+  },
+  {
+    "id": "Q029",
+    "language": "en",
+    "answerable": true,
+    "covered": false,
+    "gold": [
+      "IR-A07-EN"
+    ],
+    "cited": [],
+    "right_source": false,
+    "invented": [],
+    "sentences": 0,
+    "quotes_found": 0,
+    "answer": "not covered"
+  },
+  {
+    "id": "Q030",
+    "language": "en",
+    "answerable": true,
+    "covered": false,
+    "gold": [
+      "IR-A08-EN",
+      "PDPL-A18-EN"
+    ],
+    "cited": [],
+    "right_source": false,
+    "invented": [],
+    "sentences": 0,
+    "quotes_found": 0,
+    "answer": "not covered"
+  },
+  {
+    "id": "Q032",
+    "language": "en",
+    "answerable": true,
+    "covered": false,
+    "gold": [
+      "IR-A10-EN"
+    ],
+    "cited": [],
+    "right_source": false,
+    "invented": [],
+    "sentences": 0,
+    "quotes_found": 0,
+    "answer": "not covered"
+  },
+  {
+    "id": "Q033",
+    "language": "en",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "IR-A11-EN",
+      "PDPL-A05-EN",
+      "PDPL-A07-EN"
+    ],
+    "cited": [
+      "PDPL-A07-AR"
+    ],
+    "right_source": true,
+    "invented": [],
+    "sentences": 3,
+    "quotes_found": 0,
+    "answer": "The controller must ensure that consent is freely given, specific, informed, and unambiguous. The controller must provide clear information about the purposes of processing personal data. The consent mechanism must allow the data subject to withdraw consent easily at any time."
+  },
+  {
+    "id": "Q034",
+    "language": "en",
+    "answerable": true,
+    "covered": false,
+    "gold": [
+      "IR-A12-EN",
+      "PDPL-A05-EN"
+    ],
+    "cited": [],
+    "right_source": false,
+    "invented": [],
+    "sentences": 0,
+    "quotes_found": 0,
+    "answer": "not covered"
+  },
+  {
+    "id": "Q036",
+    "language": "en",
+    "answerable": true,
+    "covered": false,
+    "gold": [
+      "IR-A16-EN",
+      "PDPL-A06-EN"
+    ],
+    "cited": [],
+    "right_source": false,
+    "invented": [],
+    "sentences": 0,
+    "quotes_found": 0,
+    "answer": "not covered"
+  },
+  {
+    "id": "Q037",
+    "language": "en",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "IR-A18-EN",
+      "PDPL-A10-EN"
+    ],
+    "cited": [
+      "PDPL-A15-AR"
+    ],
+    "right_source": false,
+    "invented": [],
+    "sentences": 2,
+    "quotes_found": 0,
+    "answer": "The company must verify that the new purpose for using the personal data is compatible with the original purpose for which the data was collected. Additionally, the company must document the justification for the new purpose and ensure that it complies with the principles of data processing outlined in the PDPL."
+  },
+  {
+    "id": "Q038",
+    "language": "en",
+    "answerable": true,
+    "covered": false,
+    "gold": [
+      "IR-A20-EN",
+      "PDPL-A15-EN"
+    ],
+    "cited": [],
+    "right_source": false,
+    "invented": [],
+    "sentences": 0,
+    "quotes_found": 0,
+    "answer": "not covered"
+  },
+  {
+    "id": "Q040",
+    "language": "en",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "IR-A22-EN",
+      "PDPL-A17-EN"
+    ],
+    "cited": [
+      "PDPL-A15-AR"
+    ],
+    "right_source": false,
+    "invented": [],
+    "sentences": 3,
+    "quotes_found": 0,
+    "answer": "The controller must ensure that the updated personal information is accurate and complete. The controller should inform the other organization about the updates to maintain data accuracy. The controller must consider the purpose for which the data was originally collected and ensure that the updates align with that purpose."
+  },
+  {
+    "id": "Q041",
+    "language": "en",
+    "answerable": true,
+    "covered": false,
+    "gold": [
+      "IR-A24-EN",
+      "PDPL-A20-EN"
+    ],
+    "cited": [],
+    "right_source": false,
+    "invented": [],
+    "sentences": 0,
+    "quotes_found": 0,
+    "answer": "not covered"
+  },
+  {
+    "id": "Q043",
+    "language": "en",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "IR-A27-EN",
+      "PDPL-A24-EN"
+    ],
+    "cited": [
+      "PDPL-A07-AR",
+      "PDPL-A09-AR",
+      "PDPL-A10-AR"
+    ],
+    "right_source": false,
+    "invented": [],
+    "sentences": 3,
+    "quotes_found": 0,
+    "answer": "The lender must obtain the customer's consent before collecting, using, or disclosing their credit data. The lender is required to notify the customer about the purpose of data collection and the entities with whom the data will be shared. The lender must implement appropriate security measures to protect the customer's credit data from unauthorized access or disclosure."
+  },
+  {
+    "id": "Q044",
+    "language": "en",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "IR-A29-EN",
+      "PDPL-A25-EN",
+      "PDPL-A26-EN"
+    ],
+    "cited": [
+      "PDPL-A15-AR"
+    ],
+    "right_source": false,
+    "invented": [],
+    "sentences": 3,
+    "quotes_found": 0,
+    "answer": "The retailer must obtain the explicit consent of customers before sending direct-marketing messages. The retailer must clearly identify themselves as the sender of the marketing messages. Customers must be provided with an easy way to opt-out of receiving further marketing messages."
+  },
+  {
+    "id": "Q045",
+    "language": "en",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "IR-A32-EN",
+      "PDPL-A30-EN"
+    ],
+    "cited": [
+      "PDPL-A15-AR"
+    ],
+    "right_source": false,
+    "invented": [],
+    "sentences": 3,
+    "quotes_found": 0,
+    "answer": "A Data Protection Officer (DPO) is required when the processing is carried out by a public authority or body. Additionally, a DPO is required if the core activities of the entity involve regular and systematic monitoring of data subjects on a large scale. Lastly, a DPO is necessary when the core activities consist of processing special categories of data on a large scale."
+  },
+  {
+    "id": "Q047",
+    "language": "en",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "TR-A05-EN"
+    ],
+    "cited": [
+      "TR-A01-AR",
+      "TR-A03-AR"
+    ],
+    "right_source": false,
+    "invented": [],
+    "sentences": 2,
+    "quotes_found": 0,
+    "answer": "The onward transfer of personal data from an overseas recipient is governed by the Regulation on Personal Data Transfer outside the Kingdom. The overseas recipient must ensure that the onward transfer complies with the conditions set forth in the Regulation."
+  },
+  {
+    "id": "Q048",
+    "language": "en",
+    "answerable": true,
+    "covered": true,
+    "gold": [
+      "TR-A07-EN"
+    ],
+    "cited": [
+      "TR-A05-AR"
+    ],
+    "right_source": false,
+    "invented": [],
+    "sentences": 2,
+    "quotes_found": 0,
+    "answer": "Yes, a transfer-risk assessment is required when transferring sensitive personal data outside Saudi Arabia. The assessment must be conducted prior to the transfer."
+  },
+  {
+    "id": "Q049",
+    "language": "ar",
+    "answerable": false,
+    "covered": false,
+    "gold": [],
+    "cited": [],
+    "right_source": false,
+    "invented": [],
+    "sentences": 0,
+    "quotes_found": 0,
+    "answer": "not covered"
+  },
+  {
+    "id": "Q050",
+    "language": "ar",
+    "answerable": false,
+    "covered": false,
+    "gold": [],
+    "cited": [],
+    "right_source": false,
+    "invented": [],
+    "sentences": 0,
+    "quotes_found": 0,
+    "answer": "not covered"
+  },
+  {
+    "id": "Q051",
+    "language": "ar",
+    "answerable": false,
+    "covered": false,
+    "gold": [],
+    "cited": [],
+    "right_source": false,
+    "invented": [],
+    "sentences": 0,
+    "quotes_found": 0,
+    "answer": "not covered"
+  },
+  {
+    "id": "Q055",
+    "language": "en",
+    "answerable": false,
+    "covered": false,
+    "gold": [],
+    "cited": [],
+    "right_source": false,
+    "invented": [],
+    "sentences": 0,
+    "quotes_found": 0,
+    "answer": "not covered"
+  },
+  {
+    "id": "Q056",
+    "language": "en",
+    "answerable": false,
+    "covered": false,
+    "gold": [],
+    "cited": [],
+    "right_source": false,
+    "invented": [],
+    "sentences": 0,
+    "quotes_found": 0,
+    "answer": "not covered"
+  },
+  {
+    "id": "Q057",
+    "language": "en",
+    "answerable": false,
+    "covered": false,
+    "gold": [],
+    "cited": [],
+    "right_source": false,
+    "invented": [],
+    "sentences": 0,
+    "quotes_found": 0,
+    "answer": "not covered"
+  }
+]

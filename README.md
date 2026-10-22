@@ -1,183 +1,209 @@
+# PDPL Copilot
 
-# خطة فريق PDPL Copilot
+**AIEP Capstone, Track B: Saudi Personal Data Protection Law (PDPL) compliance assistant**
 
-تقسيم المشروع على 4 أشخاص، مع خطوات كل شخص مقسمة على 3 مراحل. ما تنتقلون للمرحلة الجاية إلا لما تخلص اللي قبلها.
+> ⚠️ **Not legal advice.** PDPL Copilot is a student project. Its answers and gap reports can be wrong and must be checked against the official texts and a qualified lawyer.
 
-## مين يسوي وش
+PDPL Copilot does two things:
 
-**الشخص 1: مسؤول البيانات القانونية**  
-تجهيز النصوص (خلصت)، ويقود الـ 60 سؤال، ويساعد في قائمة متطلبات PDPL
+1. **Bilingual legal Q&A.** Ask a question about the PDPL in Arabic or English. The system finds the relevant articles of the PDPL, its Implementing Regulation and the Transfer Regulation, and answers **only** from them, citing the article for every sentence. If the texts do not answer the question, it says **"not covered"** instead of guessing.
+2. **Privacy policy Gap Analyser.** Give it a company's privacy policy (link, file or pasted text). For each of 17 PDPL requirements it reports **covered / partial / missing**, with the sentence from the policy as evidence and the PDPL article behind the requirement.
 
-**الشخص 2: مسؤول نظام السؤال والجواب RAG**  
-البحث، وترتيب النتائج، والـ LLM، والتأكد من رقم المادة، والتجارب E1 وE2 وE3 وE5
+## Team
 
-**الشخص 3أ: تحليل Privacy Policy: المودل**  
-تدريب OPP-115 بـ TF-IDF + LR، ثم Fine-tuning، والمقارنة في E4
+| Member | Role |
+|---|---|
+| Rana (P1) | Legal corpus (PDPL, IR, TR in Arabic and English), gold Q&A set |
+| Mathayel (P2) | RAG: retrieval, reranking, answering, citation checking (experiments E1, E2, E3, E5) |
+| Danah (P3A) | OPP-115 clause classifier: TF-IDF baseline vs fine-tuned BERT (experiment E4) |
+| Ahlam (P3B) | Gap Analyser, Saudi policies and labels, Streamlit app |
 
-**الشخص 3ب: تحليل Privacy Policy: Gap Analyser**  
-يستقبل السياسة ويطلع Covered / Partially covered / Missing، والتطبيق والديمو
+## Why
 
-نفس تقسيمكم، بس الشخص الثالث صار شخصين: 3أ يبني المودل، و3ب يبني Gap Analyser. والاثنين يشاركون في التطبيق والديمو.
+Since the PDPL came into force, every company that handles personal data in Saudi Arabia must publish a privacy policy that tells people what the law requires. Reading the law and checking a policy against it by hand is slow, and general chatbots answer legal questions confidently without citing the text. PDPL Copilot answers from the law itself, shows its sources, and refuses when the law does not cover the question.
 
-## وش يسلّم كل شخص للثاني
+## How it works
 
-اتفقوا على شكل هالتسليمات من أول يوم، عشان محد يوقف ينتظر:
+```mermaid
+flowchart LR
+    Q[Question AR/EN] --> B[BM25]
+    Q --> E[Embeddings<br/>ChromaDB]
+    B --> F[Reciprocal Rank Fusion<br/>top 40]
+    E --> F
+    F --> R[Cross-encoder reranker]
+    R --> L[gpt-4o-mini picks<br/>best 8 of top 10]
+    L --> A[gpt-4o-mini answers<br/>from these articles only]
+    A --> C[Citation check:<br/>quote found in article?]
+    C --> OUT[Cited answer<br/>or 'not covered']
 
-- الشخص 1 ← الشخص 2: النصوص وأسئلة التقييم
-- الشخص 1 ← 3ب: قائمة متطلبات PDPL
-- الشخص 2 ← 3ب: دالة `retrieve()` ودالة `answer()`
-- 3أ ← 3ب: دالة `classify()` والموديل المحفوظ
+    P[Privacy policy] --> G[Gap Analyser v0<br/>gpt-4o-mini]
+    K[17-requirement<br/>PDPL checklist] --> G
+    G --> V[Quote check<br/>against policy text]
+    V --> CL[OPP-115 classifier<br/>labels each evidence]
+    CL --> REP[Covered / Partial / Missing<br/>+ evidence + article + category]
+```
 
-## خطوات كل شخص
+- **Retrieval** (`retrieval/retriever.py`): BM25 with Arabic tokenisation + multilingual MiniLM embeddings stored in ChromaDB, fused with RRF, then the small cross-encoder `cross-encoder/mmarco-mMiniLMv2-L12-H384-v1`, then gpt-4o-mini picks the 8 best of the top 10 (falls back to the reranker order without network).
+- **Answering** (`retrieval/answer.py`): the LLM writes each sentence with the article ids it relies on and a short quote. `retrieval/citation_check.py` drops citations that do not exist, were not retrieved, or do not support the sentence. Every live answer is cached in `results/answers_cache.json`, which is the offline fallback for the demo.
+- **Gap Analyser** (`src/gap/analyse_v0.py`): checks a policy against `data/checklist/pdpl_checklist.csv` (17 requirements from PDPL Art. 12, 13 and IR Art. 4). Every quote the model returns is searched for in the policy text; a quote that is not there is flagged.
+- **Classifier** (`src/classifier/classify.py`): labels English policy paragraphs with the 10 OPP-115 categories. `src/gap/evidence_labels.py` connects it to the Gap Analyser: each evidence sentence (translated to English with gpt-4o-mini if it is Arabic) is labelled by the classifier, the label is shown next to the evidence in the app, and it is checked against the OPP-115 categories the checklist links to that requirement. The classifier does not change the analyser's verdicts.
 
-### الشخص 1: مسؤول البيانات القانونية
+## Data
 
-تجهيز النصوص خلص (رنا). باقي عليه إنه يقود الـ 60 سؤال ويساعد في قائمة المتطلبات.
+| Data | Where | Source and licence |
+|---|---|---|
+| Legal corpus: PDPL 43 + IR 38 + TR 9 articles, AR + EN, one record per article | `data/processed/legal_articles_v1.0.{json,csv}` | Official texts published by SDAIA; scraped with `src/data/build_legal_corpus.py`; manual review in `data/review/` |
+| Gold Q&A: 40 development questions (6 unanswerable) + 20 test questions (6 unanswerable) | `data/evaluation/` | Written and reviewed by the team; see the READMEs in that folder |
+| OPP-115 privacy policy segments | `data/opp115/`, `data/opp115_segments.{csv,parquet}`, split in `configs/split.json` | OPP-115 corpus (Wilson et al., 2016), for research use |
+| 11 Saudi privacy policies + team labels (187 policy × requirement labels) | `data/policies/`, `data/labels/team_labels.csv` | Each policy belongs to its company; texts kept for non-commercial education with source link and download date (`data/policies/README.md`). Re-download with `python -m src.policies.fetch_policies` |
+| PDPL requirements checklist | `data/checklist/` | Written by the team from the articles |
 
-#### المرحلة 1 · البداية
+## Setup
 
-1.  إضافة عمود الفصل (`chapter`) لكل مادة في ملف النصوص  
-    وصف المشروع يطلبه. بعدها ارفعي نسخة v1.1.
-2.  تجهيز ملف الأسئلة `data/eval/gold_qa.csv` وكتابة أول 15 سؤال، وتوزيع الباقي: كل شخص في الفريق يكتب 15 سؤال من مواقف واقعية  
-    الأعمدة: رقم السؤال، والسؤال، واللغة، والوثيقة، ورقم المادة الصحيحة، والجواب المرجعي، وهل هو خارج النطاق، وهل هو من موقف واقعي.
-3.  تسليم أول دفعة أسئلة للشخص 2 عشان يبدأ يختبر
+Python 3.10+ recommended.
 
-#### المرحلة 2 · البناء
+```bash
+git clone https://github.com/dralsarrani/PDPLComplianceCopilot.git
+cd PDPLComplianceCopilot
+python -m venv .venv
+# Windows: .venv\Scripts\activate    macOS/Linux: source .venv/bin/activate
+pip install -r requirements.txt
+```
 
-4.  جمع أسئلة الفريق ومراجعتها، وكتابة رقم المادة الصحيحة والجواب المرجعي لكل سؤال، لين توصل 60 أو أكثر  
-    20 بالعربي على الأقل، و10 ما يجاوب عليها النظام، وثلثها من مواقف واقعية مثل "عندنا تطبيق توصيل ونبي نشارك أرقام العملاء مع شركة تسويق".
-5.  كتابة قائمة متطلبات PDPL مع الشخص 3ب في ملف `data/checklist/pdpl_checklist.csv`  
-    من 15 إلى 20 متطلب تقريباً. لكل متطلب: رقمه، ووصفه، والمواد اللي يستند عليها. مثال: "السياسة تذكر الغرض من جمع البيانات"، ويستند على IR مادة 4. 3ب يحتاجها بأسرع وقت.
+Copy `.env.example` to `.env` and add your own OpenAI key (`.env` is ignored by git; never commit a key):
 
-#### المرحلة 3 · التجارب والتجهيز للعرض
+```
+OPENAI_API_KEY=your-key-here
+OPENAI_MODEL=gpt-4o-mini
+```
 
-6.  تصحيح إجابات الشات بوت يدوياً مع الشخص 2 (درجة 0 أو 1 أو 2)  
-    كل واحد يصحح لحاله، وبعدها تحسبون نسبة الاتفاق بينكم. هذا مطلوب بالاسم.
-7.  كتابة "بطاقة البيانات" (data card) في التقرير: المصدر، والرخصة، والحجم، والقيود
+The first run downloads the embedding and reranker models and builds `chroma_db/` (a few minutes).
 
-**يسلّم:** النصوص، وأسئلة التقييم، وقائمة المتطلبات
+## Run the demo app
 
-**ينتظر:** ما ينتظر أحد
+```bash
+python -m streamlit run app/app.py
+```
 
-### الشخص 2: مسؤول نظام السؤال والجواب RAG
+The app has an Arabic / English toggle and a dark mode. Without network, questions that were answered before are served from the cache.
 
-المستخدم يسأل بالعربي أو الإنجليزي، والبوت يجاوب من النصوص بس، ويذكر رقم المادة، ويقول "غير مشمول" إذا ما لقى.
+From the command line:
 
-#### المرحلة 1 · البداية
+```bash
+python -m retrieval.answer "هل يجوز نقل بيانات العملاء خارج المملكة؟"
+python -m src.gap.analyse_v0 data/policies/tamara.txt
+```
 
-1.  بحث بالكلمات: BM25 على `normalized_text`  
-    بمكتبة rank_bm25.
-2.  بحث بالمعنى: embeddings بموديل `BAAI/bge-m3` وتخزينها في ChromaDB  
-    هذي قاعدة البيانات الشعاعية المطلوبة في المشروع.
-3.  دمج نتايج البحثين بطريقة RRF (reciprocal rank fusion)
-4.  كتابة دالة `retrieve(question, k=5)` اللي ترجع المواد مع رقمها ونصها، وتسليمها للشخص 3ب بدري
+## Reproduce the results
 
-#### المرحلة 2 · البناء
+All commands run from the project root. Those marked 🔑 call OpenAI.
 
-5.  Reranker بموديل `BAAI/bge-reranker-v2-m3`
-6.  الإجابة بـ OpenAI: prompt يقول "جاوب من النص بس، واذكر رقم المادة، وإذا ما لقيت قل غير مشمول"
-7.  كود يتأكد إن كل مادة استشهد فيها البوت موجودة فعلاً في النتايج اللي رجعت
-8.  كتابة دالة `answer(question)` وتسليمها للشخص 3ب
+| What | Command | Output |
+|---|---|---|
+| Retrieval per method and language | `python -m retrieval.evaluate_by_language` 🔑 (Final row only) | `results/retrieval_by_language.csv` |
+| Full Q&A on the gold set | `python -m retrieval.evaluate_answers` 🔑 | `results/answer_eval.json` |
+| Citation checker on hand-made cases | `python -m retrieval.evaluate_citation_check` 🔑 | `results/citation_check_eval.json` |
+| Reranker comparison | `python -m retrieval.compare_rerankers --fast` | printed |
+| Gap Analyser vs team labels | `python -m src.gap.evaluate_gap` (add `--v1` for v1) | `results/gap_eval/`, `results/gap_eval_v1/` |
+| Classifier labels on the analyser's evidence 🔑 | `python -m src.gap.evidence_labels` | `results/gap_opp115/` |
+| E1: LLM only vs full system 🔑 | `python -m retrieval.experiment_e1_llm_only` | `results/e1_llm_only.json`, `.csv` |
+| Experiments E1, E2, E3, E5 (retrieval) | `python -m retrieval.experiment_e1` (and `_e2`, `_e3`, `_e5`) | printed; summary in `EXPERIMENT_RESULTS.md` |
+| Classifier (E4) | `notebooks/02_split.ipynb` to `06_error_analysis.ipynb` | `results/e4_*.csv` |
 
-#### المرحلة 3 · التجارب والتجهيز للعرض
+The classifier split is by policy (70/15/15) with seed 42 (`configs/split.json`). The fine-tuned model is on Hugging Face (`dralsarrani/opp115-bert`, set by `CLASSIFIER_MODEL` in `.env`); the TF-IDF baseline is saved in `artifacts/classifier/baseline.joblib`.
 
-9.  التجارب على أسئلة الفريق، وكل تجربة لها جدول  
-    E1: LLM لحاله، ضد RAG بسيط، ضد البحث المدمج مع reranker. E2: تقسيم بطول ثابت ضد تقسيم حسب المادة. E3: أسئلة عربي ضد إنجليزي، وموديل لغة وحدة ضد متعدد اللغات. E5: مع تعليمات "غير مشمول" وحد أدنى للدرجة، وبدونها.
-10. المقاييس: Recall@5 وMRR، كل لغة لحالها
-11. تحليل الأخطاء: أمثلة غلط مقسمة لأنواع، مع السبب
+## Results
 
-**يسلّم:** `retrieve()` و`answer()` وجداول E1 وE2 وE3 وE5
+### Retrieval (34 answerable development questions, 17 AR + 17 EN)
 
-**ينتظر:** أسئلة التقييم من الشخص 1، لكن يقدر يبدأ البحث بدونها
+| Method | Recall@5 all | Recall@5 AR | Recall@5 EN | MRR all |
+|---|---|---|---|---|
+| BM25 | 62.7 | 55.9 | 69.6 | 0.678 |
+| Embeddings | 52.5 | 32.4 | 72.5 | 0.543 |
+| Hybrid (RRF) | 56.9 | 41.2 | 72.5 | 0.635 |
+| Hybrid + reranker | 83.3 | 82.4 | 84.3 | 0.881 |
+| **Final (app): + LLM pick** | **90.2** | **88.2** | **92.2** | **0.929** |
 
-### الشخص 3أ: تحليل Privacy Policy: المودل
+The multilingual MiniLM embeddings are weak in Arabic (32.4); the reranker closes most of that gap.
 
-موديل يقرأ فقرة من سياسة خصوصية ويقول وش تتكلم عنه، مثل جمع البيانات أو مشاركتها أو الحذف. هذا هو الموديل اللي يدربه الفريق بنفسه.
+### Answers (40 development questions)
 
-#### المرحلة 1 · البداية
+| Metric | Result |
+|---|---|
+| Answerable questions citing a correct gold article | 97.1% (33/34) |
+| Answer sentences whose quote was found word for word in the cited article | 93.8% |
+| Unanswerable questions answered "not covered" | 100% (6/6) |
+| Answerable questions wrongly answered "not covered" (false refusal) | 0% (0/34) |
+| Citation checker on 14 hand-made cases (correct, invented, unrelated, missing, not retrieved) | 14/14 |
 
-1.  تنزيل OPP-115 وفهم التصنيفات العشرة  
-    مثل First Party Collection وThird Party Sharing وData Retention وData Security وغيرها.
-2.  تحويله لجدول: كل فقرة، ورقم سياستها، وتصنيفاتها (0 أو 1 لكل تصنيف)
-3.  تقسيم الـ 115 سياسة **حسب السياسة**: 70% train و15% validation و15% test، وتثبيت التقسيم في ملف  
-    لو انقسم حسب الفقرة، فقرات نفس السياسة تتسرب للاختبار والنتيجة تطلع أحسن من الحقيقة. هذا فخ مذكور بالاسم.
-4.  Baseline: TF-IDF + Logistic Regression، وتسجيل F1 لكل تصنيف  
-    مطلوب في نقطة المراجعة الأولى.
+### Experiments (details in [`EXPERIMENT_RESULTS.md`](EXPERIMENT_RESULTS.md))
 
-#### المرحلة 2 · البناء
+| # | Question | Result |
+|---|---|---|
+| E1 | Which retrieval method finds the right article? | Recall@5: BM25 62.7%, hybrid 56.9%, hybrid + reranker **83.3%** |
+| E1 | Does retrieval help the answers? (LLM only vs full system, same gpt-4o-mini) | Right article cited: **14.7% vs 97.1%**. Quotes found in the cited article: **0% vs 93.8%**. Answered: 70.6% vs 100%. Both said "not covered" to 6/6 unanswerable questions |
+| E2 | Article chunks or fixed 200-word chunks? (BM25) | Fixed chunks slightly better: AR 52.9% vs 47.1%, EN 68.6% vs 65.7% |
+| E3 | English-only or multilingual embeddings? | Arabic Recall@5 2.9% → **32.4%** with the multilingual model; English 75.5% vs 72.5% |
+| E4 | TF-IDF or fine-tuned BERT for OPP-115? | macro-F1 0.742 → **0.783** (table below) |
+| E5 | Does a retrieval-score threshold catch out-of-scope questions? | Catches 6/6 but wrongly refuses 8/34. The app instead relies on the answer prompt's "not covered" rule: 6/6 caught, 0/34 wrongly refused |
 
-5.  Fine-tuning لموديل `deberta-v3-small` أو `bert-base-uncased` على Colab  
-    مخرجات sigmoid لأن الفقرة ممكن يكون لها أكثر من تصنيف.
-6.  اختيار حد القرار لكل تصنيف على الـ validation
-7.  حفظ الموديل مع الـ tokenizer وحدود القرار في مجلد واحد، والتأكد إنه ينفتح في جلسة جديدة
-8.  كتابة دالة `classify(paragraphs)` وتسليمها للشخص 3ب
+### Gap Analyser (11 Saudi policies × 17 requirements = 187 team labels)
 
-#### المرحلة 3 · التجارب والتجهيز للعرض
+| Version | Accuracy (3 classes) | Mentioned vs missing | Cohen's κ | F1 covered / partial / missing |
+|---|---|---|---|---|
+| **v0 (used in the app)** | **77.5%** | **93.0%** | **0.452** | 0.87 / 0.32 / 0.70 |
+| v1 (yes/no sub-questions) | 72.7% | 87.2% | 0.445 | 0.84 / 0.47 / 0.52 |
 
-9.  جدول E4: Precision وRecall وF1 لكل تصنيف، وmacro-F1، للموديلين
-10. الإجابة على سؤال E4: أي تصنيفات استفادت من الـ transformer، وأيها لا، وليش
-11. تحليل الأخطاء للمصنّف، والمشاركة في ربط التطبيق والديمو مع 3ب
+v0 is too lenient: in 22 of 32 cases the team labelled *partial*, v0 said *covered*. v1 handles *partial* better but is too strict overall. Details per requirement and per policy are in `results/gap_eval*/`.
 
-**يسلّم:** `classify()` والموديل المحفوظ وجدول E4
+### Clause classifier, OPP-115 (test set, macro-F1 over 10 categories)
 
-**ينتظر:** ما ينتظر أحد، ويقدر يبدأ اليوم
+| Model | Macro-F1 |
+|---|---|
+| TF-IDF + logistic regression | 0.742 |
+| **Fine-tuned BERT** | **0.783** |
 
-### الشخص 3ب: تحليل Privacy Policy: Gap Analyser
+Per-category F1 is in `results/e4_test_comparison.csv`.
 
-المستخدم يلصق سياسة خصوصية، والنظام يطلع تقرير: كل متطلب في القائمة هل هو مغطى أو جزئي أو ناقص، مع الجملة من السياسة والمادة كدليل.
+### Classifier on the Gap Analyser's evidence (170 evidence sentences from the 11 Saudi policies)
 
-#### المرحلة 1 · البداية
+Does the classifier's top OPP-115 label for an evidence sentence fall in the categories the checklist links to that requirement?
 
-1.  جمع 10 سياسات خصوصية أو أكثر لتطبيقات ومواقع شغالة في السعودية  
-    احفظي كل وحدة كنص، مع رابطها وتاريخ تنزيلها.
-2.  هيكل تطبيق Streamlit بصفحتين فاضيتين، مع تنبيه "ليس استشارة قانونية"  
-    صفحة الأسئلة وصفحة تحليل السياسة. نسخة بشعة بس شغالة من البداية، مثل ما ينصح وصف المشروع.
-3.  ترتيب المستودع: `requirements.txt` و`.gitignore` وREADME فيه طريقة التشغيل
+| Evidence | Match |
+|---|---|
+| All | **75.9%** (129/170) |
+| Arabic, translated to English | 78.1% (25/32) |
+| English | 75.4% (104/138) |
 
-#### المرحلة 2 · البناء
+The link holds for collection, sharing, retention and security (R03 to R05, R07, R09: 100%) but not for the data subject's rights: R13 (9%) and R14 (36%) are mostly labelled *Other*. OPP-115 categories and PDPL requirements overlap but are not the same thing.
 
-4.  جدول ربط: كل تصنيف من OPP-115 بأي متطلب من قائمة المتطلبات  
-    واكتبي وين ما يتطابقون، لأن OPP-115 سياسات أمريكية. هذا فخ مذكور.
-5.  تعليم السياسات العشر يدوياً: كل متطلب مغطى أو جزئي أو ناقص  
-    هذا "الجواب الصحيح" اللي تقيسين عليه.
-6.  محلل الفجوات: تقسيم السياسة لفقرات، ثم `classify()`، ثم الربط بالقائمة، ثم `retrieve()` للمادة، ثم OpenAI يطلع JSON بالحكم والدليل
+## Limitations and future work
 
-#### المرحلة 3 · التجارب والتجهيز للعرض
+- The retrieval settings were tuned on the same 40 development questions they are scored on, so those numbers are optimistic. Results on the 20 held-out test questions (`data/evaluation/gold_qa_test.json`) are still pending. Those questions are in this public repository, so they are not a fully blind holdout.
+- E2 and E5 were run with BM25 or retrieval scores, not the full pipeline. In the LLM-only run, a citation counts as right if it names the gold article in either language, which favours that run.
+- E2 found fixed-length chunks slightly better than article chunks under BM25. The app keeps article chunks because every citation must point to one whole article.
+- Each Saudi policy was labelled by one team member only, so there is no inter-annotator agreement on the labels. The team rule was: a requirement the policy never mentions is *missing*.
+- The Gap Analyser does not tell *covered* from *partial* well (partial F1 0.32).
+- The classifier is English only; Arabic evidence is machine-translated before it is labelled. It labels the analyser's evidence but does not yet help choose the verdict.
+- The legal corpus does not yet have the *chapter* field for each article.
+- Future work: a second labeller per policy, and using the classifier to pick the policy paragraphs the analyser reads.
 
-7.  تقييم المحلل: دقة كل متطلب على السياسات العشر
-8.  ربط الصفحتين بدوال الشخص 2 و3أ وتجربة الديمو كامل  
-    سؤال بالعربي، وسؤال خارج النطاق، وسياسة جديدة، وكل هذا في حدود دقيقة.
-9.  بروفة الديمو مع الفريق على سياسة ما شفتوها قبل
+## Repository structure
 
-**يسلّم:** محلل الفجوات والتطبيق والديمو وترتيب المستودع
+```
+app/                 Streamlit app (app.py + CSS)
+retrieval/           BM25, embeddings, hybrid, reranking, answer(), citation check, evaluations
+src/data/            legal corpus builder
+src/classifier/      OPP-115 data, split, classify()
+src/gap/             Gap Analyser v0/v1, evaluation, label sheet
+src/policies/        fetching and reading privacy policies
+data/                legal corpus, gold Q&A, checklist, policy list, labels, OPP-115 segments
+notebooks/           corpus visualisation, classifier experiments (E4), error analysis
+configs/split.json   classifier train/val/test split (seed 42)
+artifacts/           saved TF-IDF baseline
+results/             evaluation outputs used in the report
+```
 
-**ينتظر:** القائمة من الشخص 1، و`classify()` من 3أ، و`retrieve()` و`answer()` من الشخص 2
+## Licence
 
-## المراحل مع نقاط المراجعة
-
-| المرحلة | الشخص 1 | الشخص 2 | 3أ | 3ب | نقطة المراجعة |
-|---|---|---|---|---|---|
-| 1 · البداية | عمود الفصل، وملف الأسئلة، وتوزيعها | BM25، وembeddings، وretrieve | OPP-115، والتقسيم، والـ baseline | 10 سياسات، وهيكل التطبيق | البيانات والـ baseline |
-| 2 · البناء | 60 سؤال، وقائمة المتطلبات مع 3ب | reranker، وOpenAI، وanswer | Fine-tuning، وclassify | الربط، والتعليم، والمحلل | النظام شغال من أوله لآخره |
-| 3 · التجارب | التصحيح اليدوي، وبطاقة البيانات | E1 وE2 وE3 وE5، والأخطاء | E4، والأخطاء، والمساعدة في الديمو | التقييم، والربط، والبروفة | البروفة النهائية |
-| 4 · التسليم | الكل: التقرير (10 إلى 15 صفحة)، وقسم الذكاء الاصطناعي المسؤول، والعرض (10 دقايق)، وتنظيف المستودع | | | | يوم العرض |
-
-## مطلوب من الكل (من ملف المشروع)
-
-| المطلوب                                                                                                                                         | مين                         |
-|-------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|
-| كل شخص لازم يكون عنده commits حقيقية في المستودع، يعني لا تخلون واحد يرفع عن الكل                                                               | الكل                        |
-| سجل قرارات مشترك: وش جربتوا، ووش اخترتوا، وليش. هذا يصير عمود التقرير                                                                           | الكل، وكل واحد يكتب قراراته |
-| مراجعة داخلية 15 دقيقة قبل كل نقطة مراجعة: كل شخص يشرح جزء شخص ثاني                                                                             | الكل                        |
-| بديل إذا انقطع النت يوم العرض: إجابات محفوظة (cache) أو موديل محلي مثل Ollama                                                                   | الشخص 2                     |
-| ترتيب المستودع زي المقترح: `configs/` و`eval/` و`artifacts/` و`app/` و`tests/` و`results/`، مع اختبار بسيط واحد على الأقل يتأكد إن النظام يشتغل | 3ب                          |
-| مفتاح OpenAI ما ينحط في المستودع أبداً. يكون في متغير بيئة، مع ملف `.env.example`                                                                | الشخص 2 و3ب                 |
-| تثبيت الـ random seed وكتابته، عشان النتايج تتكرر                                                                                               | الشخص 2 و3أ                 |
-| README فيه أسماء الفريق، ورسم النظام، وأوامر التشغيل، وجدول النتايج                                                                             | 3ب، والكل يضيف جزءه         |
-| التقرير (11 قسم، من 10 إلى 15 صفحة)، والشرائح، والعرض (10 دقايق) آخرها 2.5 دقيقة ديمو حي                                                        | الكل                        |
-
-**قرار لازم تاخذونه بدري:** OPP-115 كله إنجليزي، والسياسات السعودية كثير منها بالعربي.
-
-الحل الأسهل إن 3ب يترجم الفقرات العربية للإنجليزي بـ OpenAI قبل ما يرسلها لـ `classify()`، ويكتب هذا في قسم القيود في التقرير.
-
-قواعد عامة: كل شخص يشتغل على فرع (branch) خاص فيه، ويرفع PR لما يخلص خطوة. ومحد يعدل ملف النصوص القانونية يدوياً. وكل واحد لازم يقدر يشرح شغل الباقين في الأسئلة يوم العرض.
+Code: Apache 2.0 (see `LICENSE`). Legal texts belong to SDAIA; privacy policies belong to their companies and are used for non-commercial education only.
