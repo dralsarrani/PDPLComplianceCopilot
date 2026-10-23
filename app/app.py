@@ -46,6 +46,8 @@ sys.path.insert(0, str(PROJECT_ROOT))
 from retrieval.citation_check import load_articles  # noqa: E402
 from src.gap.analyse_v0 import analyse  # noqa: E402
 from src.gap.evidence_labels import label_evidence  # noqa: E402
+from src.gap.highlight import highlight_html  # noqa: E402
+from src.gap.report_pdf import build_pdf  # noqa: E402
 from src.policies.archive import from_archive  # noqa: E402
 from src.policies.find_policy import find_policy, guess_website, looks_like_site  # noqa: E402
 from src.policies.web_search import from_web_search  # noqa: E402
@@ -797,9 +799,21 @@ def page_gap():
             run_analysis(pasted)
             st.rerun()
 
+    analysed_on = st.session_state.get("gap_saved_on") or source.get("date", "")
+    st.download_button(tr("تحميل التقرير (PDF) مع ملحق الأدلة", "Download the report (PDF) with an evidence appendix"),
+                       report_pdf(json.dumps(report, ensure_ascii=False), source["name"], analysed_on, "en" if EN else "ar"),
+                       file_name=f"pdpl-report-{re.sub(r'[^A-Za-z0-9]+', '-', source.get('site') or source.get('id') or 'policy').strip('-')}.pdf",
+                       mime="application/pdf", icon=":material/download:", on_click="ignore")
     with st.expander(tr("عرض التفاصيل: المتطلبات السبعة عشر والشواهد من نص السياسة",
                         "Show all details: the 17 requirements and the quotes from the policy")):
         details(report, checklist, source)
+
+
+@st.cache_data(show_spinner=False, max_entries=20)
+def report_pdf(report_json, name, analysed_on, lang):
+    """The PDF is made once per report and language, not on every rerun."""
+    return build_pdf(json.loads(report_json), pd.read_csv(CHECKLIST_PATH).fillna(""), name, analysed_on, lang,
+                     opp115_names=None if lang == "en" else OPP115_AR)
 
 
 VERDICTS = [(80, "ok", tr("جيدة", "Good"), tr("تُفصح السياسة عن أغلب ما يتعلق ببياناتك الشخصية",
@@ -932,8 +946,16 @@ def details(report, checklist, source):
                 f'<div class="note">{tr("لا توجد متطلبات بهذه الحالة.", "No requirements with this status.")}</div>',
                 unsafe_allow_html=True)
     if source.get("text"):  # a library result on another computer has no text, only its link
-        st.markdown(f'<div class="gaps-title">{tr("نص السياسة محل التحليل", "The policy text that was checked")}</div>'
-                    f'<div class="article-text policy-text" dir="auto">{esc(source["text"][:8000])}</div>',
+        titles = {q: (r.requirement_en if EN else r.requirement_ar) for q, r in checklist.items()}
+        missing = [r["req_id"] for r in sorted(report, key=lambda r: r["req_id"]) if r["status"] == "missing"]
+        legend = (f'<span class="hl ok">{tr("مستوفى", "Covered")}</span> '
+                  f'<span class="hl warn">{tr("مستوفى جزئياً", "Partly covered")}</span>')
+        absent = (f'<div class="meta">{tr("غير مذكورة في النص", "Not in the text")}: '
+                  + tr("، ", ", ").join(f'<span class="miss" title="{esc(titles.get(q, ""))}">{q}</span>' for q in missing)
+                  + '</div>') if missing else ""
+        st.markdown(f'<div class="gaps-title">{tr("نص السياسة محل التحليل، مع تظليل الشواهد", "The policy text that was checked, with the quotes marked")}</div>'
+                    f'<div class="hl-legend">{legend}</div>{absent}'
+                    f'<div class="article-text policy-text" dir="auto">{highlight_html(source["text"], report, titles)}</div>',
                     unsafe_allow_html=True)
 
 

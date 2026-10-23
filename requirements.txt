@@ -23,6 +23,8 @@ streamlit
 plotly==7.1.0
 python-dotenv
 pypdf
+fpdf2          # gap report as PDF
+uharfbuzz      # Arabic letter joining in the PDF
 
 # Notebooks
 matplotlib
