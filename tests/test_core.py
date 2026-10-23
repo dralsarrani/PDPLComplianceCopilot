@@ -10,7 +10,8 @@ import unittest
 from pathlib import Path
 
 from retrieval.answer import locate_quote
-from retrieval.citation_check import ID_PATTERN, check_citations, normalise_id
+from retrieval.citation_check import ECC_PATTERN, ID_PATTERN, check_citations, normalise_id
+from retrieval.router import keyword_route
 from src.gap.analyse_v0 import load_checklist, normalise, quote_in_policy
 from src.gap.highlight import find_spans, highlight_html
 
@@ -18,6 +19,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CORPUS = json.loads((PROJECT_ROOT / "data" / "processed" / "legal_articles_v1.0.json").read_text(encoding="utf-8"))
 GOLD = json.loads((PROJECT_ROOT / "data" / "evaluation" / "gold_qa.json").read_text(encoding="utf-8"))["questions"]
 ARTICLES = {a["record_id"]: a for a in CORPUS}
+ECC = json.loads((PROJECT_ROOT / "data" / "processed" / "ecc_controls_v2024.json").read_text(encoding="utf-8"))
 
 
 class TestData(unittest.TestCase):
@@ -83,6 +85,27 @@ class TestGapAnalyser(unittest.TestCase):
         marked = highlight_html(text, report)
         self.assertEqual(marked.count("<mark"), 1)
         self.assertIn("&lt;delete&gt;", marked)
+
+
+class TestCyberControls(unittest.TestCase):
+    def test_ecc_corpus(self):
+        ids = [c["record_id"] for c in ECC]
+        self.assertEqual(len(ids), 2 * 108, "ECC-2:2024 has 108 main controls, each in Arabic and English")
+        self.assertEqual(len(set(ids)), len(ids), "control ids must be unique")
+        for c in ECC:
+            self.assertRegex(c["record_id"], ECC_PATTERN)
+            self.assertTrue(c["official_text"].strip() and c["article_title"].strip(), f"{c['record_id']} is empty")
+        for c in ECC:
+            other = c["record_id"][:-2] + ("EN" if c["language"] == "ar" else "AR")
+            self.assertIn(other, ids, f"{c['record_id']} has no {other[-2:]} version")
+        self.assertEqual(normalise_id("ECC 2.10.3"), "ECC-2-10-3-EN")
+        self.assertEqual(normalise_id("[ecc-2-10-3-ar]"), "ECC-2-10-3-AR")
+
+    def test_keyword_route(self):
+        self.assertEqual(keyword_route("How often must penetration tests be done?"), "ecc")
+        self.assertEqual(keyword_route("هل يجوز نقل البيانات الشخصية خارج المملكة؟"), "pdpl")
+        self.assertEqual(keyword_route("كيف أحمي البيانات الشخصية بالتشفير؟"), "both")
+        self.assertEqual(keyword_route("ما عاصمة فرنسا؟"), "pdpl")
 
 
 if __name__ == "__main__":

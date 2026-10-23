@@ -84,8 +84,16 @@ SECTORS_AR = {"Banking": "بنوك", "Fintech (BNPL)": "تقنية مالية", 
 PAGES = {"qa": tr("اسأل عن النظام", "Ask the law"), "gap": tr("تحليل سياسة الخصوصية", "Check a privacy policy")}
 DOCUMENTS = {"PDPL": tr("نظام حماية البيانات الشخصية", "Personal Data Protection Law"),
              "IR": tr("اللائحة التنفيذية", "Implementing Regulation"),
-             "TR": tr("لائحة نقل البيانات خارج المملكة", "Data Transfer Regulation")}
-SHORT_DOCUMENTS = {"PDPL": tr("النظام", "PDPL"), "IR": tr("اللائحة", "IR"), "TR": tr("لائحة النقل", "TR")}
+             "TR": tr("لائحة نقل البيانات خارج المملكة", "Data Transfer Regulation"),
+             "ECC": tr("الضوابط الأساسية للأمن السيبراني", "Essential Cybersecurity Controls")}
+SHORT_DOCUMENTS = {"PDPL": tr("النظام", "PDPL"), "IR": tr("اللائحة", "IR"), "TR": tr("لائحة النقل", "TR"),
+                   "ECC": tr("الضوابط", "ECC")}
+# Which texts the router searched for the question (retrieval/router.py)
+ROUTES = {"pdpl": tr("نظام حماية البيانات الشخصية ولائحتاه", "the PDPL and its regulations"),
+          "ecc": tr("الضوابط الأساسية للأمن السيبراني (الهيئة الوطنية للأمن السيبراني)",
+                    "the NCA Essential Cybersecurity Controls"),
+          "both": tr("نظام حماية البيانات الشخصية والضوابط الأساسية للأمن السيبراني",
+                     "the PDPL and the NCA Essential Cybersecurity Controls")}
 STATUS = {"covered": (tr("مغطى", "Covered"), "ok"),
           "partial": (tr("مغطى جزئياً", "Partly covered"), "warn"),
           "missing": (tr("غير مغطى", "Missing"), "bad"),
@@ -219,10 +227,19 @@ def esc(text):
     return html.escape(str(text))
 
 
+def ref_parts(record_id):
+    """'PDPL-A15-AR' -> ('PDPL', '15', 'المادة'); 'ECC-2-10-3-EN' -> ('ECC', '2-10-3', 'الضابط')"""
+    parts = record_id.split("-")
+    if parts[0] == "ECC":
+        # \u2066...\u2069 keeps "2-10-3" left to right inside Arabic text (else it shows as 3-10-2)
+        return "ECC", "\u2066" + "-".join(parts[1:4]) + "\u2069", tr("الضابط", "Control")
+    return parts[0], str(int(parts[1][1:])), tr("المادة", "Article")
+
+
 def article_label(record_id):
     """'PDPL-A15-AR' -> 'نظام حماية البيانات الشخصية، المادة 15'"""
-    doc, number, _ = record_id.split("-")
-    return tr(f"{DOCUMENTS.get(doc, doc)}، المادة {int(number[1:])}", f"{DOCUMENTS.get(doc, doc)}, Article {int(number[1:])}")
+    doc, number, unit = ref_parts(record_id)
+    return f"{DOCUMENTS.get(doc, doc)}{tr('، ', ', ')}{unit} {number}"
 
 
 def articles_short(articles):
@@ -240,8 +257,8 @@ def count_articles(n):
 
 
 HERO = {"qa": (tr("وش تبي تعرف عن حماية بياناتك؟", "What do you want to know about your data?"),
-               tr("إجابات من نصوص النظام واللوائح، مع رقم المادة",
-                  "Answers from the text of the law and its regulations, with the article number")),
+               tr("إجابات من نصوص النظام واللوائح وضوابط الأمن السيبراني، مع رقم المادة أو الضابط",
+                  "Answers from the law, its regulations and the cybersecurity controls, with the article or control number")),
         "gap": (tr("تحليل سياسة الخصوصية لأي جهة", "Check any company's privacy policy"),
                 tr("مقارنة السياسة بمتطلبات نظام حماية البيانات الشخصية، مع الاستشهاد بنصوصها",
                    "We compare the policy with what the law requires, and show the proof from its text"))}
@@ -282,7 +299,8 @@ def warm_up():
     return thread
 
 
-ASK_STEPS = {"retrieve": tr("البحث في 180 مادة نظامية...", "Searching 180 legal articles..."),
+ASK_STEPS = {"retrieve": tr("البحث في المواد النظامية وضوابط الأمن السيبراني...",
+                          "Searching the legal articles and cybersecurity controls..."),
              "answer": tr("كتابة الإجابة من نصوص المواد...", "Writing the answer from the articles..."),
              "check": tr("التحقق من كل استشهاد...", "Checking every citation...")}
 
@@ -306,9 +324,9 @@ def ask(question):
 
 
 def short_article(record_id):
-    """'PDPL-A29-AR' -> 'المادة 29 من النظام'"""
-    doc, number, _ = record_id.split("-")
-    return tr(f"المادة {int(number[1:])} من {SHORT_DOCUMENTS.get(doc, doc)}", f"{SHORT_DOCUMENTS.get(doc, doc)} Art. {int(number[1:])}")
+    """'PDPL-A29-AR' -> 'المادة 29 من النظام'; 'ECC-2-10-3-EN' -> 'الضابط 2-10-3 من الضوابط'"""
+    doc, number, unit = ref_parts(record_id)
+    return tr(f"{unit} {number} من {SHORT_DOCUMENTS.get(doc, doc)}", f"{SHORT_DOCUMENTS.get(doc, doc)} {number}")
 
 
 def official_sources_note(citations):
@@ -316,14 +334,18 @@ def official_sources_note(citations):
     articles = load_articles()
     links = {}
     for cid in citations:
-        doc = cid.split("-")[0]
+        doc = ref_parts(cid)[0]
         url = articles.get(cid, {}).get("source_url")
         if url and doc not in links:
             links[doc] = f'<a href="{esc(url)}" target="_blank" rel="noopener">{esc(DOCUMENTS.get(doc, doc))}</a>'
     if not links:
         return ""
-    text = tr("النصوص منقولة من الموقع الرسمي للهيئة السعودية للبيانات والذكاء الاصطناعي (سدايا)، وللاطلاع على النص الرسمي:",
-              "The texts are taken from the official website of SDAIA. Read the official text:")
+    if "ECC" in links:
+        text = tr("النصوص منقولة من المواقع الرسمية (سدايا، والهيئة الوطنية للأمن السيبراني)، وللاطلاع على النص الرسمي:",
+                  "The texts are taken from the official websites of SDAIA and the National Cybersecurity Authority. Read the official text:")
+    else:
+        text = tr("النصوص منقولة من الموقع الرسمي للهيئة السعودية للبيانات والذكاء الاصطناعي (سدايا)، وللاطلاع على النص الرسمي:",
+                  "The texts are taken from the official website of SDAIA. Read the official text:")
     return f'<div class="source-note">{ICONS["info"]}{text} {tr("، ", ", ").join(links.values())}</div>'
 
 
@@ -374,17 +396,20 @@ def page_qa():
     articles = load_articles()
     sources = []
     for cid in result["citations"]:
-        doc, number, _ = cid.split("-")
+        doc, number, unit = ref_parts(cid)
         article = articles[cid]
-        # IR and TR articles have titles; PDPL articles have none, so their opening words are shown
+        # IR, TR and ECC texts have titles; PDPL articles have none, so their opening words are shown
         title = article.get("article_title") or f'{article["official_text"][:90]}...'
-        inner = (f'<div class="source-num"><small>{tr("مادة", "Art.")}</small>{int(number[1:])}</div><div>'
-                 f'<div class="source-title">{esc(DOCUMENTS.get(doc, doc))}، {tr("المادة", "Article")} {int(number[1:])}</div>'
+        small = tr("ضابط", "Ctrl") if doc == "ECC" else tr("مادة", "Art.")
+        inner = (f'<div class="source-num{" long" if doc == "ECC" else ""}"><small>{small}</small>{number}</div><div>'
+                 f'<div class="source-title">{esc(article_label(cid))}</div>'
                  f'<div class="source-doc" dir="auto">{esc(title)}</div></div>')
         sources.append(f'<div class="source">{inner}</div>')
     st.markdown('<div class="answer-card split"><div class="answer-main">'
                 f'<div class="answer-title">{tr("الإجابة", "Answer")}</div>'
-                f'{answer_sentences(result)}'
+                + (f'<div class="route-note">{tr("بحثنا في", "Searched")}: {ROUTES[result["source"]]}</div>'
+                   if result.get("source") in ("ecc", "both") else "")
+                + f'{answer_sentences(result)}'
                 f'<span class="verified">{ICONS["check"]}{tr("مستندة إلى", "Based on")} {count_articles(n)}</span></div>'
                 f'<div class="answer-side"><div class="side-title">{tr("المصادر", "Sources")}</div>{"".join(sources)}</div></div>'
                 + official_sources_note(result["citations"]), unsafe_allow_html=True)

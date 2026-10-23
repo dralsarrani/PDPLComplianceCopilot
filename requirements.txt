@@ -25,6 +25,8 @@ python-dotenv
 pypdf
 fpdf2          # gap report as PDF
 uharfbuzz      # Arabic letter joining in the PDF
+pdfplumber     # reads the NCA controls PDF, English (src/nca/build_ecc.py)
+pymupdf        # reads the NCA controls PDF, Arabic (src/nca/arabic_pdf.py)
 
 # Notebooks
 matplotlib
