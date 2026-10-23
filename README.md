@@ -14,10 +14,10 @@ PDPL Copilot does three things:
 
 | Member | Role |
 |---|---|
-| Rana (P1) | Legal corpus (PDPL, IR, TR in Arabic and English), gold Q&A set |
-| Mathayel (P2) | RAG: retrieval, reranking, answering, citation checking (experiments E1, E2, E3, E5) |
-| Danah (P3A) | OPP-115 clause classifier: TF-IDF baseline vs fine-tuned BERT (experiment E4) |
-| Ahlam (P3B) | Gap Analyser, Saudi policies and labels, Streamlit app, NCA cybersecurity controls |
+| Rana | Legal corpus (PDPL, IR, TR in Arabic and English), gold Q&A set |
+| Mathayel | RAG: retrieval, reranking, answering, citation checking (experiments E1, E2, E3, E5) |
+| Danah | OPP-115 clause classifier: TF-IDF baseline vs fine-tuned BERT (experiment E4) |
+| Ahlam | Gap Analyser, Saudi policies and labels, Streamlit app, NCA cybersecurity controls |
 
 ## Why
 
@@ -79,7 +79,7 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-Copy `.env.example` to `.env` and add your own OpenAI key :
+Copy `.env.example` to `.env` and add your own OpenAI key:
 
 ```
 OPENAI_API_KEY=your-key-here
@@ -111,22 +111,22 @@ python -m src.gap.analyse_v0 data/policies/tamara.txt
 
 ## Reproduce the results
 
-All commands run from the project root. Those marked 🔑 call OpenAI.
+All commands run from the project root.
 
-| What | Command | Output |
-|---|---|---|
-| Quick check that the system works (no OpenAI, a few seconds) | `python -m unittest discover tests -v` | 11 tests, `OK` |
-| Retrieval per method and language | `python -m retrieval.evaluate_by_language` 🔑 (Final row only) | `results/retrieval_by_language.csv` |
-| Full Q&A on the gold set | `python -m retrieval.evaluate_answers` 🔑 | `results/answer_eval.json` |
-| Same two on the 20 test questions | add `--test` to the two commands above | `results/retrieval_by_language_test.csv`, `results/answer_eval_test.json` |
-| Citation checker on hand-made cases | `python -m retrieval.evaluate_citation_check` 🔑 | `results/citation_check_eval.json` |
-| Reranker comparison | `python -m retrieval.compare_rerankers --fast` | printed |
-| Gap Analyser vs team labels | `python -m src.gap.evaluate_gap` (add `--v1` for v1) | `results/gap_eval/`, `results/gap_eval_v1/` |
-| Classifier labels on the analyser's evidence 🔑 | `python -m src.gap.evidence_labels` | `results/gap_opp115/` |
-| E1: LLM only vs full system 🔑 | `python -m retrieval.experiment_e1_llm_only` | `results/e1_llm_only.json`, `.csv` |
-| Experiments E1, E2, E3, E5 (retrieval) | `python -m retrieval.experiment_e1` (and `_e2`, `_e3`, `_e5`) | printed; summary in `EXPERIMENT_RESULTS.md` |
-| Cybersecurity controls: routing and search 🔑 | `python -m retrieval.evaluate_ecc` | `results/ecc_eval/` |
-| Classifier (E4) | `notebooks/02_split.ipynb` to `06_error_analysis.ipynb` | `results/e4_*.csv` |
+| What | Command | Needs OpenAI key | Output |
+|---|---|---|---|
+| Quick check that the system works (a few seconds) | `python -m unittest discover tests -v` | No | 11 tests, `OK` |
+| Retrieval per method and language | `python -m retrieval.evaluate_by_language` | Final row only | `results/retrieval_by_language.csv` |
+| Full Q&A on the gold set | `python -m retrieval.evaluate_answers` | Yes | `results/answer_eval.json` |
+| Same two on the 20 test questions | add `--test` to the two commands above | As above | `results/retrieval_by_language_test.csv`, `results/answer_eval_test.json` |
+| Citation checker on hand-made cases | `python -m retrieval.evaluate_citation_check` | Yes | `results/citation_check_eval.json` |
+| Reranker comparison | `python -m retrieval.compare_rerankers --fast` | No | printed |
+| Gap Analyser vs team labels | `python -m src.gap.evaluate_gap` (add `--v1` for v1) | No | `results/gap_eval/`, `results/gap_eval_v1/` |
+| Classifier labels on the analyser's evidence | `python -m src.gap.evidence_labels` | Yes | `results/gap_opp115/` |
+| E1: LLM only vs full system | `python -m retrieval.experiment_e1_llm_only` | Yes | `results/e1_llm_only.json`, `.csv` |
+| Experiments E1, E2, E3, E5 (retrieval) | `python -m retrieval.experiment_e1` (and `_e2`, `_e3`, `_e5`) | No | printed; summary in `EXPERIMENT_RESULTS.md` |
+| Cybersecurity controls: routing and search | `python -m retrieval.evaluate_ecc` | Yes | `results/ecc_eval/` |
+| Classifier (E4) | `notebooks/02_split.ipynb` to `06_error_analysis.ipynb` | No | `results/e4_*.csv` |
 
 The classifier split is by policy (70/15/15) with seed 42 (`configs/split.json`). The fine-tuned model is on Hugging Face (`dralsarrani/opp115-bert`, set by `CLASSIFIER_MODEL` in `.env`); the TF-IDF baseline is saved in `artifacts/classifier/baseline.joblib`.
 
@@ -235,7 +235,7 @@ The link holds for collection, sharing, retention and security (R03 to R05, R07,
 
 The one routing miss (ECC02, whether non-Saudis may hold cybersecurity jobs) went to the PDPL. To catch such misses, `answer()` gives a second chance: when the PDPL texts do not answer a question that uses cybersecurity words, the controls are tried as well (a question the PDPL answers never gets there). The one unanswerable PDPL question with cybersecurity words (Q060) still gets "not covered". Because all 60 PDPL questions stay on the PDPL route with the unchanged PDPL prompt, the PDPL results above still hold. We tried a broader router prompt (all 29 ECC subdomain titles plus "any cybersecurity question goes to the controls"): it routed 12/12 cybersecurity questions right but moved 2 of the 60 PDPL questions away from the PDPL, so we kept the first router. Twelve questions are a small sample.
 
-## Limitations and future work
+## Limitations
 
 - The retrieval settings were tuned on the same 40 development questions they are scored on, so those numbers are optimistic. The 20 held-out test questions (`data/evaluation/gold_qa_test.json`) were scored once, after tuning; they are in this public repository, so they are not a fully blind holdout.
 - E2 and E5 were run with BM25 or retrieval scores, not the full pipeline. In the LLM-only run, a citation counts as right if it names the gold article in either language, which favours that run.
@@ -248,7 +248,6 @@ The one routing miss (ECC02, whether non-Saudis may hold cybersecurity jobs) wen
 - The router adds one gpt-4o-mini call (about one second) to every question.
 - The two graders agreed little on the 0 to 2 answer scores (κ 0.05): the scale did not say how complete a "2" must be.
 - A policy found by OpenAI web search may be summarised rather than copied word for word; the app marks such results as incomplete.
-- Future work: a second labeller per policy, and using the classifier to pick the policy paragraphs the analyser reads.
 
 ## Repository structure
 
