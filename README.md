@@ -4,10 +4,11 @@
 
 > ⚠️ **Not legal advice.** PDPL Copilot is a student project. Its answers and gap reports can be wrong and must be checked against the official texts and a qualified lawyer.
 
-PDPL Copilot does two things:
+PDPL Copilot does three things:
 
 1. **Bilingual legal Q&A.** Ask a question about the PDPL in Arabic or English. The system finds the relevant articles of the PDPL, its Implementing Regulation and the Transfer Regulation, and answers **only** from them, citing the article for every sentence. If the texts do not answer the question, it says **"not covered"** instead of guessing.
-2. **Privacy policy Gap Analyser.** Give it a company's privacy policy (link, file or pasted text). For each of 17 PDPL requirements it reports **covered / partial / missing**, with the sentence from the policy as evidence and the PDPL article behind the requirement.
+2. **Cybersecurity controls Q&A.** The same assistant also answers from the National Cybersecurity Authority's Essential Cybersecurity Controls (ECC-2:2024). A router decides for each question whether it needs the PDPL, the controls, or both. An Arabic question gets an Arabic answer quoting the official Arabic text; an English question gets English.
+3. **Privacy policy Gap Analyser.** Give it a company's privacy policy (link, file or pasted text). For each of 17 PDPL requirements it reports **covered / partial / missing**, with the sentence from the policy as evidence and the PDPL article behind the requirement.
 
 ## Team
 
@@ -16,7 +17,7 @@ PDPL Copilot does two things:
 | Rana (P1) | Legal corpus (PDPL, IR, TR in Arabic and English), gold Q&A set |
 | Mathayel (P2) | RAG: retrieval, reranking, answering, citation checking (experiments E1, E2, E3, E5) |
 | Danah (P3A) | OPP-115 clause classifier: TF-IDF baseline vs fine-tuned BERT (experiment E4) |
-| Ahlam (P3B) | Gap Analyser, Saudi policies and labels, Streamlit app |
+| Ahlam (P3B) | Gap Analyser, Saudi policies and labels, Streamlit app, NCA cybersecurity controls |
 
 ## Why
 
@@ -26,8 +27,9 @@ Since the PDPL came into force, every company that handles personal data in Saud
 
 ```mermaid
 flowchart LR
-    Q[Question AR/EN] --> B[BM25]
-    Q --> E[Embeddings<br/>ChromaDB]
+    Q[Question AR/EN] --> RT[Router<br/>PDPL / NCA controls / both]
+    RT --> B[BM25]
+    RT --> E[Embeddings<br/>ChromaDB]
     B --> F[Reciprocal Rank Fusion<br/>top 40]
     E --> F
     F --> R[Cross-encoder reranker]
@@ -35,6 +37,7 @@ flowchart LR
     L --> A[gpt-4o-mini answers<br/>from these articles only]
     A --> C[Citation check:<br/>quote found in article?]
     C --> OUT[Cited answer<br/>or 'not covered']
+    OUT -. PDPL 'not covered' and<br/>cybersecurity words .-> SC[Second chance:<br/>search the NCA controls]
 
     P[Privacy policy] --> G[Gap Analyser v0<br/>gpt-4o-mini]
     K[17-requirement<br/>PDPL checklist] --> G
@@ -48,6 +51,8 @@ flowchart LR
 - **Gap Analyser** (`src/gap/analyse_v0.py`): checks a policy against `data/checklist/pdpl_checklist.csv` (17 requirements from PDPL Art. 12, 13 and IR Art. 4). Every quote the model returns is searched for in the policy text; a quote that is not there is flagged.
 - **Classifier** (`src/classifier/classify.py`): labels English policy paragraphs with the 10 OPP-115 categories. `src/gap/evidence_labels.py` connects it to the Gap Analyser: each evidence sentence (translated to English with gpt-4o-mini if it is Arabic) is labelled by the classifier, the label is shown next to the evidence in the app, and it is checked against the OPP-115 categories the checklist links to that requirement. The classifier does not change the analyser's verdicts.
 - **Second corpus: NCA Essential Cybersecurity Controls (ECC-2:2024)**: `src/nca/build_ecc.py` reads the official English and Arabic PDFs into 108 controls in each language (`data/processed/ecc_controls_v2024.{json,csv}`; domain, subdomain, objective, control text). The Arabic PDF has ligatures with no text value; `src/nca/arabic_pdf.py` maps them back and checks every control number against the English one. `retrieval/router.py` (gpt-4o-mini, keyword fallback) sends each question to the PDPL, to the controls, or to both; `retrieval/ecc_retriever.py` runs the same search pipeline on its own index, in the question's language. Questions routed to the PDPL are answered exactly as before.
+- **Second chance** (`retrieval/answer.py`): when the router sent a question to the PDPL, the PDPL texts do not answer it and it uses cybersecurity words, the controls are searched too. A question the PDPL answers never gets there.
+- **Finding a policy** (`src/policies/`): the app takes a company name, a website, a policy link, or a file (PDF, Word, TXT, `read_file.py`). It looks in this order: the 11 Saudi policies and the global companies analysed ahead (`data/library/`, `src/gap/analyse_library.py`); the company's own site (`find_policy.py`: privacy link, sitemap, common paths; robots.txt is respected); public archives (`archive.py`: Open Terms Archive, Wayback Machine, Common Crawl); and last, an OpenAI web search (`web_search.py`), whose copy may be incomplete, so the requirements it lacks are shown grey and the result is marked incomplete. Sites that block bots are never worked around; the user can upload the policy instead.
 - **In the app** the quotes are marked inside the policy text (green covered, amber partial; missing requirements are listed above the text, `src/gap/highlight.py`), and the gap report can be downloaded as a PDF with an evidence appendix (`src/gap/report_pdf.py`, Arabic or English; font IBM Plex Sans Arabic, OFL, in `app/fonts/`).
 
 ## Data
@@ -60,6 +65,7 @@ flowchart LR
 | NCA Essential Cybersecurity Controls ECC-2:2024: 108 controls, AR + EN | `data/processed/ecc_controls_v2024.{json,csv}`, questions in `data/evaluation/ecc_gold.csv` | Published by the National Cybersecurity Authority (https://nca.gov.sa/en/regulatory-documents/controls-list/ecc/); download the English and Arabic PDFs into `data/nca/` and run `python -m src.nca.build_ecc` |
 | 11 Saudi privacy policies + team labels (187 policy × requirement labels) | `data/policies/`, `data/labels/team_labels.csv` | Each policy belongs to its company; texts kept for non-commercial education with source link and download date (`data/policies/README.md`). Re-download with `python -m src.policies.fetch_policies` |
 | PDPL requirements checklist | `data/checklist/` | Written by the team from the articles |
+| Global company list for the policy page | `data/library/companies.csv`, `library.csv` | Company names and policy links; the policy texts are kept local (`data/library/texts/`, not in the repository) |
 
 ## Setup
 
@@ -88,7 +94,13 @@ The first run downloads the embedding and reranker models and builds `chroma_db/
 python -m streamlit run app/app.py
 ```
 
-The app has an Arabic / English toggle and a dark mode. Without network, questions that were answered before are served from the cache.
+What the app shows:
+
+- **Ask the law**: the answer sentence by sentence, each with its article or control number and the exact quote found in the text; source cards; a line linking the official texts (SDAIA for the PDPL, NCA for the controls); which texts were searched for cybersecurity questions; the full text of the cited articles; how many citations were checked.
+- **Check a privacy policy**: a score out of 17 with a verdict (good / average / weak), the most important missing requirements in plain words with why each matters, all 17 requirements with their evidence quote, the PDPL article and the OPP-115 category the classifier gives the evidence, the policy text with the evidence highlighted, and a PDF download of the report.
+- A history panel of past questions and analyses (`results/history.json`, local only), an Arabic / English interface and a dark mode.
+
+Without network, questions that were answered before are served from the cache (`results/answers_cache.json`): ask the demo questions once before presenting.
 
 From the command line:
 
@@ -154,6 +166,19 @@ Two errors: Q012 cited IR-A22 instead of PDPL-A14, and Q053 (unanswerable) was a
 | Unanswerable questions answered "not covered" | 100% (6/6) |
 | Answerable questions wrongly answered "not covered" (false refusal) | 0% (0/34) |
 | Citation checker on 14 hand-made cases (correct, invented, unrelated, missing, not retrieved) | 14/14 |
+
+### Human grading of the answers (40 development questions, 0 = wrong, 1 = partly right, 2 = right)
+
+Two team members (Ahlam and Danah) graded every answer against the reference answer, independently and without seeing each other's scores.
+
+| | Result |
+|---|---|
+| Mean score, grader A / grader B | 1.80 / 1.30 |
+| Same score | 35% |
+| Within one point | 95% |
+| Cohen's κ | 0.05 |
+
+Only two answers got opposite scores (Q006 and Q027); most disagreements were 2 against 1, on whether an answer shorter than the reference answer is "complete". We report the scores as given, without adjudication.
 
 ### Experiments (details in [`EXPERIMENT_RESULTS.md`](EXPERIMENT_RESULTS.md))
 
@@ -221,18 +246,20 @@ The one routing miss (ECC02, whether non-Saudis may hold cybersecurity jobs) wen
 - The *chapter* field is empty: the official texts (SDAIA platform and the Bureau of Experts page) list the articles without chapter headings, so there is no chapter to record. Retrieval and citations use the article number.
 - The Arabic NCA controls are rebuilt from the PDF's glyphs (11 ligatures mapped by hand, 3 words the PDF splits joined again); a few spacing or vowel-mark slips may remain.
 - The router adds one gpt-4o-mini call (about one second) to every question.
+- The two graders agreed little on the 0 to 2 answer scores (κ 0.05): the scale did not say how complete a "2" must be.
+- A policy found by OpenAI web search may be summarised rather than copied word for word; the app marks such results as incomplete.
 - Future work: a second labeller per policy, and using the classifier to pick the policy paragraphs the analyser reads.
 
 ## Repository structure
 
 ```
-app/                 Streamlit app (app.py + CSS)
-retrieval/           BM25, embeddings, hybrid, reranking, answer(), citation check, evaluations
+app/                 Streamlit app (app.py, CSS for light/dark and right-to-left/left-to-right, fonts for the PDF)
+retrieval/           BM25, embeddings, hybrid, reranking, router, NCA controls search, answer(), citation check, evaluations
 src/data/            legal corpus builder
 src/classifier/      OPP-115 data, split, classify()
 src/nca/             NCA cybersecurity controls corpus builder
-src/gap/             Gap Analyser v0/v1, evaluation, label sheet
-src/policies/        fetching and reading privacy policies
+src/gap/             Gap Analyser v0/v1, evaluation, label sheet, highlighting, PDF report, library analysis
+src/policies/        finding, fetching and reading privacy policies (site, archives, web search, files)
 data/                legal corpus, gold Q&A, checklist, policy list, labels, OPP-115 segments
 notebooks/           corpus visualisation, classifier experiments (E4), error analysis
 configs/split.json   classifier train/val/test split (seed 42)
@@ -243,4 +270,4 @@ tests/               quick checks of data, citation checking and quote matching
 
 ## Licence
 
-Code: Apache 2.0 (see `LICENSE`). Legal texts belong to SDAIA; privacy policies belong to their companies and are used for non-commercial education only.
+Code: Apache 2.0 (see `LICENSE`). Legal texts belong to SDAIA; the Essential Cybersecurity Controls belong to the National Cybersecurity Authority; privacy policies belong to their companies and are used for non-commercial education only.
