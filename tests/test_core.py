@@ -12,6 +12,7 @@ from pathlib import Path
 from retrieval.answer import locate_quote
 from retrieval.citation_check import ID_PATTERN, check_citations, normalise_id
 from src.gap.analyse_v0 import load_checklist, normalise, quote_in_policy
+from src.gap.highlight import find_spans, highlight_html
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CORPUS = json.loads((PROJECT_ROOT / "data" / "processed" / "legal_articles_v1.0.json").read_text(encoding="utf-8"))
@@ -72,6 +73,16 @@ class TestGapAnalyser(unittest.TestCase):
         self.assertTrue(quote_in_policy("We keep your data for 5 years.", policy))
         self.assertTrue(quote_in_policy("We keep your data ... ask us to delete it", policy))
         self.assertFalse(quote_in_policy("We never share your data.", policy))
+
+    def test_highlight_quotes_in_policy(self):
+        text = "We keep your data\nfor 5 years. You can ask us to <delete> it."
+        self.assertEqual(len(find_spans(text, "we keep your data for 5 years ... ask us")), 2)
+        self.assertEqual(find_spans(text, "We never share your data."), [])
+        report = [{"req_id": "R11", "status": "covered", "evidence": "We keep your data for 5 years."},
+                  {"req_id": "R02", "status": "missing", "evidence": ""}]
+        marked = highlight_html(text, report)
+        self.assertEqual(marked.count("<mark"), 1)
+        self.assertIn("&lt;delete&gt;", marked)
 
 
 if __name__ == "__main__":
