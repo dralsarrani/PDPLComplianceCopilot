@@ -101,15 +101,17 @@ def _rrf(rankings):
     return sorted(scores, key=scores.get, reverse=True)
 
 
-def _llm_rerank(question, ranked):
+def _llm_rerank(question, ranked, articles=None):
     """Let gpt-4o-mini pick and order its LLM_RERANK_KEEP best of the first
     LLM_RERANK_TOP of ranked [(index, score)]; the rest keep the small reranker's order.
-    On any OpenAI problem the order is kept as it is, so search still works offline."""
+    On any OpenAI problem the order is kept as it is, so search still works offline.
+    articles: the list the indexes point into (default: the PDPL corpus; the NCA
+    controls pass their own, see ecc_retriever.py)."""
     import os
     from dotenv import load_dotenv
     from openai import OpenAI
 
-    articles = _cache["articles"]
+    articles = articles or _cache["articles"]
     head, tail = ranked[:LLM_RERANK_TOP], ranked[LLM_RERANK_TOP:]
     listing = "\n\n".join(f"[{articles[i]['record_id']}] {articles[i]['article_title']}\n"
                            f"{articles[i]['official_text'][:LLM_RERANK_CHARS]}" for i, _ in head)

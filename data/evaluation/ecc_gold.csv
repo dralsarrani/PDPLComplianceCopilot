@@ -1,0 +1,13 @@
+﻿id,question,expected_source,gold_control_ids
+ECC01,هل لازم يكون فيه إدارة مستقلة للأمن السيبراني، أو عادي تكون تابعة لإدارة تقنية المعلومات؟,ecc,1-2-1
+ECC02,هل مسموح لغير السعوديين يشتغلون في وظائف الأمن السيبراني، أو لازم تكون الوظائف للسعوديين المتفرغين؟,ecc,1-2-2
+ECC03,متى تحتاج الجهة تسوي تقييم للمخاطر السيبرانية؟ وهل لازم يكون بشكل سنوي أو حسب الحاجة؟,ecc,1-5-3
+ECC04,إذا انتهى عقد موظف، مين المسؤول عن إلغاء صلاحياته ومتى لازم تنسحب منه؟,ecc,1-9-5
+ECC05,وش المواضيع اللي لازم تشملها برامج التوعية بالأمن السيبراني للموظفين؟ وهل يكفي التوعية بالتصيد الإلكتروني فقط؟,ecc,1-10-3
+ECC06,هل لازم نستخدم التحقق متعدد العوامل (MFA) عند تسجيل الدخول لكل الأنظمة، أو فيه أنظمة مستثناة؟,ecc,2-2-3
+ECC07,What security measures should we have in place to protect company email from phishing and spam?,ecc,2-4-3
+ECC08,"How can we protect company data on employees’ personal phones, especially if a device is lost?",ecc,2-6-3
+ECC09,How often should we test our backups to make sure we can restore important systems quickly after an incident?,ecc,2-9-3
+ECC10,"Who should we notify if a cybersecurity incident occurs, and what steps should we follow to report it?",ecc,2-13-3
+ECC11,How should we protect personal data based on its classification level?,both,2-7-2
+ECC12,"If we use a cloud service provider, how can we make sure our personal data is protected and returned when the contract ends?",both,4-2-3

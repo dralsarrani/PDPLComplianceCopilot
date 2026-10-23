@@ -2,7 +2,7 @@
 check_citations(sentences, retrieved_ids): verify every citation in an answer.
 
 For each sentence of the answer and each article it cites:
-    1. exists?      the id is one of the 180 articles in the corpus    else: not_in_corpus
+    1. exists?      the id is in the corpus (180 articles + NCA controls)  else: not_in_corpus
     2. retrieved?   the article was among the ones retrieve() returned else: not_retrieved
     3. supports?    an LLM reads the sentence and the article text     -> supported /
                                                                           partial /
@@ -26,10 +26,12 @@ from openai import OpenAI
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 ARTICLES_PATH = PROJECT_ROOT / "data" / "processed" / "legal_articles_v1.0.json"
+ECC_PATH = PROJECT_ROOT / "data" / "processed" / "ecc_controls_v2024.json"  # NCA controls, if built
 DEFAULT_MODEL = "gpt-4o-mini"
 MAX_ARTICLE_CHARS = 4000
 VALID = ("supported", "partial")
 ID_PATTERN = re.compile(r"^(PDPL|IR|TR)-A(\d+)-(AR|EN)$")
+ECC_PATTERN = re.compile(r"^ECC-?(\d+)[-.](\d+)[-.](\d+)(?:-(AR|EN))?$")
 
 JUDGE_PROMPT = """You check citations in answers about the Saudi Personal Data Protection Law (PDPL).
 For each numbered pair you get a sentence and the text of the article it cites.
@@ -45,9 +47,12 @@ _articles = {}
 
 
 def load_articles():
+    """All citable texts by id: the 180 PDPL articles and, once built, the 108 NCA controls."""
     if not _articles:
-        for a in json.loads(ARTICLES_PATH.read_text(encoding="utf-8")):
-            _articles[a["record_id"]] = a
+        for path in (ARTICLES_PATH, ECC_PATH):
+            if path.exists():
+                for a in json.loads(path.read_text(encoding="utf-8")):
+                    _articles[a["record_id"]] = a
     return _articles
 
 
@@ -57,6 +62,9 @@ def normalise_id(citation):
     match = ID_PATTERN.match(cleaned)
     if match:
         return f"{match[1]}-A{int(match[2]):02d}-{match[3]}"
+    match = ECC_PATTERN.match(cleaned)
+    if match:  # 'ECC 2.10.3' -> 'ECC-2-10-3-EN' (English when no language is given)
+        return f"ECC-{int(match[1])}-{int(match[2])}-{int(match[3])}-{match[4] or 'EN'}"
     return cleaned
 
 

@@ -34,8 +34,10 @@ from pathlib import Path
 from dotenv import load_dotenv
 from openai import OpenAI
 
+from retrieval import ecc_retriever
 from retrieval.citation_check import check_citations, normalise_id
 from retrieval.retriever import retrieve
+from retrieval.router import keyword_route, route
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CACHE_PATH = PROJECT_ROOT / "results" / "answers_cache.json"
@@ -43,6 +45,10 @@ DEFAULT_MODEL = "gpt-4o-mini"
 ARTICLES_FOR_ANSWER = 8  # see RERANK_MODEL in retriever.py
 NOT_COVERED = {"ar": "غير مشمول: لم أجد في نصوص النظام ما يجيب على هذا السؤال.",
                "en": "Not covered: the PDPL texts I searched do not answer this question."}
+NOT_COVERED_ECC = {"ar": "غير مشمول: لم أجد في النصوص التي بحثت فيها ما يجيب على هذا السؤال.",
+                   "en": "Not covered: the texts I searched do not answer this question."}
+# A question routed to "both" gets the best PDPL articles and the best NCA controls.
+BOTH_SPLIT = (5, 4)
 
 SYSTEM_PROMPT = """You answer questions about the Saudi Personal Data Protection Law (PDPL)
 using ONLY the articles given to you. Do not use any outside knowledge.
@@ -55,6 +61,21 @@ using ONLY the articles given to you. Do not use any outside knowledge.
 - If the articles do not answer the question, set covered to false and leave sentences empty.
 Reply in JSON: {"covered": true or false,
                 "sentences": [{"text": "...", "citations": ["PDPL-A15-AR", ...],
+                               "quote": "..."}, ...]}"""
+# Used when the router sends the question to the NCA controls (alone or with the PDPL).
+# The PDPL-only prompt above stays as it was, so PDPL answers and their evaluation do not change.
+ECC_SYSTEM_PROMPT = """You answer questions about Saudi regulations using ONLY the texts given to you:
+the Personal Data Protection Law (PDPL) and its regulations (ids like PDPL-A15-AR, IR-A04-EN) and/or
+the National Cybersecurity Authority's Essential Cybersecurity Controls ECC-2:2024 (ids like ECC-2-10-3-AR).
+Do not use any outside knowledge.
+- Answer in the same language as the question, in a few clear sentences.
+- Give each sentence the ids of the texts it relies on. Copy each id exactly as it appears in brackets.
+  Cite only the text that directly states the rule in the sentence; usually one.
+- For each sentence, copy in "quote" the words from one cited text that support it, exactly as written
+  in that text (one short passage, at most 40 words, no changes).
+- If the texts do not answer the question, set covered to false and leave sentences empty.
+Reply in JSON: {"covered": true or false,
+                "sentences": [{"text": "...", "citations": ["ECC-2-10-3-AR", ...],
                                "quote": "..."}, ...]}"""
 ARABIC_MARKS = re.compile(r"[\u064B-\u0652\u0640]")  # short vowels and tatweel
 PUNCTUATION = " .,;:!?\"'“”«»…،؛()[]-"
@@ -148,14 +169,15 @@ def build_prompt(question, articles):
     return f"Articles:\n{context}\n\nQuestion: {question}"
 
 
-def answer(question, k=ARTICLES_FOR_ANSWER, model=None, on_step=None):
+def answer(question, k=ARTICLES_FOR_ANSWER, model=None, on_step=None, source=None):
     """Return {question, covered, answer, sentences, citations, problems,
     citation_check, retrieved, from_cache, timings}. Falls back to the cached
     answer if OpenAI fails.
     sentences: the sentences shown to the user, [{text, citations, evidence}],
     evidence = {"id", "quote"} when the quote was found in the article, else None.
     on_step(name) is called before each step ("retrieve", "answer", "check"),
-    so the app can show what is happening."""
+    so the app can show what is happening.
+    source ("pdpl", "ecc" or "both") skips the router; used for the second chance below."""
     on_step = on_step or (lambda name: None)
     load_dotenv()
     model = model or os.environ.get("OPENAI_MODEL", DEFAULT_MODEL)
@@ -163,7 +185,19 @@ def answer(question, k=ARTICLES_FOR_ANSWER, model=None, on_step=None):
     try:
         on_step("retrieve")
         start = time.perf_counter()
-        articles = retrieve(question, k=k, language=question_language(question))
+        routed = ({"source": source, "by": "second chance"} if source
+                  else route(question, model=model) if ecc_retriever.available()
+                  else {"source": "pdpl", "by": "none"})
+        timings["route"] = time.perf_counter() - start
+        start = time.perf_counter()
+        language = question_language(question)
+        if routed["source"] == "pdpl":
+            articles = retrieve(question, k=k, language=language)
+        elif routed["source"] == "ecc":
+            articles = ecc_retriever.retrieve_ecc(question, k=k, language=language)
+        else:
+            articles = (retrieve(question, k=BOTH_SPLIT[0], language=language)
+                        + ecc_retriever.retrieve_ecc(question, k=BOTH_SPLIT[1], language=language))
         timings["retrieve"] = time.perf_counter() - start
         on_step("answer")
         start = time.perf_counter()
@@ -171,7 +205,8 @@ def answer(question, k=ARTICLES_FOR_ANSWER, model=None, on_step=None):
             model=model,
             temperature=0,
             response_format={"type": "json_object"},
-            messages=[{"role": "system", "content": SYSTEM_PROMPT},
+            messages=[{"role": "system",
+                       "content": SYSTEM_PROMPT if routed["source"] == "pdpl" else ECC_SYSTEM_PROMPT},
                       {"role": "user", "content": build_prompt(question, articles)}],
         )
         reply = json.loads(response.choices[0].message.content)
@@ -202,10 +237,12 @@ def answer(question, k=ARTICLES_FOR_ANSWER, model=None, on_step=None):
                           "evidence": found if found and found["id"] in valid_ids else None})
     backed = [s["text"] for s in shown]
     covered = bool(backed)
+    not_covered = NOT_COVERED if routed["source"] == "pdpl" else NOT_COVERED_ECC
     result = {
         "question": question,
+        "source": routed["source"],  # which corpus the router chose: pdpl, ecc or both
         "covered": covered,
-        "answer": " ".join(backed) if covered else NOT_COVERED[question_language(question)],
+        "answer": " ".join(backed) if covered else not_covered[question_language(question)],
         "sentences": shown,
         "citations": check["valid_citations"],
         "problems": check["problems"],
@@ -214,6 +251,15 @@ def answer(question, k=ARTICLES_FOR_ANSWER, model=None, on_step=None):
         "from_cache": False,
         "timings": {step: round(seconds, 1) for step, seconds in timings.items()},
     }
+    # Second chance: the router sent a question to the PDPL, the PDPL texts do not answer it,
+    # but it uses cybersecurity words (router.keyword_route), so the controls are tried too.
+    # A question the PDPL answers never gets here, so PDPL answers do not change.
+    if (not covered and routed["source"] == "pdpl" and not source and ecc_retriever.available()
+            and keyword_route(question) != "pdpl"):
+        second = answer(question, k=k, model=model, on_step=on_step, source="ecc")
+        if second["covered"]:
+            second["timings"] = {s: round(result["timings"].get(s, 0) + t, 1) for s, t in second["timings"].items()}
+            return second
     save_to_cache(question, result)
     return result
 
@@ -221,7 +267,7 @@ def answer(question, k=ARTICLES_FOR_ANSWER, model=None, on_step=None):
 if __name__ == "__main__":
     query = " ".join(sys.argv[1:]) or input("Enter your question: ")
     result = answer(query)
-    print(f"\nQuestion: {query}\n")
+    print(f"\nQuestion: {query}  (source: {result.get('source', 'pdpl')})\n")
     print("Retrieved articles (after reranking):")
     for rank, r in enumerate(result["retrieved"], start=1):
         print(f"Rank {rank}: {r['record_id']:<12} | Score: {r['score']}")

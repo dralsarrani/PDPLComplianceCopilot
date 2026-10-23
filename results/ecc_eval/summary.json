@@ -1,0 +1,22 @@
+{
+  "ecc_questions": 12,
+  "routing_accuracy": 0.917,
+  "pdpl_gold_questions": 60,
+  "pdpl_kept_on_pdpl": 1.0,
+  "pdpl_routes": {
+    "pdpl": 60,
+    "ecc": 0,
+    "both": 0
+  },
+  "ecc_search_questions": 12,
+  "ecc_recall_at_5": 1.0,
+  "ecc_mrr": 0.903,
+  "routing_accuracy_with_second_chance": 1.0,
+  "pdpl_unanswerable_second_chance": [
+    {
+      "id": "Q060",
+      "covered": false,
+      "source": "pdpl"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+﻿id,question,expected_source,routed,route_ok,language,gold,retrieved,recall_at_5,rr,seconds,answered_from
+ECC01,هل لازم يكون فيه إدارة مستقلة للأمن السيبراني، أو عادي تكون تابعة لإدارة تقنية المعلومات؟,ecc,ecc,True,ar,ECC-1-2-1-AR,ECC-1-2-1-AR;ECC-1-8-2-AR;ECC-1-5-1-AR;ECC-1-6-1-AR;ECC-1-6-4-AR,1.0,1.0,26.6,
+ECC02,هل مسموح لغير السعوديين يشتغلون في وظائف الأمن السيبراني، أو لازم تكون الوظائف للسعوديين المتفرغين؟,ecc,pdpl,False,ar,ECC-1-2-2-AR,ECC-1-2-2-AR;ECC-1-9-2-AR;ECC-1-10-4-AR;ECC-1-10-2-AR;ECC-1-9-5-AR,1.0,1.0,21.5,ecc
+ECC03,متى تحتاج الجهة تسوي تقييم للمخاطر السيبرانية؟ وهل لازم يكون بشكل سنوي أو حسب الحاجة؟,ecc,ecc,True,ar,ECC-1-5-3-AR,ECC-1-5-3-AR;ECC-1-5-4-AR;ECC-1-8-1-AR;ECC-1-8-2-AR;ECC-1-6-2-AR,1.0,1.0,5.9,
+ECC04,إذا انتهى عقد موظف، مين المسؤول عن إلغاء صلاحياته ومتى لازم تنسحب منه؟,ecc,ecc,True,ar,ECC-1-9-5-AR,ECC-1-9-5-AR;ECC-1-9-1-AR;ECC-1-9-6-AR;ECC-1-9-3-AR;ECC-1-4-2-AR,1.0,1.0,5.8,
+ECC05,وش المواضيع اللي لازم تشملها برامج التوعية بالأمن السيبراني للموظفين؟ وهل يكفي التوعية بالتصيد الإلكتروني فقط؟,ecc,ecc,True,ar,ECC-1-10-3-AR,ECC-1-10-1-AR;ECC-1-10-3-AR;ECC-1-10-4-AR;ECC-1-10-5-AR;ECC-1-9-4-AR,1.0,0.5,6.5,
+ECC06,هل لازم نستخدم التحقق متعدد العوامل (MFA) عند تسجيل الدخول لكل الأنظمة، أو فيه أنظمة مستثناة؟,ecc,ecc,True,ar,ECC-2-2-3-AR,ECC-2-2-3-AR;ECC-2-2-2-AR;ECC-2-2-4-AR;ECC-1-1-3-AR;ECC-1-8-1-AR,1.0,1.0,6.3,
+ECC07,What security measures should we have in place to protect company email from phishing and spam?,ecc,ecc,True,en,ECC-2-4-3-EN,ECC-2-4-3-EN;ECC-1-10-3-EN;ECC-2-4-2-EN;ECC-2-4-1-EN;ECC-2-4-4-EN,1.0,1.0,6.0,
+ECC08,"How can we protect company data on employees’ personal phones, especially if a device is lost?",ecc,ecc,True,en,ECC-2-6-3-EN,ECC-2-6-3-EN;ECC-2-6-2-EN;ECC-2-6-4-EN;ECC-1-9-4-EN;ECC-1-9-1-EN,1.0,1.0,6.2,
+ECC09,How often should we test our backups to make sure we can restore important systems quickly after an incident?,ecc,ecc,True,en,ECC-2-9-3-EN,ECC-2-9-3-EN;ECC-2-9-4-EN;ECC-2-9-1-EN;ECC-2-9-2-EN;ECC-2-11-4-EN,1.0,1.0,5.8,
+ECC10,"Who should we notify if a cybersecurity incident occurs, and what steps should we follow to report it?",ecc,ecc,True,en,ECC-2-13-3-EN,ECC-2-13-3-EN;ECC-2-13-1-EN;ECC-2-13-2-EN;ECC-1-2-1-EN;ECC-1-1-1-EN,1.0,1.0,5.7,
+ECC11,How should we protect personal data based on its classification level?,both,both,True,en,ECC-2-7-2-EN,ECC-2-7-2-EN;ECC-2-7-1-EN;ECC-2-8-3-EN;ECC-4-2-3-EN;ECC-2-10-3-EN,1.0,1.0,5.6,
+ECC12,"If we use a cloud service provider, how can we make sure our personal data is protected and returned when the contract ends?",both,both,True,en,ECC-4-2-3-EN,ECC-4-1-2-EN;ECC-4-1-3-EN;ECC-4-2-3-EN;ECC-4-2-1-EN;ECC-2-7-1-EN,1.0,0.3333333333333333,5.6,
