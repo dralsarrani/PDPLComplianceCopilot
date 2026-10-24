@@ -14,6 +14,7 @@ from retrieval.citation_check import ECC_PATTERN, ID_PATTERN, check_citations, n
 from retrieval.router import keyword_route
 from src.gap.analyse_v0 import load_checklist, normalise, quote_in_policy
 from src.gap.highlight import find_spans, highlight_html
+from src.policies.company_name import company_name
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CORPUS = json.loads((PROJECT_ROOT / "data" / "processed" / "legal_articles_v1.0.json").read_text(encoding="utf-8"))
@@ -85,6 +86,19 @@ class TestGapAnalyser(unittest.TestCase):
         marked = highlight_html(text, report)
         self.assertEqual(marked.count("<mark"), 1)
         self.assertIn("&lt;delete&gt;", marked)
+
+
+    def test_company_name(self):
+        """The company a pasted policy belongs to, without OpenAI."""
+        self.assertEqual(company_name("Privacy Notice Ride | Careem\nUpdated 2026")[0], "Careem")
+        self.assertEqual(company_name("سياسة الخصوصية لشركة تمارا\nمقدمة")[0], "تمارا")
+        self.assertEqual(company_name("سياسة الخصوصية من Apple تم التحديث في 2025. تلتزم Apple بحماية بياناتك "
+                                      "وتجمع Apple البيانات وتستخدم Apple البيانات")[0], "Apple")
+        self.assertEqual(company_name("We, Tamara Financing Company (\u201cTamara\u201d, \u201cwe\u201d), keep data.")[0], "Tamara")
+        self.assertEqual(company_name("Read more at https://sdaia.gov.sa. Write to privacy@foodics.com"),
+                         ("Foodics", "foodics.com"))
+        self.assertEqual(company_name("text\n\u00a9 2025 Lean Technologies. All rights reserved")[0], "Lean Technologies")
+        self.assertEqual(company_name("we keep your data safe.", "policy_final_v2.pdf"), ("", ""))
 
 
 class TestCyberControls(unittest.TestCase):

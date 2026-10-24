@@ -49,6 +49,7 @@ from src.gap.evidence_labels import label_evidence  # noqa: E402
 from src.gap.highlight import highlight_html  # noqa: E402
 from src.gap.report_pdf import build_pdf  # noqa: E402
 from src.policies.archive import from_archive  # noqa: E402
+from src.policies.company_name import company_name  # noqa: E402
 from src.policies.find_policy import find_policy, guess_website, looks_like_site  # noqa: E402
 from src.policies.web_search import from_web_search  # noqa: E402
 from src.policies.read_file import TYPES as FILE_TYPES, read_policy_file  # noqa: E402
@@ -628,7 +629,8 @@ def source_note(source, saved_on=None):
     elif source["kind"] == "site":
         copy = tr(f"لنص الصفحة كما جُلب بتاريخ {day}", f"of the page as read on {day}")
     elif source["kind"] == "file":
-        copy = tr(f"للملف المرفوع ({name}) بتاريخ {day}", f"of the uploaded file ({name}) on {day}")
+        file = esc(source.get("file", source["name"]))
+        copy = tr(f"للملف المرفوع ({file}) بتاريخ {day}", f"of the uploaded file ({file}) on {day}")
     else:
         copy = tr(f"للنص الملصوق بتاريخ {day}", f"of the pasted text on {day}")
     when = tr(f" (نتيجة محفوظة من تحليل بتاريخ {esc(saved_on)})", f" (saved result of an analysis on {esc(saved_on)})") if saved_on else ""
@@ -669,6 +671,27 @@ def match_saved(query, policies, library):
     exact = [e for e in entries if q in (squash_name(w) for w in e[3] if w)]
     found = exact or [e for e in entries if len(q) >= 3 and any(q in squash_name(w) for w in e[3] if w)]
     return [(kind, key, name) for kind, key, name, _ in found]
+
+
+def name_policy(source, policies, library):
+    """A pasted or uploaded policy is named after the company its text names ("Tamara"),
+    with our Arabic name when it is a company we already have. When the text names
+    none, it is "الجهة" and the result page asks for the name."""
+    name, site = company_name(source["text"], source.get("file", ""))
+    saved = next((pid for pid, row in policies.items()
+                  if site and site == re.sub(r"^(https?://)?(www\.)?", "", row.url.lower()).split("/")[0]), None)
+    if saved:
+        name = policies[saved].name if EN else NAMES_AR.get(saved, policies[saved].name)
+    elif site and library_by_site(site, library):
+        item = library[library_by_site(site, library)]
+        name = item["name"] if EN else item.get("name_ar") or item["name"]
+    elif name:
+        matches = match_saved(name, policies, library)
+        if len(matches) == 1:
+            kind, mid, shown = matches[0]
+            name = library[mid].get("name_ar") or shown if kind == "library" and not EN else shown
+    source.update(name=name or tr("الجهة", "The company"), named=bool(name))
+    return source
 
 
 def library_by_site(site, library):
@@ -752,12 +775,12 @@ def page_gap():
         else:
             try:
                 text = read_policy_file(upload.name, upload.getvalue())
-                name = re.sub(r"[_-]+", " ", upload.name.rsplit(".", 1)[0]).strip() or tr("الملف المرفوع", "Uploaded file")
-                source = {"kind": "file", "name": name, "text": text, "date": today}
+                source = name_policy({"kind": "file", "file": upload.name, "text": text, "date": today},
+                                     policies, library)
             except ValueError as error:
                 st.warning(message(str(error)))
     elif submitted and len(query.strip()) >= MIN_PASTED:  # the policy itself was pasted in the box
-        source = {"kind": "paste", "name": tr("السياسة الملصوقة", "Pasted policy"), "text": query, "date": today}
+        source = name_policy({"kind": "paste", "text": query, "date": today}, policies, library)
     elif submitted and query.strip():
         matches = match_saved(query, policies, library)
         if len(matches) == 1 and matches[0][0] == "library":
@@ -813,6 +836,12 @@ def page_gap():
     checked = total - parts[3][1]
     percent = round(100 * parts[0][1] / checked) if checked else 0
     checklist = load_checklist_ar()
+    if source.get("named") is False:  # the text does not name its company: the user may type it
+        typed = st.text_input(tr("اسم الجهة", "Company name"), key=f"gap_name_{text_key(source['text'])}",
+                              placeholder=tr("لم نجد اسم الجهة في نص السياسة، اكتبه هنا إن رغبت",
+                                             "The policy does not name its company; type it here if you like"))
+        if typed.strip():
+            source["name"] = typed.strip()
     st.markdown(verdict_card(source["name"], percent, parts, total, report, checklist)
                 + source_note(source, st.session_state.get("gap_saved_on")), unsafe_allow_html=True)
     if parts[3][1]:
