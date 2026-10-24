@@ -52,7 +52,7 @@ flowchart LR
 - **Classifier** (`src/classifier/classify.py`): labels English policy paragraphs with the 10 OPP-115 categories. `src/gap/evidence_labels.py` connects it to the Gap Analyser: each evidence sentence (translated to English with gpt-4o-mini if it is Arabic) is labelled by the classifier, the label is shown next to the evidence in the app, and it is checked against the OPP-115 categories the checklist links to that requirement. The classifier does not change the analyser's verdicts.
 - **Second corpus: NCA Essential Cybersecurity Controls (ECC-2:2024)**: `src/nca/build_ecc.py` reads the official English and Arabic PDFs into 108 controls in each language (`data/processed/ecc_controls_v2024.{json,csv}`; domain, subdomain, objective, control text). The Arabic PDF has ligatures with no text value; `src/nca/arabic_pdf.py` maps them back and checks every control number against the English one. `retrieval/router.py` (gpt-4o-mini, keyword fallback) sends each question to the PDPL, to the controls, or to both; `retrieval/ecc_retriever.py` runs the same search pipeline on its own index, in the question's language. Questions routed to the PDPL are answered exactly as before.
 - **Second chance** (`retrieval/answer.py`): when the router sent a question to the PDPL, the PDPL texts do not answer it and it uses cybersecurity words, the controls are searched too. A question the PDPL answers never gets there.
-- **Finding a policy** (`src/policies/`): the app takes a company name, a website, a policy link, or a file (PDF, Word, TXT, `read_file.py`). It looks in this order: the 11 Saudi policies and the global companies analysed ahead (`data/library/`, `src/gap/analyse_library.py`); the company's own site (`find_policy.py`: privacy link, sitemap, common paths; robots.txt is respected); public archives (`archive.py`: Open Terms Archive, Wayback Machine, Common Crawl); and last, an OpenAI web search (`web_search.py`), whose copy may be incomplete, so the requirements it lacks are shown grey and the result is marked incomplete. Sites that block bots are never worked around; the user can upload the policy instead.
+- **Finding a policy** (`src/policies/`): the app takes a company name, a website, a policy link, or a file (PDF, Word, TXT, `read_file.py`). It looks in this order: the 11 Saudi policies and the global companies analysed ahead (`data/library/`, `src/gap/analyse_library.py`); the company's own site (`find_policy.py`: privacy link, sitemap, common paths; robots.txt is respected); public archives (`archive.py`: Open Terms Archive, Wayback Machine, Common Crawl); and last, an OpenAI web search (`web_search.py`), whose copy may be incomplete, so the requirements it lacks are shown grey and the result is marked incomplete. Sites that block bots are never worked around; the user can upload the policy instead. A pasted or uploaded policy is named after its company, read from the text itself without OpenAI (`company_name.py`: the title, the sentence that names the company, its own links, the © line, a privacy email, then the file name); when none is found the user can type the name.
 - **In the app** the quotes are marked inside the policy text (green covered, amber partial; missing requirements are listed above the text, `src/gap/highlight.py`), and the gap report can be downloaded as a PDF with an evidence appendix (`src/gap/report_pdf.py`, Arabic or English; font IBM Plex Sans Arabic, OFL, in `app/fonts/`).
 
 ## Data
@@ -115,7 +115,7 @@ All commands run from the project root.
 
 | What | Command | Needs OpenAI key | Output |
 |---|---|---|---|
-| Quick check that the system works (a few seconds) | `python -m unittest discover tests -v` | No | 11 tests, `OK` |
+| Quick check that the system works (a few seconds) | `python -m unittest discover tests -v` | No | 12 tests, `OK` |
 | Retrieval per method and language | `python -m retrieval.evaluate_by_language` | Final row only | `results/retrieval_by_language.csv` |
 | Full Q&A on the gold set | `python -m retrieval.evaluate_answers` | Yes | `results/answer_eval.json` |
 | Same two on the 20 test questions | add `--test` to the two commands above | As above | `results/retrieval_by_language_test.csv`, `results/answer_eval_test.json` |
@@ -242,6 +242,7 @@ The one routing miss (ECC02, whether non-Saudis may hold cybersecurity jobs) wen
 - E2 found fixed-length chunks slightly better than article chunks under BM25. The app keeps article chunks because every citation must point to one whole article.
 - Each Saudi policy was labelled by one team member only, so there is no inter-annotator agreement on the labels. The team rule was: a requirement the policy never mentions is *missing*.
 - The Gap Analyser does not tell *covered* from *partial* well (partial F1 0.32).
+- The Gap Analyser reads the first 60,000 characters of a policy (the longest of the 11 Saudi policies has 43,000). We chose not to split long policies into parts: a requirement covered in one part would be judged missing in the others.
 - The classifier is English only; Arabic evidence is machine-translated before it is labelled. It labels the analyser's evidence but does not yet help choose the verdict.
 - The *chapter* field is empty: the official texts (SDAIA platform and the Bureau of Experts page) list the articles without chapter headings, so there is no chapter to record. Retrieval and citations use the article number.
 - The Arabic NCA controls are rebuilt from the PDF's glyphs (11 ligatures mapped by hand, 3 words the PDF splits joined again); a few spacing or vowel-mark slips may remain.
@@ -264,7 +265,7 @@ notebooks/           corpus visualisation, classifier experiments (E4), error an
 configs/split.json   classifier train/val/test split (seed 42)
 artifacts/           saved TF-IDF baseline
 results/             evaluation outputs used in the report
-tests/               quick checks of data, citation checking and quote matching
+tests/               quick checks of data, citation checking, quote matching and company names
 ```
 
 ## Licence
