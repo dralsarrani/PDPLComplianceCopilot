@@ -13,7 +13,8 @@ from retrieval.answer import locate_quote
 from retrieval.citation_check import ECC_PATTERN, ID_PATTERN, check_citations, normalise_id
 from retrieval.router import keyword_route
 from src.gap.analyse_v0 import load_checklist, normalise, quote_in_policy
-from src.gap.highlight import find_spans, highlight_html
+from src.gap.evidence import check_report, find_spans
+from src.gap.highlight import highlight_html
 from src.policies.company_name import company_name
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -76,6 +77,23 @@ class TestGapAnalyser(unittest.TestCase):
         self.assertTrue(quote_in_policy("We keep your data for 5 years.", policy))
         self.assertTrue(quote_in_policy("We keep your data ... ask us to delete it", policy))
         self.assertFalse(quote_in_policy("We never share your data.", policy))
+
+    def test_evidence_check(self):
+        """Quote marks, punctuation and Arabic letter forms do not matter; word order does.
+        A reworded quote is not verified, but the closest real passage is found."""
+        text = ('We use your data for the purposes in the \u201cHow we use your data\u201d section. '
+                'We keep it for 5 years. يتم الاحتفاظ بالبيانات الشخصية لمدة عشر سنوات.')
+        self.assertTrue(find_spans(text, 'for the purposes in the "How we use your data" section'))
+        self.assertTrue(find_spans(text, "يتم الإحتفاظ بالبيانات الشخصيه لمدة عشر سنوات"))
+        self.assertTrue(find_spans(text, "We use your data ... We keep it"))
+        self.assertEqual(find_spans(text, "We keep it ... We use your data"), [])  # pieces out of order
+        report = check_report([{"req_id": "R11", "status": "covered", "evidence": "We keep your data for 5 years"},
+                               {"req_id": "R05", "status": "covered", "evidence": "We use your data for the purposes"},
+                               {"req_id": "R09", "status": "covered", "evidence": "We never sell anything to anyone at all"},
+                               {"req_id": "R02", "status": "missing", "evidence": ""}], text)
+        self.assertEqual([r["evidence_state"] for r in report], ["near", "verified", "unverified", "none"])
+        self.assertEqual(report[0]["evidence_near"], "We keep it for 5 years")
+        self.assertEqual([r["status"] for r in report], ["covered"] * 3 + ["missing"])  # the verdicts stay
 
     def test_highlight_quotes_in_policy(self):
         text = "We keep your data\nfor 5 years. You can ask us to <delete> it."

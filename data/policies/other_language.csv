@@ -1,0 +1,11 @@
+policy_id,language,method,url,start_line,stop_line
+hungerstation,ar,script,https://hungerstation.com/sa-ar/privacy-policy,,
+careem,ar,script,https://www.careem.com/ar-AE/privacy-notice-ride,,
+alrajhi,ar,manual,https://alrajhibank.com.sa/ar/About-alrajhi-bank/privacy-policy,,
+alinma,en,script,https://www.alinma.com/en/About-the-Bank/Privacy,,
+tamara,ar,script,https://tamara.co/ar/privacy-policy,سياسة الخصوصية,
+jarir,ar,manual,https://www.jarir.com/privacy-policy,,
+stc,en,script,https://www.stc.com.sa/en/content-page/privacy.html,,stc group website
+saudia,ar,manual,https://www.saudia.com/ar-SA/help/useful-links/legal-and-terms-and-conditions/privacy-policy,,
+nahdi,ar,script,https://www.nahdionline.com/ar-sa/static/privacy-policy,إشعار الخصوصية لشركة النهدي,
+ksu,ar,script,https://ksu.edu.sa/ar/privacy-policy,,هل كانت هذه الصفحة مفيدة

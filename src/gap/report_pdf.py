@@ -22,7 +22,7 @@ from fpdf.fonts import FontFace
 FONTS = Path(__file__).resolve().parents[2] / "app" / "fonts"
 MONTHS_AR = ["يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر",
              "أكتوبر", "نوفمبر", "ديسمبر"]
-GREEN, GREY = (15, 81, 50), (107, 114, 128)
+GREEN, GREY, AMBER = (15, 81, 50), (107, 114, 128), (138, 90, 18)
 FILL = {"covered": (232, 241, 236), "partial": (251, 243, 226), "missing": (251, 234, 234),
         "unsure": (240, 239, 236), "error": (251, 234, 234)}
 WORDS = {
@@ -34,7 +34,8 @@ WORDS = {
            "id": "الرقم", "req": "المتطلب", "status": "الحالة", "articles": "المرجع",
            "appendix": "ملحق الأدلة: الشواهد المقتبسة من نص السياسة",
            "quote": "الشاهد", "found": "التحقق", "yes": "النص موجود حرفياً في السياسة",
-           "no": "تنبيه: النص المقتبس غير موجود في السياسة", "none": "لا يوجد شاهد في نص السياسة",
+           "no": "دليل غير موثق: النص المقتبس غير موجود في السياسة",
+           "near": "دليل غير موثق: أعاد المحلل صياغة الاقتباس، وهذا أقرب نص له في السياسة", "none": "لا يوجد شاهد في نص السياسة",
            "opp": "تصنيف المصنّف (OPP-115)", "match": "يطابق المتطلب", "nomatch": "لا يطابق تصنيفات المتطلب",
            "reason": "سبب الحكم",
            "disclaimer": "هذا التقرير آلي لأغراض التوعية، ولا يُعد رأياً قانونياً. "
@@ -49,7 +50,8 @@ WORDS = {
            "id": "ID", "req": "Requirement", "status": "Status", "articles": "Source",
            "appendix": "Evidence appendix: quotes from the policy text",
            "quote": "Quote", "found": "Check", "yes": "Found word for word in the policy",
-           "no": "Warning: the quoted text is not in the policy", "none": "No quote in the policy text",
+           "no": "Unverified evidence: the quoted text is not in the policy",
+           "near": "Unverified evidence: the analyser reworded the quote; this is the closest text in the policy", "none": "No quote in the policy text",
            "opp": "Classifier label (OPP-115)", "match": "matches the requirement",
            "nomatch": "not one of the requirement's categories", "reason": "Reason",
            "disclaimer": "An automatic report for awareness, not legal advice. Made with gpt-4o-mini "
@@ -145,9 +147,11 @@ def build_pdf(report, checklist, name, analysed_on="", lang="ar", opp115_names=N
         pdf.multi_cell(0, 7, f'{r["req_id"]}  {titles.get(r["req_id"], r["requirement"])}  ({status})',
                        align=align, fill=True, new_x="LMARGIN", new_y="NEXT")
         if r.get("evidence"):
-            line(f'{w["quote"]} ({w["yes"] if r.get("evidence_found") else w["no"]}):', 8.5,
-                 color=GREEN if r.get("evidence_found") else (155, 28, 28), height=5)
-            line(f'"{r["evidence"]}"', 9.5, height=5.5, own_direction=True)
+            near = r.get("evidence_state") == "near"
+            note = w["yes"] if r.get("evidence_found") else w["near"] if near else w["no"]
+            line(f'{w["quote"]} ({note}):', 8.5,
+                 color=GREEN if r.get("evidence_found") else AMBER if near else (155, 28, 28), height=5)
+            line(f'"{r["evidence_near"] if near else r["evidence"]}"', 9.5, height=5.5, own_direction=True)
             if r.get("opp115"):
                 label = (opp115_names or {}).get(r["opp115"], r["opp115"])
                 line(f'{w["opp"]}: {label} · {w["match"] if r.get("opp115_match") else w["nomatch"]}',

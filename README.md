@@ -48,7 +48,7 @@ flowchart LR
 
 - **Retrieval** (`retrieval/retriever.py`): BM25 with Arabic tokenisation + multilingual MiniLM embeddings stored in ChromaDB, fused with RRF, then the small cross-encoder `cross-encoder/mmarco-mMiniLMv2-L12-H384-v1`, then gpt-4o-mini picks the 8 best of the top 10 (falls back to the reranker order without network).
 - **Answering** (`retrieval/answer.py`): the LLM writes each sentence with the article ids it relies on and a short quote. `retrieval/citation_check.py` drops citations that do not exist, were not retrieved, or do not support the sentence. Every live answer is cached in `results/answers_cache.json`, which is the offline fallback for the demo.
-- **Gap Analyser** (`src/gap/analyse_v0.py`): checks a policy against `data/checklist/pdpl_checklist.csv` (17 requirements from PDPL Art. 12, 13 and IR Art. 4). Every quote the model returns is searched for in the policy text; a quote that is not there is flagged.
+- **Gap Analyser** (`src/gap/analyse_v0.py`): checks a policy against `data/checklist/pdpl_checklist.csv` (17 requirements from PDPL Art. 12, 13 and IR Art. 4). Every quote the model returns is checked against the policy text (`src/gap/evidence.py`): it is *verified* only if its words are in the policy in the same order (case, punctuation, quote marks and Arabic letter forms ignored). A quote the model reworded is not verified; the app then shows the closest real passage of the policy, marked as unverified evidence. The verdict (covered / partial / missing) is kept apart from this evidence check.
 - **Classifier** (`src/classifier/classify.py`): labels English policy paragraphs with the 10 OPP-115 categories. `src/gap/evidence_labels.py` connects it to the Gap Analyser: each evidence sentence (translated to English with gpt-4o-mini if it is Arabic) is labelled by the classifier, the label is shown next to the evidence in the app, and it is checked against the OPP-115 categories the checklist links to that requirement. The classifier does not change the analyser's verdicts.
 - **Second corpus: NCA Essential Cybersecurity Controls (ECC-2:2024)**: `src/nca/build_ecc.py` reads the official English and Arabic PDFs into 108 controls in each language (`data/processed/ecc_controls_v2024.{json,csv}`; domain, subdomain, objective, control text). The Arabic PDF has ligatures with no text value; `src/nca/arabic_pdf.py` maps them back and checks every control number against the English one. `retrieval/router.py` (gpt-4o-mini, keyword fallback) sends each question to the PDPL, to the controls, or to both; `retrieval/ecc_retriever.py` runs the same search pipeline on its own index, in the question's language. Questions routed to the PDPL are answered exactly as before.
 - **Second chance** (`retrieval/answer.py`): when the router sent a question to the PDPL, the PDPL texts do not answer it and it uses cybersecurity words, the controls are searched too. A question the PDPL answers never gets there.
@@ -115,7 +115,7 @@ All commands run from the project root.
 
 | What | Command | Needs OpenAI key | Output |
 |---|---|---|---|
-| Quick check that the system works (a few seconds) | `python -m unittest discover tests -v` | No | 12 tests, `OK` |
+| Quick check that the system works (a few seconds) | `python -m unittest discover tests -v` | No | 13 tests, `OK` |
 | Retrieval per method and language | `python -m retrieval.evaluate_by_language` | Final row only | `results/retrieval_by_language.csv` |
 | Full Q&A on the gold set | `python -m retrieval.evaluate_answers` | Yes | `results/answer_eval.json` |
 | Same two on the 20 test questions | add `--test` to the two commands above | As above | `results/retrieval_by_language_test.csv`, `results/answer_eval_test.json` |
@@ -200,6 +200,8 @@ Only two answers got opposite scores (Q006 and Q027); most disagreements were 2 
 
 v0 is too lenient: in 22 of 32 cases the team labelled *partial*, v0 said *covered*. v1 handles *partial* better but is too strict overall. Details per requirement and per policy are in `results/gap_eval*/`.
 
+**Evidence check.** Of the 152 requirements v0 judged *covered*, 143 have a quote found word for word in the policy. In the other 9 the model reworded the sentence; a close real passage exists for all 9, and the team had labelled 8 of them *covered*. So the verdicts stand and only the quote is unverified. Counting those 9 as *partial* instead would lower the accuracy from 77.5% to 73.8%, so the score is not changed; the app marks each quote as verified or not.
+
 ### Clause classifier, OPP-115 (test set, macro-F1 over 10 categories)
 
 | Model | Macro-F1 |
@@ -242,6 +244,7 @@ The one routing miss (ECC02, whether non-Saudis may hold cybersecurity jobs) wen
 - E2 found fixed-length chunks slightly better than article chunks under BM25. The app keeps article chunks because every citation must point to one whole article.
 - Each Saudi policy was labelled by one team member only, so there is no inter-annotator agreement on the labels. The team rule was: a requirement the policy never mentions is *missing*.
 - The Gap Analyser does not tell *covered* from *partial* well (partial F1 0.32).
+- The 11 Saudi policies were labelled in one language each (9 English, 2 Arabic). The app shows a saved policy in the interface language when that copy is kept (`python -m src.policies.fetch_other_language` saves the second language in `data/policies/ar/` and `data/policies/en/`; Al Rajhi, Saudia and Jarir are copied by hand; KFUPM has no Arabic policy page), and otherwise says so and offers the copy it has. The scores above are for the labelled copies only.
 - The Gap Analyser reads the first 60,000 characters of a policy (the longest of the 11 Saudi policies has 43,000). We chose not to split long policies into parts: a requirement covered in one part would be judged missing in the others.
 - The classifier is English only; Arabic evidence is machine-translated before it is labelled. It labels the analyser's evidence but does not yet help choose the verdict.
 - The *chapter* field is empty: the official texts (SDAIA platform and the Bureau of Experts page) list the articles without chapter headings, so there is no chapter to record. Retrieval and citations use the article number.

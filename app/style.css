@@ -264,6 +264,9 @@ div[role="radiogroup"] { gap: 0.4rem; }
 }
 .meta { color: var(--muted); font-size: 0.8rem; margin-top: 0.4rem; }
 .bad-text { color: var(--red); }
+.ok-text { color: var(--green-text); }
+.warn-text { color: var(--amber-text); }
+.meta.ok-text svg, .meta.warn-text svg, .meta.bad-text svg { width: 0.95rem; height: 0.95rem; vertical-align: -0.15rem; margin-inline-end: 0.3rem; }
 
 /* ---------- footer ---------- */
 .app-footer {

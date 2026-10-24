@@ -37,6 +37,8 @@ import pandas as pd
 from dotenv import load_dotenv
 from openai import OpenAI
 
+from src.gap.evidence import find_spans
+
 CHECKLIST = Path("data/checklist/pdpl_checklist.csv")
 OUTPUT_DIR = Path("results/gap_v0")
 DEFAULT_MODEL = "gpt-4o-mini"
@@ -66,12 +68,11 @@ def normalise(text):
     return re.sub(r"\s+", " ", text).strip().lower()
 
 
-def quote_in_policy(evidence, policy_norm):
-    """True if the quote is in the policy. Ignores "..." and punctuation the
-    model adds at the ends of the quote (e.g. a final full stop)."""
-    parts = [p.strip(" .,;:!?\"'“”…") for p in re.split(r"\.\.\.|…", normalise(evidence))]
-    parts = [p for p in parts if p]
-    return bool(parts) and all(p in policy_norm for p in parts)
+def quote_in_policy(evidence, policy_text):
+    """True if the quote's words are in the policy, in the same order (see evidence.py:
+    case, spacing, punctuation, quote marks and Arabic letter forms are ignored, and
+    a quote with "..." is checked piece by piece)."""
+    return bool(evidence) and bool(find_spans(policy_text, evidence))
 
 
 def build_prompt(policy_text, checklist):

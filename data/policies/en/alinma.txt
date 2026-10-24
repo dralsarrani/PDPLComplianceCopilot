@@ -1,0 +1,98 @@
+Privacy
+Privacy notice
+alinma Bank is a leading Saudi bank established in 2006. It offers an integrated range of banking services that comply with Islamic Sharia for individual customers, businesses, and investors. Its services include account management, financing, credit cards, and electronic banking solutions. The bank is committed to providing innovative financial solutions that meet the needs of various customer segments and enhance interaction with them, while maintaining full compliance with the regulations and regulatory requirements in place in the Kingdom.
+alinma Bank respects your privacy and is committed to protecting the personal data we collect and process in accordance with the Kingdom of Saudi Arabia Personal Data Protection Law issued by Royal Decree No. (M/19) dated 9/2/1443H, and other applicable regulations in the Kingdom.
+This Notice, governed by the applicable regulatory requirements, explains how we responsibly and lawfully collect and process your personal data, and how we protect your privacy.
+This Notice applies to all personal data processing activities carried out by alinma Bank across all of its business lines, products, services, operational functions, and customer interaction channels, including branches, digital platforms, mobile applications, online banking services.
+We recognize that it is important for you to know how we deal with your personal and financial data. When we say “we” this means alinma Bank and our trusted partners who provide services to us. These include our contracted Third Parties, including but not limited to advertising agencies, technology providers, social media partners, etc.
+Contact Information of the Controller:
+Name: alinma Bank
+Address: AlOlaya, Riyadh, Saudi Arabia
+Website: www.alinma.com
+Phone: +966112185555
+Contact Information of the Data Protection Officer (DPO):
+Address: AlOlaya, Riyadh, Saudi Arabia
+Email: data.privacy@alinma.com
+Date of Last Update
+This Privacy Notice was last updated in Mar 2026. The Notice is reviewed at least annually whenever material legal, regulatory, operational, or technological changes occur. The review process is overseen by the Data Protection Officer to ensure continued compliance with applicable laws and regulatory expectations. Any changes will be posted on our website with the updated date.
+What Personal Data is collected?
+Personal Data is any data, regardless of its source or form, that may lead to identifying an individual specifically, or that may directly or indirectly make it possible to identify an individual, including name, personal identification number, addresses, contact numbers, license numbers, records, personal assets, bank and credit card numbers, photos and videos of an individual, and any other data of personal nature.
+We collect and process the following Personal Data:
+Personal Identification Information: Full name, date of birth, gender, nationality, identification numbers (e.g., national ID, passport number).
+Contact Information: Address, phone numbers, email addresses.
+Financial Information: Bank account numbers, credit scores, loan details.
+Employment Information: Employer name, job title, salary, employment history.
+Other Personal Data: Marital status, dependents, and any other information necessary for providing our banking services.
+Communication information such as phone calls, chats, date and duration of the conversation, messages and emails.
+Bank Internal identifiers such as the customer identification number (CIF), account number, loan number, etc.
+Sensitive Personal Data as required by regulatory bodies such as Biometric information (face ID, fingerprints, etc.), your health data, criminal convictions or felonies, etc.
+Mandatory Data: Certain personal data is mandatory for us to provide our banking services and comply with legal obligations. Failure to provide this data may result in our inability to offer certain services.
+Optional Data: Some personal data is optional and is collected to enhance our services and customer experience. You may choose not to provide this data without affecting the core services we offer.
+How do we collect and use your Personal Data?
+Some of the Personal Data that we process is obtained directly from you through account opening forms, loan applications, online banking portals, and customer service interactions either in-person or online.
+We also obtain some Personal Data indirectly from third parties such as Credit Bureau agencies, Fraud prevention agencies, regulatory authorities, other banks or financial institutions and publicly available sources.
+We gather and process data through cookies, tracking technologies, and other methods from various sources, including our KSA branches, alinma websites, applications, phone calls, emails, and device identifiers.
+We also obtain information about additional cardholders, account holders, business partners, dependents, family members, representatives, and agents.
+For corporate banking, we collect personal data on representatives, employees, shareholders, and beneficial owners.
+alinma Bank applies the principle of data minimization, ensuring that personal data collected, whether obtained directly from you or from authorized third parties, is adequate, relevant, and limited to what is necessary in relation to the lawful purpose for which it is processed.
+What are the purposes for collection and processing?
+We only use Personal Data for the purpose it was collected for. We process your Personal Data for the following reasons:
+Account Management and Service Provision, including processing transactions.
+Customer Support and Communication regarding your accounts, products, or services.
+Compliance with Legal and Regulatory Requirements applicable to the financial sector in KSA.
+To verify your identity and comply with Know Your Customer (KYC) and Anti-Money Laundering (AML) requirements.
+To assess credit risk and manage credit facilities.
+For direct marketing, with your consent, and to provide you with personalized offers.
+Fraud Prevention and Security
+Awareness Activities
+Service Improvement and Development
+Profiling
+How do we disclose your Personal Data?
+Internal Sharing: Personal data may be shared within Bank alinma for operational and administrative purposes.
+alinma Bank does not sell, rent, or trade personal data to third parties for commercial purposes. Personal data is only shared where necessary to provide banking services, complete transactions, comply with legal or regulatory obligations, or where explicit consent has been obtained for clearly defined secondary purposes such as marketing.
+Sharing with alinma subsidiaries: We may share your personal data with alinma subsidiaries (e.g. alinma Pay) to support seamless services across our platforms. This sharing is limited to what is necessary to enhance our services, improve functionality and ensure a consistent experience. alinma subsidiaries are required to handle your personal data in compliance with privacy and security standards.
+External Sharing: Personal data may be shared with:
+Regulatory bodies, including SAMA and law enforcement agencies, as required by law.
+Third-party service providers, to support our operations.
+Authorized Credit bureaus licensed by the Saudi Central Bank and fraud prevention organizations.
+Other banks or financial institutions involved in a transaction you initiate.
+Auditors, lawyers, or professional advisors as part of our legal and compliance activities.
+Occasional (One-Time) Sharing: We may share your personal data on an occasional basis in the event of an exceptional request or urgent legal circumstance, such as a court order.
+We ensure that these third parties adhere to strict data protection standards through contractual agreements in line with the requirements of KSA PDPL. These agreements include confidentiality obligations, data protection controls, and incident notification requirements to ensure that personal data remains protected at standards consistent with alinma’s internal requirements.
+Transfer outside the Kingdom
+Where we transfer your data outside of the Kingdom of Saudi Arabia, we ensure that appropriate safeguards, as required by the KSA PDPL, are in place, including contracts and international agreements.
+Legal Basis for Collecting and Processing Your Personal Data
+In accordance with KSA Personal Data Protection Law, the legal basis on which we rely in processing such data is:
+Fulfillment of a contractual obligation (e.g. client servicing, customer support management, account management).
+Compliance with a statutory obligation based on SAMA and other regulatory bodies (Compliance with rules and directions from competent authorities and KSA Laws)
+Achieving legitimate interests or objectives (e.g. Management and protection of the Bank’s assets and technology equipment)
+Your explicit and independent consent is obtained for the processing of your personal data, with full acknowledgment of your right to withdraw this consent at any time. Withdrawal will not affect the lawfulness of any processing carried out based on your consent before its withdrawal. This includes the processing of sensitive personal data such as fingerprints or biometric information. You may exercise this right through the bank’s mobile application or by contacting the Data Protection Officer via email (data.privacy@alinma.com)
+Preserving Vital Interests in certain cases, where it is necessary to perform an act that serves an actual interest of the data subject (whether material or moral), and where it is not possible to contact the data subject or doing so would be difficult.
+Serving the Public Interest
+If you would like to review, exercise any of the above rights, please contact the Data Protection Officer (DPO).
+How do we store, retain and destroy your Personal Data?
+Personal Data is only stored for as long as it is necessary to fulfil the purposes for which it was collected. Your Personal Data is stored securely either at the bank’s headquarters or at a cloud computing service provider complying with the Saudi Central Bank (SAMA) guidelines.
+We implement technical and organizational measures to protect your personal data from unauthorized access, disclosure, alteration, and destruction. These measures include encryption, access controls, and regular security assessments to maintain data integrity and confidentiality.
+Personal Data is retained for defined retention periods in line with regulatory, legal, and professional body standards and guidelines. This length of time may vary depending on individual circumstances. We regularly review our data retention period to ensure we are not keeping Personal Data for longer than necessary.
+We may retain your data after the termination of our banking relationship to fulfill legal and regulatory obligations (including statutory retention periods), comply with judicial orders, adhere to internal policies, or if it aligns with the Bank's legitimate interests.
+Personal data related to banking relationships may be retained for at least ten (10) years following the termination of the banking relationship, in accordance with applicable regulations, unless a longer retention period is required by applicable laws or regulatory requirements. After the retention period, we will securely dispose of such data in a manner that prevents access or retrieval.
+Your Rights Regarding Processing of Your Personal Data
+Under KSA Personal Data Protection Law, you have the following rights, which primarily depend on the purpose of Personal Data collection and processing:
+Right to Be Informed: You are entitled to be informed how we collect your personal data, legal basis for collection and processing, how such data is processed, stored, destroyed, and to whom it will be disclosed. You can access all details through the Privacy Notice or contact us using the above-mentioned information.
+Right of Access to Your Personal Data: You are entitled to request access to your Personal Data.
+Right to Request Access to Your Personal Data: You are entitled to request access to your Personal Data held by the Controller in a readable and clear format if technically feasible through our systems.
+Right to Request Correction of Your Personal Data: You are entitled to request rectification of your Personal Data that you believe is inaccurate, incorrect or incomplete. Such data will be reviewed and updated within 30 days which may be extended as allowed by law. In addition, you will be notified via email.
+Right to Request destruction of Your Personal Data: You are entitled to request deletion of your Personal Data in certain circumstances.
+Right to Withdraw Your Consent for Processing Your Personal Data: You are entitled to withdraw your consent for processing your Personal Data at any time unless there are legal bases that require otherwise.
+You may opt out of receiving marketing messages at any time through the privacy settings in the mobile application, by contacting the Customer Service Center, or by reaching out to the Data Protection Officer via email at (data.privacy@alinma.com).
+Withdrawing your consent will not affect any other services in the event you choose to exercise this right.
+Right to Request Compensation: You have the right to seek compensation for material or moral damages if you suffer harm as a result of any violations of the relevant laws and regulations.
+Right to File a Complaint: You have the right to file a complaint arising from any violation of the applicable laws and regulations.
+For further details regarding the processing of your Personal Data and how to exercise your rights, you can contact the Data Protection Officer (DPO) using the above-mentioned contact details.
+Here are common areas where restrictions might apply on the above-mentioned rights:
+Public Security and Law Enforcement: Data subject rights may be restricted if honoring them interferes with public and national security or law enforcement activities.
+Compliance with Legal Requirements: The Bank may retain data or deny deletion requests to comply with statutory or regulatory obligations, such as record retention laws in finance or healthcare.
+Archiving, Research, and Statistics: Restrictions may be placed when personal data is processed for purposes of archiving in the public interest, scientific or historical research, or statistical purposes.
+Confidentiality and Intellectual Property: Granting access to or correcting data might infringe upon the rights of others, such as breaching confidentiality or intellectual property rights.
+Business Interests: The Bank may invoke restrictions if complying with data subject rights requests would adversely affect trade secrets, commercial interests, or sensitive operational information.
+Your will be provided with the justification regarding the restriction that might apply.
