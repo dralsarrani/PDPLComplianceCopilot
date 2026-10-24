@@ -45,12 +45,14 @@ sys.path.insert(0, str(PROJECT_ROOT))
 
 from retrieval.citation_check import load_articles  # noqa: E402
 from src.gap.analyse_v0 import analyse  # noqa: E402
+from src.gap.evidence import check_report  # noqa: E402
 from src.gap.evidence_labels import label_evidence  # noqa: E402
 from src.gap.highlight import highlight_html  # noqa: E402
 from src.gap.report_pdf import build_pdf  # noqa: E402
 from src.policies.archive import from_archive  # noqa: E402
 from src.policies.company_name import company_name  # noqa: E402
 from src.policies.find_policy import find_policy, guess_website, looks_like_site  # noqa: E402
+from src.policies.language import text_language  # noqa: E402
 from src.policies.web_search import from_web_search  # noqa: E402
 from src.policies.read_file import TYPES as FILE_TYPES, read_policy_file  # noqa: E402
 # retrieval.answer and retrieval.retriever load the search models; they are
@@ -589,7 +591,7 @@ def run_analysis(source):
                                                 ensure_ascii=False, indent=2), encoding="utf-8")
                 except Exception as error:
                     fallback = GAP_RESULTS_DIR / f"{source.get('id')}.json"
-                    if source["kind"] != "example" or not fallback.exists():
+                    if source["kind"] != "example" or not source.get("main", True) or not fallback.exists():
                         raise GapError(tr("تعذر الاتصال بـ OpenAI، ولا يوجد تحليل محفوظ لهذه السياسة.",
                                           "Could not reach OpenAI, and there is no saved analysis of this policy."),
                                        str(error))
@@ -640,10 +642,61 @@ def source_note(source, saved_on=None):
     return f'<div class="source-note">{ICONS["info"]}{text}{link}</div>'
 
 
-def example_source(policy_id, policies):
+def other_copies():
+    """The saved policies' copies in their second language (src/policies/fetch_other_language.py):
+    {(policy_id, language): row of other_language_fetched.csv}, only the copies that exist."""
+    csv_path = POLICIES_DIR / "other_language_fetched.csv"
+    if not csv_path.exists():
+        return {}
+    return {(r.policy_id, r.language): r for r in pd.read_csv(csv_path).fillna("").itertuples()
+            if (POLICIES_DIR / r.language / f"{r.policy_id}.txt").exists()}
+
+
+def example_languages(policy_id, policies):
+    """The languages a saved policy is kept in, its own language first."""
+    return [policies[policy_id].language] + [lang for pid, lang in other_copies() if pid == policy_id]
+
+
+def example_source(policy_id, policies, lang=None):
+    """A saved policy in the interface language (or `lang`), or None if it is not kept in
+    that language. The text's language is checked too, so a copy in the wrong language
+    is never analysed as the right one."""
+    row, lang = policies[policy_id], lang or ("en" if EN else "ar")
+    main = row.language == lang
+    if main:
+        path, url, day = POLICIES_DIR / f"{policy_id}.txt", row.url, row.fetched_on
+    else:
+        copy = other_copies().get((policy_id, lang))
+        if copy is None:
+            return None
+        path, url, day = POLICIES_DIR / lang / f"{policy_id}.txt", copy.url, copy.fetched_on
+    text = path.read_text(encoding="utf-8")
+    if text_language(text) != lang:
+        return None
+    return {"kind": "example", "id": policy_id, "name": row.name if EN else NAMES_AR.get(policy_id, row.name),
+            "url": url, "date": day, "text": text, "lang": lang, "main": main}
+
+
+def language_name(lang):
+    return {"ar": tr("العربية", "Arabic"), "en": tr("الإنجليزية", "English")}.get(lang, lang)
+
+
+def language_notice(policy_id, policies):
+    """A saved policy that is not kept in the interface language: say so, and offer the
+    copy we do have. Returns that copy's source when the user asks for it, else None."""
     row = policies[policy_id]
-    return {"kind": "example", "id": policy_id, "name": row.name if EN else NAMES_AR.get(policy_id, row.name), "url": row.url,
-            "date": row.fetched_on, "text": (POLICIES_DIR / f"{policy_id}.txt").read_text(encoding="utf-8")}
+    name = row.name if EN else NAMES_AR.get(policy_id, row.name)
+    wanted = "en" if EN else "ar"
+    have = [lang for lang in example_languages(policy_id, policies) if lang != wanted]
+    kept = tr("، ", ", ").join(language_name(lang) for lang in have)
+    st.markdown(f'<div class="note">{tr(f"النسخة {language_name(wanted)} من سياسة {esc(name)} غير متوفرة لدينا، والمتوفر هو النسخة {kept}.", f"We do not have the {language_name(wanted)} copy of {esc(name)}'s policy; we have the {kept} copy.")}</div>',
+                unsafe_allow_html=True)
+    for lang in have:
+        if st.button(tr(f"حلّل النسخة {language_name(lang)}", f"Check the {language_name(lang)} copy"),
+                     key=f"gap_lang_{policy_id}_{lang}"):
+            st.session_state.gap_lang_missing = None
+            return example_source(policy_id, policies, lang)
+    return None
 
 
 def squash_name(text):
@@ -718,9 +771,16 @@ def requirement_card(r, checklist, i=0):
     title = (row.requirement_en if EN else row.requirement_ar) if row is not None else r["requirement"]
     lines = []
     if r["evidence"]:
-        lines.append(f'<div class="evidence" dir="auto">"{esc(r["evidence"])}"</div>')
-        if not r["evidence_found"]:
-            lines.append(f'<div class="meta bad-text">{tr("تنبيه: النص المقتبس غير موجود في السياسة", "Warning: the quoted text is not in the policy")}</div>')
+        state = r.get("evidence_state") or ("verified" if r["evidence_found"] else "unverified")
+        if state == "near":  # the model reworded the quote: show the policy's own words
+            lines.append(f'<div class="evidence" dir="auto">"{esc(r["evidence_near"])}"</div>')
+            lines.append(f'<div class="meta warn-text">{ICONS["warn"]}'
+                         f'{tr("دليل غير موثق: أعاد المحلل صياغة الاقتباس، وهذا أقرب نص له في السياسة", "Unverified evidence: the analyser reworded the quote; this is the closest text in the policy")}</div>')
+        else:
+            lines.append(f'<div class="evidence" dir="auto">"{esc(r["evidence"])}"</div>')
+            lines.append(f'<div class="meta ok-text">{ICONS["ok"]}{tr("دليل موثق: النص موجود في السياسة حرفياً", "Verified evidence: the text is in the policy word for word")}</div>'
+                         if state == "verified" else
+                         f'<div class="meta bad-text">{ICONS["bad"]}{tr("دليل غير موثق: النص المقتبس غير موجود في السياسة", "Unverified evidence: the quoted text is not in the policy")}</div>')
         if r.get("opp115"):
             category = r["opp115"] if EN else OPP115_AR.get(r["opp115"], r["opp115"])
             match = (tr("يطابق المتطلب", "matches the requirement") if r["opp115_match"]
@@ -769,6 +829,8 @@ def page_gap():
             else:
                 upload = st.file_uploader(tr("ملف السياسة: PDF أو Word أو TXT", "Policy file: PDF, Word or TXT"), type=FILE_TYPES)
                 submitted = st.form_submit_button(tr("حلّل", "Check"), type="primary")
+    if submitted:  # a new search clears the language notice of the last one
+        st.session_state.gap_lang_missing = None
     if submitted and mode == "file":
         if upload is None:
             st.warning(tr("يُرجى اختيار ملف السياسة أولاً.", "Choose the policy file first."))
@@ -787,6 +849,8 @@ def page_gap():
             open_library(matches[0][1], library)
         elif len(matches) == 1:
             source = example_source(matches[0][1], policies)
+            if source is None:  # not kept in this language: say so, do not switch on our own
+                st.session_state.update(gap_lang_missing=matches[0][1], gap_report=None, gap_error=None)
         elif matches:
             names = tr("، ", ", ").join(name for _, _, name in matches)
             note = tr(f"توجد أكثر من جهة مطابقة لبحثك: {esc(names)}. يُرجى إدخال الاسم كاملاً.",
@@ -803,6 +867,13 @@ def page_gap():
             source = {"kind": "site", "site": "", "date": today, "name": query.strip()}
     elif submitted:
         st.warning(tr("يُرجى إدخال اسم الجهة أو موقعها أولاً.", "Type a company name or website first."))
+
+    missing_lang = st.session_state.get("gap_lang_missing")
+    if missing_lang and missing_lang in policies:
+        chosen = language_notice(missing_lang, policies)
+        if chosen:  # the user asked for the copy we have
+            run_analysis(chosen)
+            st.rerun()
 
     if source:
         run_analysis(source)
@@ -827,6 +898,12 @@ def page_gap():
         # The web search writes the policy out and can leave parts out, so a requirement
         # it did not find is "not in this copy", not "missing", and is not held against them.
         report = [dict(r, status="unsure") if r["status"] == "missing" else r for r in report]
+    if source.get("text"):  # check every quote against the text again (results saved before this check too)
+        report = check_report(report, source["text"])
+        lang = text_language(source["text"])
+        if lang and lang != ("en" if EN else "ar"):  # say so, the analysis is still of this text
+            st.markdown(f'<div class="note">{tr(f"نص السياسة المحلَّل باللغة {language_name(lang)}، لأنها النسخة المتاحة.", f"The policy text checked is in {language_name(lang)}: that is the copy available.")}</div>',
+                        unsafe_allow_html=True)
     counts = pd.Series([r["status"] for r in report]).value_counts()
     total = len(report)
     parts = [("ok", int(counts.get("covered", 0)), STATUS["covered"][0]),

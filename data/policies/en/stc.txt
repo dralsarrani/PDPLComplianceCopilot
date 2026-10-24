@@ -1,0 +1,103 @@
+Privacy Notice
+stc respects your privacy and it is our objective to provide excellent service to all our customers. This privacy notice is formulated in accordance with the Personal Data Protection Law and Regulations in the Kingdom of Saudi Arabia to help you understand the nature of data we collect from you and how this data will be treated by stc.
+This privacy notice applies to all sectors and business units in the Company. All Company staff, contractors, and vendors working either on a permanent or temporary basis are obliged to follow the outlined standards.
+Who are we ?
+stc is the digital transformation engine in the region, offering advanced solutions and driving a role in the digitisation process.
+As the Controller responsible for the processing of your personal data our details are as follows:
+Company Name: stc (Saudi Telecom Company)
+Commercial Registration No. 1010150269
+Registered Address: King Abdulaziz Complex, Imam Mohammed Bin Saud Street Al Mursalat Area, Riyadh, Kingdom of Saudi Arabia
+Changes to this privacy notice
+To ensure that we continue to offer the best possible experience and the highest level of protection to you, we reserve the right to update the Privacy Notice as and when necessary and appropriate. For example, in compliance with new laws. Any update to this privacy notice will be available here. We therefore recommend you check it periodically. This version was last updated on 3/3/2025
+What Personal Data We Collect and Use
+The main types of personal data we collect from you and use include:
+Data required when registering with our services (such as name, e-mail address, address, phone number, date of birth, nationality, gender).
+Data required for you to use of our services, websites or mobile apps (such as cookies and usage data).
+Data required for you to pay bills or when purchasing goods (such as payment data and credit card information).
+Data exchanged during communications with you (such as customer support requests and feedback from you).
+Device data for product recommendations and solving technical complaints (such as Device ID).
+Data required to improve operational services and resolve network related complaints (such as Customer location data).
+stc uses cookies and similar technologies to improve your experience on our website. This includes:
+Keeping you signed in.
+Necessary for operation of the website.
+Understanding how you use our website and mobile apps.
+Please note that the provision of personal data is a pre-contractual requirement. Therefore, failure to complete personal data collection as required by stc will impact provision of the requested services. This might include termination of requested services.
+Why We Collect and Use Your Personal Data
+To provide you the highest standard of service and products, we collect and use your personal data.
+The legal basis for processing your personal data is:
+ontractual – to fulfil our service obligations to you.
+Legitimate interest - for activities such as certain types of marketing, preventing fraud and ensuring network and information security.
+Consent – for other activities such as requests for information, sales & certain types of marketing.
+Legal obligation – to comply with government requirements including but not limited to, national security and protection of public health.
+Public Interest - for processing based on public entities requests for public interest purposes e.g. Awareness messages.
+The purposes of this data collection including but not limited to:
+Enabling us to develop, enhance, market and/or deliver products and services to stc customers.
+Enabling and supporting our operation and systems to ensure continuity and quality to our services and provide accurate billing and enable us to process payments for products and services.
+Understanding your needs as customers and your eligibility for products and services and recommend products and services that would be relevant to you.
+Communicating new product and services launched.
+Resolving any queries or complaints you may have and allows us to provide you a personalized customer experience across all our channels.
+Provide reports to third parties and/or our enterprise clients where such reports don’t contain any personal information about you or any information that may identify you as a person in accordance with local privacy regulation
+For Credit Checks in certain scenarios e.g. when contracting for any new products or services, and we sometimes supplement the information we collect about you with information from other sources to assess the accuracy of the information that we hold e.g. data from governmental entities.
+For Fraud Prevention where we process your traffic data in order to protect against and detect fraud, to protect and detect misuse or damage to our networks, to recover debts or trace those who owe us money resulting from the use of our services.
+Improve your roaming experiences and ensure that our Roaming Services and related products are working as intended. This helps us meet our commitments around fair use, detect and resolve fraudulent use of our networks (and our partner roaming networks), and solve technical issues. Additionally, we may anonymize your personal data for more in-depth analysis, which helps us develop our roaming services without identifying individual users.
+How We Collect Your Personal Data
+We may collect personal data in different ways, including:
+Product and Services – When you register, use or sign a contract to become our customer and use one of our products or services.
+Direct Interactions – When you complete a form and send it to us via our website, mobile apps, by email, post or via a phone call to our call center. This includes any personal data you provide to us when making an enquiry or taking part in a promotion.
+Social Media Interactions – Any posts and interactions you have directly with us on social media channels.
+Browsing – Data about how you are using our web site, including the date and time of your visit, the type of Internet Browser you use and how you were referred to our web site.
+Web Surveys – Our online web surveys enable us to gather specific data regarding issues such as your feedback on the look and feel of our website and mobile apps. Additionally, we may also request information on several elements of our Customer Service. Your feedback is vital, appreciated and enables us to enhance the quality of Customer Service we provide. The provision of your name and other details is optional.
+Telecommunication Network – When you use stc networks.
+Data Protection and Disclosure
+We take the protection of your data very seriously and will employ appropriate organizational and technical data protection and security measures and procedures – including internal audit, external audit, training of staff and contractors on privacy and reporting to our audit and data governance steering committees and regulatory authorities – to safeguard your data from any unauthorized disclosure or processing.
+stc always maintain the privacy and confidentiality of all personal data collected. Such data may only be disclosed or shared when approved and required by law.
+stc will not disclose your personal data without your consent except:
+- Under the following circumstances where the entity requesting disclosure is a public entity and in which case the data will be shared in strict accordance with the controls and procedures set out in the Personal Data Protection Law of the Kingdom of Saudi Arabia:
+for security purposes
+to implement another law
+to meet judicial requirements
+to protect public health or safety
+to protect the life or health of a particular individual(s).
+- When we may share information with trusted third parties who support us in operating our website, managing our business activities, maintaining service quality, or delivering services to you. This may also occur when we determine that such actions are necessary or beneficial for providing products, services, or technical support, in alignment with the "Why We Collect and Use Your Personal Data" section. All such sharing is conducted in full compliance with the Personal Data Protection Law and Regulations, ensuring that your rights and interests are not impacted.
+- When using roaming services, we use your personal data as follows:
+- As a subscriber of stc and during roaming in other countries, the storage, treatment, and transfer of your personal data is controlled by the roaming network you are using and is subject to regulations applied on such networks in their respective countries.
+- As a visitor user from another country roaming on our stc network, your personal data is processed by us and our vendors e.g. to provide you the required connectivity and to calculate and charge you for your Calls, SMS, and Data usage.
+Personal data may be transferred outside of the Kingdom for the above purposes. Where this is the case, it will be done in accordance with the Personal Data Protection Law, its Regulations and applicable CST requirements. Personal data may also be transferred outside of the Kingdom in cases of extreme necessity to preserve the life or health of an individual, their vital interests or to prevent, examine or treat an infection, stc may transfer personal data outside the Kingdom or disclose it to a party outside the Kingdom, where this is in implementation of an obligation under a convention to which the Kingdom is a party, or to serve the interests of the Kingdom.
+stc does not rent, sell, exchange, or transfer your personal data to third parties outside of stc or partner companies unless it is collected without identifiers on an aggregated basis for analytical purposes, studies, reports with adherence to personal data protection acts and regulations in the Kingdom of Saudi Arabia.
+How Long We Store Your Personal Data
+Your personal data is retained only for the duration necessary to fulfil its intended purposes and meet legal, regulatory, accounting, or reporting obligations. Once the retention period has expired, stc will securely destroy your personal data in accordance with applicable laws and regulations.
+Your Customer Rights
+As a customer, you have the following rights at any time in accordance with the relevant laws, legislation and regulations; unless there are legal, regulatory or judicial restrictions that prevent this:
+Right to Be Informed: Customers have the right to be informed about the purpose and type of personal data that stc have about them.
+Right To Access: Customers have the right to access or obtain a copy of their personal data held by stc through the 'Privacy' section in their mystc account. For Jawwy customer through profile section in their Jawwy app.
+Right To Rectify: Customers have the right to correct, complete or update their personal data held by stc through the 'Privacy' section in their mystc account. For Jawwy customer through profile section in their Jawwy app.
+Right to request Erasure: Customers have the right to request the erasure of their personal data which is no longer required by contacting us through customer service chat or calling customer service.
+Right To Withdraw Consent: Customer has the right to revoke his consent, block marketing calls, or stop receiving promotional messages through mystc in number management, sending 3300 or advertisement to 900, calling customer service center 900.
+Contact us with your questions and comments
+In case of any questions, comments, or complaints you can reach us via
+Chat through mystc portal and mobile apps
+Social media
+call customer service center on 900
+stc stores
+The competent supervisory authority for stc activities is the Communications, Space and Technology Commission (CST). You may submit a complaint with the competent supervisory authority should you be unsatisfied with our resolution to your concern.
+Saudi Data and Artificial Intelligence Authority (SDAIA): is the Competent Authority for the Personal Data Protection Law and its regulations. It also has the authority to conduct audits and impose penalties for non-compliance. Their website is sdaia.gov.sa
+Personal Data Protection Officer
+Name: Personal Data Protection Officer (PDPO)
+Email: DPO@stc.com.sa
+Links to Other Websites
+Our website and mobile apps may contain links to third party sites, which may be subject to separate privacy policies. These sites are not under our control, and we are not responsible for their own privacy policies.
+stc group stc Saudi stc Kuwait stc Bahrain
+switch region for content in your area
+popular pages
+mofawtar 4
+sawa post plus
+baity 5G
+quicknet 5G unlimited
+support
+FAQS
+contact us
+support library
+Raise a Ticket (inquiry/request/complaint)
+spam SMS
+Fiber Relocation Request
+group website

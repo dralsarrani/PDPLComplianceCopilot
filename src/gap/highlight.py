@@ -3,31 +3,19 @@ Mark the analyser's evidence inside the policy text (an extra from the brief:
 "highlight covered and missing clauses directly in the pasted policy").
 
 The analyser (analyse_v0.py) quotes the policy for each covered or partly covered
-requirement. Here each quote is found again in the original text, ignoring case
-and spacing like quote_in_policy(), and wrapped in <mark> with its requirement id.
-A quote with "..." is marked in pieces. Requirements with no quote are the
+requirement. Here each quote is found again in the original text with
+evidence.find_spans() (the same check as quote_in_policy()), and wrapped in <mark>
+with its requirement id. A quote with "..." is marked in pieces. A quote the model
+reworded is marked by the closest real passage (evidence_near) when there is one. Requirements with no quote are the
 missing ones: they have no place in the text, so the app lists them above it.
 
-    spans = find_spans(text, quote)          -> [(start, end), ...] or []
     html = highlight_html(text, report)      -> escaped text with <mark> tags
 """
 import html
-import re
+
+from src.gap.evidence import find_spans
 
 TONES = {"covered": "ok", "partial": "warn"}
-
-
-def find_spans(text, quote):
-    """Where the quote is in the text, as (start, end) pairs; [] if any piece is missing."""
-    pieces = [p.strip(" .,;:!?\"'“”…") for p in re.split(r"\.\.\.|…", quote or "")]
-    spans = []
-    for piece in filter(None, pieces):
-        pattern = r"\s+".join(re.escape(word) for word in piece.split())
-        match = re.search(pattern, text, flags=re.IGNORECASE)
-        if not match:
-            return []
-        spans.append(match.span())
-    return spans
 
 
 def highlight_html(text, report, titles=None):
@@ -38,8 +26,9 @@ def highlight_html(text, report, titles=None):
     marks = []
     for r in report:
         tone = TONES.get(r.get("status"))
-        if tone and r.get("evidence"):
-            marks += [(start, end, tone, r["req_id"]) for start, end in find_spans(text, r["evidence"])]
+        quote = r.get("evidence_near") or r.get("evidence")
+        if tone and quote:
+            marks += [(start, end, tone, r["req_id"]) for start, end in find_spans(text, quote)]
     marks.sort()
     merged = []
     for start, end, tone, req in marks:
