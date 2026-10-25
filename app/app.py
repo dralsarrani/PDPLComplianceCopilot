@@ -313,13 +313,13 @@ def hero(page):
     """Big green banner: brand on the right, page headline in the middle (nav sits on its left)."""
     title, subtitle = HERO[page]
     if page == "qa":
-        title = "خصوصيتك مُصانة، وامتثالك للأنظمة أسهل."
+        title = tr("خصوصيتك مُصانة، وامتثالك للأنظمة أسهل.", "Your privacy, protected. Compliance, made easier.")
     st.markdown(
         f'<div class="hero"><div class="brand"><div><img class="musaan-wordmark" '
         f'src="{HEADER_ICON_URL}" alt="مُصان | MUSAAN" width="260" height="75">'
         '<div class="app-subtitle">' + tr("مساعد الامتثال لنظام حماية البيانات الشخصية",
                                           "Saudi Personal Data Protection Assistant") + '</div></div></div>'
-        f'<div class="hero-center"><h1 dir="{"rtl" if page == "qa" else ("ltr" if EN else "rtl")}">{title}</h1>'
+        f'<div class="hero-center"><h1 dir="{"ltr" if EN else "rtl"}">{title}</h1>'
         f'<p>{subtitle}</p></div></div>',
         unsafe_allow_html=True)
 
