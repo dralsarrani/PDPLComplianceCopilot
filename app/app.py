@@ -301,6 +301,20 @@ def count_articles(n):
     return {1: "مادة واحدة", 2: "مادتين"}.get(n, f"{n} مواد" if n <= 10 else f"{n} مادة")
 
 
+def count_controls(n):
+    if EN:
+        return "1 control" if n == 1 else f"{n} controls"
+    return {1: "ضابط واحد", 2: "ضابطين"}.get(n, f"{n} ضوابط" if n <= 10 else f"{n} ضابطاً")
+
+
+def count_sources(citations):
+    """'3 مواد' for law articles, '3 ضوابط' for NCA controls, 'مادة واحدة وضابطين' when the answer has both."""
+    controls = sum(ref_parts(c)[0] == "ECC" for c in citations)
+    parts = ([count_articles(len(citations) - controls)] if len(citations) > controls else []) \
+        + ([count_controls(controls)] if controls else [])
+    return tr(" و", " and ").join(parts)
+
+
 HERO = {"qa": (tr("وش تبي تعرف عن حماية بياناتك؟", "What do you want to know about your data?"),
                tr("إجابات من نصوص النظام واللوائح وضوابط الأمن السيبراني، مع رقم المادة أو الضابط",
                   "Answers from the law, its regulations and the cybersecurity controls, with the article or control number")),
@@ -478,7 +492,6 @@ def page_qa():
                     f'<div class="answer-body">{esc(result["answer"])}</div></div>', unsafe_allow_html=True)
         return
 
-    n = len(result["citations"])
     articles = load_articles()
     sources = []
     for cid in result["citations"]:
@@ -496,7 +509,7 @@ def page_qa():
                 + (f'<div class="route-note">{tr("بحثنا في", "Searched")}: {ROUTES[result["source"]]}</div>'
                    if result.get("source") in ("ecc", "both") else "")
                 + f'{answer_sentences(result)}'
-                f'<span class="verified">{ICONS["check"]}{tr("مستندة إلى", "Based on")} {count_articles(n)}</span></div>'
+                f'<span class="verified">{ICONS["check"]}{tr("مستندة إلى", "Based on")} {count_sources(result["citations"])}</span></div>'
                 f'<div class="answer-side"><div class="side-title">{tr("المصادر", "Sources")}</div>{"".join(sources)}</div></div>'
                 + official_sources_note(result["citations"]), unsafe_allow_html=True)
     with st.expander(tr("عرض نص المواد كاملاً", "Show the full text of the articles")):
