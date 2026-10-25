@@ -1,32 +1,30 @@
-/* Night look: always loaded after style.css, and used while the page's <html> has the
-   class pdpl-dark (the moon button switches it in the browser, without a rerun).
-   The same names as in style.css, with darker surfaces and lighter text. */
+/* Dark palette, activated only by the existing persisted pdpl-dark class. */
 html.pdpl-dark {
-  --green: #23875A;
-  --green-mid: #46B07C;
-  --green-soft: #173A2B;
-  --amber: #E3B25A;
+  --green: #0B7A4C;
+  --green-mid: #1CA56F;
+  --green-soft: #123E2D;
+  --amber: #D9B45A;
   --amber-mid: #E3A43A;
-  --amber-soft: #3A2E14;
+  --amber-soft: #3A301A;
   --red: #C24141;
-  --red-soft: #3D1D1D;
-  --ink: #E6ECE9;
-  --ink-2: #C3CEC8;
-  --muted: #94A39B;
-  --line: #2A3631;
-  --panel: #0E1512;
-  --card: #16201C;
-  --card-2: #1B2722;
-  --green-text: #6FCF9C;
-  --amber-text: #E8B65C;
-  --red-text: #F08A8A;
-  --line-2: #2F4A3D;
+  --red-soft: #3D2427;
+  --ink: #EFF8F2;
+  --ink-2: #D0E5D8;
+  --muted: #A7C4B3;
+  --line: #294E3D;
+  --panel: #04241A;
+  --card: #0B3326;
+  --card-2: #103E2D;
+  --green-text: #78D9AC;
+  --amber-text: #E6C879;
+  --red-text: #FFB3B3;
+  --line-2: #416C56;
   --red-line: #6B2E2E;
-  --track: #26332D;
-  --tone-ok: #4CC38A;
-  --tone-warn: #E3A43A;
-  --tone-bad: #F07070;
-  --nav-on: #23875A;
+  --track: #214735;
+  --tone-ok: #78D9AC;
+  --tone-warn: #E6C879;
+  --tone-bad: #FFB3B3;
+  --nav-on: #0B7A4C;
   color-scheme: dark;
 }
 /* Streamlit's own parts follow its light theme, so they are recoloured here */
@@ -45,7 +43,17 @@ html.pdpl-dark .stTextInput [data-baseweb="input"],
 html.pdpl-dark .stTextArea [data-baseweb="textarea"],
 html.pdpl-dark [data-baseweb="select"] > div { background: var(--card) !important; border-color: var(--line-2) !important; }
 html.pdpl-dark [class*="st-key-askbox"] .stTextInput [data-baseweb="input"] { background: var(--panel) !important; }
-html.pdpl-dark [class*="st-key-askbox"] { box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45); }
+html.pdpl-dark [class*="st-key-askbox"] .stTextInput [data-baseweb="input"],
+html.pdpl-dark [class*="st-key-askbox"] .stTextArea [data-baseweb="textarea"],
+html.pdpl-dark [class*="st-key-askbox"] .stSelectbox [data-baseweb="select"] > div {
+  box-shadow: inset 0 0 0 1px var(--muted) !important;
+}
+html.pdpl-dark [class*="st-key-askbox"] .stTextInput [data-baseweb="input"]:focus-within,
+html.pdpl-dark [class*="st-key-askbox"] .stTextArea [data-baseweb="textarea"]:focus-within,
+html.pdpl-dark [class*="st-key-askbox"] .stSelectbox [data-baseweb="select"] > div:focus-within {
+  box-shadow: inset 0 0 0 2px var(--green-mid), 0 0 0 3px var(--green-soft) !important;
+}
+html.pdpl-dark [class*="st-key-askbox"] { box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28); }
 html.pdpl-dark [data-testid="stFileUploaderDropzone"] { background: var(--card-2); border: 1px dashed var(--line-2); }
 html.pdpl-dark [data-testid="stFileUploaderDropzone"] *,
 html.pdpl-dark [data-testid="stFileUploaderFile"] * { color: var(--ink-2); }
@@ -61,6 +69,13 @@ html.pdpl-dark [data-testid="stToast"] { background: var(--card); color: var(--i
 html.pdpl-dark [data-testid="stTooltipContent"],
 html.pdpl-dark [data-baseweb="tooltip"] div { background: var(--card-2); color: var(--ink); }
 html.pdpl-dark .stButton button[kind="secondary"]:hover { background: var(--green-soft); }
+html.pdpl-dark .stButton button[kind="secondary"],
+html.pdpl-dark [data-testid="stDownloadButton"] button {
+  background: var(--card); color: var(--green-text); border-color: var(--line-2);
+}
 html.pdpl-dark .answer-card .side-title { color: var(--green-text); }
-html.pdpl-dark .hero { background: linear-gradient(135deg, #071F17 0%, #0D3A27 55%, #13583A 100%); }
+html.pdpl-dark .hero { background: linear-gradient(180deg, #04241A 0%, #04241A 125px, #05462C 70%, #0B7A4C 100%); }
 html.pdpl-dark section[data-testid="stSidebar"] [data-testid="stSidebarCollapseButton"] button { color: var(--ink); }
+html.pdpl-dark [data-baseweb="popover"] [role="listbox"],
+html.pdpl-dark [data-baseweb="popover"] [role="option"] { background: var(--card); color: var(--ink); }
+html.pdpl-dark [data-baseweb="popover"] [role="option"]:hover { background: var(--green-soft); }

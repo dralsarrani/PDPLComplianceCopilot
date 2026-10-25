@@ -1,32 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap');
 
 :root {
-  --green-dark: #0B3D2C;
-  --green: #0F5132;
-  --green-mid: #1F7A50;
+  --green-dark: #05462C;
+  --green: #0B7A4C;
+  --green-mid: #1CA56F;
+  --brand-ink: #06311F;
+  --brand-gold: #D9B45A;
+  --brand-dark: #04241A;
   --green-soft: #E8F1EC;
   --amber: #8A5A00;
   --amber-mid: #D79A1E;
   --amber-soft: #FBF3E2;
   --red: #9B1C1C;
   --red-soft: #FBEAEA;
-  --ink: #1F2937;
+  --ink: #06311F;
   --muted: #6B7280;
   --line: #E5E7EB;
-  --panel: #F5F7F6;
+  --panel: #F3F7F4;
   --card: #FFFFFF;
   --card-2: #F6FAF7;
-  --ink-2: #374151;
-  --green-text: #14573A;
+  --ink-2: #305544;
+  --green-text: #05462C;
   --amber-text: #8A5A12;
   --red-text: #B42318;
   --line-2: #D5EADD;
   --red-line: #E9B8B8;
   --track: #E3EBE6;
-  --tone-ok: #14573A;
+  --tone-ok: #0B7A4C;
   --tone-warn: #B7791F;
   --tone-bad: #B42318;
-  --nav-on: #14573A;
+  --nav-on: #0B7A4C;
   color-scheme: light;
 }
 
@@ -51,15 +54,25 @@ html, body, [class*="st-"], .stMarkdown, button, input, textarea, select {
 [data-testid="stExpandSidebarButton"] span { color: #fff; }
 .stApp { background: var(--panel); }
 .block-container { padding-top: 0 !important; max-width: 1100px; }
+/* Fill short pages, while allowing results to extend the document naturally. */
+[data-testid="stMainBlockContainer"] {
+  min-height: 100vh; min-height: 100dvh; padding-bottom: 1.5rem !important;
+  display: flex; flex-direction: column; box-sizing: border-box;
+}
+[data-testid="stMainBlockContainer"] > [data-testid="stVerticalBlock"] { flex: 1; }
+.st-key-footer { margin-top: auto; flex-shrink: 0; }
+[data-testid="stMainBlockContainer"] > [data-testid="stVerticalBlock"] > [data-testid="stLayoutWrapper"]:has(> .st-key-footer) {
+  margin-top: auto; flex-shrink: 0;
+}
 
 /* ---------- hero banner (full width), in the spirit of Saudi government platforms ---------- */
 [data-testid="stMainBlockContainer"], .block-container { position: relative; }
 .hero {
   margin: -2rem calc(50% - 50vw) 0; padding: 1.4rem calc(50vw - 50%) 5.2rem;
-  background: linear-gradient(135deg, #0B3D2C 0%, #14573A 55%, #1B8354 100%);
+  background: linear-gradient(180deg, #04241A 0%, #04241A 125px, #05462C 70%, #0B7A4C 100%);
   color: #fff; position: relative; overflow: hidden;
 }
-.hero::before, .hero::after { content: ""; position: absolute; border-radius: 50%; background: rgba(255, 255, 255, 0.06); }
+.hero::before, .hero::after { display: none; }
 .hero::before { width: 520px; height: 520px; left: -140px; top: -230px; }
 .hero::after { width: 300px; height: 300px; right: -60px; bottom: -170px; }
 .brand { display: flex; align-items: center; gap: 0.8rem; position: relative; z-index: 1; }
@@ -68,21 +81,29 @@ html, body, [class*="st-"], .stMarkdown, button, input, textarea, select {
   display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
 .app-title { font-size: 1.12rem; font-weight: 700; line-height: 1.4; }
+.app-logo.musaan-logo {
+  width: 52px; height: 52px; object-fit: contain; align-self: center;
+  padding: 0; background: transparent; border: 0; box-shadow: none;
+}
+.musaan-wordmark { display: block; width: min(280px, 100%); height: auto; aspect-ratio: 2095 / 600; object-fit: contain; }
+.brand > div { max-width: 100%; }
+.hero .app-subtitle, .hero-center p { color: #fff !important; }
 .app-subtitle { font-size: 0.8rem; opacity: 0.75; direction: ltr; text-align: right; }
 .hero-center { text-align: center; margin-top: 2.6rem; position: relative; z-index: 1; }
-.hero-center h1 { font-size: 2.3rem; font-weight: 700; color: #fff; padding: 0; line-height: 1.5; }
-.hero-center p { opacity: 0.85; margin-top: 0.3rem; font-size: 1.02rem; }
+.hero-center h1 { font-size: clamp(1.65rem, 3.5vw, 2.2rem); font-weight: 700; color: #fff; padding: 0; line-height: 1.5; overflow-wrap: break-word; }
+.hero-center p { opacity: 0.85; margin-top: 0.4rem; font-size: 1.02rem; line-height: 1.8; overflow-wrap: break-word; }
 .hero-center h1 a { display: none; }
 
 /* page switch, placed on the left of the hero's top row */
 .st-key-navbar { position: absolute; top: 0.9rem; left: 9rem; width: 430px; z-index: 5; }
 /* page switch: two buttons in a white pill; the open page's button is green */
-.page-nav { display: flex; gap: 4px; padding: 4px; background: var(--card); border-radius: 999px;
+.page-nav { display: flex; gap: 4px; padding: 4px; background: var(--brand-dark); border-radius: 999px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15); }
 .page-nav button { flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 0.45rem;
-  border: none; border-radius: 999px; padding: 0.45rem 0.9rem; background: transparent; color: var(--ink);
+  border: none; border-radius: 999px; padding: 0.45rem 0.9rem; background: transparent; color: #fff;
   font: inherit; font-size: 15px; white-space: nowrap; cursor: pointer; transition: background 0.15s, color 0.15s; }
-.page-nav button:hover { background: var(--green-soft); }
+.page-nav button:hover { background: var(--green); }
+.page-nav button:focus-visible { outline: 2px solid var(--green-mid); outline-offset: 2px; }
 .page-nav[data-p="qa"] button[data-page="qa"], .page-nav[data-p="gap"] button[data-page="gap"] {
   background: var(--nav-on); color: #fff; font-weight: 600; }
 .st-key-navbar [data-testid="stMarkdownContainer"]:has(.page-nav) { margin-bottom: 0 !important; }
@@ -109,8 +130,20 @@ html, body, [class*="st-"], .stMarkdown, button, input, textarea, select {
 [class*="st-key-askbox"] [data-testid="InputInstructions"] { display: none; }
 [class*="st-key-askbox"] .stButton button[kind="primary"], [class*="st-key-askbox"] [data-testid="stFormSubmitButton"] button {
   border-radius: 14px; font-size: 1.05rem; font-weight: 700; min-height: 3.2rem; padding: 0 1rem;
-  background: #14573A; border-color: #14573A;
+  background: var(--green); border-color: var(--green); color: #fff;
 }
+.stButton button[kind="primary"], [data-testid="stFormSubmitButton"] button[kind="primary"] {
+  background: var(--green); border-color: var(--green); color: #fff;
+}
+.stButton button[kind="primary"]:hover, [data-testid="stFormSubmitButton"] button[kind="primary"]:hover,
+[class*="st-key-askbox"] [data-testid="stFormSubmitButton"] button:hover {
+  background: var(--green-mid); border-color: var(--green-mid); color: var(--brand-ink);
+}
+.stButton button:focus-visible, [data-testid="stFormSubmitButton"] button:focus-visible {
+  outline: 2px solid var(--green-mid); outline-offset: 3px;
+}
+.stApp .stButton button[kind="primary"] p, .stApp [data-testid="stFormSubmitButton"] button p { color: #fff !important; }
+.stApp .stButton button[kind="primary"]:hover p, .stApp [data-testid="stFormSubmitButton"] button:hover p { color: var(--brand-ink) !important; }
 
 /* policy page: paste / link switch, text area, example policies */
 [class*="st-key-askbox"] [data-testid="stTextArea"] textarea { font-size: 1rem; line-height: 1.7; background: var(--panel); border-radius: 12px; }
@@ -270,10 +303,25 @@ div[role="radiogroup"] { gap: 0.4rem; }
 
 /* ---------- footer ---------- */
 .app-footer {
-  margin-top: 2.5rem; padding-top: 0.9rem; border-top: 1px solid var(--line);
-  color: var(--muted); font-size: 0.8rem; text-align: center;
+  margin: 2.5rem calc(50% - 50vw) -1.5rem; padding: 1.25rem max(1rem, calc(50vw - 50%)) 1.5rem;
+  border-top: 1px solid var(--green-dark); background: var(--brand-dark);
+  color: #E8F1EC; font-size: 0.8rem; text-align: center;
 }
-.footer-notice { color: var(--amber); font-weight: 500; margin-bottom: 0.3rem; }
+.footer-notice { color: var(--brand-gold); font-weight: 500; margin-bottom: 0.45rem; }
+.footer-notice > span { display: block; line-height: 1.8; }
+.app-footer { line-height: 1.8; }
+
+/* Inset outlines preserve the existing field dimensions and corner radii. */
+[class*="st-key-askbox"] .stTextInput [data-baseweb="input"],
+[class*="st-key-askbox"] .stTextArea [data-baseweb="textarea"],
+[class*="st-key-askbox"] .stSelectbox [data-baseweb="select"] > div {
+  box-shadow: inset 0 0 0 1px var(--line-2) !important;
+}
+[class*="st-key-askbox"] .stTextInput [data-baseweb="input"]:focus-within,
+[class*="st-key-askbox"] .stTextArea [data-baseweb="textarea"]:focus-within,
+[class*="st-key-askbox"] .stSelectbox [data-baseweb="select"] > div:focus-within {
+  box-shadow: inset 0 0 0 2px var(--green-mid), 0 0 0 3px var(--green-soft) !important;
+}
 
 /* ---------- gap result count cards ---------- */
 .stat-cards { display: flex; gap: 0.7rem; }
@@ -415,7 +463,7 @@ section[data-testid="stSidebar"][data-collapsed="true"] { display: none; }
 /* One square per requirement, so "out of 17" is visible at a glance */
 .req-bar { display: flex; gap: 3px; margin-top: 0.7rem; max-width: 420px; }
 .req-bar i { flex: 1; height: 14px; border-radius: 3px; }
-.req-bar i.ok { background: #1F7A4D; }
+.req-bar i.ok { background: var(--green); }
 .req-bar i.warn { background: #E0A43A; }
 .req-bar i.bad { background: #D14343; }
 .req-bar i.unsure { background: #B8BEC6; }
@@ -461,6 +509,9 @@ html.pdpl-dark .theme-btn .sun { display: grid; }
 .st-key-lang_toggle button p { font-weight: 700; font-size: 0.95rem; color: #fff !important; }
 .st-key-lang_toggle button:hover { background: rgba(255, 255, 255, 0.28) !important; }
 @media (max-width: 900px) { .st-key-navbar .st-key-lang_toggle { position: static; } }
+@media (max-width: 900px) {
+  .theme-btn, .st-key-lang_toggle button { background: var(--brand-dark) !important; color: #fff !important; }
+}
 
 /* switching pages reruns the app; Streamlit greys out the old page meanwhile, which looked like a hang */
 [data-stale="true"] { opacity: 1 !important; transition: none !important; }
