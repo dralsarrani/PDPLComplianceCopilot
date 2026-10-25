@@ -170,7 +170,7 @@ def brand_image_url(svg_name, png_name):
 
 
 BRAND_ICON_URL = brand_image_url("03-App-Icon/MUSAAN-app-icon.svg", "03-App-Icon/MUSAAN-app-icon.png")
-HEADER_ICON_URL = brand_image_url("02-Logo-Horizontal/MUSAAN-horizontal-dark.svg",
+HEADER_ICON_URL = brand_image_url("02-Logo-Horizontal/MUSAAN-horizontal-dark-animated.svg",
                                   "02-Logo-Horizontal/MUSAAN-horizontal-dark.png")
 
 st.set_page_config(page_title="مُصان | MUSAAN", page_icon=BRAND_ICON_URL, layout="wide",
@@ -1125,6 +1125,22 @@ WHY_EN = {"R01": "Without it you do not know who to contact if something happens
           "R17": "A program may turn down a request, like a loan, with no person reviewing it"}
 
 
+# the (i) beside the score: what the result is based on, shown on hover or tap
+HOW_TIP = ('<span class="how" tabindex="0" aria-label="' + tr("منهجية التحليل", "How the analysis works") + '">i'
+           '<span class="how-tip" role="tooltip">'
+           f'<b>{tr("منهجية التحليل", "How the analysis works")}</b>'
+           + "".join(f"<span>{line}</span>" for line in tr(
+               ["يُوجب نظام حماية البيانات الشخصية على الجهات أن تُضمِّن سياسة الخصوصية سبعة عشر عنصراً تُعرِّف صاحب البيانات بحقوقه وبكيفية معالجة بياناته.",
+                "حُلِّلت هذه السياسة آلياً لبيان مدى استيفائها لتلك العناصر، مع إيراد الشاهد من نصّها لكل عنصر في التفاصيل.",
+                "هذه النتيجة استرشادية، ولا تُغني عن الرأي القانوني المتخصص."],
+               ["The Personal Data Protection Law requires any company that collects your data to tell you "
+                "17 specific things in its privacy policy.",
+                "The policy was checked automatically for which of them it states; the sentence behind each one "
+                "is shown in the details below.",
+                "The result is guidance only, not a legal ruling."]))
+           + '</span></span>')
+
+
 def verdict_card(name, percent, parts, total, report, checklist):
     """The whole result in one look: a verdict word with its colour, and the
     three most important gaps in plain words."""
@@ -1157,7 +1173,8 @@ def verdict_card(name, percent, parts, total, report, checklist):
                  f'<ul class="gaps">{items}</ul>'
                  if gaps else f'<div class="gaps-title">{tr("تستوفي السياسة جميع المتطلبات", "The policy covers every requirement")} 🎉</div>')
     return (f'<div class="verdict {tone}">'
-            f'<div class="verdict-head"><div class="ring" style="--p:{percent}"><span>{percent}%</span></div>'
+            f'<div class="verdict-head"><div class="ring-wrap"><div class="ring" style="--p:{percent}"><span>{percent}%</span></div>'
+            f'{HOW_TIP}</div>'
             f'<div><div class="verdict-name">{tr(f"سياسة {esc(name)}", f"{esc(name)} privacy policy")}</div>'
             f'<div class="verdict-word">{word}</div>'
             f'<div class="verdict-meaning">{tr("الخلاصة", "Meaning")}: {meaning}</div>'
