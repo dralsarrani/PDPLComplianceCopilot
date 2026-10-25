@@ -68,6 +68,7 @@ HISTORY_PATH = PROJECT_ROOT / "results" / "history.json"
 HISTORY_MAX = 50
 STYLE_PATH = Path(__file__).resolve().parent / "style.css"
 DARK_PATH = Path(__file__).resolve().parent / "dark.css"  # night look, used while <html> has class pdpl-dark
+ORB_PATH = Path(__file__).resolve().parent / "orb.js"  # the orb on the question box that watches the user
 EN = st.query_params.get("lang") == "en"  # English page; kept in the address, so a refresh keeps it
 
 
@@ -412,15 +413,52 @@ def answer_sentences(result):
     return '<div class="answer-body">' + "".join(parts) + "</div>"
 
 
+def voice_heard(box, name=False):
+    """After a recording: its words go into the text box `box` and are sent like typed words."""
+    audio = st.session_state.get(f"{box}_voice")
+    if audio is None:  # the recording was deleted
+        return
+    from src.voice import transcribe
+    try:
+        text = transcribe(audio.getvalue())
+    except RuntimeError as error:
+        st.session_state[f"{box}_voice_error"] = (tr("تعذر تحويل الصوت إلى نص، اكتب بدلاً من ذلك.",
+                                                     "Could not turn the recording into text. Please type instead."),
+                                                  str(error.__cause__ or error))
+        return
+    if name:  # a company name, not a sentence: "الراجحي." -> "الراجحي"
+        text = text.strip(" .،,؟?!")
+    if text:
+        st.session_state[box] = text
+        st.session_state[f"{box}_voice_text"] = text
+    else:
+        st.warning(tr("لم يُسمع كلام في التسجيل، حاول مرة أخرى.", "No words were heard in the recording. Please try again."))
+
+
+def voice_button(box, name=False):
+    """The microphone under a text box. Returns the words of a new recording, once, or ""."""
+    st.audio_input(tr("أو تحدّث بصوتك", "Or speak") if name else tr("أو اسأل بصوتك", "Or ask by voice"),
+                   key=f"{box}_voice", on_change=voice_heard, args=(box, name))
+    error = st.session_state.pop(f"{box}_voice_error", None)
+    if error:
+        show_error(error)
+    # the box shows the words, but in a form its value only arrives with the button
+    return st.session_state.pop(f"{box}_voice_text", "")
+
+
 def page_qa():
     # a form, so pressing Enter sends the question like the button does
-    with st.container(key="askbox"), st.form("ask_form", border=False):
-        text_col, button_col = st.columns([6, 1], vertical_alignment="center")
-        question = text_col.text_input(tr("السؤال", "Question"), key="question", label_visibility="collapsed",
-                                       placeholder=tr("اكتب استفسارك عن نظام حماية البيانات الشخصية...",
-                                                      "Enter your question about the Personal Data Protection Law..."))
-        clicked = button_col.form_submit_button(tr("اسأل", "Ask"), type="primary", use_container_width=True)
-    if clicked:
+    with st.container(key="askbox"):
+        with st.form("ask_form", border=False):
+            text_col, button_col = st.columns([6, 1], vertical_alignment="center")
+            question = text_col.text_input(tr("السؤال", "Question"), key="question", label_visibility="collapsed",
+                                           placeholder=tr("اكتب استفسارك عن نظام حماية البيانات الشخصية...",
+                                                          "Enter your question about the Personal Data Protection Law..."))
+            clicked = button_col.form_submit_button(tr("اسأل", "Ask"), type="primary", use_container_width=True)
+        spoken = voice_button("question")
+    if spoken:
+        ask(spoken)
+    elif clicked:
         if question.strip():
             ask(question)
         else:
@@ -867,13 +905,17 @@ def page_gap():
         with st.form("gap_form", border=False):
             if mode == "search":
                 text_col, button_col = st.columns([6, 1], vertical_alignment="center")
-                query = text_col.text_input(tr("الشركة", "Company"), label_visibility="collapsed",
+                query = text_col.text_input(tr("الشركة", "Company"), key="gap_query", label_visibility="collapsed",
                                             placeholder=tr("أدخل اسم الجهة أو رابط موقعها، مثل: الراجحي أو stc.com.sa",
                                                            "Type a company name or paste its website, e.g. Al Rajhi or stc.com.sa"))
                 submitted = button_col.form_submit_button(tr("حلّل", "Check"), type="primary", use_container_width=True)
             else:
                 upload = st.file_uploader(tr("ملف السياسة: PDF أو Word أو TXT", "Policy file: PDF, Word or TXT"), type=FILE_TYPES)
                 submitted = st.form_submit_button(tr("حلّل", "Check"), type="primary")
+        if mode == "search":
+            spoken = voice_button("gap_query", name=True)
+            if spoken:
+                query, submitted = spoken, True
     if submitted:  # a new search clears the language notice of the last one
         st.session_state.gap_lang_missing = None
     if submitted and mode == "file":
@@ -1273,11 +1315,12 @@ with st.container(key="page_gap"):
     page_gap()
 with st.container(key="footer"):
     st.markdown('<div class="app-footer"><div class="footer-notice">'
-                + tr('<span dir="rtl">تنبيه: مشروع تعليمي، وليس استشارة قانونية.</span><span dir="ltr">Educational project, not legal advice.</span>',
-                     '<span dir="ltr">Note: educational project, not legal advice.</span><span dir="rtl">مشروع تعليمي، وليس استشارة قانونية.</span>')
+                + tr('<span dir="rtl">المعلومات المقدَّمة للاسترشاد فقط، ولا تُعد رأياً قانونياً ملزماً.</span><span dir="ltr">For guidance only; not a binding legal opinion.</span>',
+                     '<span dir="ltr">For guidance only; not a binding legal opinion.</span><span dir="rtl">المعلومات المقدَّمة للاسترشاد فقط، ولا تُعد رأياً قانونياً ملزماً.</span>')
                 + '</div><div>' + tr("© 2026 فريق مُصان | MUSAAN. جميع الحقوق محفوظة.",
                                      "© 2026 مُصان | MUSAAN team. All rights reserved.")
                 + '</div></div>', unsafe_allow_html=True)
 history_panel()  # last, so a question or analysis from this run is already in the list
 st.iframe(PAGE_SCRIPT, height=1)
+st.iframe(f"<script>{ORB_PATH.read_text(encoding='utf-8')}</script>", height=1)
 

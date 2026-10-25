@@ -99,6 +99,8 @@ What the app shows:
 - **Ask the law**: the answer sentence by sentence, each with its article or control number and the exact quote found in the text; source cards; a line linking the official texts (SDAIA for the PDPL, NCA for the controls); which texts were searched for cybersecurity questions; the full text of the cited articles; how many citations were checked.
 - **Check a privacy policy**: a score out of 17 with a verdict (good / average / weak), the most important missing requirements in plain words with why each matters, all 17 requirements with their evidence quote, the PDPL article and the OPP-115 category the classifier gives the evidence, the policy text with the evidence highlighted, and a PDF download of the report.
 - A history panel of past questions and analyses (`results/history.json`, local only), an Arabic / English interface and a dark mode.
+- Voice input: a microphone under the question box and under the company search. `src/voice.py` turns the recording into text with OpenAI (`gpt-4o-transcribe`, Arabic or English), and the text is then asked or searched like typed text, so answers and scores do not change.
+- A small green orb on the question box (`app/orb.js`, no libraries): its eyes follow the pointer and the caret while typing, scan while the app answers or analyses, and smile at the result.
 
 Without network, questions that were answered before are served from the cache (`results/answers_cache.json`): ask the demo questions once before presenting.
 
