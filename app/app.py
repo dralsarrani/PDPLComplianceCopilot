@@ -26,6 +26,7 @@ Look: app/style.css (right-to-left, IBM Plex Sans Arabic) and .streamlit/config.
 Run from the project root:
     python -m streamlit run app/app.py
 """
+import base64
 import hashlib
 import html
 import json
@@ -154,7 +155,24 @@ ICONS = {"ok": _svg('<circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 
          "info": _svg('<circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/>')}
 
 
-st.set_page_config(page_title="PDPL Compliance Copilot", page_icon="⚖️", layout="wide",
+BRAND_DIR = Path(__file__).resolve().parent / "assets" / "brand" / "musaan-v2"
+
+
+def brand_image_url(svg_name, png_name):
+    """Embed the approved local asset, with PNG fallback if SVG is unavailable."""
+    asset = BRAND_DIR / svg_name
+    mime = "image/svg+xml"
+    if not asset.is_file():
+        asset = BRAND_DIR / png_name
+        mime = "image/png"
+    return f"data:{mime};base64," + base64.b64encode(asset.read_bytes()).decode("ascii")
+
+
+BRAND_ICON_URL = brand_image_url("03-App-Icon/MUSAAN-app-icon.svg", "03-App-Icon/MUSAAN-app-icon.png")
+HEADER_ICON_URL = brand_image_url("02-Logo-Horizontal/MUSAAN-horizontal-dark.svg",
+                                  "02-Logo-Horizontal/MUSAAN-horizontal-dark.png")
+
+st.set_page_config(page_title="مُصان | MUSAAN", page_icon=BRAND_ICON_URL, layout="wide",
                    initial_sidebar_state="collapsed")
 LTR_PATH = Path(__file__).resolve().parent / "ltr.css"  # left-to-right layout for the English page
 LOOK = (STYLE_PATH.read_text(encoding="utf-8") + DARK_PATH.read_text(encoding="utf-8")
@@ -246,10 +264,33 @@ def article_label(record_id):
 
 
 def articles_short(articles):
-    """'IR-A04(1b); PDPL-A13(3)' -> 'اللائحة م4(1b)، النظام م13(3)'"""
+    """Localise display only; unknown lettered references keep their original ID."""
+    # Verified against IR Article 4's Arabic/English text and SDAIA's official page.
+    # https://dgp.sdaia.gov.sa/wps/portal/pdp/knowledgecenter/details/PDPL2
+    ir_letters = {("1", "a"): "أ", ("1", "b"): "ب", ("1", "c"): "ج",
+                  ("1", "d"): "د", ("1", "e"): "هـ", ("1", "f"): "و",
+                  ("1", "g"): "ز", ("5", "b"): "ب", ("5", "c"): "ج"}
+    digits = str.maketrans("0123456789", "٠١٢٣٤٥٦٧٨٩")
+
     def one(ref):
-        m = re.match(r"(PDPL|IR|TR)-A0*(\d+)(.*)", ref.strip())
-        return tr(f"{SHORT_DOCUMENTS[m[1]]} م{m[2]}{m[3]}", f"{SHORT_DOCUMENTS[m[1]]} Art. {m[2]}{m[3]}") if m else ref.strip()
+        original = ref.strip()
+        m = re.fullmatch(r"(PDPL|IR|TR)-A0*(\d+)(?:\((\d+)([a-z]?)\))?", original)
+        if not m:
+            return original
+        doc, article, paragraph, letter = m.groups()
+        if EN:
+            suffix = f"({paragraph})" if paragraph else ""
+            suffix += f"({letter})" if letter else ""
+            return f"{DOCUMENTS[doc]}, Art. {article}{suffix}"
+        arabic_letter = ir_letters.get((paragraph, letter)) if doc == "IR" and article == "4" else None
+        if letter and not arabic_letter:
+            return original
+        text = f"{DOCUMENTS[doc]}، المادة {article.translate(digits)}"
+        if paragraph:
+            text += f"، الفقرة ({paragraph.translate(digits)})"
+        if arabic_letter:
+            text += f"، البند ({arabic_letter})"
+        return text
     return tr("، ", ", ").join(one(r) for r in articles.split(";") if r.strip())
 
 
@@ -270,12 +311,15 @@ HERO = {"qa": (tr("وش تبي تعرف عن حماية بياناتك؟", "What
 def hero(page):
     """Big green banner: brand on the right, page headline in the middle (nav sits on its left)."""
     title, subtitle = HERO[page]
+    if page == "qa":
+        title = "خصوصيتك مُصانة، وامتثالك للأنظمة أسهل."
     st.markdown(
-        f'<div class="hero"><div class="brand"><div class="app-logo">{ICONS["shield"]}</div><div>'
-        '<div class="app-title">' + tr("مساعد الامتثال لنظام حماية البيانات الشخصية",
-                                          "Saudi Personal Data Protection Assistant") + '</div>'
-        '<div class="app-subtitle">PDPL Compliance Copilot</div></div></div>'
-        f'<div class="hero-center"><h1>{title}</h1><p>{subtitle}</p></div></div>',
+        f'<div class="hero"><div class="brand"><div><img class="musaan-wordmark" '
+        f'src="{HEADER_ICON_URL}" alt="مُصان | MUSAAN" width="260" height="75">'
+        '<div class="app-subtitle">' + tr("مساعد الامتثال لنظام حماية البيانات الشخصية",
+                                          "Saudi Personal Data Protection Assistant") + '</div></div></div>'
+        f'<div class="hero-center"><h1 dir="{"rtl" if page == "qa" else ("ltr" if EN else "rtl")}">{title}</h1>'
+        f'<p>{subtitle}</p></div></div>',
         unsafe_allow_html=True)
 
 
@@ -373,7 +417,8 @@ def page_qa():
     with st.container(key="askbox"), st.form("ask_form", border=False):
         text_col, button_col = st.columns([6, 1], vertical_alignment="center")
         question = text_col.text_input(tr("السؤال", "Question"), key="question", label_visibility="collapsed",
-                                       placeholder=tr("اكتب سؤالك بالعربية أو الإنجليزية", "Type your question in Arabic or English"))
+                                       placeholder=tr("اكتب استفسارك عن نظام حماية البيانات الشخصية...",
+                                                      "Enter your question about the Personal Data Protection Law..."))
         clicked = button_col.form_submit_button(tr("اسأل", "Ask"), type="primary", use_container_width=True)
     if clicked:
         if question.strip():
@@ -467,7 +512,7 @@ GAP_STEPS = {"guess": tr("البحث عن موقع الشركة...", "Finding th
              "web": tr("البحث عن السياسة في الإنترنت...", "Searching the web for the policy..."),
              "analyse": tr("مقارنة السياسة بـ17 متطلباً من النظام...", "Comparing the policy with the law's 17 requirements..."),
              "check": tr("التحقق من أن كل اقتباس موجود في نص السياسة...", "Checking that every quote is in the policy..."),
-             "classify": tr("تصنيف كل دليل بمصنّف OPP-115...", "Labelling each piece of evidence with the OPP-115 classifier...")}
+             "classify": tr("تحديد فئة كل دليل...", "Identifying each evidence category...")}
 
 # OPP-115 categories of the 3A classifier, in Arabic
 OPP115_AR = {"First Party Collection/Use": "جمع الجهة للبيانات واستخدامها",
@@ -785,7 +830,7 @@ def requirement_card(r, checklist, i=0):
             category = r["opp115"] if EN else OPP115_AR.get(r["opp115"], r["opp115"])
             match = (tr("يطابق المتطلب", "matches the requirement") if r["opp115_match"]
                      else tr("لا يطابق تصنيفات المتطلب", "not one of the requirement's categories"))
-            lines.append(f'<div class="meta">{tr("تصنيف المصنّف (OPP-115)", "Classifier label (OPP-115)")}: '
+            lines.append(f'<div class="meta">{tr("فئة الدليل", "Evidence category")}: '
                          f'{esc(category)} · {match}</div>')
     if r.get("applies") == "conditional" and r["status"] == "missing" and row is not None:
         lines.append(f'<div class="meta">{tr("يُشترط في حال", "Only required if")}: {esc(row.condition if EN else row.condition_ar)}</div>')
@@ -799,10 +844,10 @@ def requirement_card(r, checklist, i=0):
 
 def compliance_gauge(percent):
     fig = go.Figure(go.Indicator(
-        mode="gauge+number", value=percent, number={"suffix": "%", "font": {"size": 44, "color": "#0F5132"}},
+        mode="gauge+number", value=percent, number={"suffix": "%", "font": {"size": 44, "color": "#06311F"}},
         title={"text": "مغطى بالكامل", "font": {"size": 15, "color": "#6B7280"}},
         gauge={"axis": {"range": [0, 100], "tickwidth": 0, "tickfont": {"size": 11}},
-               "bar": {"color": "#0F5132", "thickness": 0.75},
+               "bar": {"color": "#0B7A4C", "thickness": 0.75},
                "bgcolor": "#E3EBE6", "borderwidth": 0,
                "steps": [{"range": [0, 50], "color": "#FBEAEA"}, {"range": [50, 80], "color": "#FBF3E2"},
                          {"range": [80, 100], "color": "#E8F1EC"}]}))
@@ -1226,12 +1271,13 @@ with st.container(key="page_qa"):
 with st.container(key="page_gap"):
     hero("gap")
     page_gap()
-st.markdown('<div class="app-footer"><div class="footer-notice">'
-            + tr('تنبيه: مشروع تعليمي، وليس استشارة قانونية. <span dir="ltr">Educational project, not legal advice.</span>',
-                 'Note: educational project, not legal advice. <span dir="rtl">مشروع تعليمي، وليس استشارة قانونية.</span>')
-            + '</div><div>' + tr("© 2026 فريق مشروع PDPL Compliance Copilot. جميع الحقوق محفوظة.",
-                                 "© 2026 PDPL Compliance Copilot team. All rights reserved.")
-            + '</div></div>', unsafe_allow_html=True)
+with st.container(key="footer"):
+    st.markdown('<div class="app-footer"><div class="footer-notice">'
+                + tr('<span dir="rtl">تنبيه: مشروع تعليمي، وليس استشارة قانونية.</span><span dir="ltr">Educational project, not legal advice.</span>',
+                     '<span dir="ltr">Note: educational project, not legal advice.</span><span dir="rtl">مشروع تعليمي، وليس استشارة قانونية.</span>')
+                + '</div><div>' + tr("© 2026 فريق مُصان | MUSAAN. جميع الحقوق محفوظة.",
+                                     "© 2026 مُصان | MUSAAN team. All rights reserved.")
+                + '</div></div>', unsafe_allow_html=True)
 history_panel()  # last, so a question or analysis from this run is already in the list
 st.iframe(PAGE_SCRIPT, height=1)
 
