@@ -558,7 +558,6 @@ html.pdpl-dark .theme-btn .sun { display: grid; }
 
 /* slim header: one row with a smaller logo, no line under it, and plain icons for the look and language */
 .hero { padding-top: 0.9rem; padding-bottom: 6.4rem; }  /* room for the orb between the headline and the box */
-.musaan-wordmark { width: 190px; }
 .hero .app-subtitle { display: none; }
 .hero-center { margin-top: 1.9rem; }
 .theme-btn, .st-key-lang_toggle button { background: transparent !important; width: 2.3rem; height: 2.3rem; opacity: 0.85; }
