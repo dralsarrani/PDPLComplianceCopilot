@@ -528,3 +528,39 @@ html.pdpl-dark .theme-btn .sun { display: grid; }
 /* Q&A: which texts the router searched, and long control numbers (2-10-3) */
 .route-note { font-size: 0.8rem; color: var(--muted); margin: -0.2rem 0 0.5rem; }
 .source-num.long { width: auto; min-width: 52px; padding: 0 6px; font-size: 0.8rem; }
+
+/* voice: a round microphone at the end of the question row, next to the Ask / Check button */
+.st-key-question_voice, .st-key-gap_query_voice {
+  position: absolute !important; inset-inline-end: 0.8rem; bottom: 0.7rem; width: 51px !important; z-index: 2; }
+[class*="st-key-askbox"]:has(.st-key-question_voice, .st-key-gap_query_voice) [data-testid="stForm"] { padding-inline-end: 60px; }
+.st-key-question_voice [data-testid="stWidgetLabel"], .st-key-gap_query_voice [data-testid="stWidgetLabel"],
+.st-key-question_voice [data-testid="stElementToolbar"], .st-key-gap_query_voice [data-testid="stElementToolbar"],
+.st-key-question_voice [data-testid="stAudioInputWaveSurfer"], .st-key-gap_query_voice [data-testid="stAudioInputWaveSurfer"],
+.st-key-question_voice [data-testid="stAudioInputWaveformTimeCode"], .st-key-gap_query_voice [data-testid="stAudioInputWaveformTimeCode"],
+.st-key-question_voice button[aria-label="Play"], .st-key-gap_query_voice button[aria-label="Play"],
+.st-key-question_voice button[aria-label="Pause"], .st-key-gap_query_voice button[aria-label="Pause"] { display: none !important; }
+.st-key-question_voice [data-testid="stAudioInput"] > div:last-child, .st-key-gap_query_voice [data-testid="stAudioInput"] > div:last-child {
+  background: transparent !important; border: none !important; padding: 0 !important; height: 51px; min-height: 0; gap: 0; }
+.st-key-question_voice [data-testid="stAudioInput"] > div:last-child > div:not(:has(button)),
+.st-key-gap_query_voice [data-testid="stAudioInput"] > div:last-child > div:not(:has(button)) { display: none; }
+.st-key-question_voice [data-testid="stAudioInput"] > div:last-child > div:has(button),
+.st-key-gap_query_voice [data-testid="stAudioInput"] > div:last-child > div:has(button) { padding: 0 !important; margin: 0 !important; gap: 0 !important; width: 51px; }
+.st-key-question_voice button[data-testid="stAudioInputActionButton"], .st-key-gap_query_voice button[data-testid="stAudioInputActionButton"] {
+  width: 51px !important; min-width: 51px; height: 51px; flex: none; padding: 0 !important; border-radius: 50% !important; background: var(--panel); color: var(--green); border: 1px solid var(--line, #E5E7EB); }
+.st-key-question_voice button[aria-label="Record"]:hover, .st-key-gap_query_voice button[aria-label="Record"]:hover {
+  background: var(--green); color: #fff; }
+.st-key-question_voice button[data-testid="stAudioInputActionButton"] svg, .st-key-gap_query_voice button[data-testid="stAudioInputActionButton"] svg {
+  width: 22px; height: 22px; }
+.st-key-question_voice button[aria-label="Stop recording"], .st-key-gap_query_voice button[aria-label="Stop recording"] {
+  background: #C0392B !important; color: #fff !important; border-color: #C0392B !important; animation: voice-pulse 1.2s ease-in-out infinite; }
+@keyframes voice-pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(192, 57, 43, 0.45); } 50% { box-shadow: 0 0 0 9px rgba(192, 57, 43, 0); } }
+@media (prefers-reduced-motion: reduce) { .st-key-question_voice button, .st-key-gap_query_voice button { animation: none !important; } }
+
+/* slim header: one row with a smaller logo, no line under it, and plain icons for the look and language */
+.hero { padding-top: 0.9rem; padding-bottom: 6.4rem; }  /* room for the orb between the headline and the box */
+.musaan-wordmark { width: 190px; }
+.hero .app-subtitle { display: none; }
+.hero-center { margin-top: 1.9rem; }
+.theme-btn, .st-key-lang_toggle button { background: transparent !important; width: 2.3rem; height: 2.3rem; opacity: 0.85; }
+.theme-btn:hover, .st-key-lang_toggle button:hover { background: rgba(255, 255, 255, 0.14) !important; opacity: 1; }
+.st-key-navbar .st-key-lang_toggle { left: calc(-8rem + 2.3rem + 4px); }
