@@ -606,3 +606,22 @@ html.pdpl-dark .theme-btn .sun { display: grid; }
   .ring-wrap .how { position: static; margin: -1.6rem auto 0; }
   .how-tip { top: 10.5rem; inset-inline: 1rem; width: auto; }
 }
+
+/* progress line while asking or analysing: keep the text and spinner, drop the box */
+[data-testid="stExpander"]:has([data-testid="stExpanderIconSpinner"]) details {
+  border: 0 !important; background: transparent !important; box-shadow: none !important; }
+
+/* answer: the exact words fold under each sentence; checks and official links share one footer row */
+details.evidence { margin-top: 0.15rem; background: transparent !important; border: 0 !important; padding: 0 !important; }
+details.evidence summary { cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 0.3rem;
+  color: var(--green); font-size: 0.78rem; font-weight: 600; }
+details.evidence summary::-webkit-details-marker { display: none; }
+details.evidence summary:hover { text-decoration: underline; }
+details.evidence[open] summary { margin-bottom: 0.3rem; }
+.answer-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.9rem;
+  border-top: 1px solid var(--line); padding-top: 0.8rem; margin-top: 0.2rem; }
+.answer-foot .check-line { margin: 0; }
+.answer-foot .source-note { flex-basis: 100%; border: 0; background: transparent; padding: 0; margin: 0;
+  color: var(--muted); font-size: 0.8rem; }
+/* the full-width green bands use 100vw, which includes the scrollbar: clip that extra width */
+[data-testid="stMain"], [data-testid="stAppViewContainer"] { overflow-x: clip; }
