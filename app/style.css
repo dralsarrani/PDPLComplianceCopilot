@@ -582,3 +582,27 @@ html.pdpl-dark .theme-btn .sun { display: grid; }
 /* keep the open tip above the boxes that come after the card */
 [data-testid="stElementContainer"]:has(.how:hover), [data-testid="stElementContainer"]:has(.how:focus) {
   position: relative; z-index: 30; }
+
+/* phone: the page switch, look and language buttons on one dark strip above the hero,
+   clear of the history button in the top corner */
+@media (max-width: 900px) {
+  .st-key-navbar { flex-direction: row !important; flex-wrap: wrap; align-items: center; gap: 0.3rem !important;
+    margin: -1rem calc(50% - 50vw) 0 !important; padding: 0.85rem 1rem 0.2rem !important; background: #04241A;
+    width: auto !important; max-width: none !important; }
+  .st-key-navbar [data-testid="stElementContainer"]:has(.page-nav) { flex: 1 1 100%; width: auto !important;
+    padding-inline-start: 3.2rem; }
+  .st-key-navbar [data-testid="stElementContainer"]:has(.theme-btn) { width: auto !important; flex: none;
+    margin-inline-start: auto; }
+  .st-key-navbar .st-key-lang_toggle { width: auto !important; flex: none; }
+  .theme-btn, .st-key-lang_toggle button { background: transparent !important; opacity: 1; }
+  .page-nav button { font-size: 13.5px; padding: 0.45rem 0.5rem; gap: 0.3rem; }
+  .page-nav button svg { display: none; }
+  .hero { margin-top: -1rem; }
+}
+/* phone: the (i) explanation opens across the card instead of running off the screen */
+@media (max-width: 640px) {
+  .ring-wrap { position: static; }
+  .verdict { position: relative; }
+  .ring-wrap .how { position: static; margin: -1.6rem auto 0; }
+  .how-tip { top: 10.5rem; inset-inline: 1rem; width: auto; }
+}

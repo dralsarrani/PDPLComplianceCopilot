@@ -19,7 +19,7 @@ css.textContent = `
 #musan-orb.blink .eye { animation: musan-blink .2s ease-in-out; }
 #musan-orb.hop .ball { animation: musan-hop .18s ease-out; }
 #musan-orb.happy .eye { transform: scaleY(.45); }
-@media (max-width: 640px) { #musan-orb { display: none; } }  /* no room beside the box on a phone */
+@media (max-width: 640px) { #musan-orb { width: 48px; height: 48px; margin-top: 14px; } }  /* smaller on a phone */
 @keyframes musan-blink { 50% { transform: scaleY(.1); } }
 @keyframes musan-hop { 50% { transform: scale(1.04, .95); } }
 @media (prefers-reduced-motion: reduce) {
