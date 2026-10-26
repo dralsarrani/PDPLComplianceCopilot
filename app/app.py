@@ -307,6 +307,12 @@ def count_controls(n):
     return {1: "ضابط واحد", 2: "ضابطين"}.get(n, f"{n} ضوابط" if n <= 10 else f"{n} ضابطاً")
 
 
+def count_citations(n):
+    if EN:
+        return "1 citation" if n == 1 else f"{n} citations"
+    return {1: "استشهاد واحد", 2: "استشهادين"}.get(n, f"{n} استشهادات" if n <= 10 else f"{n} استشهاداً")
+
+
 def count_sources(citations):
     """'3 مواد' for law articles, '3 ضوابط' for NCA controls, 'مادة واحدة وضابطين' when the answer has both."""
     controls = sum(ref_parts(c)[0] == "ECC" for c in citations)
@@ -420,8 +426,9 @@ def answer_sentences(result):
     for s in result["sentences"]:
         tags = "".join(f'<span class="cite-tag">{esc(short_article(c))}</span>' for c in s["citations"])
         evidence = s.get("evidence")
-        quote = (f'<div class="evidence-quote" dir="auto">«{esc(evidence["quote"])}»'
-                 f'<div class="evidence-meta">{ICONS["check"]}{tr("نص حرفي من", "Word for word from")} {esc(article_label(evidence["id"]))}</div></div>'
+        # the exact words fold away under the sentence, so the answer reads once
+        quote = (f'<details class="evidence"><summary>{ICONS["check"]}{tr("عرض النص الحرفي", "Show the exact words")}</summary>'
+                 f'<div class="evidence-quote" dir="auto">«{esc(evidence["quote"])}»</div></details>'
                  if evidence else "")
         parts.append(f'<div class="answer-sentence"><div dir="auto">{esc(s["text"])} {tags}</div>{quote}</div>')
     return '<div class="answer-body">' + "".join(parts) + "</div>"
@@ -492,26 +499,32 @@ def page_qa():
                     f'<div class="answer-body">{esc(result["answer"])}</div></div>', unsafe_allow_html=True)
         return
 
+    checked = sum(len(row["citations"]) for row in result.get("citation_check", []))
+    problems = result.get("problems", [])
+    summary = tr(f"تم التحقق من {count_citations(checked)}", f"{count_citations(checked)} checked")
+    if problems:
+        summary += tr(f"، واستُبعد {len(problems)} لا تظهر في الإجابة", f"; {len(problems)} removed from the answer")
     articles = load_articles()
     sources = []
     for cid in result["citations"]:
         doc, number, unit = ref_parts(cid)
         article = articles[cid]
-        # IR, TR and ECC texts have titles; PDPL articles have none, so their opening words are shown
-        title = article.get("article_title") or f'{article["official_text"][:90]}...'
+        # IR, TR and ECC texts have titles; PDPL articles have none (their words are already in the answer)
+        title = article.get("article_title")
         small = tr("ضابط", "Ctrl") if doc == "ECC" else tr("مادة", "Art.")
         inner = (f'<div class="source-num{" long" if doc == "ECC" else ""}"><small>{small}</small>{number}</div><div>'
                  f'<div class="source-title">{esc(article_label(cid))}</div>'
-                 f'<div class="source-doc" dir="auto">{esc(title)}</div></div>')
+                 + (f'<div class="source-doc" dir="auto">{esc(title)}</div>' if title else "") + '</div>')
         sources.append(f'<div class="source">{inner}</div>')
     st.markdown('<div class="answer-card split"><div class="answer-main">'
                 f'<div class="answer-title">{tr("الإجابة", "Answer")}</div>'
                 + (f'<div class="route-note">{tr("بحثنا في", "Searched")}: {ROUTES[result["source"]]}</div>'
                    if result.get("source") in ("ecc", "both") else "")
-                + f'{answer_sentences(result)}'
-                f'<span class="verified">{ICONS["check"]}{tr("مستندة إلى", "Based on")} {count_sources(result["citations"])}</span></div>'
-                f'<div class="answer-side"><div class="side-title">{tr("المصادر", "Sources")}</div>{"".join(sources)}</div></div>'
-                + official_sources_note(result["citations"]), unsafe_allow_html=True)
+                + f'{answer_sentences(result)}<div class="answer-foot">'
+                f'<span class="verified">{ICONS["check"]}{tr("مستندة إلى", "Based on")} {count_sources(result["citations"])}</span>'
+                f'<span class="check-line">{summary}</span>{official_sources_note(result["citations"])}</div></div>'
+                f'<div class="answer-side"><div class="side-title">{tr("المصادر", "Sources")}</div>{"".join(sources)}</div></div>',
+                unsafe_allow_html=True)
     with st.expander(tr("عرض نص المواد كاملاً", "Show the full text of the articles")):
         for cid in result["citations"]:
             heading = article_label(cid) + (f' – {articles[cid]["article_title"]}' if articles[cid].get("article_title") else "")
@@ -519,12 +532,6 @@ def page_qa():
                         f'<div class="article-text" dir="auto">{esc(articles[cid]["official_text"])}</div>',
                         unsafe_allow_html=True)
 
-    checked = sum(len(row["citations"]) for row in result.get("citation_check", []))
-    problems = result.get("problems", [])
-    summary = tr(f"تم التحقق من {checked} استشهاد", f"{checked} citations checked")
-    if problems:
-        summary += tr(f"، واستُبعد {len(problems)} لا تظهر في الإجابة", f"; {len(problems)} removed from the answer")
-    st.markdown(f'<div class="check-line">{ICONS["check"]}{summary}</div>', unsafe_allow_html=True)
     if problems:
         with st.expander(tr("تفاصيل الاستشهادات المستبعدة", "Removed citations")):
             for p in problems:
