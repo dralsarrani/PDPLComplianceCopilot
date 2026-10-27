@@ -625,3 +625,12 @@ details.evidence[open] summary { margin-bottom: 0.3rem; }
   color: var(--muted); font-size: 0.8rem; }
 /* the full-width green bands use 100vw, which includes the scrollbar: clip that extra width */
 [data-testid="stMain"], [data-testid="stAppViewContainer"] { overflow-x: clip; }
+
+/* asked a question in the company box: how the analysis works */
+.method-card {
+  background: var(--card); border: 1px solid var(--line); border-inline-start: 4px solid var(--green);
+  border-radius: 12px; padding: 1rem 1.2rem; margin: 0.8rem 0; color: var(--ink);
+}
+.method-card b { display: block; color: var(--green); font-size: 1.05rem; margin-bottom: 0.4rem; }
+.method-card p { margin: 0.3rem 0; line-height: 1.8; }
+.method-card .method-hint { color: var(--muted, #6B7280); font-size: 0.9rem; margin-top: 0.6rem; }

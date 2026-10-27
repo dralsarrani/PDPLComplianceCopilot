@@ -158,7 +158,12 @@ def sitemap_links(site):
         except (Blocked, requests.RequestException):
             continue
         read += 1
-        body = gzip.decompress(r.content).decode("utf-8", "ignore") if sitemap.endswith(".gz") else r.text
+        body = r.text
+        if r.content[:2] == b"\x1f\x8b":  # still gzipped; a ".gz" name alone does not mean it is
+            try:
+                body = gzip.decompress(r.content).decode("utf-8", "ignore")
+            except (OSError, EOFError):
+                continue
         for loc in re.findall(r"<loc>\s*(.*?)\s*</loc>", body, re.IGNORECASE):
             loc = loc.replace("&amp;", "&")
             if re.search(r"\.xml(\.gz)?$", loc, re.IGNORECASE):
