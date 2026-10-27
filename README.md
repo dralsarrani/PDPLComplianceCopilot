@@ -1,4 +1,4 @@
-# مُصان (Musaan) · PDPL Copilot
+# Musaan (مُصان) · PDPL Copilot
 
 > ⚠️ **Not legal advice.** PDPL Copilot is a student project. Its answers and gap reports can be wrong and must be checked against the official texts and a qualified lawyer.
 
