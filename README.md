@@ -10,11 +10,30 @@ PDPL Copilot does three things:
 2. **Cybersecurity controls Q&A.** The same assistant also answers from the National Cybersecurity Authority's Essential Cybersecurity Controls (ECC-2:2024). A router decides for each question whether it needs the PDPL, the controls, or both. An Arabic question gets an Arabic answer quoting the official Arabic text; an English question gets English.
 3. **Privacy policy Gap Analyser.** Give it a company's privacy policy (link, file or pasted text). For each of 17 PDPL requirements it reports **covered / partial / missing**, with the sentence from the policy as evidence and the PDPL article behind the requirement.
 
+The app built on it is called **مُصان (Musaan)**.
+
+**Contents:** [Results at a glance](#results-at-a-glance) · [Team](#team) · [How it works](#how-it-works) · [Data](#data) · [Setup](#setup) · [Run the demo app](#run-the-demo-app) · [Reproduce the results](#reproduce-the-results) · [Results](#results) · [Limitations](#limitations) · [Repository structure](#repository-structure)
+
+## Results at a glance
+
+| What we measured | Development set | Held-out test set |
+|---|---|---|
+| Answers citing a correct article | **97.1%** (33/34) | **92.9%** (13/14) |
+| Out-of-scope questions answered "not covered" | **100%** (6/6) | 83.3% (5/6) |
+| Answerable questions wrongly refused | **0%** (0/34) | **0%** (0/14) |
+| Right article in the top 5 search results | 90.2% | 100% |
+| Same gpt-4o-mini **without** our retrieval: correct article cited | 14.7% | |
+| Gap Analyser agrees with the team's labels (11 Saudi policies) | **77.5%** (93.0% for mentioned vs missing) | |
+| OPP-115 classifier, macro-F1 (BERT vs TF-IDF baseline) | | **0.783** vs 0.742 |
+| Cybersecurity questions: right control in the top 5 | 100% (12/12) | |
+
+Details and how each number was produced are in [Results](#results); weaknesses are in [Limitations](#limitations).
+
 ## Team
 
 | Member | Role |
 |---|---|
-| Rana | Legal corpus (PDPL, IR, TR in Arabic and English), gold Q&A set |
+| Rana | Legal corpus (PDPL, IR, TR in Arabic and English), gold Q&A set, app design and the مُصان brand |
 | Mathayel | RAG: retrieval, reranking, answering, citation checking (experiments E1, E2, E3, E5) |
 | Danah | OPP-115 clause classifier: TF-IDF baseline vs fine-tuned BERT (experiment E4) |
 | Ahlam | Gap Analyser, Saudi policies and labels, Streamlit app, NCA cybersecurity controls |
@@ -60,7 +79,7 @@ flowchart LR
 | Data | Where | Source and licence |
 |---|---|---|
 | Legal corpus: PDPL 43 + IR 38 + TR 9 articles, AR + EN, one record per article (document, chapter, article number, language, text) | `data/processed/legal_articles_v1.0.{json,csv}` | Official texts published by SDAIA; scraped with `src/data/build_legal_corpus.py`; manual review in `data/review/` |
-| Gold Q&A: 40 development questions (6 unanswerable) + 20 test questions (6 unanswerable) | `data/evaluation/` | Written and reviewed by the team; see the READMEs in that folder |
+| Gold Q&A: 60 questions (30 Arabic, 30 English; 46 real-life scenarios, 14 direct), each with gold article ids, a reference answer and the supporting excerpt. 40 development (6 unanswerable) + 20 held-out test (6 unanswerable) | `data/evaluation/` | Written and reviewed by the team; see the READMEs in that folder |
 | OPP-115 privacy policy segments | `data/opp115/`, `data/opp115_segments.{csv,parquet}`, split in `configs/split.json` | OPP-115 corpus (Wilson et al., 2016), for research use |
 | NCA Essential Cybersecurity Controls ECC-2:2024: 108 controls, AR + EN | `data/processed/ecc_controls_v2024.{json,csv}`, questions in `data/evaluation/ecc_gold.csv` | Published by the National Cybersecurity Authority (https://nca.gov.sa/en/regulatory-documents/controls-list/ecc/); download the English and Arabic PDFs into `data/nca/` and run `python -m src.nca.build_ecc` |
 | 11 Saudi privacy policies + team labels (187 policy × requirement labels) | `data/policies/`, `data/labels/team_labels.csv` | Each policy belongs to its company; texts kept for non-commercial education with source link and download date (`data/policies/README.md`). Re-download with `python -m src.policies.fetch_policies` |
@@ -128,7 +147,7 @@ All commands run from the project root.
 | E1: LLM only vs full system | `python -m retrieval.experiment_e1_llm_only` | Yes | `results/e1_llm_only.json`, `.csv` |
 | Experiments E1, E2, E3, E5 (retrieval) | `python -m retrieval.experiment_e1` (and `_e2`, `_e3`, `_e5`) | No | printed; summary in `EXPERIMENT_RESULTS.md` |
 | Cybersecurity controls: routing and search | `python -m retrieval.evaluate_ecc` | Yes | `results/ecc_eval/` |
-| Classifier (E4) | `notebooks/02_split.ipynb` to `06_error_analysis.ipynb` | No | `results/e4_*.csv` |
+| Classifier (E4) | `notebooks/02_split.ipynb` to `08_evidence.ipynb` | No | `results/e4_*.csv` |
 
 The classifier split is by policy (70/15/15) with seed 42 (`configs/split.json`). The fine-tuned model is on Hugging Face (`dralsarrani/opp115-bert`, set by `CLASSIFIER_MODEL` in `.env`); the TF-IDF baseline is saved in `artifacts/classifier/baseline.joblib`.
 
@@ -213,6 +232,21 @@ v0 is too lenient: in 22 of 32 cases the team labelled *partial*, v0 said *cover
 
 Per-category F1 is in `results/e4_test_comparison.csv`.
 
+Other starting models were trained with the same recipe and split, then scored on test once: Legal-BERT 0.774 (`04_finetune.ipynb`) and bge-base 0.765 (`07_finetune_bge.ipynb`). Averaging several models gave no gain on validation, so no ensemble is used. The app keeps BERT.
+
+**How sure are we?** (`notebooks/08_evidence.ipynb`)
+
+| Check | Result |
+|---|---|
+| 95% interval, resampling the 18 test policies 1000 times | baseline 0.685 to 0.775; BERT 0.721 to 0.827 |
+| BERT minus baseline | +0.040 (0.004 to 0.082); BERT ahead in 98.3% of resamples |
+| One human annotator scored against another (ceiling) | 0.749 |
+| BERT scored against a single annotator | 0.748, the same as human agreement |
+| Paragraphs (training unit) vs single sentences (what the Gap Analyser sends) | BERT 0.783 vs 0.619 |
+| Baseline with thresholds chosen by 5-fold cross-validation | 0.768 at 0.5 and 0.768 tuned: no gain |
+
+So BERT is reliably better than the baseline, and it already agrees with the labels as well as the human annotators agree with each other: the labels, not the model, are the limit. Scoring single sentences costs about 0.16, which is a known weakness of using the classifier on evidence sentences.
+
 ### Classifier on the Gap Analyser's evidence (170 evidence sentences from the 11 Saudi policies)
 
 Does the classifier's top OPP-115 label for an evidence sentence fall in the categories the checklist links to that requirement?
@@ -248,9 +282,10 @@ The one routing miss (ECC02, whether non-Saudis may hold cybersecurity jobs) wen
 - The Gap Analyser does not tell *covered* from *partial* well (partial F1 0.32).
 - The 11 Saudi policies were labelled in one language each (9 English, 2 Arabic). The app shows a saved policy in the interface language when that copy is kept (`python -m src.policies.fetch_other_language` saves the second language in `data/policies/ar/` and `data/policies/en/`; Al Rajhi, Saudia and Jarir are copied by hand; KFUPM has no Arabic policy page), and otherwise says so and offers the copy it has. The scores above are for the labelled copies only.
 - The Gap Analyser reads the first 60,000 characters of a policy (the longest of the 11 Saudi policies has 43,000). We chose not to split long policies into parts: a requirement covered in one part would be judged missing in the others.
-- The classifier is English only; Arabic evidence is machine-translated before it is labelled. It labels the analyser's evidence but does not yet help choose the verdict.
+- The classifier is English only; Arabic evidence is machine-translated before it is labelled. It labels the analyser's evidence but does not help choose the verdict. It was trained on paragraphs but is given single sentences, which lowers its macro-F1 from 0.783 to 0.619 (`08_evidence.ipynb`).
 - The *chapter* field is empty: the official texts (SDAIA platform and the Bureau of Experts page) list the articles without chapter headings, so there is no chapter to record. Retrieval and citations use the article number.
 - The Arabic NCA controls are rebuilt from the PDF's glyphs (11 ligatures mapped by hand, 3 words the PDF splits joined again); a few spacing or vowel-mark slips may remain.
+- The app runs on the user's own computer with their own OpenAI key; it is not deployed online. Without a key or network, only answers saved in the cache can be shown.
 - The router adds one gpt-4o-mini call (about one second) to every question.
 - The two graders agreed little on the 0 to 2 answer scores (κ 0.05): the scale did not say how complete a "2" must be.
 - A policy found by OpenAI web search may be summarised rather than copied word for word; the app marks such results as incomplete.
@@ -266,7 +301,7 @@ src/nca/             NCA cybersecurity controls corpus builder
 src/gap/             Gap Analyser v0/v1, evaluation, label sheet, highlighting, PDF report, library analysis
 src/policies/        finding, fetching and reading privacy policies (site, archives, web search, files)
 data/                legal corpus, gold Q&A, checklist, policy list, labels, OPP-115 segments
-notebooks/           corpus visualisation, classifier experiments (E4), error analysis
+notebooks/           corpus visualisation, classifier experiments (E4: 02 to 07), error analysis (06), evidence checks (08)
 configs/split.json   classifier train/val/test split (seed 42)
 artifacts/           saved TF-IDF baseline
 results/             evaluation outputs used in the report
