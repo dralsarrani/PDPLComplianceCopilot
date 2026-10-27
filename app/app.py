@@ -950,6 +950,9 @@ def page_gap():
                 st.warning(message(str(error)))
     elif submitted and len(query.strip()) >= MIN_PASTED:  # the policy itself was pasted in the box
         source = name_policy({"kind": "paste", "text": query, "date": today}, policies, library)
+    elif submitted and looks_like_question(query):  # a question about the analysis, not a company name
+        st.session_state.update(gap_report=None, gap_error=None)
+        st.markdown(METHOD_CARD, unsafe_allow_html=True)
     elif submitted and query.strip():
         matches = match_saved(query, policies, library)
         if len(matches) == 1 and matches[0][0] == "library":
@@ -1130,6 +1133,33 @@ WHY_EN = {"R01": "Without it you do not know who to contact if something happens
           "R15": "You can stop them using your data whenever you want",
           "R16": "You know whether your data is safe from leaks",
           "R17": "A program may turn down a request, like a loan, with no person reviewing it"}
+
+
+QUESTION_START = re.compile(r"^(على أي|على اي|علي أي|كيف|ليش|لماذا|لم|وش|ايش|إيش|ماذا|ما هي|ما هو|ماهي|ماهو|هل|متى|أين|اين|وين|كم"
+                            r"|how|why|what|which|is|are|does|do|can|when|where)\b", re.I)
+
+
+def looks_like_question(text):
+    """A question typed in the company box, e.g. 'على أي أساس يتم التحليل؟'."""
+    text = text.strip()
+    marked = " " in text and ("?" in text or "؟" in text)  # a link can hold "?" but no space
+    return marked or bool(QUESTION_START.match(text))
+
+
+# asked in the company box: how the analysis works, in general
+METHOD_CARD = ('<div class="method-card">'
+               f'<b>{tr("منهجية التحليل", "How the analysis works")}</b>'
+               + "".join(f"<p>{line}</p>" for line in tr(
+                   ["يُوجب نظام حماية البيانات الشخصية على الجهات أن تُضمِّن سياسة الخصوصية سبعة عشر عنصراً تُعرِّف صاحب البيانات بحقوقه وبكيفية معالجة بياناته.",
+                    "يُحلِّل مُصان سياسة الجهة آلياً لبيان مدى استيفائها لكل عنصر (مستوفى، أو جزئي، أو غير مذكور)، مع إيراد الشاهد من نصّ السياسة والمادة النظامية التي يستند إليها.",
+                    "النتيجة استرشادية، ولا تُغني عن الرأي القانوني المتخصص."],
+                   ["The Personal Data Protection Law requires any company that collects your data to tell you "
+                    "17 specific things in its privacy policy.",
+                    "Musaan checks a company's policy automatically for each of them (covered, partial or missing) "
+                    "and shows the sentence from the policy and the article behind it.",
+                    "The result is guidance only, not a legal ruling."]))
+               + f'<p class="method-hint">{tr("لتحليل سياسة، أدخل اسم الجهة أو رابط موقعها.", "To check a policy, type the company name or its website.")}</p>'
+               '</div>')
 
 
 # the (i) beside the score: what the result is based on, shown on hover or tap
