@@ -1,6 +1,4 @@
-# PDPL Copilot
-
-**AIEP Capstone, Track B: Saudi Personal Data Protection Law (PDPL) compliance assistant**
+# مُصان (Musaan) · PDPL Copilot
 
 > ⚠️ **Not legal advice.** PDPL Copilot is a student project. Its answers and gap reports can be wrong and must be checked against the official texts and a qualified lawyer.
 
@@ -9,8 +7,6 @@ PDPL Copilot does three things:
 1. **Bilingual legal Q&A.** Ask a question about the PDPL in Arabic or English. The system finds the relevant articles of the PDPL, its Implementing Regulation and the Transfer Regulation, and answers **only** from them, citing the article for every sentence. If the texts do not answer the question, it says **"not covered"** instead of guessing.
 2. **Cybersecurity controls Q&A.** The same assistant also answers from the National Cybersecurity Authority's Essential Cybersecurity Controls (ECC-2:2024). A router decides for each question whether it needs the PDPL, the controls, or both. An Arabic question gets an Arabic answer quoting the official Arabic text; an English question gets English.
 3. **Privacy policy Gap Analyser.** Give it a company's privacy policy (link, file or pasted text). For each of 17 PDPL requirements it reports **covered / partial / missing**, with the sentence from the policy as evidence and the PDPL article behind the requirement.
-
-The app built on it is called **مُصان (Musaan)**.
 
 **Contents:** [Results at a glance](#results-at-a-glance) · [Team](#team) · [How it works](#how-it-works) · [Data](#data) · [Setup](#setup) · [Run the demo app](#run-the-demo-app) · [Reproduce the results](#reproduce-the-results) · [Results](#results) · [Limitations](#limitations) · [Repository structure](#repository-structure)
 
@@ -33,10 +29,10 @@ Details and how each number was produced are in [Results](#results); weaknesses 
 
 | Member | Role |
 |---|---|
-| Rana | Legal corpus (PDPL, IR, TR in Arabic and English), gold Q&A set, app design and the مُصان brand |
+| Rana | Legal corpus (the PDPL, its Implementing Regulation and its Transfer Regulation, in Arabic and English), gold Q&A set, app design and the مُصان brand |
 | Mathayel | RAG: retrieval, reranking, answering, citation checking (experiments E1, E2, E3, E5) |
 | Danah | OPP-115 clause classifier: TF-IDF baseline vs fine-tuned BERT (experiment E4) |
-| Ahlam | Gap Analyser, Saudi policies and labels, Streamlit app, NCA cybersecurity controls |
+| Ahlam | Gap Analyser and its evaluation, Saudi policies and labels, NCA cybersecurity controls, Streamlit app and its features (policy search and upload, highlighted evidence, PDF report, voice input, Arabic/English, dark mode, history) |
 
 ## Why
 
@@ -71,7 +67,7 @@ flowchart LR
 - **Classifier** (`src/classifier/classify.py`): labels English policy paragraphs with the 10 OPP-115 categories. `src/gap/evidence_labels.py` connects it to the Gap Analyser: each evidence sentence (translated to English with gpt-4o-mini if it is Arabic) is labelled by the classifier, the label is shown next to the evidence in the app, and it is checked against the OPP-115 categories the checklist links to that requirement. The classifier does not change the analyser's verdicts.
 - **Second corpus: NCA Essential Cybersecurity Controls (ECC-2:2024)**: `src/nca/build_ecc.py` reads the official English and Arabic PDFs into 108 controls in each language (`data/processed/ecc_controls_v2024.{json,csv}`; domain, subdomain, objective, control text). The Arabic PDF has ligatures with no text value; `src/nca/arabic_pdf.py` maps them back and checks every control number against the English one. `retrieval/router.py` (gpt-4o-mini, keyword fallback) sends each question to the PDPL, to the controls, or to both; `retrieval/ecc_retriever.py` runs the same search pipeline on its own index, in the question's language. Questions routed to the PDPL are answered exactly as before.
 - **Second chance** (`retrieval/answer.py`): when the router sent a question to the PDPL, the PDPL texts do not answer it and it uses cybersecurity words, the controls are searched too. A question the PDPL answers never gets there.
-- **Finding a policy** (`src/policies/`): the app takes a company name, a website, a policy link, or a file (PDF, Word, TXT, `read_file.py`). It looks in this order: the 11 Saudi policies and the global companies analysed ahead (`data/library/`, `src/gap/analyse_library.py`); the company's own site (`find_policy.py`: privacy link, sitemap, common paths; robots.txt is respected); public archives (`archive.py`: Open Terms Archive, Wayback Machine, Common Crawl); and last, an OpenAI web search (`web_search.py`), whose copy may be incomplete, so the requirements it lacks are shown grey and the result is marked incomplete. Sites that block bots are never worked around; the user can upload the policy instead. A pasted or uploaded policy is named after its company, read from the text itself without OpenAI (`company_name.py`: the title, the sentence that names the company, its own links, the © line, a privacy email, then the file name); when none is found the user can type the name.
+- **Finding a policy** (`src/policies/`): the app takes a company name, a website, a policy link or a file (PDF, Word, TXT). It tries, in order: the policies already analysed (`data/library/`), the company's own site (robots.txt respected), public archives (Open Terms Archive, Wayback Machine, Common Crawl), and last an OpenAI web search, whose copy may be incomplete and is marked so. Sites that block bots are never worked around; the user can upload the policy instead. A pasted or uploaded policy is named after its company, read from the text itself (`company_name.py`).
 - **In the app** the quotes are marked inside the policy text (green covered, amber partial; missing requirements are listed above the text, `src/gap/highlight.py`), and the gap report can be downloaded as a PDF with an evidence appendix (`src/gap/report_pdf.py`, Arabic or English; font IBM Plex Sans Arabic, OFL, in `app/fonts/`).
 
 ## Data
@@ -113,6 +109,8 @@ The first run downloads the embedding and reranker models and builds `chroma_db/
 python -m streamlit run app/app.py
 ```
 
+The app opens in your browser at http://localhost:8501.
+
 What the app shows:
 
 - **Ask the law**: the answer sentence by sentence, each with its article or control number and the exact quote found in the text; source cards; a line linking the official texts (SDAIA for the PDPL, NCA for the controls); which texts were searched for cybersecurity questions; the full text of the cited articles; how many citations were checked.
@@ -123,7 +121,7 @@ What the app shows:
 
 Without network, questions that were answered before are served from the cache (`results/answers_cache.json`): ask the demo questions once before presenting.
 
-From the command line:
+Without the app, from the command line (the first line asks one question, the second analyses one saved policy):
 
 ```bash
 python -m retrieval.answer "هل يجوز نقل بيانات العملاء خارج المملكة؟"
@@ -152,6 +150,17 @@ All commands run from the project root.
 The classifier split is by policy (70/15/15) with seed 42 (`configs/split.json`). The fine-tuned model is on Hugging Face (`dralsarrani/opp115-bert`, set by `CLASSIFIER_MODEL` in `.env`); the TF-IDF baseline is saved in `artifacts/classifier/baseline.joblib`.
 
 ## Results
+
+**Terms used below**
+
+| Term | Meaning |
+|---|---|
+| PDPL / IR / TR | Personal Data Protection Law / its Implementing Regulation / its Regulation on Personal Data Transfer outside the Kingdom |
+| Recall@5 | Share of questions where a correct article is among the first 5 search results |
+| MRR | How high the first correct article is ranked, on average (1 = always first) |
+| Macro-F1 | F1 score (balance of precision and recall) averaged over all categories, so small categories count as much as big ones |
+| Cohen's κ | Agreement between two raters after removing agreement expected by chance (0 = chance, 1 = perfect) |
+| Development / test set | Questions used while building the system / questions kept aside and scored once at the end |
 
 ### Retrieval (34 answerable development questions, 17 AR + 17 EN)
 
@@ -271,7 +280,7 @@ The link holds for collection, sharing, retention and security (R03 to R05, R07,
 | Right control in the top 5 | **100%** (12/12) |
 | MRR | 0.903 |
 
-The one routing miss (ECC02, whether non-Saudis may hold cybersecurity jobs) went to the PDPL. To catch such misses, `answer()` gives a second chance: when the PDPL texts do not answer a question that uses cybersecurity words, the controls are tried as well (a question the PDPL answers never gets there). The one unanswerable PDPL question with cybersecurity words (Q060) still gets "not covered". Because all 60 PDPL questions stay on the PDPL route with the unchanged PDPL prompt, the PDPL results above still hold. We tried a broader router prompt (all 29 ECC subdomain titles plus "any cybersecurity question goes to the controls"): it routed 12/12 cybersecurity questions right but moved 2 of the 60 PDPL questions away from the PDPL, so we kept the first router. Twelve questions are a small sample.
+The one routing miss (ECC02, whether non-Saudis may hold cybersecurity jobs) went to the PDPL. To catch such misses, `answer()` gives a second chance: when the PDPL texts do not answer a question that uses cybersecurity words, the controls are tried too. A question the PDPL answers never gets there, so all PDPL results above still hold, and the one unanswerable PDPL question with cybersecurity words (Q060) still gets "not covered". A broader router prompt routed 12/12 but moved 2 of the 60 PDPL questions away from the PDPL, so we kept the first router. Twelve questions are a small sample.
 
 ## Limitations
 
