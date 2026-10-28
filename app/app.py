@@ -1084,7 +1084,8 @@ def page_gap():
 
     analysed_on = st.session_state.get("gap_saved_on") or source.get("date", "")
     st.download_button(tr("تحميل التقرير (PDF) مع ملحق الأدلة", "Download the report (PDF) with an evidence appendix"),
-                       report_pdf(json.dumps(report, ensure_ascii=False), source["name"], analysed_on, "en" if EN else "ar"),
+                       report_pdf(json.dumps(report, ensure_ascii=False), source["name"], analysed_on, "en" if EN else "ar",
+                                  source.get("url", "")),
                        file_name=f"pdpl-report-{re.sub(r'[^A-Za-z0-9]+', '-', source.get('site') or source.get('id') or 'policy').strip('-')}.pdf",
                        mime="application/pdf", icon=":material/download:", on_click="ignore")
     with st.expander(tr("عرض التفاصيل: المتطلبات السبعة عشر والشواهد من نص السياسة",
@@ -1093,10 +1094,14 @@ def page_gap():
 
 
 @st.cache_data(show_spinner=False, max_entries=20)
-def report_pdf(report_json, name, analysed_on, lang):
-    """The PDF is made once per report and language, not on every rerun."""
+def report_pdf(report_json, name, analysed_on, lang, url=""):
+    """The PDF is made once per report and language, not on every rerun. It uses the
+    page's own verdicts, plain questions and reasons."""
+    en = lang == "en"
     return build_pdf(json.loads(report_json), pd.read_csv(CHECKLIST_PATH).fillna(""), name, analysed_on, lang,
-                     opp115_names=None if lang == "en" else OPP115_AR)
+                     opp115_names=None if en else OPP115_AR, url=url,
+                     texts={"verdicts": VERDICTS, "questions": QUESTION_EN if en else QUESTION_AR,
+                            "why": WHY_EN if en else WHY_AR})
 
 
 VERDICTS = [(80, "ok", tr("جيدة", "Good"), tr("تُفصح السياسة عن أغلب ما يتعلق ببياناتك الشخصية",
@@ -1261,7 +1266,10 @@ def verdict_card(name, percent, parts, total, report, checklist):
             f'{gaps_html}</div>')
 
 
+@st.fragment
 def details(report, checklist, source):
+    """A fragment: choosing a filter reruns only this part, so it is instant and the
+    details stay open (a whole-page rerun closed them and showed the old list for a moment)."""
     options = [k for k in FILTERS if k != "unsure" or any(r["status"] == "unsure" for r in report)]
     shown = st.radio(tr("عرض", "Show"), options, format_func=FILTERS.get, horizontal=True,
                      label_visibility="collapsed", key="gap_filter")
