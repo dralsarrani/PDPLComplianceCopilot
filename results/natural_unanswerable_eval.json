@@ -1,0 +1,165 @@
+[
+  {
+    "id": "N01",
+    "language": "ar",
+    "topic": "AI training",
+    "borderline": false,
+    "covered": false,
+    "cited": [],
+    "seconds": 19.0,
+    "answer": "غير مشمول: لم أجد في نصوص النظام ما يجيب على هذا السؤال."
+  },
+  {
+    "id": "N02",
+    "language": "en",
+    "topic": "cookies",
+    "borderline": false,
+    "covered": true,
+    "cited": [
+      "IR-A11-EN",
+      "PDPL-A26-EN"
+    ],
+    "seconds": 17.3,
+    "answer": "The Controller shall obtain Data Subject's consent to Process their Data in any appropriate form or means. Personal Data may be processed for marketing purposes, if it is collected directly from the Data Subject and their consent is given in accordance with the provisions of Law."
+  },
+  {
+    "id": "N03",
+    "language": "ar",
+    "topic": "minimum age for children",
+    "borderline": false,
+    "covered": false,
+    "cited": [],
+    "seconds": 10.1,
+    "answer": "غير مشمول: لم أجد في نصوص النظام ما يجيب على هذا السؤال."
+  },
+  {
+    "id": "N04",
+    "language": "en",
+    "topic": "search-engine delisting",
+    "borderline": false,
+    "covered": false,
+    "cited": [],
+    "seconds": 7.6,
+    "answer": "Not covered: the PDPL texts I searched do not answer this question."
+  },
+  {
+    "id": "N05",
+    "language": "ar",
+    "topic": "deepfakes",
+    "borderline": false,
+    "covered": false,
+    "cited": [],
+    "seconds": 6.7,
+    "answer": "غير مشمول: لم أجد في نصوص النظام ما يجيب على هذا السؤال."
+  },
+  {
+    "id": "N06",
+    "language": "ar",
+    "topic": "fee for a copy of my data",
+    "borderline": false,
+    "covered": false,
+    "cited": [],
+    "seconds": 6.6,
+    "answer": "غير مشمول: لم أجد في نصوص النظام ما يجيب على هذا السؤال."
+  },
+  {
+    "id": "N07",
+    "language": "en",
+    "topic": "DPO qualifications",
+    "borderline": false,
+    "covered": false,
+    "cited": [],
+    "seconds": 6.1,
+    "answer": "Not covered: the PDPL texts I searched do not answer this question."
+  },
+  {
+    "id": "N08",
+    "language": "ar",
+    "topic": "microphone listening for ads",
+    "borderline": true,
+    "covered": false,
+    "cited": [],
+    "seconds": 7.1,
+    "answer": "غير مشمول: لم أجد في نصوص النظام ما يجيب على هذا السؤال."
+  },
+  {
+    "id": "N09",
+    "language": "en",
+    "topic": "password encryption",
+    "borderline": true,
+    "covered": false,
+    "cited": [],
+    "seconds": 6.6,
+    "answer": "Not covered: the texts I searched do not answer this question."
+  },
+  {
+    "id": "N10",
+    "language": "ar",
+    "topic": "paying a ransomware ransom",
+    "borderline": false,
+    "covered": false,
+    "cited": [],
+    "seconds": 6.8,
+    "answer": "غير مشمول: لم أجد في النصوص التي بحثت فيها ما يجيب على هذا السؤال."
+  },
+  {
+    "id": "N11",
+    "language": "ar",
+    "topic": "naming analytics tools in the policy",
+    "borderline": true,
+    "covered": false,
+    "cited": [],
+    "seconds": 6.8,
+    "answer": "غير مشمول: لم أجد في نصوص النظام ما يجيب على هذا السؤال."
+  },
+  {
+    "id": "N12",
+    "language": "en",
+    "topic": "cyber insurance",
+    "borderline": false,
+    "covered": false,
+    "cited": [],
+    "seconds": 13.0,
+    "answer": "Not covered: the PDPL texts I searched do not answer this question."
+  },
+  {
+    "id": "N13",
+    "language": "ar",
+    "topic": "company acquisition",
+    "borderline": true,
+    "covered": false,
+    "cited": [],
+    "seconds": 9.0,
+    "answer": "غير مشمول: لم أجد في نصوص النظام ما يجيب على هذا السؤال."
+  },
+  {
+    "id": "N14",
+    "language": "en",
+    "topic": "accessibility of the policy",
+    "borderline": false,
+    "covered": false,
+    "cited": [],
+    "seconds": 6.5,
+    "answer": "Not covered: the PDPL texts I searched do not answer this question."
+  },
+  {
+    "id": "N15",
+    "language": "ar",
+    "topic": "retention years for job applicants",
+    "borderline": true,
+    "covered": false,
+    "cited": [],
+    "seconds": 7.0,
+    "answer": "غير مشمول: لم أجد في نصوص النظام ما يجيب على هذا السؤال."
+  },
+  {
+    "id": "N16",
+    "language": "en",
+    "topic": "policy language",
+    "borderline": false,
+    "covered": false,
+    "cited": [],
+    "seconds": 6.9,
+    "answer": "Not covered: the PDPL texts I searched do not answer this question."
+  }
+]
