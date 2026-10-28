@@ -44,6 +44,7 @@ from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 from openai import OpenAI
 
+from src.claude_llm import claude_json, claude_model
 from src.policies.fetch_policies import HEADERS, MIN_CHARS, TIMEOUT, Blocked, allowed, html_to_text, robots
 from src.policies.web_search import ask, sources
 
@@ -182,18 +183,23 @@ tv. or gaming subdomain), then its other pages. Reply ONLY with JSON: {{"own": [
 
 
 def pick_own(company, results):
-    """The search results on the company's own website, best first, as gpt-4o-mini
-    judges them from the address, title and text of each. [] if none or OpenAI fails."""
+    """The search results on the company's own website, best first, as gpt-4o-mini (or
+    Claude, src/claude_llm.py) judges them from the address, title and text of each.
+    [] if none or the model fails."""
     if not results:
         return []
     listing = "\n".join(f"{i}. {item['url']}\n   {item.get('title', '')}\n   {(item.get('content') or '')[:200]}"
                         for i, item in enumerate(results, 1))
+    prompt = PICK_PROMPT.format(company=company, results=listing)
     try:
-        response = OpenAI().chat.completions.create(
-            model=os.environ.get("OPENAI_MODEL", "gpt-4o-mini"), temperature=0,
-            response_format={"type": "json_object"},
-            messages=[{"role": "user", "content": PICK_PROMPT.format(company=company, results=listing)}])
-        own = json.loads(response.choices[0].message.content).get("own") or []
+        if claude_model():
+            own = claude_json(prompt).get("own") or []
+        else:
+            response = OpenAI().chat.completions.create(
+                model=os.environ.get("OPENAI_MODEL", "gpt-4o-mini"), temperature=0,
+                response_format={"type": "json_object"},
+                messages=[{"role": "user", "content": prompt}])
+            own = json.loads(response.choices[0].message.content).get("own") or []
     except Exception as error:
         print(f"[find_policy] picking the company's site failed: {error}")
         return []

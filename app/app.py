@@ -45,7 +45,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
 from retrieval.citation_check import load_articles  # noqa: E402
-from src.gap.analyse_v0 import analyse  # noqa: E402
+from src.gap.analyse_v0 import DEFAULT_MODEL, analyse, gap_model  # noqa: E402
 from src.gap.evidence import check_report  # noqa: E402
 from src.gap.evidence_labels import label_evidence  # noqa: E402
 from src.gap.highlight import highlight_html  # noqa: E402
@@ -719,7 +719,9 @@ def run_analysis(source):
                                               "yourself and paste it here:"), "", policy_help(source))
                 remember(source, typed)
                 status.update(label=GAP_STEPS["analyse"])
-            saved = GAP_CACHE_DIR / f"{text_key(source['text'])}.json"
+            model = gap_model()  # another model keeps its own saved results
+            suffix = "" if model == DEFAULT_MODEL else f"_{model}"
+            saved = GAP_CACHE_DIR / f"{text_key(source['text'])}{suffix}.json"
             if saved.exists():
                 cached = json.loads(saved.read_text(encoding="utf-8"))
                 report, st.session_state.gap_saved_on = cached["report"], cached["date"]

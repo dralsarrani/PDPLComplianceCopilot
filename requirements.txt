@@ -17,6 +17,7 @@ nltk
 sentence-transformers
 chromadb
 openai
+anthropic      # Claude for the Gap Analyser (optional key)
 
 # App
 streamlit

@@ -6,9 +6,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "اسم الشركة: stc(شركة الاتصالات السعودية)",
+    "evidence": "بصفتنا جهة التحكم المسؤولة عن معالجة بياناتك الشخصية، فيما يلي تفاصيل الشركة",
     "evidence_found": true,
-    "reason": "The policy clearly states the identity of the controller."
+    "reason": "The policy names stc as controller, gives its commercial registration number and registered address, and lists contact channels such as customer service 900."
   },
   {
     "req_id": "R02",
@@ -19,7 +19,7 @@
     "status": "covered",
     "evidence": "البريد الإلكتروني: DPO@stc.com.sa",
     "evidence_found": true,
-    "reason": "The policy provides contact details for the data protection officer."
+    "reason": "A dedicated DPO section gives an email address for the data protection officer."
   },
   {
     "req_id": "R03",
@@ -28,9 +28,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "البيانات المطلوبة عند التسجيل في خدماتنا (مثل الاسم وعنوان البريد الإلكتروني والعنوان ورقم الهاتف وتاريخ الميلاد والجنسية)",
+    "evidence": "الأنواع البيانات الشخصية الرئيسية التي نجمعها منك ونستخدمها تشمل ما يلي",
     "evidence_found": true,
-    "reason": "The policy specifies the types of personal data collected."
+    "reason": "The policy lists the categories of data collected, with examples such as name, email, payment data, device ID and location."
   },
   {
     "req_id": "R04",
@@ -39,9 +39,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "قد يتم جمع البيانات الشخصية بطرق مختلفة، بما في ذلك: المنتجات والخدمات - عند التسجيل أو استخدام أو توقيع عقد لتصبح عميلاً لدينا",
+    "evidence": "قد يتم جمع البيانات الشخصية بطرق مختلفة، بما في ذلك",
     "evidence_found": true,
-    "reason": "The policy describes the means used to collect personal data."
+    "reason": "The policy has a dedicated section on collection methods: products and services, direct contact, social media, browsing, web surveys and the telecom network."
   },
   {
     "req_id": "R05",
@@ -52,7 +52,7 @@
     "status": "covered",
     "evidence": "نجمع بياناتك الشخصية ونستخدمها لتقديم أعلى مستوى من الخدمة والمنتجات",
     "evidence_found": true,
-    "reason": "The policy clearly states the purpose of collecting and processing personal data."
+    "reason": "The policy states the purposes in detail, including service provision, billing, fraud prevention, credit checks and marketing, along with legal bases."
   },
   {
     "req_id": "R06",
@@ -61,9 +61,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "الأساس القانوني لمعالجة بياناتك الشخصية هو: تعاقدي - للوفاء بالتزامات الخدمة تجاهك.",
+    "evidence": "الأساس القانوني لمعالجة بياناتك الشخصية هو:",
     "evidence_found": true,
-    "reason": "The policy clearly states the legal basis for processing personal data."
+    "reason": "The policy lists contractual, legitimate interest, consent, legal obligation and public interest bases with the purposes each applies to."
   },
   {
     "req_id": "R07",
@@ -71,10 +71,10 @@
     "articles": "PDPL-A13(2); IR-A04(1g)",
     "applies": "always",
     "condition": "",
-    "status": "covered",
-    "evidence": "البيانات المطلوبة عند التسجيل في خدماتنا (مثل الاسم وعنوان البريد الإلكتروني والعنوان ورقم الهاتف وتاريخ الميلاد والجنسية).",
+    "status": "partial",
+    "evidence": "ويعتبر توفير اسمك والتفاصيل الأخرى أمرًا اختياريًا.",
     "evidence_found": true,
-    "reason": "The policy specifies which personal data is mandatory."
+    "reason": "Optional data is mentioned only for web surveys, while data needed for registration is described as required, without a clear mandatory/optional breakdown."
   },
   {
     "req_id": "R08",
@@ -83,9 +83,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "لذلك، فإن عدم إكمال جمع البيانات الشخصية كما هو مطلوب في stc سيؤثر على توفير الخدمات المطلوبة.",
+    "evidence": "فإن عدم إكمال جمع البيانات الشخصية كما هو مطلوب في stc سيؤثر على توفير الخدمات المطلوبة",
     "evidence_found": true,
-    "reason": "The policy explains the consequences of not providing personal data."
+    "reason": "The policy states that failing to provide required data affects service provision and may lead to termination of services."
   },
   {
     "req_id": "R09",
@@ -93,10 +93,10 @@
     "articles": "PDPL-A13(4)",
     "applies": "always",
     "condition": "",
-    "status": "covered",
-    "evidence": "لن تقوم stc بالكشف عن بياناتك الشخصية دون موافقتك باستثناء: عندما تكون الجهة الذي تطلب المشاركة جهة عامة.",
-    "evidence_found": false,
-    "reason": "The policy details the parties with whom personal data may be shared."
+    "status": "partial",
+    "evidence": "عندما نشارك المعلومات مع أطراف ثالثة موثوقة تدعمنا في تشغيل موقعنا الإلكتروني، أو إدارة أنشطتنا التجارية، أو الحفاظ على جودة الخدمة، أو تقديم الخدمات لك.",
+    "evidence_found": true,
+    "reason": "Recipients are described generically (trusted third parties, public authorities, roaming networks, suppliers) without naming them or clearly stating their capacity as processors or controllers."
   },
   {
     "req_id": "R10",
@@ -107,7 +107,7 @@
     "status": "covered",
     "evidence": "قد يتم نقل البيانات الشخصية خارج المملكة للأغراض المذكورة أعلاه.",
     "evidence_found": true,
-    "reason": "The policy states that personal data may be transferred outside the Kingdom."
+    "reason": "The policy states that data may be transferred outside the Kingdom and gives the conditions under which this happens."
   },
   {
     "req_id": "R11",
@@ -115,10 +115,10 @@
     "articles": "IR-A04(1d)",
     "applies": "always",
     "condition": "",
-    "status": "covered",
-    "evidence": "يتم الاحتفاظ ببياناتك الشخصية فقط للمدة اللازمة لتحقيق الأغراض التي تم جمعها من أجلها",
+    "status": "partial",
+    "evidence": "يتم الاحتفاظ ببياناتك الشخصية فقط للمدة اللازمة لتحقيق الأغراض التي تم جمعها من أجلها وللوفاء بالالتزامات القانونية أو التنظيمية أو المحاسبية أو الإبلاغ",
     "evidence_found": true,
-    "reason": "The policy clearly states how long personal data is kept."
+    "reason": "States a criterion (necessary for purposes and legal obligations) but gives no specific retention periods."
   },
   {
     "req_id": "R12",
@@ -126,10 +126,10 @@
     "articles": "PDPL-A12",
     "applies": "always",
     "condition": "",
-    "status": "covered",
-    "evidence": "سنقوم بإتلاف بياناتك الشخصية بشكل آمن وفقاً للأنظمة واللوائح المعمول بها",
+    "status": "partial",
+    "evidence": "بمجرد انتهاء فترة الاحتفاظ، سنقوم بإتلاف بياناتك الشخصية بشكل آمن وفقاً للأنظمة واللوائح المعمول بها",
     "evidence_found": true,
-    "reason": "The policy clearly explains how personal data is destroyed."
+    "reason": "Describes secure destruction after retention, but says nothing about how or where data is stored."
   },
   {
     "req_id": "R13",
@@ -140,7 +140,7 @@
     "status": "covered",
     "evidence": "الحق في العلم: يحق للعملاء أن يكونوا على علم بالغرض ونوع البيانات الشخصية التي تمتلكهاstc عنهم",
     "evidence_found": true,
-    "reason": "The policy clearly outlines the data subject's rights."
+    "reason": "Lists the rights to be informed, access and obtain a copy, correct, and request destruction."
   },
   {
     "req_id": "R14",
@@ -149,9 +149,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "يحق للعملاء الوصول إلى بياناتهم الشخصية التي تحتفظ بهاstc أو الحصول على نسخة منها",
+    "evidence": "الحق في طلب الاتلاف: يحق للعملاء طلب إتلاف بياناتهم الشخصية التي لم تعد مطلوبة خلال التواصل معنا عبر دردشة خدمة العملاء أو الإتصال بخدمة العملاء",
     "evidence_found": true,
-    "reason": "The policy clearly states how the data subject can exercise their rights."
+    "reason": "Gives specific channels for exercising rights, such as the mystc privacy section, customer chat and calls."
   },
   {
     "req_id": "R15",
@@ -160,9 +160,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "يحق للعميل إلغاء موافقته أو حظر المكالمات التسويقية",
+    "evidence": "الحق في سحب الموافقة: يحق للعميل إلغاء موافقته أو حظر المكالمات التسويقية أو إيقاف استقبال الرسائل الترويجية من خلال mystc في إدارة الأرقام أو إرسال 3300 أو الإعلان إلى 900 أو الاتصال بمركز خدمة العملاء 900",
     "evidence_found": true,
-    "reason": "The policy clearly explains how to withdraw consent."
+    "reason": "Explains the right to withdraw consent and the specific channels to do it."
   },
   {
     "req_id": "R16",
@@ -171,9 +171,9 @@
     "applies": "conditional",
     "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
     "status": "covered",
-    "evidence": "نتخذ الوسائل والضوابط والإجراءات الإدارية والتقنية المناسبة لحماية بياناتك والمحافظة عليها",
+    "evidence": "نحن نأخذ حماية بياناتك على محمل الجد ونتخذ الوسائل والضوابط والإجراءات الإدارية والتقنية المناسبة لحماية بياناتك والمحافظة عليها",
     "evidence_found": true,
-    "reason": "The policy clearly states the measures taken to protect personal data."
+    "reason": "The policy describes administrative and technical safeguards such as internal and external audits, staff training and reporting to committees and regulators."
   },
   {
     "req_id": "R17",
@@ -184,6 +184,6 @@
     "status": "missing",
     "evidence": "",
     "evidence_found": false,
-    "reason": "The policy does not mention whether decisions are made solely by automated processing."
+    "reason": "The policy does not say whether any decisions are made solely by automated processing."
   }
 ]

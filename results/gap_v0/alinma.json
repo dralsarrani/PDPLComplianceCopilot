@@ -6,9 +6,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "الاسم: مصرف الإنماء",
+    "evidence": "بيانات الاتصال بجهة التحكم:",
     "evidence_found": true,
-    "reason": "The policy clearly states the identity of the controller."
+    "reason": "The policy names Alinma Bank as the controller and gives its address, website and phone number."
   },
   {
     "req_id": "R02",
@@ -17,9 +17,9 @@
     "applies": "conditional",
     "condition": "The controller has appointed a DPO",
     "status": "covered",
-    "evidence": "البريد الإلكتروني: data.privacy@alinma.com",
+    "evidence": "بيانات التواصل مع مسؤول حماية البيانات الشخصية (DPO):",
     "evidence_found": true,
-    "reason": "The policy provides contact details for the DPO."
+    "reason": "The policy gives the DPO's address and email (data.privacy@alinma.com)."
   },
   {
     "req_id": "R03",
@@ -28,9 +28,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "نقوم بجمع ومعالجة البيانات الشخصية التالية",
+    "evidence": "نقوم بجمع ومعالجة البيانات الشخصية التالية:",
     "evidence_found": true,
-    "reason": "The policy clearly lists the personal data collected."
+    "reason": "The policy lists the specific categories of personal data collected, including identity, contact, financial, employment and sensitive data."
   },
   {
     "req_id": "R04",
@@ -39,9 +39,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "بعض بياناتك الشخصية التي نعالجها يتم الحصول عليها مباشرة منك",
+    "evidence": "نقوم بجمع ومعالجة البيانات من خلال ملفات تعريف الارتباط (كوكيز)، وتقنيات التتبع، وطرق أخرى من مصادر متنوعة",
     "evidence_found": true,
-    "reason": "The policy specifies the means used to collect personal data."
+    "reason": "The policy describes direct collection through forms and portals, indirect collection from third parties, and cookies, devices, calls and email."
   },
   {
     "req_id": "R05",
@@ -50,9 +50,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "نقوم بمعالجة بياناتك الشخصية للأغراض التالية",
+    "evidence": "نقوم بمعالجة بياناتك الشخصية للأغراض التالية:",
     "evidence_found": true,
-    "reason": "The policy clearly states the purposes of collecting and processing personal data."
+    "reason": "The policy lists specific processing purposes such as account management, KYC/AML, credit risk assessment and fraud prevention."
   },
   {
     "req_id": "R06",
@@ -61,9 +61,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "الأساس القانوني لجمع ومعالجة بياناتك الشخصية وفقاً لقانون حماية البيانات الشخصية، الأساس القانوني الذي نعتمد عليه في معالجة البيانات يشمل",
+    "evidence": "تنفيذ التزام تعاقدي (على سبيل المثال: خدمة العملاء، إدارة دعم العملاء، إدارة الحسابات).",
     "evidence_found": true,
-    "reason": "The policy clearly states the legal basis for data processing."
+    "reason": "The policy lists the legal bases relied on: contract, legal obligation, legitimate interests, explicit consent, vital interests and public interest."
   },
   {
     "req_id": "R07",
@@ -74,7 +74,7 @@
     "status": "covered",
     "evidence": "البيانات الإلزامية: بعض البيانات الشخصية إلزامية بالنسبة لنا لتقديم خدماتنا المصرفية والامتثال للالتزامات القانونية والتشريعية.",
     "evidence_found": true,
-    "reason": "The policy specifies which personal data is mandatory and which is optional."
+    "reason": "The policy has separate mandatory and optional data sections that explain the purpose of each, though it does not list which specific fields fall in each."
   },
   {
     "req_id": "R08",
@@ -85,7 +85,7 @@
     "status": "covered",
     "evidence": "قد يؤدي عدم تقديم هذه البيانات إلى عدم قدرتنا على تقديم بعض الخدمات.",
     "evidence_found": true,
-    "reason": "The policy clearly outlines the consequences of not providing personal data."
+    "reason": "The policy states that not providing mandatory data may prevent some services, and that skipping optional data does not affect core services."
   },
   {
     "req_id": "R09",
@@ -94,9 +94,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "قد يتم مشاركة البيانات الشخصية مع الشركات التابعة لمصرف الإنماء (مثل الإنماء باي) لدعم تقديم وتسهيل الخدمات عبر منصاتنا.",
-    "evidence_found": false,
-    "reason": "The policy specifies the parties with whom personal data is shared."
+    "evidence": "مقدمي الخدمات من الأطراف الثالثة لدعم عملياتنا.",
+    "evidence_found": true,
+    "reason": "The policy names the recipient categories (affiliates, regulators such as SAMA, service providers, credit bureaus, banks, auditors and lawyers) and the purpose of sharing with each."
   },
   {
     "req_id": "R10",
@@ -104,10 +104,10 @@
     "articles": "PDPL-A13(4)",
     "applies": "always",
     "condition": "",
-    "status": "covered",
-    "evidence": "عندما نقوم بنقل بياناتك خارج المملكة العربية السعودية، نحرص على توفير ضمانات مناسبة وفقاً لمتطلبات قانون حماية البيانات الشخصية السعودي.",
+    "status": "partial",
+    "evidence": "عندما نقوم بنقل بياناتك خارج المملكة العربية السعودية، نحرص على توفير ضمانات مناسبة وفقاً لمتطلبات قانون حماية البيانات الشخصية السعودي",
     "evidence_found": true,
-    "reason": "The policy clearly states that personal data may be transferred outside the Kingdom."
+    "reason": "The policy mentions transfers outside the Kingdom only conditionally and does not say whether they actually occur, or to which countries."
   },
   {
     "req_id": "R11",
@@ -116,9 +116,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "يتم الاحتفاظ ببياناتك الشخصية لمدة لا تقل عن عشر (10) سنوات بعد انتهاء العلاقة المصرفية",
-    "evidence_found": false,
-    "reason": "The policy clearly states the retention period for personal data."
+    "evidence": "قد يتم الاحتفاظ بالبيانات الشخصية لمدة لا تقل عن عشر (10) سنوات بعد انتهاء العلاقة المصرفية",
+    "evidence_found": true,
+    "reason": "The policy gives a specific minimum retention period of 10 years after the relationship ends, plus criteria such as necessity for the purpose and legal requirements."
   },
   {
     "req_id": "R12",
@@ -127,9 +127,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "نقوم بإتلاف هذه البيانات بشكل آمن بطريقة تمنع الوصول إليها أو استرجاعها",
+    "evidence": "بعد فترة الاحتفاظ، نقوم بإتلاف هذه البيانات بشكل آمن بطريقة تمنع الوصول إليها أو استرجاعها",
     "evidence_found": true,
-    "reason": "The policy clearly describes how personal data is destroyed."
+    "reason": "The policy describes storage at the bank's headquarters or with a cloud provider, security measures, and secure destruction after the retention period."
   },
   {
     "req_id": "R13",
@@ -140,7 +140,7 @@
     "status": "covered",
     "evidence": "الحق في طلب إتلاف بياناتك الشخصية: يحق لك طلب إتلاف بياناتك الشخصية في بعض الحالات",
     "evidence_found": true,
-    "reason": "The policy explicitly lists the rights of the data subjects."
+    "reason": "The policy lists the rights to be informed, access, obtain a copy, correct and request destruction, each as a named right."
   },
   {
     "req_id": "R14",
@@ -149,9 +149,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "يمكنك العدول عن الموافقة على استلام الرسائل التسويقية في أي وقت عن طريق إعدادات الخصوصية في التطبيق",
+    "evidence": "لمزيد من التفاصيل بشأن معالجة بياناتك الشخصية وكيفية ممارسة حقوقك، يمكنك التواصل مع مسؤول حماية البيانات الشخصية باستخدام تفاصيل التواصل المذكورة أعلاه",
     "evidence_found": true,
-    "reason": "The policy provides clear instructions on how to exercise rights."
+    "reason": "The policy directs data subjects to the DPO, whose email and address it provides, and also gives branch and call-center complaint channels."
   },
   {
     "req_id": "R15",
@@ -160,9 +160,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "يحق لك سحب موافقتك على معالجة بياناتك الشخصية في أي وقت",
+    "evidence": "يمكنك العدول عن الموافقة على استلام الرسائل التسويقية في أي وقت عن طريق إعدادات الخصوصية في التطبيق، أو بالاتصال بمركز خدمة العملاء أو بالتواصل مع مسؤول حماية البيانات الشخصية عبر البريد الإلكتروني (data.privacy@alinma.com)",
     "evidence_found": true,
-    "reason": "The policy clearly states how to withdraw consent."
+    "reason": "The policy states the right to withdraw consent at any time and names the app, the call center and the DPO email as channels."
   },
   {
     "req_id": "R16",
@@ -171,9 +171,9 @@
     "applies": "conditional",
     "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
     "status": "covered",
-    "evidence": "ننفذ تدابير تقنية وتنظيمية لحماية بياناتك الشخصية من الوصول غير المصرح به",
+    "evidence": "ننفذ تدابير تقنية وتنظيمية لحماية بياناتك الشخصية من الوصول غير المصرح به، والمشاركة، والتعديل، والإتلاف",
     "evidence_found": true,
-    "reason": "The policy clearly states the measures taken to protect personal data."
+    "reason": "The policy states technical and organizational measures and names encryption, secure access controls and regular security assessments."
   },
   {
     "req_id": "R17",
@@ -184,6 +184,6 @@
     "status": "missing",
     "evidence": "",
     "evidence_found": false,
-    "reason": "The policy does not mention whether decisions are made solely by automated processing."
+    "reason": "The policy never says whether decisions are made solely by automated processing; it only lists profiling and credit risk assessment as purposes."
   }
 ]

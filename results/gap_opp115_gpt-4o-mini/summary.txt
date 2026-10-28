@@ -1,0 +1,25 @@
+Policies: 11   evidence sentences: 170   classifier: bert
+Top OPP-115 label is one of the requirement's categories: 75.9% (129/170)
+  Arabic evidence (translated): 78.1% (25/32)
+  English evidence:             75.4% (104/138)
+
+Per requirement:
+                                                                    expected match   n               most_common_label
+req_id                                                                                                                
+R01                                                                    Other   91%  11                           Other
+R02                                                                    Other  100%   9                           Other
+R03                                               First Party Collection/Use  100%  11      First Party Collection/Use
+R04                                               First Party Collection/Use  100%  11      First Party Collection/Use
+R05                                               First Party Collection/Use  100%  11      First Party Collection/Use
+R06                          First Party Collection/Use; User Choice/Control   45%  11                           Other
+R07                          User Choice/Control; First Party Collection/Use  100%  11      First Party Collection/Use
+R08                                                      User Choice/Control   50%   8             User Choice/Control
+R09                                           Third Party Sharing/Collection  100%  11  Third Party Sharing/Collection
+R10     Third Party Sharing/Collection; International and Specific Audiences   78%   9  Third Party Sharing/Collection
+R11                                                           Data Retention   89%   9                  Data Retention
+R12                                            Data Retention; Data Security   60%  10                   Data Security
+R13                                           User Access, Edit and Deletion    9%  11                           Other
+R14                                           User Access, Edit and Deletion   36%  11                           Other
+R15                                                      User Choice/Control   82%  11             User Choice/Control
+R16                                                            Data Security   82%  11                   Data Security
+R17                                               First Party Collection/Use   50%   4      First Party Collection/Use

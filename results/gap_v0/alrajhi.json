@@ -6,9 +6,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "we refer to these entities collectively as the \"ARB Group\".",
+    "evidence": "References in this Policy to \"alrajhi bank\", \"ARB\", \"we\", \"us\" and \"our\" include alrajhi bank (Commercial Registration No. 1010000096, with its registered address at 8467 King Fahad Road, Al Murooj District, Unit Number 1, Riyadh 12263 – 2743 Kingdom of Saudi Arabia) and its affiliates and subsidiaries, which are listed at the end of this document",
     "evidence_found": true,
-    "reason": "The policy clearly identifies the controller and provides contact information."
+    "reason": "The policy names the controller with its registration number and address, says it acts as controller, and gives a contact email."
   },
   {
     "req_id": "R02",
@@ -17,9 +17,9 @@
     "applies": "conditional",
     "condition": "The controller has appointed a DPO",
     "status": "covered",
-    "evidence": "please contact our Data Protection Officer at DPP@alrajhibank.com.sa",
+    "evidence": "please contact our Data Protection Officer at",
     "evidence_found": true,
-    "reason": "The policy provides specific contact details for the DPO."
+    "reason": "The policy gives a DPO contact email address (DPP@alrajhibank.com.sa) in the contact section."
   },
   {
     "req_id": "R03",
@@ -30,7 +30,7 @@
     "status": "covered",
     "evidence": "We may collect the following categories of Personal Data",
     "evidence_found": true,
-    "reason": "The policy clearly lists the types of personal data collected."
+    "reason": "The policy lists detailed categories of personal data collected, including sensitive and product-specific data."
   },
   {
     "req_id": "R04",
@@ -39,9 +39,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "We collect most of your Personal Data directly from you through your use of the application",
+    "evidence": "We collect most of your Personal Data directly from you through your use of the application or when you interact with us through digital channels",
     "evidence_found": true,
-    "reason": "The policy specifies the means used to collect personal data."
+    "reason": "The policy explains direct collection, third-party sources and cookies as the means of collection."
   },
   {
     "req_id": "R05",
@@ -50,9 +50,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "We collect and use your Personal Data for the purposes described in the \"How and why we use your Personal Data\" section of this Policy.",
-    "evidence_found": false,
-    "reason": "The policy clearly states the purposes for collecting and processing personal data."
+    "evidence": "We use your Personal Data for the purposes set out below",
+    "evidence_found": true,
+    "reason": "The policy has a detailed table of purposes with the data categories and legal basis for each."
   },
   {
     "req_id": "R06",
@@ -61,9 +61,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "Under the Kingdom of Saudi Arabia’s Personal Data Protection Law (PDPL), we may only process your Personal Data where we have a valid legal basis to do so.",
+    "evidence": "Contractual basis – where processing is necessary to enter into or perform a contract with you",
     "evidence_found": true,
-    "reason": "The policy clearly states the legal bases for processing personal data."
+    "reason": "The policy lists the legal bases (contract, legal obligation, legitimate interests, consent, actual interest) and maps them to each processing purpose."
   },
   {
     "req_id": "R07",
@@ -71,10 +71,10 @@
     "articles": "PDPL-A13(2); IR-A04(1g)",
     "applies": "always",
     "condition": "",
-    "status": "covered",
-    "evidence": "Certain Personal Data is required for us to provide our services, comply with applicable legal and regulatory requirements, and manage our relationship with you.",
+    "status": "partial",
+    "evidence": "Certain Personal Data is required for us to provide our services, comply with applicable legal and regulatory requirements, and manage our relationship with you",
     "evidence_found": true,
-    "reason": "The policy specifies that certain personal data is mandatory."
+    "reason": "It says some data is required but does not specify which data is mandatory and which is optional."
   },
   {
     "req_id": "R08",
@@ -83,9 +83,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "If you do not provide the required information, we may not be able to provide you with the relevant products or services or continue to provide them.",
+    "evidence": "If you do not provide the required information, we may not be able to provide you with the relevant products or services or continue to provide them",
     "evidence_found": true,
-    "reason": "The policy explains the consequences of not providing personal data."
+    "reason": "The policy states the consequence of not providing required data."
   },
   {
     "req_id": "R09",
@@ -94,9 +94,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "Your Personal Data may be shared on a one-time, occasional or ongoing basis, depending on the nature of the relevant product, service or relationship.",
+    "evidence": "We may share your Personal Data with the following categories of recipients",
     "evidence_found": true,
-    "reason": "The policy clearly states the parties with whom personal data is shared."
+    "reason": "A detailed table lists recipient categories and describes their roles, such as service providers, payment providers and regulators."
   },
   {
     "req_id": "R10",
@@ -105,9 +105,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "Personal Data may be processed and stored on systems operated by alrajhi bank or authorised third-party service providers, including cloud-based infrastructure, which may be located within or, where permitted by applicable law, outside the Kingdom of Saudi Arabia.",
+    "evidence": "Where it is necessary to transfer your Personal Data outside the Kingdom of Saudi Arabia, we will ensure that such transfer is carried out in accordance with the PDPL and applicable regulatory requirements, including those issued by SAMA",
     "evidence_found": true,
-    "reason": "The policy explicitly mentions the transfer of personal data outside the Kingdom."
+    "reason": "A dedicated section explains that data may be stored, processed or transferred outside the Kingdom and describes the safeguards."
   },
   {
     "req_id": "R11",
@@ -115,10 +115,10 @@
     "articles": "IR-A04(1d)",
     "applies": "always",
     "condition": "",
-    "status": "covered",
-    "evidence": "We will not retain your Personal Data for longer than is necessary to fulfil the purposes for which it was collected",
+    "status": "partial",
+    "evidence": "We will not retain your Personal Data for longer than is necessary to fulfil the purposes for which it was collected, unless we are legally required or otherwise permitted under applicable law to retain it for a longer period.",
     "evidence_found": true,
-    "reason": "The policy clearly states how long personal data is kept."
+    "reason": "It gives a general criterion (as long as necessary, legal requirements) but no specific retention periods."
   },
   {
     "req_id": "R12",
@@ -127,9 +127,9 @@
     "applies": "always",
     "condition": "",
     "status": "partial",
-    "evidence": "Following the end of the relevant retention period, we will securely delete, irreversibly anonymise, or otherwise ensure that the Personal Data is no longer actively processed",
+    "evidence": "Following the end of the relevant retention period, we will securely delete, irreversibly anonymise, or otherwise ensure that the Personal Data is no longer actively processed, in accordance with applicable law.",
     "evidence_found": true,
-    "reason": "The policy mentions destruction but lacks detail on storage methods."
+    "reason": "Destruction is described and storage location is covered, but details of how data is stored and destroyed are general."
   },
   {
     "req_id": "R13",
@@ -138,9 +138,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "Under the PDPL, you have certain rights in relation to the processing of your Personal Data",
+    "evidence": "You have the right to access your Personal Data and request a copy of it in a clear and readable format.",
     "evidence_found": true,
-    "reason": "The policy explicitly outlines the data subject's rights."
+    "reason": "The policy lists the rights to be informed, access, copy, rectification and destruction."
   },
   {
     "req_id": "R14",
@@ -149,9 +149,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "If you would like to exercise any of your rights, including submitting a request to access your Personal Data",
+    "evidence": "If you would like to exercise any of your rights, including submitting a request to access your Personal Data (commonly referred to as a data subject access request), please contact us using the details set out in the “How do you contact us?” section below.",
     "evidence_found": true,
-    "reason": "The policy provides clear instructions on how to exercise rights."
+    "reason": "It explains contacting the DPO by email, identity verification and response handling."
   },
   {
     "req_id": "R15",
@@ -160,9 +160,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "Where processing is based on your consent, you have the right to withdraw that consent at any time",
+    "evidence": "If you would like to withdraw your consent to the processing of your Personal Data by us, you may do so by contacting us by email using the details set out in the “How do you contact us?” section below.",
     "evidence_found": true,
-    "reason": "The policy clearly states how to withdraw consent."
+    "reason": "It states the right to withdraw consent and gives the method, including in-app for marketing."
   },
   {
     "req_id": "R16",
@@ -171,9 +171,9 @@
     "applies": "conditional",
     "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
     "status": "covered",
-    "evidence": "we maintain a range of appropriate technical and organisational security measures to protect your Personal Data",
+    "evidence": "We make use of data encryption methods to protect data both in transit and at rest",
     "evidence_found": true,
-    "reason": "The policy clearly states the measures taken to protect personal data."
+    "reason": "The policy has a dedicated section listing specific security measures such as encryption, role-based access controls, data minimization and breach procedures."
   },
   {
     "req_id": "R17",
@@ -182,8 +182,8 @@
     "applies": "conditional",
     "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
     "status": "covered",
-    "evidence": "We will not make decisions that significantly affect you based solely on automated processing unless permitted by law and, where required, based on your explicit consent",
+    "evidence": "We will not make decisions that significantly affect you based solely on automated processing unless permitted by law and, where required, based on your explicit consent.",
     "evidence_found": true,
-    "reason": "The policy explicitly mentions the conditions under which automated processing is used."
+    "reason": "The policy has an Automated processing section that states its position on solely automated decisions and mentions profiling and the right to request human review."
   }
 ]

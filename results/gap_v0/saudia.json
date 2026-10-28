@@ -6,9 +6,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "Any personal information processed by Saudia in connection with this Privacy Policy is controlled by Saudia",
+    "evidence": "Any personal information processed by Saudia in connection with this Privacy Policy is controlled by Saudia, which is considered the “data controller” of your personal information",
     "evidence_found": true,
-    "reason": "The policy clearly identifies Saudia as the data controller."
+    "reason": "The policy names Saudia as controller and gives a postal address for Saudi Arabian Airlines Corporation plus a contact form."
   },
   {
     "req_id": "R02",
@@ -16,10 +16,10 @@
     "articles": "IR-A04(1b)",
     "applies": "conditional",
     "condition": "The controller has appointed a DPO",
-    "status": "covered",
-    "evidence": "To contact the Data Protection Officer, please visit our Contact Form page.",
+    "status": "partial",
+    "evidence": "The Data Protection Officer for Saudia can be contacted via the Contact Form",
     "evidence_found": true,
-    "reason": "The policy provides a way to contact the Data Protection Officer."
+    "reason": "A DPO contact route is given through a contact form and a postal address, but no direct DPO email or phone number."
   },
   {
     "req_id": "R03",
@@ -28,9 +28,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "Typically, the information includes: Full name/Title, Date of birth, Address, Contact information (email, mobile number)",
-    "evidence_found": false,
-    "reason": "The policy specifies the types of personal data collected."
+    "evidence": "Types of personal information we collect depend on the nature of your interaction with us",
+    "evidence_found": true,
+    "reason": "The policy lists specific data types, such as name, date of birth, passport details, payment card details and sensitive data."
   },
   {
     "req_id": "R04",
@@ -41,7 +41,7 @@
     "status": "covered",
     "evidence": "We collect personal information about you whenever you use our services",
     "evidence_found": true,
-    "reason": "The policy states the means used to collect personal data."
+    "reason": "The policy describes collection via websites, apps, email, contact centres, cookies, and third parties."
   },
   {
     "req_id": "R05",
@@ -50,9 +50,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "We will use the information you give us for the purposes described in our Privacy Policy",
+    "evidence": "To fulfil your travel arrangements and deliver the services you have asked for, including ticketing, bookings, changes, cancellations, refunds, upgrades, and ancillary services",
     "evidence_found": true,
-    "reason": "The policy outlines the purposes for collecting and processing personal data."
+    "reason": "The policy sets out detailed purposes in a dedicated section on what personal information is used for."
   },
   {
     "req_id": "R06",
@@ -61,9 +61,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "the legal basis will depend on the reason or reasons Saudia collected and needs to use your information",
+    "evidence": "Because we need to use your information so that we can process your booking, fulfill your travel arrangements and otherwise perform the contract we have with you.",
     "evidence_found": true,
-    "reason": "The policy clearly states the legal basis for processing personal data."
+    "reason": "The policy lists specific legal bases: contract, legitimate interests, legal obligation, vital interests and consent."
   },
   {
     "req_id": "R07",
@@ -71,10 +71,10 @@
     "articles": "PDPL-A13(2); IR-A04(1g)",
     "applies": "always",
     "condition": "",
-    "status": "covered",
-    "evidence": "the information includes Full name/Title, Date of birth, Address, Contact information (email, mobile number)",
-    "evidence_found": false,
-    "reason": "The policy specifies which personal data is mandatory."
+    "status": "partial",
+    "evidence": "When you use our services, you will need to provide us with your personal details or the details of those individual(s) who will be travelling.",
+    "evidence_found": true,
+    "reason": "It implies some data is required to use services but never clearly separates mandatory from optional data, apart from noting that some items are provided by choice."
   },
   {
     "req_id": "R08",
@@ -83,9 +83,9 @@
     "applies": "always",
     "condition": "",
     "status": "partial",
-    "evidence": "if you withdraw your full consent, in some circumstances, it may mean we will not be able to provide all or parts of the services you have requested",
+    "evidence": "However, if you withdraw your full consent, in some circumstances, it may mean we will not be able to provide all or parts of the services you have requested from us and you will not be able to cancel your booking or obtain a refund of any charges you have paid.",
     "evidence_found": true,
-    "reason": "The policy mentions consequences but does not detail all potential consequences."
+    "reason": "It states consequences of withdrawing consent but not generally of refusing to provide data at collection."
   },
   {
     "req_id": "R09",
@@ -94,9 +94,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "Your personal information may be shared with the companies within our group",
+    "evidence": "Airlines and other service providers needed to deliver the services you have asked for where, for instance, part of your travel itinerary involves a flight operated by a different airline or includes car hire or a hotel booking.",
     "evidence_found": true,
-    "reason": "The policy specifies parties with whom personal data is shared."
+    "reason": "It lists recipient categories (group companies, authorities, airlines, payment firms, service providers) and their roles, including data controllers."
   },
   {
     "req_id": "R10",
@@ -104,10 +104,10 @@
     "articles": "PDPL-A13(4)",
     "applies": "always",
     "condition": "",
-    "status": "covered",
-    "evidence": "Your personal information may be sent to and stored by us and third parties in countries outside the country in which you are located",
+    "status": "partial",
+    "evidence": "Your personal information may be sent to and stored by us and third parties in countries outside the country in which you are located.",
     "evidence_found": true,
-    "reason": "The policy clearly states that personal data may be transferred outside the Kingdom."
+    "reason": "It confirms transfers abroad but speaks generally of countries outside the user's location and the EEA, without specifically addressing transfers outside the Kingdom."
   },
   {
     "req_id": "R11",
@@ -116,9 +116,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "We will keep your information for as long as we need it for the purpose it is being processed for.",
+    "evidence": "If you stop interacting with us as a customer, we will remove or anonymise your information after 7 years.",
     "evidence_found": true,
-    "reason": "The policy clearly states how long personal data is kept."
+    "reason": "The policy gives a 7-year retention period and the criteria of keeping data as long as needed for the purpose."
   },
   {
     "req_id": "R12",
@@ -129,7 +129,7 @@
     "status": "partial",
     "evidence": "Safely disposing of or anonymizing personal data when it is no longer needed",
     "evidence_found": true,
-    "reason": "The policy mentions how personal data is disposed of but lacks detail on storage."
+    "reason": "It mentions secure deletion or anonymisation and security protocols for storage, but gives no specific detail on how data is stored and destroyed."
   },
   {
     "req_id": "R13",
@@ -138,9 +138,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "Your rights include the following: You may access the personal information we hold on you.",
-    "evidence_found": false,
-    "reason": "The policy clearly outlines the data subject's rights."
+    "evidence": "You may access the personal information we hold on you.",
+    "evidence_found": true,
+    "reason": "The policy lists access, copy, correction and erasure rights, though the right to be informed is only implied through the notice itself."
   },
   {
     "req_id": "R14",
@@ -149,9 +149,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "If you wish to change how we use your personal information, please contact us.",
+    "evidence": "Alternatively, you can make a request to us via our Contact Form , ensuring you mark the request for Customer Permissions (Data Protection Office).",
     "evidence_found": true,
-    "reason": "The policy specifies how data subjects can exercise their rights."
+    "reason": "It explains how to submit requests, the identity verification required and the details to include."
   },
   {
     "req_id": "R15",
@@ -160,9 +160,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "you can withdraw your consent at any time through my account settings or by contacting Saudia’s Data Protection Office Conduct Form.",
-    "evidence_found": false,
-    "reason": "The policy clearly states how to withdraw consent."
+    "evidence": "If the basis of our processing your data is consent to marketing, you can withdraw your consent to such processing at any time, including by amending your account online or alternately contact us via our Contact Form page.",
+    "evidence_found": true,
+    "reason": "It states clearly how consent can be withdrawn, through account settings or the contact form."
   },
   {
     "req_id": "R16",
@@ -171,9 +171,9 @@
     "applies": "conditional",
     "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
     "status": "covered",
-    "evidence": "We have implemented robust technical and organizational security measures, policies, and procedures to protect your personal information and ensure its privacy.",
+    "evidence": "We have implemented robust technical and organizational security measures, policies, and procedures to protect your personal information and ensure its privacy",
     "evidence_found": true,
-    "reason": "The policy clearly states the measures taken to protect personal data."
+    "reason": "The policy states technical and organizational security measures and lists specific ones such as confidentiality obligations, secure disposal and storage protocols."
   },
   {
     "req_id": "R17",
@@ -184,6 +184,6 @@
     "status": "missing",
     "evidence": "",
     "evidence_found": false,
-    "reason": "The policy does not mention whether decisions are made solely by automated processing."
+    "reason": "The section on AI and automated processing never says whether decisions are made solely by automated processing, and it gives no such statement about decisions affecting individuals."
   }
 ]

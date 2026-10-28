@@ -6,9 +6,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "KFUPM, located in Dhahran, Saudi Arabia, acts as the Controller of your personal data",
+    "evidence": "KFUPM, located in Dhahran, Saudi Arabia, acts as the Controller of your personal data and determines the purposes and means of processing your personal information",
     "evidence_found": true,
-    "reason": "The policy clearly identifies KFUPM as the controller and provides its location."
+    "reason": "The policy names KFUPM as controller with its location and gives a contact point, including phone and email."
   },
   {
     "req_id": "R02",
@@ -16,10 +16,10 @@
     "articles": "IR-A04(1b)",
     "applies": "conditional",
     "condition": "The controller has appointed a DPO",
-    "status": "partial",
-    "evidence": "please contact us at Digital Risk & Information Security",
-    "evidence_found": true,
-    "reason": "The policy mentions a contact point but does not specify a dedicated DPO."
+    "status": "missing",
+    "evidence": "",
+    "evidence_found": false,
+    "reason": "The policy gives contact details for a department but never mentions a data protection officer."
   },
   {
     "req_id": "R03",
@@ -28,9 +28,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "KFUPM may collect and process different types of personal data, including but not limited to",
+    "evidence": "KFUPM may collect and process different types of personal data, including but not limited to:",
     "evidence_found": true,
-    "reason": "The policy clearly lists the types of personal data collected."
+    "reason": "The policy lists specific categories of personal data collected, such as identity, academic, technical, financial, employment and health data."
   },
   {
     "req_id": "R04",
@@ -39,9 +39,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "KFUPM collects personal data through various methods, including",
+    "evidence": "KFUPM collects personal data through various methods, including:",
     "evidence_found": true,
-    "reason": "The policy specifies the methods used to collect personal data."
+    "reason": "The policy describes direct interactions, automated technologies such as cookies and logs, and third-party sources."
   },
   {
     "req_id": "R05",
@@ -50,9 +50,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "KFUPM processes personal data for the following legitimate purposes",
+    "evidence": "KFUPM processes personal data for the following legitimate purposes:",
     "evidence_found": true,
-    "reason": "The policy clearly states the purposes for collecting and processing personal data."
+    "reason": "The policy lists specific purposes such as academic services, security, financial transactions and employment management."
   },
   {
     "req_id": "R06",
@@ -61,9 +61,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "The collection and processing of personal data are based on the data subject’s consent",
+    "evidence": "The collection and processing of personal data are based on the data subject’s consent, which may be withdrawn at any time, unless another legal basis applies.",
     "evidence_found": true,
-    "reason": "The policy clearly states the legal basis for processing personal data."
+    "reason": "Section 4 states consent as the legal basis, with a note that other legal bases may apply."
   },
   {
     "req_id": "R07",
@@ -71,10 +71,10 @@
     "articles": "PDPL-A13(2); IR-A04(1g)",
     "applies": "always",
     "condition": "",
-    "status": "partial",
-    "evidence": "KFUPM may collect and process different types of personal data, including but not limited to",
-    "evidence_found": true,
-    "reason": "The policy lists types of personal data but does not specify which are mandatory or optional."
+    "status": "missing",
+    "evidence": "",
+    "evidence_found": false,
+    "reason": "The policy never says which data is mandatory and which is optional."
   },
   {
     "req_id": "R08",
@@ -85,7 +85,7 @@
     "status": "missing",
     "evidence": "",
     "evidence_found": false,
-    "reason": "The policy does not mention the consequences of not providing personal data."
+    "reason": "The policy does not describe what happens if personal data is not provided."
   },
   {
     "req_id": "R09",
@@ -94,9 +94,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "KFUPM may share personal data under the following conditions",
+    "evidence": "Service Providers: With third-party vendors under confidentiality agreements for operational and technical support.",
     "evidence_found": true,
-    "reason": "The policy specifies parties with whom personal data may be shared."
+    "reason": "Section 5 lists the categories of recipients (government authorities, service providers, academic and research partners) and their roles."
   },
   {
     "req_id": "R10",
@@ -105,9 +105,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "Personal data may only be transferred or processed outside the Kingdom under the circumstances specified in Article 29 of the Personal Data Protection Law",
+    "evidence": "KFUPM may transfer personal data outside Saudi Arabia when necessary and in compliance with PDPL regulations.",
     "evidence_found": true,
-    "reason": "The policy clearly states conditions for transferring personal data outside the Kingdom."
+    "reason": "Section 9 states that data may be transferred or processed outside the Kingdom, with conditions and safeguards."
   },
   {
     "req_id": "R11",
@@ -115,10 +115,10 @@
     "articles": "IR-A04(1d)",
     "applies": "always",
     "condition": "",
-    "status": "covered",
+    "status": "partial",
     "evidence": "KFUPM retains personal data only for as long as necessary to fulfill its intended purpose or as required by applicable laws and regulations",
     "evidence_found": true,
-    "reason": "The policy clearly states the retention period for personal data."
+    "reason": "It gives a general criterion (as long as necessary for the purpose or required by law) but no specific retention periods."
   },
   {
     "req_id": "R12",
@@ -126,10 +126,10 @@
     "articles": "PDPL-A12",
     "applies": "always",
     "condition": "",
-    "status": "covered",
+    "status": "partial",
     "evidence": "When no longer needed, data is securely deleted, anonymized, or archived in accordance with legal obligations",
     "evidence_found": true,
-    "reason": "The policy specifies how personal data is destroyed."
+    "reason": "It mentions secure deletion, anonymization or archiving but does not explain how data is stored or destroyed."
   },
   {
     "req_id": "R13",
@@ -138,9 +138,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "The right to request the destruction of their personal data held by KFUPM under specific conditions",
+    "evidence": "The right to request the destruction of their personal data held by KFUPM under specific conditions.",
     "evidence_found": true,
-    "reason": "The policy outlines the rights of data subjects regarding their personal data."
+    "reason": "It lists the rights to be informed, access, obtain a copy, correct and request destruction, although the right to be informed is cut off by a stray comment."
   },
   {
     "req_id": "R14",
@@ -148,10 +148,10 @@
     "articles": "PDPL-A12; IR-A04(1e)",
     "applies": "always",
     "condition": "",
-    "status": "covered",
-    "evidence": "To exercise these rights, please contact us at Digital Risk & Information Security",
+    "status": "partial",
+    "evidence": "To exercise these rights, please contact us at Digital Risk & Information Security.",
     "evidence_found": true,
-    "reason": "The policy explains how data subjects can exercise their rights."
+    "reason": "It names a contact point but gives no procedure, form, or timelines for exercising rights."
   },
   {
     "req_id": "R15",
@@ -159,10 +159,10 @@
     "articles": "IR-A04(1f)",
     "applies": "always",
     "condition": "",
-    "status": "covered",
-    "evidence": "The collection and processing of personal data are based on the data subject’s consent, which may be withdrawn at any time",
+    "status": "partial",
+    "evidence": "The collection and processing of personal data are based on the data subject’s consent, which may be withdrawn at any time, unless another legal basis applies.",
     "evidence_found": true,
-    "reason": "The policy mentions how consent can be withdrawn."
+    "reason": "It states consent can be withdrawn at any time but does not explain how to withdraw it."
   },
   {
     "req_id": "R16",
@@ -170,10 +170,10 @@
     "articles": "IR-A04(5b)",
     "applies": "conditional",
     "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
-    "status": "covered",
-    "evidence": "KFUPM implements appropriate technical and organizational measures to protect collected personal data from unauthorized access, modification, disclosure, or destruction",
+    "status": "partial",
+    "evidence": "KFUPM implements appropriate technical and organizational measures to protect collected personal data from unauthorized access, modification, disclosure, or destruction, in compliance with the applicable laws and regulations of Saudi Arabia.",
     "evidence_found": true,
-    "reason": "The policy clearly states the measures taken to protect personal data."
+    "reason": "The policy mentions technical and organizational protection measures but gives no specifics about what they are."
   },
   {
     "req_id": "R17",
@@ -184,6 +184,6 @@
     "status": "missing",
     "evidence": "",
     "evidence_found": false,
-    "reason": "The policy does not mention whether decisions are made solely by automated processing."
+    "reason": "The policy does not say whether any decisions are made solely by automated processing; it only mentions automated data collection tools such as cookies."
   }
 ]

@@ -6,9 +6,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "please contact us at [email protected]",
+    "evidence": "Jarir Bookstore Head Office Address:",
     "evidence_found": true,
-    "reason": "The policy provides contact information for inquiries."
+    "reason": "The policy names Jarir as the controller and gives an email and a Riyadh head office address for questions about personal data handling."
   },
   {
     "req_id": "R02",
@@ -19,7 +19,7 @@
     "status": "missing",
     "evidence": "",
     "evidence_found": false,
-    "reason": "There is no mention of a Data Protection Officer's contact details."
+    "reason": "No DPO is mentioned and no DPO-specific contact details are given, only a general contact email and address."
   },
   {
     "req_id": "R03",
@@ -30,7 +30,7 @@
     "status": "covered",
     "evidence": "This data may include, but is not limited to, your name, contact information, payment details, purchase history, and browsing behaviour.",
     "evidence_found": true,
-    "reason": "The policy clearly lists the types of personal data collected."
+    "reason": "The policy lists the categories of personal data collected, though the list is open-ended."
   },
   {
     "req_id": "R04",
@@ -39,9 +39,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "We collect personal data that you provide to us when you use our online services, visit our physical stores, or interact with us through various channels.",
+    "evidence": "We collect location data through technologies such as GPS, Wi-Fi, or cellular network signals.",
     "evidence_found": true,
-    "reason": "The policy specifies the means of data collection."
+    "reason": "The policy describes collection through online services, stores, other channels, cookies and location technologies."
   },
   {
     "req_id": "R05",
@@ -50,9 +50,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "Your personal data is processed for specific purposes, including: To provide you with the products and services you request.",
+    "evidence": "To provide you with the products and services you request.",
     "evidence_found": true,
-    "reason": "The policy outlines the purposes for collecting and processing personal data."
+    "reason": "The policy has a dedicated section listing the purposes of processing."
   },
   {
     "req_id": "R06",
@@ -60,10 +60,10 @@
     "articles": "PDPL-A13(1); PDPL-A04(1); IR-A04(1c)",
     "applies": "always",
     "condition": "",
-    "status": "covered",
-    "evidence": "We obtain your consent before processing any personal data for purposes that require it under the PDPL.",
+    "status": "partial",
+    "evidence": "We obtain your consent before processing any personal data for purposes that require it under the PDPL",
     "evidence_found": true,
-    "reason": "The policy clearly states the legal basis for collecting personal data."
+    "reason": "Consent and legal obligations are mentioned, but no clear legal basis is tied to each collection purpose."
   },
   {
     "req_id": "R07",
@@ -72,9 +72,9 @@
     "applies": "always",
     "condition": "",
     "status": "partial",
-    "evidence": "This data may include, but is not limited to, your name, contact information, payment details, purchase history, and browsing behaviour.",
+    "evidence": "Mandatory Cookies: Essential for the website to function and cannot be switched off",
     "evidence_found": true,
-    "reason": "The policy mentions types of personal data but does not specify which are mandatory or optional."
+    "reason": "Only cookies are labelled mandatory; no mandatory versus optional distinction is made for personal data fields."
   },
   {
     "req_id": "R08",
@@ -85,7 +85,7 @@
     "status": "missing",
     "evidence": "",
     "evidence_found": false,
-    "reason": "The policy does not mention the consequences of not providing personal data."
+    "reason": "The policy does not say what happens if personal data is not provided."
   },
   {
     "req_id": "R09",
@@ -94,9 +94,9 @@
     "applies": "always",
     "condition": "",
     "status": "partial",
-    "evidence": "We do not share your personal data with third parties except as necessary to provide our services, legitimate purposes, comply with the law, or protect our rights.",
+    "evidence": "We do not share your personal data with third parties except as necessary to provide our services, legitimate purposes, comply with the law, or protect our rights",
     "evidence_found": true,
-    "reason": "The policy mentions sharing data but does not specify the parties involved."
+    "reason": "Sharing is described only generically, with no named recipients or their capacity."
   },
   {
     "req_id": "R10",
@@ -107,7 +107,7 @@
     "status": "missing",
     "evidence": "",
     "evidence_found": false,
-    "reason": "The policy does not address whether personal data is transferred outside the Kingdom."
+    "reason": "The policy does not mention any transfer, disclosure or processing of data outside the Kingdom."
   },
   {
     "req_id": "R11",
@@ -118,7 +118,7 @@
     "status": "missing",
     "evidence": "",
     "evidence_found": false,
-    "reason": "The policy does not specify how long personal data is kept or the criteria used to decide."
+    "reason": "The policy gives no retention period or criteria for deciding how long data is kept."
   },
   {
     "req_id": "R12",
@@ -126,10 +126,10 @@
     "articles": "PDPL-A12",
     "applies": "always",
     "condition": "",
-    "status": "partial",
-    "evidence": "We implement technical and organizational measures to secure your personal data against unauthorized access, alteration, disclosure, or destruction",
-    "evidence_found": true,
-    "reason": "The policy mentions security measures but does not detail how personal data is destroyed."
+    "status": "missing",
+    "evidence": "",
+    "evidence_found": false,
+    "reason": "The policy does not describe how data is stored or destroyed; the security section only mentions protection against unauthorized destruction."
   },
   {
     "req_id": "R13",
@@ -137,10 +137,10 @@
     "articles": "PDPL-A04; PDPL-A12; PDPL-A13(6); IR-A04(1e)",
     "applies": "always",
     "condition": "",
-    "status": "covered",
-    "evidence": "You have rights concerning your personal data, including: The right to access and obtain a copy of your data.",
+    "status": "partial",
+    "evidence": "The right to access and obtain a copy of your data.",
     "evidence_found": true,
-    "reason": "The policy clearly outlines the data subject's rights."
+    "reason": "Access, copy, correction and deletion are listed, but the right to be informed is not stated explicitly."
   },
   {
     "req_id": "R14",
@@ -151,7 +151,7 @@
     "status": "covered",
     "evidence": "If you wish to submit a request to access, modify, or delete your personal data, you can visit the Data Request Form.",
     "evidence_found": true,
-    "reason": "The policy specifies how data subjects can exercise their rights."
+    "reason": "The policy gives specific channels (privacy center, guest preferences link, and data request form) for exercising rights."
   },
   {
     "req_id": "R15",
@@ -159,10 +159,10 @@
     "articles": "IR-A04(1f)",
     "applies": "always",
     "condition": "",
-    "status": "covered",
+    "status": "partial",
     "evidence": "You have the right to withdraw your consent at any time.",
     "evidence_found": true,
-    "reason": "The policy clearly states how to withdraw consent."
+    "reason": "The right to withdraw is stated, but the general privacy statement gives no specific process; only cookie consent has a described revocation route."
   },
   {
     "req_id": "R16",
@@ -170,10 +170,10 @@
     "articles": "IR-A04(5b)",
     "applies": "conditional",
     "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
-    "status": "covered",
+    "status": "partial",
     "evidence": "We implement technical and organizational measures to secure your personal data against unauthorized access, alteration, disclosure, or destruction.",
     "evidence_found": true,
-    "reason": "The policy clearly states the measures taken to protect personal data."
+    "reason": "The policy mentions technical and organizational security measures, but only generically and without naming any specific measures."
   },
   {
     "req_id": "R17",
@@ -184,6 +184,6 @@
     "status": "missing",
     "evidence": "",
     "evidence_found": false,
-    "reason": "The policy does not mention anything about decisions made solely by automated processing."
+    "reason": "The policy says nothing about automated decision-making or whether decisions are made solely by automated processing."
   }
 ]

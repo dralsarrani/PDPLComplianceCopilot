@@ -21,6 +21,8 @@ be trusted.
 Reads   data/checklist/pdpl_checklist.csv
         the policy .txt file given on the command line
         OPENAI_API_KEY (and optional OPENAI_MODEL) from .env
+        CLAUDE_MODEL=claude-sonnet-5-5 in .env (with ANTHROPIC_API_KEY) uses Claude
+        instead (src/claude_llm.py); without them, gpt-4o-mini
 Writes  results/gap_v0/<policy name>.json
 
 Run from the project root:
@@ -37,6 +39,7 @@ import pandas as pd
 from dotenv import load_dotenv
 from openai import OpenAI
 
+from src.claude_llm import claude_json, claude_model
 from src.gap.evidence import find_spans
 
 CHECKLIST = Path("data/checklist/pdpl_checklist.csv")
@@ -83,17 +86,24 @@ def build_prompt(policy_text, checklist):
             + "\n\nPrivacy policy:\n\"\"\"\n" + policy_text[:MAX_POLICY_CHARS] + "\n\"\"\"")
 
 
+def gap_model():
+    """The model the analyser uses: Claude when CLAUDE_MODEL is set up, else OPENAI_MODEL."""
+    load_dotenv()
+    return claude_model() or os.environ.get("OPENAI_MODEL", DEFAULT_MODEL)
+
+
 def analyse(policy_text, checklist=None, model=None):
     """Return one dict per checklist requirement:
     {req_id, requirement, articles, applies, condition, status, evidence,
     evidence_found, reason}"""
     load_dotenv()
     checklist = load_checklist() if checklist is None else checklist
-    model = model or os.environ.get("OPENAI_MODEL", DEFAULT_MODEL)
-    client = OpenAI()
+    model = model or gap_model()
 
     def ask(group):
-        response = client.chat.completions.create(
+        if model.startswith("claude"):
+            return claude_json(build_prompt(policy_text, group), SYSTEM_PROMPT, model).get("results", [])
+        response = OpenAI().chat.completions.create(
             model=model,
             temperature=0,
             response_format={"type": "json_object"},

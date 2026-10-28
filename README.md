@@ -20,7 +20,7 @@ PDPL Copilot does three things:
 | Natural out-of-scope questions (extra set of 16, added later) answered "not covered" | | **93.8%** (15/16) |
 | Right article in the top 5 search results | 90.2% | 100% |
 | Same gpt-4o-mini **without** our retrieval: correct article cited | 14.7% | |
-| Gap Analyser agrees with the team's labels (11 Saudi policies) | **77.5%** (93.0% for mentioned vs missing) | |
+| Gap Analyser (Claude) agrees with the team's labels (11 Saudi policies) | **75.9%** (93.0% for mentioned vs missing; κ 0.511) | |
 | OPP-115 classifier, macro-F1 (BERT vs TF-IDF baseline) | | **0.783** vs 0.742 |
 | Cybersecurity questions: right control in the top 5 | 100% (12/12) | |
 
@@ -55,9 +55,9 @@ flowchart LR
     C --> OUT[Cited answer<br/>or 'not covered']
     OUT -. PDPL 'not covered' and<br/>cybersecurity words .-> SC[Second chance:<br/>search the NCA controls]
 
-    N[Company name, link<br/>or file] --> FP[Find the policy<br/>Tavily search, gpt-4o-mini<br/>picks the company's site;<br/>else archives or paste]
+    N[Company name, link<br/>or file] --> FP[Find the policy<br/>Tavily search, Claude<br/>picks the company's site;<br/>else archives or paste]
     FP --> P[Privacy policy]
-    P --> G[Gap Analyser v0<br/>gpt-4o-mini]
+    P --> G[Gap Analyser v0<br/>Claude]
     K[17-requirement<br/>PDPL checklist] --> G
     G --> V[Quote check<br/>against policy text]
     V --> CL[OPP-115 classifier<br/>labels each evidence]
@@ -66,18 +66,18 @@ flowchart LR
 
 - **Retrieval** (`retrieval/retriever.py`): BM25 with Arabic tokenisation + multilingual MiniLM embeddings stored in ChromaDB, fused with RRF, then the small cross-encoder `cross-encoder/mmarco-mMiniLMv2-L12-H384-v1`, then gpt-4o-mini picks the 8 best of the top 10 (falls back to the reranker order without network).
 - **Answering** (`retrieval/answer.py`): the LLM writes each sentence with the article ids it relies on and a short quote. `retrieval/citation_check.py` drops citations that do not exist, were not retrieved, or do not support the sentence. Every live answer is cached in `results/answers_cache.json`, which is the offline fallback for the demo.
-- **Gap Analyser** (`src/gap/analyse_v0.py`): checks a policy against `data/checklist/pdpl_checklist.csv` (17 requirements from PDPL Art. 12, 13 and IR Art. 4). Every quote the model returns is checked against the policy text (`src/gap/evidence.py`): it is *verified* only if its words are in the policy in the same order (case, punctuation, quote marks and Arabic letter forms ignored). A quote the model reworded is not verified; the app then shows the closest real passage of the policy, marked as unverified evidence. The verdict (covered / partial / missing) is kept apart from this evidence check.
+- **Gap Analyser** (`src/gap/analyse_v0.py`): checks a policy against `data/checklist/pdpl_checklist.csv` (17 requirements from PDPL Art. 12, 13 and IR Art. 4) with Claude (`claude-sonnet-5-5`, `src/claude_llm.py`); without a Claude key it uses gpt-4o-mini, the model it was first built with. Every quote the model returns is checked against the policy text (`src/gap/evidence.py`): it is *verified* only if its words are in the policy in the same order (case, punctuation, quote marks and Arabic letter forms ignored). A quote the model reworded is not verified; the app then shows the closest real passage of the policy, marked as unverified evidence. The verdict (covered / partial / missing) is kept apart from this evidence check.
 - **Classifier** (`src/classifier/classify.py`): labels English policy paragraphs with the 10 OPP-115 categories. `src/gap/evidence_labels.py` connects it to the Gap Analyser: each evidence sentence (translated to English with gpt-4o-mini if it is Arabic) is labelled by the classifier, the label is shown next to the evidence in the app, and it is checked against the OPP-115 categories the checklist links to that requirement. The classifier does not change the analyser's verdicts.
 - **Second corpus: NCA Essential Cybersecurity Controls (ECC-2:2024)**: `src/nca/build_ecc.py` reads the official English and Arabic PDFs into 108 controls in each language (`data/processed/ecc_controls_v2024.{json,csv}`; domain, subdomain, objective, control text). The Arabic PDF has ligatures with no text value; `src/nca/arabic_pdf.py` maps them back and checks every control number against the English one. `retrieval/router.py` (gpt-4o-mini, keyword fallback) sends each question to the PDPL, to the controls, or to both; `retrieval/ecc_retriever.py` runs the same search pipeline on its own index, in the question's language. Questions routed to the PDPL are answered exactly as before.
 - **Second chance** (`retrieval/answer.py`): when the router sent a question to the PDPL, the PDPL texts do not answer it and it uses cybersecurity words, the controls are searched too. A question the PDPL answers never gets there.
 - **Finding a policy** (`src/policies/`): the user types a company name, a website or a policy link, or uploads a file (PDF, Word, TXT). For a name, the app tries these steps in order and stops at the first that works:
    1. A policy it already has: one of the 11 Saudi policies, a company analysed ahead (`results/library/`), or a company searched before (`results/found_policies/`, not committed), so a repeat search is instant.
-   2. The company's own site. A Tavily web search lists pages about the company, and gpt-4o-mini picks, by number, the results on the company's own site, so it cannot make up an address; pages that only mention the company, and companies with a similar name, are skipped. Without a Tavily key, OpenAI's search tool is used instead, and the model's memory only when no search can run (alone it gave wrong sites, such as jahez.com for jahez.net). The privacy page is read word for word, respecting robots.txt; a page that builds its text with JavaScript is read through Tavily Extract. If the first site cannot be read, the next site the search found is tried.
+   2. The company's own site. A Tavily web search lists pages about the company, and Claude (gpt-4o-mini without a Claude key) picks, by number, the results on the company's own site, so it cannot make up an address; pages that only mention the company, and companies with a similar name, are skipped. Without a Tavily key, OpenAI's search tool is used instead, and the model's memory only when no search can run (alone it gave wrong sites, such as jahez.com for jahez.net). The privacy page is read word for word, respecting robots.txt; a page that builds its text with JavaScript is read through Tavily Extract. If the first site cannot be read, the next site the search found is tried.
    3. Public archives: Open Terms Archive, Wayback Machine, Common Crawl.
    4. A copy found by OpenAI web search, marked as possibly incomplete.
    5. If all of these fail (for example, the site blocks bots, which is never worked around), the app asks the user to paste the policy or upload it.
 
-   On 26 Saudi companies typed in Arabic (with Tavily), the right site was found for all 26; the policy was read from the site for 22, from an archive for 3, and not found for 1 (October 2026). A pasted or uploaded policy is named after its company, read from the text (`company_name.py`).
+   On 26 Saudi companies typed in Arabic (with Tavily), the right site was found for all 26; the policy was read from the site for 25 and from an archive for 1 (flynas), with none failing; a new company takes 18.7 s (median). With gpt-4o-mini picking, the policy was read from the site for 22, from an archive for 3 and not found for 1, in 13 s (October 2026). A pasted or uploaded policy is named after its company, read from the text (`company_name.py`).
 
 - **In the app** the quotes are marked inside the policy text (green covered, amber partial; missing requirements are listed above the text, `src/gap/highlight.py`), and the gap report can be downloaded as a PDF: the score and verdict, the main gaps as plain questions, the 17 requirements with their articles, and an evidence appendix (`src/gap/report_pdf.py`, Arabic or English; font IBM Plex Sans Arabic, OFL, in `app/fonts/`).
 
@@ -105,11 +105,13 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-Copy `.env.example` to `.env` and add your own OpenAI key:
+Copy `.env.example` to `.env` and add your own keys:
 
 ```
 OPENAI_API_KEY=your-key-here
 OPENAI_MODEL=gpt-4o-mini
+ANTHROPIC_API_KEY=your-claude-key   # optional: Claude for the Gap Analyser and the company-site pick
+CLAUDE_MODEL=claude-sonnet-5-5   # without the Claude key, gpt-4o-mini is used for both
 TAVILY_API_KEY=your-tavily-key   # optional: finds a company's privacy page from its name (free plan at tavily.com)
 ```
 
@@ -249,14 +251,16 @@ Only two answers got opposite scores (Q006 and Q027); most disagreements were 2 
 
 ### Gap Analyser (11 Saudi policies × 17 requirements = 187 team labels)
 
-| Version | Accuracy (3 classes) | Mentioned vs missing | Cohen's κ | F1 covered / partial / missing |
-|---|---|---|---|---|
-| **v0 (used in the app)** | **77.5%** | **93.0%** | **0.452** | 0.87 / 0.32 / 0.70 |
-| v1 (yes/no sub-questions) | 72.7% | 87.2% | 0.445 | 0.84 / 0.47 / 0.52 |
+| Version | Model | Accuracy (3 classes) | Mentioned vs missing | Cohen's κ | F1 covered / partial / missing |
+|---|---|---|---|---|---|
+| **v0 (used in the app)** | **Claude Sonnet 5.5** | **75.9%** | **93.0%** | **0.511** | 0.85 / 0.47 / 0.73 |
+| v0 | gpt-4o-mini | 77.5% | 93.0% | 0.452 | 0.87 / 0.32 / 0.70 |
+| v0 | gpt-4o | 73.8% | 93.0% | 0.421 | 0.84 / 0.30 / 0.72 |
+| v1 (yes/no sub-questions) | gpt-4o-mini | 72.7% | 87.2% | 0.445 | 0.84 / 0.47 / 0.52 |
 
-v0 is too lenient: in 22 of 32 cases the team labelled *partial*, v0 said *covered*. v1 handles *partial* better but is too strict overall. Details per requirement and per policy are in `results/gap_eval*/`.
+With gpt-4o-mini, v0 is too lenient: in 22 of the 32 cases the team labelled *partial*, it said *covered*. Claude does this in 12 of 32 and finds *partial* much better (F1 0.47 vs 0.32), so it agrees more with the team beyond chance (κ 0.511 vs 0.452). Its plain accuracy is 1.6 points lower because it calls more of the team's *covered* labels *partial* (20 of 129, against 7). The largest gain is R16, breach notification (45% to 73%); R02, R10 and R11 fell from 82% to 64%. v1 handles *partial* better but is too strict overall. Details per requirement and per policy are in `results/gap_eval/` (Claude) and `results/gap_eval_gpt-4o-mini/`.
 
-**Evidence check.** Of the 152 requirements v0 judged *covered*, 143 have a quote found word for word in the policy. In the other 9 the model reworded the sentence; a close real passage exists for all 9, and the team had labelled 8 of them *covered*. So the verdicts stand and only the quote is unverified. Counting those 9 as *partial* instead would lower the accuracy from 77.5% to 73.8%, so the score is not changed; the app marks each quote as verified or not.
+**Evidence check.** Claude judged 123 requirements *covered*, and all 123 quotes are found word for word in the policy. With gpt-4o-mini, 143 of 152 were found; the model reworded the other 9 (a close real passage existed for all 9), so the app marks each quote as verified or not.
 
 ### Clause classifier, OPP-115 (test set, macro-F1 over 10 categories)
 
@@ -282,17 +286,17 @@ Other starting models were trained with the same recipe and split, then scored o
 
 So BERT is reliably better than the baseline, and it already agrees with the labels as well as the human annotators agree with each other: the labels, not the model, are the limit. Scoring single sentences costs about 0.16, which is a known weakness of using the classifier on evidence sentences.
 
-### Classifier on the Gap Analyser's evidence (170 evidence sentences from the 11 Saudi policies)
+### Classifier on the Gap Analyser's evidence (164 evidence sentences from the 11 Saudi policies, Claude run)
 
 Does the classifier's top OPP-115 label for an evidence sentence fall in the categories the checklist links to that requirement?
 
 | Evidence | Match |
 |---|---|
-| All | **75.9%** (129/170) |
-| Arabic, translated to English | 78.1% (25/32) |
-| English | 75.4% (104/138) |
+| All | **73.2%** (120/164) |
+| Arabic, translated to English | 81.2% (26/32) |
+| English | 71.2% (94/132) |
 
-The link holds for collection, sharing, retention and security (R03 to R05, R07, R09: 100%) but not for the data subject's rights: R13 (9%) and R14 (36%) are mostly labelled *Other*. OPP-115 categories and PDPL requirements overlap but are not the same thing.
+The link holds for collection, choice and security (R07 and R15: 100%; R04 and R16: 91%) but is weak for some rights and consent: R14 (27%) is mostly labelled *Other*, R08 38%, R06 45%. R13, the right of access, rose from 9% on gpt-4o-mini's evidence (75.9% overall, 129/170) to 64%. OPP-115 categories and PDPL requirements overlap but are not the same thing.
 
 ### Cybersecurity controls (NCA ECC-2:2024): 12 team questions + the 60 PDPL gold questions
 
@@ -314,17 +318,19 @@ The one routing miss (ECC02, whether non-Saudis may hold cybersecurity jobs) wen
 - E2 and E5 were run with BM25 or retrieval scores, not the full pipeline. In the LLM-only run, a citation counts as right if it names the gold article in either language, which favours that run.
 - E2 found fixed-length chunks slightly better than article chunks under BM25. The app keeps article chunks because every citation must point to one whole article.
 - Each Saudi policy was labelled by one team member only, so there is no inter-annotator agreement on the labels. The team rule was: a requirement the policy never mentions is *missing*.
-- The Gap Analyser does not tell *covered* from *partial* well (partial F1 0.32).
+- The Gap Analyser still does not tell *covered* from *partial* well (partial F1 0.47).
+- Claude is called without a temperature setting, so a rerun can change a few verdicts (a trial run scored 76.5%, the official run 75.9%). Each user needs their own Claude key; without it the app uses gpt-4o-mini, whose scores are in the table above.
+- With Claude picking the company's site, a new company takes longer (median 18.7 s against 13 s with gpt-4o-mini).
 - The 11 Saudi policies were labelled in one language each (9 English, 2 Arabic). The app shows a saved policy in the interface language when that copy is kept (`python -m src.policies.fetch_other_language` saves the second language in `data/policies/ar/` and `data/policies/en/`; Al Rajhi, Saudia and Jarir are copied by hand; KFUPM has no Arabic policy page), and otherwise says so and offers the copy it has. The scores above are for the labelled copies only.
 - The Gap Analyser reads the first 60,000 characters of a policy (the longest of the 11 Saudi policies has 43,000). We chose not to split long policies into parts: a requirement covered in one part would be judged missing in the others.
 - The classifier is English only; Arabic evidence is machine-translated before it is labelled. It labels the analyser's evidence but does not help choose the verdict. It was trained on paragraphs but is given single sentences, which lowers its macro-F1 from 0.783 to 0.619 (`08_evidence.ipynb`).
 - The *chapter* field is empty: the official texts (SDAIA platform and the Bureau of Experts page) list the articles without chapter headings, so there is no chapter to record. Retrieval and citations use the article number.
 - The Arabic NCA controls are rebuilt from the PDF's glyphs (11 ligatures mapped by hand, 3 words the PDF splits joined again); a few spacing or vowel-mark slips may remain.
-- The app runs on the user's own computer with their own OpenAI key; it is not deployed online. Without a key or network, only answers saved in the cache can be shown.
+- The app runs on the user's own computer with their own OpenAI key (and Claude key); it is not deployed online. Without a key or network, only answers saved in the cache can be shown.
 - The router adds one gpt-4o-mini call (about one second) to every question.
 - The two graders agreed little on the 0 to 2 answer scores (κ 0.05): the scale did not say how complete a "2" must be.
 - A policy found by OpenAI web search may be summarised rather than copied word for word; the app marks such results as incomplete.
-- The company-name search went through four versions, each checked on the same Saudi companies it is scored on (right site: 10/20, 25/26, 25/26, then 26/26), so 26/26 is not a blind score. The check script (`lookup_test.py`) was run locally and is not in the repository.
+- The company-name search went through four versions, each checked on the same Saudi companies it is scored on (right site: 10/20, 25/26, 25/26, 26/26, then 26/26 with Claude picking), so 26/26 is not a blind score. The check script (`lookup_test.py`) was run locally and is not in the repository.
 - A made-up or misspelt company name can bring up a real company with a similar name (a made-up "Nakhla Desert Technology" found Nakhla Agency). The note under the result links the page that was read, so the user can see which site it came from. Asking the model whether the two names are the same company was tried and was not reliable, so it was dropped.
 - Tavily needs a free key for each user (1,000 credits a month, about 4 to 6 per new company; a company found before costs nothing). Without the key the app uses OpenAI's search tool instead, which was not part of the 26-company check.
 

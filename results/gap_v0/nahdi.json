@@ -6,9 +6,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "Nahdi Company and Nahdi Clinics will be jointly referred to as \"we\" or \"our\"",
+    "evidence": "Address: Nahdi Medical Company, King Abdulaziz Branch Road, Jeddah, PO Box 17129, Saudi Arabia",
     "evidence_found": true,
-    "reason": "The policy identifies the controller and provides contact information."
+    "reason": "The policy names Nahdi Medical Company and Al Nahdi Care Company as the controller and gives a postal address, an email and a website for contact."
   },
   {
     "req_id": "R02",
@@ -16,10 +16,10 @@
     "articles": "IR-A04(1b)",
     "applies": "conditional",
     "condition": "The controller has appointed a DPO",
-    "status": "covered",
-    "evidence": "please contact us via DPO@nahdi.sa",
+    "status": "partial",
+    "evidence": "Email:DPO@nahdi.sa",
     "evidence_found": true,
-    "reason": "The policy provides contact details for the Data Protection Officer."
+    "reason": "A DPO email address is given for data protection queries, but the DPO is not named and no other contact details are provided."
   },
   {
     "req_id": "R03",
@@ -28,9 +28,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "This may include, for example: Your name, Your phone number, Your email, Your address",
-    "evidence_found": false,
-    "reason": "The policy clearly lists the types of personal data collected."
+    "evidence": "The types of personal data we collect can vary based on the situation",
+    "evidence_found": true,
+    "reason": "The policy lists the categories of personal data collected, including name, contact details, national ID, health information and payment information."
   },
   {
     "req_id": "R04",
@@ -39,9 +39,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "we will collect your personal data directly from you",
+    "evidence": "We will collect your personal data directly from you",
     "evidence_found": true,
-    "reason": "The policy specifies the means used to collect personal data."
+    "reason": "The policy says data is collected directly from the individual and from third parties such as healthcare providers and insurers, and describes online tracking and forms."
   },
   {
     "req_id": "R05",
@@ -50,9 +50,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "we may use your personal data for the purposes outlined in section 4 above",
-    "evidence_found": false,
-    "reason": "The policy outlines the purposes for collecting and processing personal data."
+    "evidence": "Please see in the table below the key purposes for which we may use your personal data, as well as examples of processing activities",
+    "evidence_found": true,
+    "reason": "The policy gives detailed tables of processing purposes for the online store, the clinics and marketing."
   },
   {
     "req_id": "R06",
@@ -61,9 +61,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "We will only process your personal data if we have a lawful basis to do so.",
+    "evidence": "We may rely on the following lawful bases:",
     "evidence_found": true,
-    "reason": "The policy clearly states the legal basis for processing personal data."
+    "reason": "Section 3 lists specific lawful bases including consent, contract, legal obligation and legitimate interest."
   },
   {
     "req_id": "R07",
@@ -71,10 +71,10 @@
     "articles": "PDPL-A13(2); IR-A04(1g)",
     "applies": "always",
     "condition": "",
-    "status": "covered",
-    "evidence": "Collecting from you your name, phone number, email, gender and address.",
+    "status": "partial",
+    "evidence": "Collecting and processing your personal data is mandatory to fulfill the purposes specified in the table above.",
     "evidence_found": true,
-    "reason": "The policy specifies which personal data is collected."
+    "reason": "It states processing is mandatory for the purposes but does not distinguish which data items are mandatory and which are optional."
   },
   {
     "req_id": "R08",
@@ -83,9 +83,9 @@
     "applies": "always",
     "condition": "",
     "status": "partial",
-    "evidence": "we will not be able to provide you with a high level of service.",
+    "evidence": "Please note that if we do not complete the collection of personal data for the above purposes, we will not be able to provide you with a high level of service.",
     "evidence_found": true,
-    "reason": "The policy mentions consequences but does not detail them fully."
+    "reason": "It mentions a consequence of not providing data but only vaguely, as a lower level of service."
   },
   {
     "req_id": "R09",
@@ -94,9 +94,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "We may disclose your personal data to the following organizations.",
-    "evidence_found": false,
-    "reason": "The policy clearly states the parties with whom personal data may be shared."
+    "evidence": "We may, as could be required for the purposes listed in section 4 above, disclose your Personal Data to the following organizations:",
+    "evidence_found": true,
+    "reason": "Section 11 lists recipient categories such as contractors, delivery companies, media partners, loyalty partners and regulators, with their roles."
   },
   {
     "req_id": "R10",
@@ -104,10 +104,10 @@
     "articles": "PDPL-A13(4)",
     "applies": "always",
     "condition": "",
-    "status": "covered",
+    "status": "partial",
     "evidence": "We may need to transfer your personal data outside of the KSA for processing.",
     "evidence_found": true,
-    "reason": "The policy explicitly mentions the transfer of personal data outside the Kingdom."
+    "reason": "It says transfers outside the Kingdom may happen but gives no destinations, recipients or specific conditions."
   },
   {
     "req_id": "R11",
@@ -115,10 +115,10 @@
     "articles": "IR-A04(1d)",
     "applies": "always",
     "condition": "",
-    "status": "covered",
-    "evidence": "we will determine the period of storage of your personal data in accordance with our Data Retention Policy",
+    "status": "partial",
+    "evidence": "We will determine the period of storage of your personal data in accordance with our Data Retention Policy",
     "evidence_found": true,
-    "reason": "The policy specifies how the storage period is determined."
+    "reason": "The policy states criteria (legal requirements and specific purposes) but gives no concrete retention periods."
   },
   {
     "req_id": "R12",
@@ -127,9 +127,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "we will arrange its destruction, anonymization or return it to you",
+    "evidence": "We will arrange safe storage of your personal data in our systems",
     "evidence_found": true,
-    "reason": "The policy clearly states how personal data is destroyed."
+    "reason": "The policy lists storage systems and describes destruction, anonymization and non-reconstruction in the disposal section."
   },
   {
     "req_id": "R13",
@@ -138,9 +138,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "you have the following rights regarding your personal data",
+    "evidence": "You have the right to request erasure (destruction) of your personal data available to us, which is no longer required by us",
     "evidence_found": true,
-    "reason": "The policy explicitly lists the rights of the data subjects."
+    "reason": "The policy lists the rights to be informed, access, obtain a copy, correct and request destruction."
   },
   {
     "req_id": "R14",
@@ -148,10 +148,10 @@
     "articles": "PDPL-A12; IR-A04(1e)",
     "applies": "always",
     "condition": "",
-    "status": "partial",
-    "evidence": "if you would like to exercise any of them, please contact us via DPO@nahdi.sa",
+    "status": "covered",
+    "evidence": "If you would like to know more about your rights or if you would like to exercise any of them, please contact us via DPO@nahdi.sa",
     "evidence_found": true,
-    "reason": "The policy mentions how to exercise rights but lacks detailed procedures."
+    "reason": "The policy gives an email contact and a website form for submitting rights requests."
   },
   {
     "req_id": "R15",
@@ -160,9 +160,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "you may withdraw your consent with the use of the form at the following website",
+    "evidence": "You may withdraw your consent with the use of the form at the following website - https://www.nahdi.sa/dsr-english/",
     "evidence_found": true,
-    "reason": "The policy clearly explains how to withdraw consent."
+    "reason": "The policy states that consent can be withdrawn at any time and gives the method."
   },
   {
     "req_id": "R16",
@@ -171,9 +171,9 @@
     "applies": "conditional",
     "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
     "status": "covered",
-    "evidence": "We protect your personal data by using a range of methods and measures.",
+    "evidence": "We apply encryption and other techniques to protect your personal data.",
     "evidence_found": true,
-    "reason": "The policy clearly states the measures taken to protect personal data."
+    "reason": "Section 10 lists specific protective measures: policies and procedures, employee training and encryption."
   },
   {
     "req_id": "R17",
@@ -184,6 +184,6 @@
     "status": "missing",
     "evidence": "",
     "evidence_found": false,
-    "reason": "The policy does not mention anything about decisions made solely by automated processing."
+    "reason": "The policy never says whether any decisions are made solely by automated processing."
   }
 ]
