@@ -68,7 +68,15 @@ flowchart LR
 - **Classifier** (`src/classifier/classify.py`): labels English policy paragraphs with the 10 OPP-115 categories. `src/gap/evidence_labels.py` connects it to the Gap Analyser: each evidence sentence (translated to English with gpt-4o-mini if it is Arabic) is labelled by the classifier, the label is shown next to the evidence in the app, and it is checked against the OPP-115 categories the checklist links to that requirement. The classifier does not change the analyser's verdicts.
 - **Second corpus: NCA Essential Cybersecurity Controls (ECC-2:2024)**: `src/nca/build_ecc.py` reads the official English and Arabic PDFs into 108 controls in each language (`data/processed/ecc_controls_v2024.{json,csv}`; domain, subdomain, objective, control text). The Arabic PDF has ligatures with no text value; `src/nca/arabic_pdf.py` maps them back and checks every control number against the English one. `retrieval/router.py` (gpt-4o-mini, keyword fallback) sends each question to the PDPL, to the controls, or to both; `retrieval/ecc_retriever.py` runs the same search pipeline on its own index, in the question's language. Questions routed to the PDPL are answered exactly as before.
 - **Second chance** (`retrieval/answer.py`): when the router sent a question to the PDPL, the PDPL texts do not answer it and it uses cybersecurity words, the controls are searched too. A question the PDPL answers never gets there.
-- **Finding a policy** (`src/policies/`): the app takes a company name, a website, a policy link or a file (PDF, Word, TXT). It tries, in order: the policies already analysed (`data/library/`), the company's own site, whose privacy page is first located by a web search for it (Tavily search engine, or OpenAI's search tool without a Tavily key; the model's memory alone guessed wrong sites, e.g. jahez.com for jahez.net). gpt-4o-mini then picks the company's own site from the search results by number, so it cannot make up an address; a page that only mentions the company, or a company with a similar name, is not taken. On 26 Saudi companies typed in Arabic, the right site was found for 26, and the policy was read from the site for 22, from an archive for 3, and not found for 1 (October 2026). The privacy page is then read word for word by the app (a page that builds its text with JavaScript is opened through Tavily Extract; robots.txt respected; when a privacy page in one language holds only the terms of use, the same page in the other language is tried), public archives (Open Terms Archive, Wayback Machine, Common Crawl), and last an OpenAI web search, whose copy may be incomplete and is marked so. Sites that block bots are never worked around; the user can upload the policy instead. A policy found from a name is remembered (`results/found_policies/`, not committed), so searching the same company again is instant. A pasted or uploaded policy is named after its company, read from the text itself (`company_name.py`).
+- **Finding a policy** (`src/policies/`): the user types a company name, a website or a policy link, or uploads a file (PDF, Word, TXT). For a name, the app tries these steps in order and stops at the first that works:
+   1. A policy it already has: one of the 11 Saudi policies, a company analysed ahead (`results/library/`), or a company searched before (`results/found_policies/`, not committed), so a repeat search is instant.
+   2. The company's own site. A Tavily web search lists pages about the company, and gpt-4o-mini picks, by number, the results on the company's own site, so it cannot make up an address; pages that only mention the company, and companies with a similar name, are skipped. Without a Tavily key, OpenAI's search tool is used instead, and the model's memory only when no search can run (alone it gave wrong sites, such as jahez.com for jahez.net). The privacy page is read word for word, respecting robots.txt; a page that builds its text with JavaScript is read through Tavily Extract. If the first site cannot be read, the next site the search found is tried.
+   3. Public archives: Open Terms Archive, Wayback Machine, Common Crawl.
+   4. A copy found by OpenAI web search, marked as possibly incomplete.
+   5. If all of these fail (for example, the site blocks bots, which is never worked around), the app asks the user to paste the policy or upload it.
+
+   On 26 Saudi companies typed in Arabic (with Tavily), the right site was found for all 26; the policy was read from the site for 22, from an archive for 3, and not found for 1 (October 2026). A pasted or uploaded policy is named after its company, read from the text (`company_name.py`).
+
 - **In the app** the quotes are marked inside the policy text (green covered, amber partial; missing requirements are listed above the text, `src/gap/highlight.py`), and the gap report can be downloaded as a PDF: the score and verdict, the main gaps as plain questions, the 17 requirements with their articles, and an evidence appendix (`src/gap/report_pdf.py`, Arabic or English; font IBM Plex Sans Arabic, OFL, in `app/fonts/`).
 
 ## Data
@@ -213,7 +221,7 @@ One error: N02 (cookie consent banner) was answered with the general consent rul
 | Answerable questions wrongly answered "not covered" (false refusal) | 0% (0/34) |
 | Citation checker on 14 hand-made cases (correct, invented, unrelated, missing, not retrieved) | 14/14 |
 
-### Human grading of the answers (40 development questions, 0 = wrong, 1 = partly right, 2 = right)
+### Human grading of the answers (40 development questions, 0 = wrong, 1 = correct but incomplete, 2 = correct and complete)
 
 Two team members (Ahlam and Danah) graded every answer against the reference answer, independently and without seeing each other's scores.
 
@@ -268,7 +276,7 @@ Other starting models were trained with the same recipe and split, then scored o
 | One human annotator scored against another (ceiling) | 0.749 |
 | BERT scored against a single annotator | 0.748, the same as human agreement |
 | Paragraphs (training unit) vs single sentences (what the Gap Analyser sends) | BERT 0.783 vs 0.619 |
-| Baseline with thresholds chosen by 5-fold cross-validation | 0.768 at 0.5 and 0.768 tuned: no gain |
+| Baseline retrained on train + validation, thresholds chosen by 5-fold cross-validation | 0.768 at 0.5 and 0.768 tuned: no gain |
 
 So BERT is reliably better than the baseline, and it already agrees with the labels as well as the human annotators agree with each other: the labels, not the model, are the limit. Scoring single sentences costs about 0.16, which is a known weakness of using the classifier on evidence sentences.
 
@@ -286,7 +294,7 @@ The link holds for collection, sharing, retention and security (R03 to R05, R07,
 
 ### Cybersecurity controls (NCA ECC-2:2024): 12 team questions + the 60 PDPL gold questions
 
-12 questions written by the team, each from one control (6 Arabic, 6 English; 2 also mention personal data and should go to both texts), in `data/evaluation/ecc_gold.csv`. Scored once, no tuning.
+12 questions written by the team, each from one control (6 Arabic, 6 English; 2 also mention personal data and should go to both texts), in `data/evaluation/ecc_gold.csv`. Scored once; the second chance below was added after seeing the one routing miss.
 
 | What | Result |
 |---|---|
@@ -314,6 +322,9 @@ The one routing miss (ECC02, whether non-Saudis may hold cybersecurity jobs) wen
 - The router adds one gpt-4o-mini call (about one second) to every question.
 - The two graders agreed little on the 0 to 2 answer scores (κ 0.05): the scale did not say how complete a "2" must be.
 - A policy found by OpenAI web search may be summarised rather than copied word for word; the app marks such results as incomplete.
+- The company-name search went through four versions, each checked on the same Saudi companies it is scored on (right site: 10/20, 25/26, 25/26, then 26/26), so 26/26 is not a blind score. The check script (`lookup_test.py`) was run locally and is not in the repository.
+- A made-up or misspelt company name can bring up a real company with a similar name (a made-up "Nakhla Desert Technology" found Nakhla Agency). The note under the result links the page that was read, so the user can see which site it came from. Asking the model whether the two names are the same company was tried and was not reliable, so it was dropped.
+- Tavily needs a free key for each user (1,000 credits a month, about 4 to 6 per new company; a company found before costs nothing). Without the key the app uses OpenAI's search tool instead, which was not part of the 26-company check.
 
 ## Repository structure
 
