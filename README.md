@@ -55,7 +55,9 @@ flowchart LR
     C --> OUT[Cited answer<br/>or 'not covered']
     OUT -. PDPL 'not covered' and<br/>cybersecurity words .-> SC[Second chance:<br/>search the NCA controls]
 
-    P[Privacy policy] --> G[Gap Analyser v0<br/>gpt-4o-mini]
+    N[Company name, link<br/>or file] --> FP[Find the policy<br/>Tavily search, gpt-4o-mini<br/>picks the company's site;<br/>else archives or paste]
+    FP --> P[Privacy policy]
+    P --> G[Gap Analyser v0<br/>gpt-4o-mini]
     K[17-requirement<br/>PDPL checklist] --> G
     G --> V[Quote check<br/>against policy text]
     V --> CL[OPP-115 classifier<br/>labels each evidence]
