@@ -17,6 +17,7 @@ PDPL Copilot does three things:
 | Answers citing a correct article | **97.1%** (33/34) | **92.9%** (13/14) |
 | Out-of-scope questions answered "not covered" | **100%** (6/6) | 83.3% (5/6) |
 | Answerable questions wrongly refused | **0%** (0/34) | **0%** (0/14) |
+| Natural out-of-scope questions (extra set of 16, added later) answered "not covered" | | **93.8%** (15/16) |
 | Right article in the top 5 search results | 90.2% | 100% |
 | Same gpt-4o-mini **without** our retrieval: correct article cited | 14.7% | |
 | Gap Analyser agrees with the team's labels (11 Saudi policies) | **77.5%** (93.0% for mentioned vs missing) | |
@@ -138,6 +139,7 @@ All commands run from the project root.
 | Retrieval per method and language | `python -m retrieval.evaluate_by_language` | Final row only | `results/retrieval_by_language.csv` |
 | Full Q&A on the gold set | `python -m retrieval.evaluate_answers` | Yes | `results/answer_eval.json` |
 | Same two on the 20 test questions | add `--test` to the two commands above | As above | `results/retrieval_by_language_test.csv`, `results/answer_eval_test.json` |
+| "Not covered" on 16 natural out-of-scope questions | `python -m retrieval.evaluate_natural` | Yes | `results/natural_unanswerable_eval.json` |
 | Citation checker on hand-made cases | `python -m retrieval.evaluate_citation_check` | Yes | `results/citation_check_eval.json` |
 | Reranker comparison | `python -m retrieval.compare_rerankers --fast` | No | printed |
 | Gap Analyser vs team labels | `python -m src.gap.evaluate_gap` (add `--v1` for v1) | No | `results/gap_eval/`, `results/gap_eval_v1/` |
@@ -186,6 +188,19 @@ The multilingual MiniLM embeddings are weak in Arabic (32.4); the reranker close
 | Average seconds per question | 11.1 |
 
 Two errors: Q012 cited IR-A22 instead of PDPL-A14, and Q053 (unanswerable) was answered with PDPL-A42. With only 20 questions, one error moves a score by 5 to 17 points.
+
+### Natural out-of-scope questions (16, added after the main evaluation)
+
+The 12 unanswerable gold questions ask for facts no law contains (a date, a phone number, a count of complaints), so they are easy to refuse. We added 16 questions in formal legal wording, the way our users ask (9 Arabic, 7 English), on topics close to data protection that the PDPL, the IR and the TR do not address (AI training, cookie banners, a minimum age for children, search-engine delisting, a fee for a copy of one's data, DPO qualifications, paying a ransomware ransom, cyber insurance, and others). Each topic was checked by keyword search in Arabic and English; five are marked borderline because general articles exist that a model could use. The questions were drafted with an AI assistant and reviewed by the team. The system was not changed for this set.
+
+| Metric | Result |
+|---|---|
+| Answered "not covered", all | 93.8% (15/16) |
+| Clear topics / borderline topics | 10/11 / 5/5 |
+| Arabic / English | 9/9 / 6/7 |
+| Average seconds per question | 8.6 |
+
+One error: N02 (cookie consent banner) was answered with the general consent rules (IR-A11, PDPL-A26). The quotes are real, but cookies are never mentioned, so the right reply was "not covered". Questions and topics: `data/evaluation/natural_unanswerable.json`.
 
 ### Answers (40 development questions)
 
