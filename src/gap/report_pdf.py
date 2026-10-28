@@ -20,7 +20,6 @@ texts: the app's own wording, so the PDF says what the screen says:
 Arabic needs letter joining and right-to-left order, so fpdf2 uses HarfBuzz
 (uharfbuzz) with the IBM Plex Sans Arabic font kept in app/fonts/.
 """
-import math
 import re
 from datetime import date
 from pathlib import Path
