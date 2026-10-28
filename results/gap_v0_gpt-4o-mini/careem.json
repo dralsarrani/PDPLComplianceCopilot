@@ -1,0 +1,189 @@
+[
+  {
+    "req_id": "R01",
+    "requirement": "The controller's identity and how to contact it about personal data",
+    "articles": "IR-A04(1a); PDPL-A13(3)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "evidence": "Careem Technologies will be the data controller for the Personal Data provided during the registration process",
+    "evidence_found": true,
+    "reason": "The policy clearly identifies the data controller."
+  },
+  {
+    "req_id": "R02",
+    "requirement": "Contact details of the data protection officer (DPO)",
+    "articles": "IR-A04(1b)",
+    "applies": "conditional",
+    "condition": "The controller has appointed a DPO",
+    "status": "missing",
+    "evidence": "",
+    "evidence_found": false,
+    "reason": "The policy does not mention a data protection officer."
+  },
+  {
+    "req_id": "R03",
+    "requirement": "The personal data that is collected",
+    "articles": "PDPL-A12",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "evidence": "The Personal Data collected in these processes may include your: name; email address; phone number; addresses that you provide",
+    "evidence_found": false,
+    "reason": "The policy specifies the types of personal data collected."
+  },
+  {
+    "req_id": "R04",
+    "requirement": "The means used to collect personal data",
+    "articles": "PDPL-A12",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "evidence": "we collect Personal Data that you provide directly to us through your access or use of the Services",
+    "evidence_found": true,
+    "reason": "The policy describes the means of collecting personal data."
+  },
+  {
+    "req_id": "R05",
+    "requirement": "The purpose of collecting and processing personal data",
+    "articles": "PDPL-A12; PDPL-A13(2); IR-A04(1c)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "evidence": "We may use Personal Data collected in the manners described above to: Provide, maintain, and improve our Services",
+    "evidence_found": true,
+    "reason": "The policy outlines the purposes for collecting and processing personal data."
+  },
+  {
+    "req_id": "R06",
+    "requirement": "The legal basis for collecting personal data (e.g. consent, contract, legal obligation)",
+    "articles": "PDPL-A13(1); PDPL-A04(1); IR-A04(1c)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "evidence": "Uber relies on the following legal basis for processing your data",
+    "evidence_found": true,
+    "reason": "The policy clearly states the legal bases for processing personal data."
+  },
+  {
+    "req_id": "R07",
+    "requirement": "Which personal data is mandatory and which is optional",
+    "articles": "PDPL-A13(2); IR-A04(1g)",
+    "applies": "always",
+    "condition": "",
+    "status": "partial",
+    "evidence": "The Personal Data collected in these processes may include your: name; email address; phone number; addresses that you provide",
+    "evidence_found": false,
+    "reason": "The policy mentions types of personal data but does not clearly distinguish between mandatory and optional data."
+  },
+  {
+    "req_id": "R08",
+    "requirement": "The consequences of not providing personal data",
+    "articles": "PDPL-A13(5)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "evidence": "if you choose not to provide us with some of this Personal Data, or request that we erase some or all of it, we may not be able to provide you with our Services",
+    "evidence_found": true,
+    "reason": "The policy specifies the consequences of not providing personal data."
+  },
+  {
+    "req_id": "R09",
+    "requirement": "The parties personal data is disclosed or shared with, and their capacity",
+    "articles": "PDPL-A13(4)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "evidence": "we may share your Personal Data: With Uber Affiliates; With third parties that we use to carry out work on our behalf",
+    "evidence_found": true,
+    "reason": "The policy clearly states the parties with whom personal data is shared."
+  },
+  {
+    "req_id": "R10",
+    "requirement": "Whether personal data is transferred, disclosed or processed outside the Kingdom",
+    "articles": "PDPL-A13(4)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "evidence": "we may also transfer personal data to countries other than the one where you live or use the Services",
+    "evidence_found": false,
+    "reason": "The policy explicitly mentions the transfer of personal data outside the Kingdom."
+  },
+  {
+    "req_id": "R11",
+    "requirement": "How long personal data is kept, or the criteria used to decide",
+    "articles": "IR-A04(1d)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "evidence": "We will store and retain your Personal Data for the period of time necessary for the purpose for which the data has been collected",
+    "evidence_found": true,
+    "reason": "The policy specifies how long personal data is kept."
+  },
+  {
+    "req_id": "R12",
+    "requirement": "How personal data is stored and destroyed",
+    "articles": "PDPL-A12",
+    "applies": "always",
+    "condition": "",
+    "status": "partial",
+    "evidence": "Following an account deletion request (where warranted in accordance with the data subject rights referred to below), we will erase or archive from active use the Personal Data",
+    "evidence_found": true,
+    "reason": "The policy mentions data destruction but lacks detail on storage methods."
+  },
+  {
+    "req_id": "R13",
+    "requirement": "The data subject's rights: to be informed, access, obtain a copy, correct, and request destruction",
+    "articles": "PDPL-A04; PDPL-A12; PDPL-A13(6); IR-A04(1e)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "evidence": "Depending upon which country you are in at the time that we collect and use your Personal Data to provide you Services, you may have some or all of the following rights under applicable law",
+    "evidence_found": true,
+    "reason": "The policy clearly outlines the data subject's rights."
+  },
+  {
+    "req_id": "R14",
+    "requirement": "How the data subject can exercise their rights",
+    "articles": "PDPL-A12; IR-A04(1e)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "evidence": "Depending on your location or the version of the Careem application that you are using, you may exercise these rights through the Settings menu in the Careem Technologies EverythingApp or by contacting here",
+    "evidence_found": true,
+    "reason": "The policy explains how data subjects can exercise their rights."
+  },
+  {
+    "req_id": "R15",
+    "requirement": "How to withdraw consent",
+    "articles": "IR-A04(1f)",
+    "applies": "always",
+    "condition": "",
+    "status": "covered",
+    "evidence": "you have the right to withdraw your consent at any time, in which case we will cease that collection and use of your data",
+    "evidence_found": true,
+    "reason": "The policy specifies how to withdraw consent."
+  },
+  {
+    "req_id": "R16",
+    "requirement": "The measures taken to protect personal data",
+    "articles": "IR-A04(5b)",
+    "applies": "conditional",
+    "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
+    "status": "covered",
+    "evidence": "Uber makes every effort to ensure that your Personal Data is secure",
+    "evidence_found": true,
+    "reason": "The policy clearly states measures taken to protect personal data."
+  },
+  {
+    "req_id": "R17",
+    "requirement": "Whether decisions are made solely by automated processing",
+    "articles": "IR-A04(5c)",
+    "applies": "conditional",
+    "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
+    "status": "covered",
+    "evidence": "We use personal data to make automated decisions relating to use of our Services",
+    "evidence_found": true,
+    "reason": "The policy explicitly mentions that automated decisions are made."
+  }
+]

@@ -8,7 +8,7 @@
     "status": "covered",
     "evidence": "We are HungerStation LLC and we are located at King Abdulaziz Road, Alyasmin, Riyadh, Saudi Arabia.",
     "evidence_found": true,
-    "reason": "The policy clearly states the controller's identity and contact information."
+    "reason": "The policy names the controller, gives its address and provides an email address for data protection questions."
   },
   {
     "req_id": "R02",
@@ -19,7 +19,7 @@
     "status": "covered",
     "evidence": "If you would like to reach our data protection officer, please contact dpo@deliveryhero.com.",
     "evidence_found": true,
-    "reason": "The policy provides specific contact details for the DPO."
+    "reason": "The policy gives a specific email address for the DPO."
   },
   {
     "req_id": "R03",
@@ -28,9 +28,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "we will process the following categories of personal data: Account data including your name, email address, password, telephone number, country, user ID, language, communication, and other profile settings.",
+    "evidence": "Broadly speaking we will process the following categories of personal data:",
     "evidence_found": true,
-    "reason": "The policy clearly lists the personal data categories collected."
+    "reason": "The policy lists categories of data in detail, such as account, order, location, device, payment and customer support data."
   },
   {
     "req_id": "R04",
@@ -39,9 +39,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "we process personal data actively provided by you, collected from your device when you interact with us, or obtained from third parties.",
+    "evidence": "we process personal data actively provided by you, collected from your device when you interact with us, or obtained from third parties",
     "evidence_found": true,
-    "reason": "The policy specifies the means used to collect personal data."
+    "reason": "The policy states the collection means: direct from the user, from the device including cookies, SDKs and pixels, and from third parties."
   },
   {
     "req_id": "R05",
@@ -50,9 +50,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "The information we request during the account creation process is necessary to take the first step in establishing a customer relationship with you so that we can provide you with our services.",
+    "evidence": "This Privacy Statement aims to clarify what personal data we process, why we process it, who receives your data, and how you can exercise your legal rights",
     "evidence_found": true,
-    "reason": "The policy clearly states the purpose of collecting and processing personal data."
+    "reason": "Section 3 sets out the specific purposes of each processing activity, such as account creation, order processing, fraud prevention and marketing."
   },
   {
     "req_id": "R06",
@@ -61,9 +61,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "The legal basis for this processing is our and your legitimate interest in concluding an agreement on the provision of our delivery services to you",
+    "evidence": "The legal basis for this processing is ‘performance of a previous agreement’ under Art. 6 (2) PDPL.",
     "evidence_found": true,
-    "reason": "The policy clearly states the legal basis for processing personal data."
+    "reason": "Each processing purpose names its legal basis (consent, contract, legal obligation, legitimate interest) with PDPL article references."
   },
   {
     "req_id": "R07",
@@ -71,10 +71,10 @@
     "articles": "PDPL-A13(2); IR-A04(1g)",
     "applies": "always",
     "condition": "",
-    "status": "covered",
-    "evidence": "we will process the following categories of personal data: Account data including your name, email address, password, telephone number, country, user ID, language, communication, and other profile settings",
+    "status": "partial",
+    "evidence": "The information we request during the account creation process is necessary to take the first step in establishing a customer relationship with you so that we can provide you with our services.",
     "evidence_found": true,
-    "reason": "The policy specifies which personal data is mandatory and optional."
+    "reason": "Some data is described as necessary for specific features, but there is no clear mandatory versus optional distinction for data fields."
   },
   {
     "req_id": "R08",
@@ -83,9 +83,9 @@
     "applies": "always",
     "condition": "",
     "status": "partial",
-    "evidence": "Without this information, we would be unable to take necessary steps to fulfill our contractual obligations to you",
+    "evidence": "Without this information, we would be unable to take necessary steps to fulfill our contractual obligations to you.",
     "evidence_found": true,
-    "reason": "The policy mentions consequences but does not detail them fully."
+    "reason": "Consequences are stated for some features, such as being unable to provide the service or receiving generic ads, but not systematically for all data."
   },
   {
     "req_id": "R09",
@@ -94,9 +94,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "we share your order data with the vendor (e.g. restaurants, shops) preparing your order",
+    "evidence": "The main data processor for cloud technology on our platform is our group’s headquarters located with Delivery Hero SE in Berlin.",
     "evidence_found": true,
-    "reason": "The policy clearly states the parties with whom personal data is shared."
+    "reason": "Section 4 names recipients such as group companies, processors, vendors, riders, Mastercard and authorities, and states each one's role as processor, independent third party or controller."
   },
   {
     "req_id": "R10",
@@ -105,9 +105,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "we take appropriate measures to ensure that your data is always afforded an adequate level of protection in the countries to which it is transferred",
+    "evidence": "We and the parties we share your personal data with may transfer personal data to countries other than the country in which you use our services.",
     "evidence_found": true,
-    "reason": "The policy clearly states that personal data may be transferred outside the Kingdom."
+    "reason": "The policy discloses cross-border transfers, including to Delivery Hero SE in Germany and EU cloud providers, with the safeguards relied on."
   },
   {
     "req_id": "R11",
@@ -116,9 +116,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "we store this personal data as long as you remain our customer and in the ordinary course of things we delete it when you close your account, or after 3 years of inactivity",
+    "evidence": "We store this personal data as long as you remain our customer and in the ordinary course of things we delete it when you close your account, or after 3 years of inactivity, unless statutory legal requirements mandate longer retention",
     "evidence_found": true,
-    "reason": "The policy clearly states the retention period for personal data."
+    "reason": "Gives specific retention periods per purpose (e.g. 3 years inactivity, 10 years for invoices, 90 days for backups) plus general criteria in section 7."
   },
   {
     "req_id": "R12",
@@ -127,9 +127,9 @@
     "applies": "always",
     "condition": "",
     "status": "partial",
-    "evidence": "we delete daily backups after 90 days",
+    "evidence": "All types of personal information you provide and the information we collect about you is stored and protected within the secure environment of our platform",
     "evidence_found": true,
-    "reason": "The policy mentions data destruction but does not provide details on storage methods."
+    "reason": "Describes secure storage, cloud hosting, backup deletion and deletion triggers, but gives no clear method of how data is destroyed."
   },
   {
     "req_id": "R13",
@@ -138,9 +138,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "you have the right to ask us to delete your personal data",
+    "evidence": "You have the right to access your personal data and obtain additional information on how we process it",
     "evidence_found": true,
-    "reason": "The policy explicitly outlines the data subject's rights."
+    "reason": "Lists rights to access, copy, rectification and erasure, and the policy itself informs users about processing."
   },
   {
     "req_id": "R14",
@@ -151,7 +151,7 @@
     "status": "covered",
     "evidence": "To exercise your rights, we encourage you to use the functions available in your account at any time",
     "evidence_found": true,
-    "reason": "The policy provides clear instructions on how to exercise rights."
+    "reason": "Explains self-service account functions and contacting the customer care team to exercise rights."
   },
   {
     "req_id": "R15",
@@ -160,9 +160,9 @@
     "applies": "always",
     "condition": "",
     "status": "partial",
-    "evidence": "you can revoke it for the future, please let us know by contacting us",
-    "evidence_found": false,
-    "reason": "The policy mentions withdrawal of consent but lacks detailed procedures."
+    "evidence": "If you have already given your consent and would like to revoke it for the future, please let us know by contacting us",
+    "evidence_found": true,
+    "reason": "Withdrawal is explained only for user surveys and opt-out for marketing, with no general consent withdrawal procedure."
   },
   {
     "req_id": "R16",
@@ -171,9 +171,9 @@
     "applies": "conditional",
     "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
     "status": "covered",
-    "evidence": "We use state of the art servers, network equipment and cloud services to deliver our platform, to ensure high performance and uninterrupted service.",
+    "evidence": "We also use tools such as 2-factor authentication, endpoint security detection, traffic monitoring, backup systems and data loss prevention solutions to keep your data secure at all times",
     "evidence_found": true,
-    "reason": "The policy clearly describes the measures taken to protect personal data."
+    "reason": "The policy lists specific security measures such as 2-factor authentication, traffic monitoring, backups and data loss prevention."
   },
   {
     "req_id": "R17",
@@ -181,9 +181,9 @@
     "articles": "IR-A04(5c)",
     "applies": "conditional",
     "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
-    "status": "partial",
-    "evidence": "we will ensure that you have the right not to be subject to the algorithmic decision making processes",
+    "status": "covered",
+    "evidence": "You have the right to object to a fully automated decision (i.e. without any human intervention in the decision-making process) that has legal effects or significantly affects you.",
     "evidence_found": true,
-    "reason": "The policy mentions automated processing but does not clarify if decisions are made solely by it."
+    "reason": "The policy states that some decisions are automated, such as fraud-related automated account suspension, and has a dedicated section on algorithmic decision making."
   }
 ]

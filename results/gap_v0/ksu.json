@@ -8,7 +8,7 @@
     "status": "covered",
     "evidence": "King Saud University is committed to ensuring the confidentiality and privacy of its website users’ data",
     "evidence_found": true,
-    "reason": "The policy identifies the controller as King Saud University."
+    "reason": "The University is named as the controller and the DMO is given as the contact channel, with website, email and phone."
   },
   {
     "req_id": "R02",
@@ -16,10 +16,10 @@
     "articles": "IR-A04(1b)",
     "applies": "conditional",
     "condition": "The controller has appointed a DPO",
-    "status": "covered",
-    "evidence": "Requests can be filed via the email address provided in Article Nine.(dmo@ksu.edu.sa)",
+    "status": "partial",
+    "evidence": "The consent can be withdrawn by contacting the DMO via",
     "evidence_found": true,
-    "reason": "The policy provides contact details for the Data Management Office."
+    "reason": "The policy gives contact details for the Data Management Office but never mentions a data protection officer."
   },
   {
     "req_id": "R03",
@@ -28,9 +28,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "The University collects the following personal data upon service: Username Authorization type Registration date Last access date",
+    "evidence": "The University collects the following personal data upon service",
     "evidence_found": true,
-    "reason": "The policy clearly lists the personal data collected."
+    "reason": "It lists the specific data items: username, authorization type, registration date and last access date."
   },
   {
     "req_id": "R04",
@@ -41,7 +41,7 @@
     "status": "covered",
     "evidence": "Personal data is collected only upon the user’s approval when requesting services and after accepting the Privacy Notice",
     "evidence_found": true,
-    "reason": "The policy specifies the means used to collect personal data."
+    "reason": "It describes how data is collected, through service requests after consent, and states that casual browsing collects nothing."
   },
   {
     "req_id": "R05",
@@ -50,9 +50,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "The University processes personal data to: Verify user identity and contact details",
+    "evidence": "The University processes personal data to:",
     "evidence_found": true,
-    "reason": "The policy states the purposes for collecting and processing personal data."
+    "reason": "Article Six lists the purposes: verifying identity, tracking requests and facilitating communication."
   },
   {
     "req_id": "R06",
@@ -63,7 +63,7 @@
     "status": "covered",
     "evidence": "Collecting personal data is based on legitimate interests (improving user experience) or legal obligations.",
     "evidence_found": true,
-    "reason": "The policy clearly states the legal basis for collecting personal data."
+    "reason": "The policy names legitimate interests, legal obligations and explicit consent as the bases for collecting and processing data."
   },
   {
     "req_id": "R07",
@@ -71,10 +71,10 @@
     "articles": "PDPL-A13(2); IR-A04(1g)",
     "applies": "always",
     "condition": "",
-    "status": "partial",
-    "evidence": "The University collects the following personal data upon service: Username Authorization type Registration date Last access date",
-    "evidence_found": true,
-    "reason": "The policy lists some personal data but does not specify which is mandatory or optional."
+    "status": "missing",
+    "evidence": "",
+    "evidence_found": false,
+    "reason": "The policy lists the data it collects but never says which items are mandatory and which are optional."
   },
   {
     "req_id": "R08",
@@ -85,7 +85,7 @@
     "status": "missing",
     "evidence": "",
     "evidence_found": false,
-    "reason": "The policy does not mention the consequences of not providing personal data."
+    "reason": "The policy does not explain what happens if the user does not provide personal data."
   },
   {
     "req_id": "R09",
@@ -93,10 +93,10 @@
     "articles": "PDPL-A13(4)",
     "applies": "always",
     "condition": "",
-    "status": "covered",
-    "evidence": "Data is disclosed to third parties only with prior consent or as required by law.",
+    "status": "partial",
+    "evidence": "Data is disclosed to third parties only with prior consent or as required by law, including the Personal Data Protection Law, its executive regulations, or regulations approved by the University board.",
     "evidence_found": true,
-    "reason": "The policy clearly states the conditions under which personal data is shared."
+    "reason": "It states the conditions for disclosure to third parties but does not identify who the recipients are or their capacity."
   },
   {
     "req_id": "R10",
@@ -107,7 +107,7 @@
     "status": "missing",
     "evidence": "",
     "evidence_found": false,
-    "reason": "The policy does not address whether personal data is transferred outside the Kingdom."
+    "reason": "The policy says nothing about transferring or processing data outside the Kingdom."
   },
   {
     "req_id": "R11",
@@ -118,7 +118,7 @@
     "status": "missing",
     "evidence": "",
     "evidence_found": false,
-    "reason": "The policy does not specify how long personal data is kept or the criteria used to decide."
+    "reason": "The policy gives no retention period or criteria; it only mentions deleting unwanted data and legal retention periods without specifying them."
   },
   {
     "req_id": "R12",
@@ -127,9 +127,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "Personal data is stored on the University's servers, which utilize the latest data protection technologies in line with the Saudi National Cybersecurity Authority standards.",
+    "evidence": "Personal data is stored on the University's servers, which utilize the latest data protection technologies in line with the Saudi National Cybersecurity Authority standards",
     "evidence_found": true,
-    "reason": "The policy clearly states how personal data is stored and mentions secure deletion."
+    "reason": "Article Eight states where data is stored and that unwanted data is securely and permanently deleted."
   },
   {
     "req_id": "R13",
@@ -138,9 +138,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "the owner of personal data has the right to: Know about the method and the legal framework of collecting, processing, sharing, saving, and terminating data.",
-    "evidence_found": false,
-    "reason": "The policy explicitly outlines the rights of the data subject."
+    "evidence": "Request data termination under certain conditions, unless a legal provision or contractual requirements specify a specific retention period",
+    "evidence_found": true,
+    "reason": "Article Ten lists rights to be informed, access a copy, correct, and request destruction."
   },
   {
     "req_id": "R14",
@@ -149,9 +149,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "Requests can be filed via the email address provided in Article Nine.",
+    "evidence": "Access to a clear and readable copy of acquired data via email in Article Nine.(dmo@ksu.edu.sa)",
     "evidence_found": true,
-    "reason": "The policy specifies how the data subject can exercise their rights."
+    "reason": "Rights requests are made through the DMO email and contact channels given in Article Nine."
   },
   {
     "req_id": "R15",
@@ -160,9 +160,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "Withdraw consent to process personal data at any time unless there are legitimate purposes that require otherwise.",
+    "evidence": "The consent can be withdrawn by contacting the DMO via",
     "evidence_found": true,
-    "reason": "The policy clearly states how to withdraw consent."
+    "reason": "Article Nine explains consent withdrawal and lists website, email and phone contacts."
   },
   {
     "req_id": "R16",
@@ -171,9 +171,9 @@
     "applies": "conditional",
     "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
     "status": "covered",
-    "evidence": "the latest data protection technologies in line with the Saudi National Cybersecurity Authority standards",
+    "evidence": "Personal data is stored on the University's servers, which utilize the latest data protection technologies in line with the Saudi National Cybersecurity Authority standards",
     "evidence_found": true,
-    "reason": "The policy clearly states the measures taken to protect personal data."
+    "reason": "The policy describes security measures such as protective technologies aligned with NCA standards and secure permanent deletion."
   },
   {
     "req_id": "R17",
@@ -184,6 +184,6 @@
     "status": "missing",
     "evidence": "",
     "evidence_found": false,
-    "reason": "The policy does not mention anything about decisions made solely by automated processing."
+    "reason": "The policy does not say whether decisions are made solely by automated processing."
   }
 ]

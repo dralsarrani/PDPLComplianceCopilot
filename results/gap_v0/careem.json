@@ -6,9 +6,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "Careem Technologies will be the data controller for the Personal Data provided during the registration process",
+    "evidence": "you can also contact us by post addressed to Privacy Legal Team, UTI, 1725 3rd Street, San Francisco, CA 94158",
     "evidence_found": true,
-    "reason": "The policy clearly identifies the data controller."
+    "reason": "The policy names Careem Technologies and Uber Technologies Inc. as controllers and gives a contact form and a postal address."
   },
   {
     "req_id": "R02",
@@ -19,7 +19,7 @@
     "status": "missing",
     "evidence": "",
     "evidence_found": false,
-    "reason": "The policy does not mention a data protection officer."
+    "reason": "No data protection officer or DPO contact details are given; only a general privacy legal team address."
   },
   {
     "req_id": "R03",
@@ -28,9 +28,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "The Personal Data collected in these processes may include your: name; email address; phone number; addresses that you provide",
-    "evidence_found": false,
-    "reason": "The policy specifies the types of personal data collected."
+    "evidence": "The Personal Data collected in these processes may include your:",
+    "evidence_found": true,
+    "reason": "Detailed lists of the personal data collected are given in Section 3, including name, contact details, ID, location and device data."
   },
   {
     "req_id": "R04",
@@ -39,9 +39,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "we collect Personal Data that you provide directly to us through your access or use of the Services",
+    "evidence": "In some cases, we collect this data through cookies, pixels, tags, and similar tracking technologies that create and maintain unique identifiers",
     "evidence_found": true,
-    "reason": "The policy describes the means of collecting personal data."
+    "reason": "The policy describes collection directly from users, through app use and tracking technologies, and from third parties."
   },
   {
     "req_id": "R05",
@@ -50,9 +50,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "We may use Personal Data collected in the manners described above to: Provide, maintain, and improve our Services",
+    "evidence": "We may use Personal Data collected in the manners described above to:",
     "evidence_found": true,
-    "reason": "The policy outlines the purposes for collecting and processing personal data."
+    "reason": "Section 4 lists the specific purposes of processing, such as providing services, safety, fraud prevention and marketing."
   },
   {
     "req_id": "R06",
@@ -61,9 +61,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "Uber relies on the following legal basis for processing your data",
+    "evidence": "Contractual Necessity: This basis applies when we must use your data in order to provide the services you request and meet our responsibilities under the contract to which you are a party to",
     "evidence_found": true,
-    "reason": "The policy clearly states the legal bases for processing personal data."
+    "reason": "Section 2 lists contractual necessity, consent, legitimate interest and legal obligation as legal bases, each with examples."
   },
   {
     "req_id": "R07",
@@ -71,10 +71,10 @@
     "articles": "PDPL-A13(2); IR-A04(1g)",
     "applies": "always",
     "condition": "",
-    "status": "partial",
-    "evidence": "The Personal Data collected in these processes may include your: name; email address; phone number; addresses that you provide",
+    "status": "missing",
+    "evidence": "",
     "evidence_found": false,
-    "reason": "The policy mentions types of personal data but does not clearly distinguish between mandatory and optional data."
+    "reason": "The policy lists the data it collects but never says which items are mandatory and which are optional."
   },
   {
     "req_id": "R08",
@@ -83,9 +83,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "if you choose not to provide us with some of this Personal Data, or request that we erase some or all of it, we may not be able to provide you with our Services",
+    "evidence": "Please note that if you choose not to provide us with some of this Personal Data, or request that we erase some or all of it, we may not be able to provide you with our Services at all, or provide it to the same standard we can if we are using that Personal Data.",
     "evidence_found": true,
-    "reason": "The policy specifies the consequences of not providing personal data."
+    "reason": "The policy states that withholding data may mean the Services cannot be provided or are degraded."
   },
   {
     "req_id": "R09",
@@ -94,9 +94,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "we may share your Personal Data: With Uber Affiliates; With third parties that we use to carry out work on our behalf",
+    "evidence": "Careem technologies, in relation to:",
     "evidence_found": true,
-    "reason": "The policy clearly states the parties with whom personal data is shared."
+    "reason": "Section 5 names the recipients (Affiliates, Careem Technologies, Google, vendors, authorities, Captains) and their roles, such as service providers or separate controllers."
   },
   {
     "req_id": "R10",
@@ -104,10 +104,10 @@
     "articles": "PDPL-A13(4)",
     "applies": "always",
     "condition": "",
-    "status": "covered",
-    "evidence": "we may also transfer personal data to countries other than the one where you live or use the Services",
-    "evidence_found": false,
-    "reason": "The policy explicitly mentions the transfer of personal data outside the Kingdom."
+    "status": "partial",
+    "evidence": "we process personal data globally. This means we may also transfer personal data to countries other than the one where you live or use theServices.",
+    "evidence_found": true,
+    "reason": "The policy says data may be transferred abroad but does not specifically address transfers outside the Kingdom of Saudi Arabia or name destinations."
   },
   {
     "req_id": "R11",
@@ -118,7 +118,7 @@
     "status": "covered",
     "evidence": "We will store and retain your Personal Data for the period of time necessary for the purpose for which the data has been collected",
     "evidence_found": true,
-    "reason": "The policy specifies how long personal data is kept."
+    "reason": "Retention is tied to the purpose of collection, which is a criterion, though no specific periods are given."
   },
   {
     "req_id": "R12",
@@ -127,9 +127,9 @@
     "applies": "always",
     "condition": "",
     "status": "partial",
-    "evidence": "Following an account deletion request (where warranted in accordance with the data subject rights referred to below), we will erase or archive from active use the Personal Data",
+    "evidence": "we will erase or archive from active use the Personal Data of the individual to which the requirement or request relates",
     "evidence_found": true,
-    "reason": "The policy mentions data destruction but lacks detail on storage methods."
+    "reason": "Destruction after deletion requests is described, but how data is stored (methods, location, safeguards) is not."
   },
   {
     "req_id": "R13",
@@ -137,10 +137,10 @@
     "articles": "PDPL-A04; PDPL-A12; PDPL-A13(6); IR-A04(1e)",
     "applies": "always",
     "condition": "",
-    "status": "covered",
-    "evidence": "Depending upon which country you are in at the time that we collect and use your Personal Data to provide you Services, you may have some or all of the following rights under applicable law",
+    "status": "partial",
+    "evidence": "To request access to your data, including your profile data and trip history",
     "evidence_found": true,
-    "reason": "The policy clearly outlines the data subject's rights."
+    "reason": "Access, correction and erasure are covered, but the right to be informed and to obtain a copy are not clearly stated."
   },
   {
     "req_id": "R14",
@@ -149,9 +149,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "Depending on your location or the version of the Careem application that you are using, you may exercise these rights through the Settings menu in the Careem Technologies EverythingApp or by contacting here",
+    "evidence": "you may exercise these rights through the Settings menu in the Careem Technologies EverythingApp or by contacting here",
     "evidence_found": true,
-    "reason": "The policy explains how data subjects can exercise their rights."
+    "reason": "Exercise is explained through app settings, contact links, and the Subject Access Request form."
   },
   {
     "req_id": "R15",
@@ -160,9 +160,9 @@
     "applies": "always",
     "condition": "",
     "status": "covered",
-    "evidence": "you have the right to withdraw your consent at any time, in which case we will cease that collection and use of your data",
+    "evidence": "To revoke your consent, where we have expressly asked for your consent as a legal basis to process your Personal Data",
     "evidence_found": true,
-    "reason": "The policy specifies how to withdraw consent."
+    "reason": "States the right to withdraw consent, and rights can be exercised via settings or contact link."
   },
   {
     "req_id": "R16",
@@ -170,10 +170,10 @@
     "articles": "IR-A04(5b)",
     "applies": "conditional",
     "condition": "Large-scale or continuous processing, monitoring, new technologies, or automated decisions",
-    "status": "covered",
+    "status": "partial",
     "evidence": "Uber makes every effort to ensure that your Personal Data is secure",
     "evidence_found": true,
-    "reason": "The policy clearly states measures taken to protect personal data."
+    "reason": "Section 10 mentions password protection, dedicated staff and periodic security reviews, but gives no specific technical or organisational measures and disclaims any guarantee of security."
   },
   {
     "req_id": "R17",
@@ -184,6 +184,6 @@
     "status": "covered",
     "evidence": "We use personal data to make automated decisions relating to use of our Services",
     "evidence_found": true,
-    "reason": "The policy explicitly mentions that automated decisions are made."
+    "reason": "Section 6 states that automated decisions are made (ratings and deactivation, matching, dynamic pricing, fraud flagging) and gives the grounds for them."
   }
 ]
