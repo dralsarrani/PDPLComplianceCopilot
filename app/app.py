@@ -52,7 +52,7 @@ from src.gap.highlight import highlight_html  # noqa: E402
 from src.gap.report_pdf import build_pdf  # noqa: E402
 from src.policies.archive import from_archive  # noqa: E402
 from src.policies.company_name import company_name  # noqa: E402
-from src.policies.find_policy import find_policy, guess_website, looks_like_site  # noqa: E402
+from src.policies.find_policy import find_policy, looks_like_site, website_candidates  # noqa: E402
 from src.policies.language import text_language  # noqa: E402
 from src.policies.web_search import from_web_search  # noqa: E402
 from src.policies.read_file import TYPES as FILE_TYPES, read_policy_file  # noqa: E402
@@ -64,6 +64,7 @@ CHECKLIST_PATH = PROJECT_ROOT / "data" / "checklist" / "pdpl_checklist.csv"
 GAP_RESULTS_DIR = PROJECT_ROOT / "results" / "gap_v0"
 GAP_CACHE_DIR = PROJECT_ROOT / "results" / "gap_cache"
 LIBRARY_DIR = PROJECT_ROOT / "results" / "library"  # analysed ahead by src/gap/analyse_library.py
+FOUND_DIR = PROJECT_ROOT / "results" / "found_policies"  # policies found from a name, so the next search is instant
 HISTORY_PATH = PROJECT_ROOT / "results" / "history.json"
 HISTORY_MAX = 50
 STYLE_PATH = Path(__file__).resolve().parent / "style.css"
@@ -625,9 +626,30 @@ def paste_help(name, url):
     return {"kind": "paste", "name": name, "text": text, "date": date.today().isoformat()}
 
 
+def found_path(name):
+    return FOUND_DIR / f"{squash_name(name) or 'x'}.json"
+
+
+def remembered(name):
+    """The policy found for this name (or website) on an earlier search, or None."""
+    path = found_path(name)
+    return json.loads(path.read_text(encoding="utf-8")) if name and path.exists() else None
+
+
+def remember(source, *names):
+    """Keeps a policy found on the web under the typed name, the official name and the site."""
+    keep = {key: source[key] for key in ("name", "site", "hint", "url", "text", "date", "via", "archive")
+            if source.get(key)}
+    FOUND_DIR.mkdir(parents=True, exist_ok=True)
+    for name in {*names, source["name"], source.get("site", "")}:
+        if name:
+            found_path(name).write_text(json.dumps(keep, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
 def run_analysis(source):
     """source: {"kind": "site" | "paste" | "example", "name", "text" or "site", "id", "date"}.
-    A "site" source with no site (only a company name) first gets its website from guess_website().
+    A "site" source with no site (only a company name) first gets its possible websites from
+    website_candidates() and tries them one after another.
     Shows the steps while it works. The same text analysed before is shown from
     results/gap_cache/ at once; an example falls back to results/gap_v0/ when
     OpenAI cannot be reached."""
@@ -635,12 +657,17 @@ def run_analysis(source):
     st.session_state.gap_error = None
     st.session_state.gap_saved_on = None
     progress = st.empty()
+    typed = source.get("name", "")
+    if source["kind"] == "site" and not source.get("text"):
+        source.update(remembered(source.get("site") or typed) or {})  # found on an earlier search: no waiting
     try:
         with progress.status(GAP_STEPS["find" if source["kind"] == "site" else "analyse"]) as status:
             if source["kind"] == "site" and not source.get("site"):
                 status.update(label=GAP_STEPS["guess"])
                 try:
-                    official, source["site"], source["hint"] = guess_website(source["name"])
+                    official, candidates = website_candidates(source["name"])
+                    source["site"], source["hint"] = candidates[0] if candidates else ("", "")
+                    source["others"] = candidates[1:]
                 except Exception as error:
                     raise GapError(tr("تعذر الاتصال بـ OpenAI للبحث عن موقع الشركة.",
                                       "Could not reach OpenAI to find the company's website."), str(error))
@@ -657,9 +684,21 @@ def run_analysis(source):
                     open_library(cid, library)
                     return
                 status.update(label=GAP_STEPS["find"])
-            if source["kind"] == "site":
+            if source["kind"] == "site" and not source.get("text"):
+                others = source.pop("others", [])  # more sites the search found, tried next
                 try:
-                    source["url"], source["text"] = find_policy(source["site"], source.get("hint", ""))
+                    try:
+                        source["url"], source["text"] = find_policy(source["site"], source.get("hint", ""))
+                    except ValueError as first_error:
+                        for site, hint in others:
+                            try:
+                                source["url"], source["text"] = find_policy(site, hint)
+                                source["site"], source["hint"] = site, hint
+                                break
+                            except ValueError:
+                                continue
+                        else:
+                            raise first_error
                 except ValueError as error:
                     # the site cannot be read for us: a public archive's copy instead
                     status.update(label=GAP_STEPS["archive"])
@@ -678,6 +717,7 @@ def run_analysis(source):
                             raise GapError(tr(f"{error} (الموقع: {source['site']}) تقدر تفتحها بنفسك وتلصقها هنا:",
                                               f"{message(str(error))} (site: {source['site']}) You can open it "
                                               "yourself and paste it here:"), "", policy_help(source))
+                remember(source, typed)
                 status.update(label=GAP_STEPS["analyse"])
             saved = GAP_CACHE_DIR / f"{text_key(source['text'])}.json"
             if saved.exists():
@@ -720,7 +760,7 @@ def run_analysis(source):
     add_history("gap", source["name"], {"source": source, "report": report})
 
 
-def source_note(source, saved_on=None):
+def source_note(source, saved_on=None, other_lang=""):
     """Which copy of the policy was analysed, and that this is not a legal ruling."""
     name, day = esc(source["name"]), esc(source["date"])
     if source["kind"] in ("example", "library"):
@@ -741,6 +781,8 @@ def source_note(source, saved_on=None):
     when = tr(f" (نتيجة محفوظة من تحليل بتاريخ {esc(saved_on)})", f" (saved result of an analysis on {esc(saved_on)})") if saved_on else ""
     link = (f' <a href="{esc(source["url"])}" target="_blank" dir="ltr">{esc(source["url"])}</a>'
             if source.get("url") else "")
+    if other_lang:  # the policy is checked in the language it is available in
+        copy += tr(f" (باللغة {esc(other_lang)}، لأنها النسخة المتاحة)", f" (in {esc(other_lang)}, the copy available)")
     text = tr(f"تحليل آلي {copy}، وليس حكماً قانونياً{when}.", f"Automatic analysis {copy}. Not a legal ruling{when}.")
     return f'<div class="source-note">{ICONS["info"]}{text}{link}</div>'
 
@@ -1008,12 +1050,12 @@ def page_gap():
         # The web search writes the policy out and can leave parts out, so a requirement
         # it did not find is "not in this copy", not "missing", and is not held against them.
         report = [dict(r, status="unsure") if r["status"] == "missing" else r for r in report]
+    other_lang = ""
     if source.get("text"):  # check every quote against the text again (results saved before this check too)
         report = check_report(report, source["text"])
         lang = text_language(source["text"])
-        if lang and lang != ("en" if EN else "ar"):  # say so, the analysis is still of this text
-            st.markdown(f'<div class="note">{tr(f"نص السياسة المحلَّل باللغة {language_name(lang)}، لأنها النسخة المتاحة.", f"The policy text checked is in {language_name(lang)}: that is the copy available.")}</div>',
-                        unsafe_allow_html=True)
+        if lang and lang != ("en" if EN else "ar"):  # said quietly in the source line under the result
+            other_lang = language_name(lang)
     counts = pd.Series([r["status"] for r in report]).value_counts()
     total = len(report)
     parts = [("ok", int(counts.get("covered", 0)), STATUS["covered"][0]),
@@ -1030,7 +1072,7 @@ def page_gap():
         if typed.strip():
             source["name"] = typed.strip()
     st.markdown(verdict_card(source["name"], percent, parts, total, report, checklist)
-                + source_note(source, st.session_state.get("gap_saved_on")), unsafe_allow_html=True)
+                + source_note(source, st.session_state.get("gap_saved_on"), other_lang), unsafe_allow_html=True)
     if parts[3][1]:
         unsure = parts[3][1]
         st.markdown(f'<div class="note">{tr(f"جُمع هذا النص عبر البحث في الإنترنت وقد يكون منقوصاً: لم يرد فيه {unsure} من المتطلبات، وقد تكون واردة في السياسة الأصلية، لذا لم تُحتسب على الجهة. وللحصول على نتيجة دقيقة يُرجى لصق نص السياسة الأصلي:", f"This text was gathered by a web search and may be incomplete: {unsure} requirements are not in it but may be in the original policy, so they are not counted against them. For a sure result, paste the original policy:")}</div>',

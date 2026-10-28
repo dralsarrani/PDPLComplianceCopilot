@@ -29,6 +29,7 @@ results/history.json
 results/gap_cache/
 results/archive_index/
 results/web_policies/
+results/found_policies/
 
 # Full texts of company policies: copyright, keep them local (links and results are enough)
 data/library/texts/
