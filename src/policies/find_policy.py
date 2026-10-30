@@ -107,13 +107,13 @@ def website_candidates(company, model=None):
     """(official name, [(domain, privacy page address or ""), ...]) of a company from
     its name, best first, to try one after another (a short name like "نينجا" can
     first bring up another site). Searches the web first; the model's memory only
-    when the search cannot run or finds nothing."""
+    when the search cannot run. When the search runs and finds no site of a company
+    with this name, the answer is [] (no such company): asking the model then made
+    up a sound-alike ("شركة الريم الذهبية لتقنية السحاب" gave remi.new)."""
     load_dotenv()
     if os.environ.get("TAVILY_API_KEY"):
         try:
-            found = tavily_candidates(company)
-            if found:
-                return "", found
+            return "", tavily_candidates(company)
         except Exception as error:
             print(f"[find_policy] Tavily search failed: {error}")
     model = model or os.environ.get("OPENAI_MODEL", "gpt-4o-mini")
@@ -142,8 +142,7 @@ def tavily_candidates(company):
     not carry the name at all (Tawakkalna's is ta.sdaia.gov.sa). It can only pick from
     the results, so it cannot make up an address (asked from memory it gave jahez.mr).
     News, social media and app-store sites, guides on writing a policy and test sites
-    are dropped before; at most one page per site. Nothing picked: [] (the OpenAI
-    search is tried instead)."""
+    are dropped before; at most one page per site. Nothing picked: [] (no such company)."""
     queries = [f"{company} سياسة الخصوصية السعودية", f"{company} privacy policy Saudi Arabia",
                f'"{company}" الموقع الرسمي']  # the site itself, for short names ("زد" once brought up Zain)
     with ThreadPoolExecutor(len(queries)) as pool:
@@ -175,7 +174,11 @@ organisation's) privacy policy. Below are web search results, numbered. Which of
 the company's OWN official website? Not news, directories, booking or comparison sites, other
 companies that only mention it, or another company whose name merely looks or sounds alike
 (Zain is not Zid, kudo.ai is not Kudu): the site must belong to the company with exactly this
-name. If several companies share the name, the one users in Saudi Arabia know best. Best first:
+name. A small spelling slip is fine ("جرر" is Jarir), and a brand's site often differs from
+its Arabic name ("طيران أديل" is flyadeal.com, "توكلنا" is ta.sdaia.gov.sa). But a company whose
+name shares only one word with a longer typed name is another company ("شركة الريم الذهبية لتقنية
+السحاب" is not Remi): if no result clearly belongs to the company typed, it may not exist, so reply {{"own": []}}.
+If several companies share the name, the one users in Saudi Arabia know best. Best first:
 its main website's privacy policy page (not the policy of one of its side services, such as a
 tv. or gaming subdomain), then its other pages. Reply ONLY with JSON: {{"own": [numbers]}}, or {{"own": []}} if none is.
 

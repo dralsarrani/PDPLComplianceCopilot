@@ -52,7 +52,7 @@ from src.gap.highlight import highlight_html  # noqa: E402
 from src.gap.report_pdf import build_pdf  # noqa: E402
 from src.policies.archive import from_archive  # noqa: E402
 from src.policies.company_name import company_name  # noqa: E402
-from src.policies.find_policy import find_policy, looks_like_site, website_candidates  # noqa: E402
+from src.policies.find_policy import NOT_FOUND, find_policy, looks_like_site, website_candidates  # noqa: E402
 from src.policies.language import text_language  # noqa: E402
 from src.policies.web_search import from_web_search  # noqa: E402
 from src.policies.read_file import TYPES as FILE_TYPES, read_policy_file  # noqa: E402
@@ -672,10 +672,11 @@ def run_analysis(source):
                     raise GapError(tr("تعذر الاتصال بـ OpenAI للبحث عن موقع الشركة.",
                                       "Could not reach OpenAI to find the company's website."), str(error))
                 if not source["site"]:
-                    raise GapError(tr(f"ما عرفنا موقع \"{source['name']}\". الصق رابط موقعها (مثل company.com.sa) "
-                                      "أو ارفع ملف السياسة.",
-                                      f"We do not know the website of \"{source['name']}\". Paste its link "
-                                      "(like company.com) or upload the policy file."), "", policy_help(source))
+                    raise GapError(tr(f"لم نعثر على جهة باسم \"{source['name']}\". تحقّق من كتابة الاسم، "
+                                      "أو أدخل رابط موقعها (مثل company.com.sa)، أو ارفع ملف السياسة.",
+                                      f"We found no company named \"{source['name']}\". Check the spelling, "
+                                      "enter its website (like company.com) or upload the policy file."),
+                                   "", policy_help(source))
                 source["name"] = official or source["name"]
                 library = list_library()
                 cid = library_by_site(source["site"], library)
@@ -707,9 +708,12 @@ def run_analysis(source):
                             source["name"], source["site"], source.get("hint", ""))
                         source["date"] = copied_on or source["date"]
                     except ValueError:
-                        # last try: OpenAI's web search writes out what the policy says
+                        # last try: OpenAI's web search writes out what the policy says. Not when the
+                        # site was read and simply has no policy page: that took ~1 min and only guessed
                         status.update(label=GAP_STEPS["web"])
                         try:
+                            if str(error) == NOT_FOUND:
+                                raise ValueError(NOT_FOUND)
                             source["url"], source["text"], source["date"] = from_web_search(
                                 source["name"], source["site"])
                             source["via"] = "web"
