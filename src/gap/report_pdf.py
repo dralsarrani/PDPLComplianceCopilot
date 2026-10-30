@@ -68,7 +68,7 @@ WORDS = {
            "none": "لا يوجد شاهد في نص السياسة",
            "opp": "فئة الدليل (مصنّف OPP-115)", "match": "يطابق المتطلب", "nomatch": "لا يطابق تصنيفات المتطلب",
            "page": "صفحة {n} من {total}",
-           "footer": "مُصان · المعلومات المقدَّمة للاسترشاد فقط، ولا تُعد رأياً قانونياً ملزماً",
+           "footer": "مصان · المعلومات المقدمة للاسترشاد فقط، ولا تعد رأيا قانونيا ملزما",
            "method": "تحليل آلي بنموذج gpt-4o-mini مقابل 17 متطلباً مستخلصة من نظام حماية البيانات الشخصية "
                      "ولائحتيه، مع التحقق من وجود كل اقتباس في نص السياسة.",
            "status_words": {"covered": "مستوفى", "partial": "مستوفى جزئياً", "missing": "غير مذكور",
@@ -323,8 +323,6 @@ def build_pdf(report, checklist, name, analysed_on="", lang="ar", opp115_names=N
         if why:
             text(why, 8.5, color=GREY, height=4.5, x=pad, width=inner - 10)
         pdf.set_y(y + 23)
-    pdf.ln(2)
-    text(w["method"], 7.5, color=GREY, height=4)
 
     # ---- the 17 requirements ----
     pdf.add_page()
