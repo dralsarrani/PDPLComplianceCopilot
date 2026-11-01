@@ -8,7 +8,7 @@ PDPL Copilot does three things:
 2. **Cybersecurity controls Q&A.** The same assistant also answers from the National Cybersecurity Authority's Essential Cybersecurity Controls (ECC-2:2024). A router decides for each question whether it needs the PDPL, the controls, or both. An Arabic question gets an Arabic answer quoting the official Arabic text; an English question gets English.
 3. **Privacy policy Gap Analyser.** Give it a company's privacy policy (link, file or pasted text). For each of 17 PDPL requirements it reports **covered / partial / missing**, with the sentence from the policy as evidence and the PDPL article behind the requirement.
 
-**Contents:** [Results at a glance](#results-at-a-glance) · [Team](#team) · [How it works](#how-it-works) · [Data](#data) · [Setup](#setup) · [Run the demo app](#run-the-demo-app) · [Reproduce the results](#reproduce-the-results) · [Results](#results) · [Limitations](#limitations) · [Repository structure](#repository-structure)
+**Contents:** [Results at a glance](#results-at-a-glance) · [Team](#team) · [How it works](#how-it-works) · [Data](#data) · [Setup](#setup) · [Run the demo app](#run-the-demo-app) · [Reproduce the results](#reproduce-the-results) · [Results](#results) · [Limitations](#limitations) · [Next step](#next-step) · [Repository structure](#repository-structure)
 
 ## Results at a glance
 
@@ -333,6 +333,10 @@ The one routing miss (ECC02, whether non-Saudis may hold cybersecurity jobs) wen
 - The company-name search went through four versions, each checked on the same Saudi companies it is scored on (right site: 10/20, 25/26, 25/26, 26/26, then 26/26 with Claude picking), so 26/26 is not a blind score. The check script (`lookup_test.py`) was run locally and is not in the repository.
 - A made-up or misspelt company name can bring up a real company with a similar name (a made-up "Nakhla Desert Technology" found Nakhla Agency). The note under the result links the page that was read, so the user can see which site it came from. Asking the model whether the two names are the same company was tried and was not reliable, so it was dropped.
 - Tavily needs a free key for each user (1,000 credits a month, about 4 to 6 per new company; a company found before costs nothing). Without the key the app uses OpenAI's search tool instead, which was not part of the 26-company check.
+
+## Next step
+
+**From policy to practice.** Today *covered* means the policy mentions a requirement, not that the organisation does what it says. The next step is to compare what a policy says with what the organisation's app and website actually collect, such as the permissions an app asks for and the tracking tools a website loads, and to flag data that is collected but not named in the policy.
 
 ## Repository structure
 
