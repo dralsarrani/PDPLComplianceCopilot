@@ -1,0 +1,255 @@
+{
+  "model": "gpt-4o-mini",
+  "summary": {
+    "with_instruction": {
+      "correctly_refused_unanswerable": "6/6",
+      "wrongly_refused_answerable": "0/34"
+    },
+    "without_instruction": {
+      "correctly_refused_unanswerable": "6/6",
+      "wrongly_refused_answerable": "0/34"
+    }
+  },
+  "rows": [
+    {
+      "id": "Q001",
+      "answerable": true,
+      "with_instruction": false,
+      "without_instruction": false
+    },
+    {
+      "id": "Q003",
+      "answerable": true,
+      "with_instruction": false,
+      "without_instruction": false
+    },
+    {
+      "id": "Q004",
+      "answerable": true,
+      "with_instruction": false,
+      "without_instruction": false
+    },
+    {
+      "id": "Q005",
+      "answerable": true,
+      "with_instruction": false,
+      "without_instruction": false
+    },
+    {
+      "id": "Q006",
+      "answerable": true,
+      "with_instruction": false,
+      "without_instruction": false
+    },
+    {
+      "id": "Q008",
+      "answerable": true,
+      "with_instruction": false,
+      "without_instruction": false
+    },
+    {
+      "id": "Q009",
+      "answerable": true,
+      "with_instruction": false,
+      "without_instruction": false
+    },
+    {
+      "id": "Q011",
+      "answerable": true,
+      "with_instruction": false,
+      "without_instruction": false
+    },
+    {
+      "id": "Q013",
+      "answerable": true,
+      "with_instruction": false,
+      "without_instruction": false
+    },
+    {
+      "id": "Q014",
+      "answerable": true,
+      "with_instruction": false,
+      "without_instruction": false
+    },
+    {
+      "id": "Q016",
+      "answerable": true,
+      "with_instruction": false,
+      "without_instruction": false
+    },
+    {
+      "id": "Q017",
+      "answerable": true,
+      "with_instruction": false,
+      "without_instruction": false
+    },
+    {
+      "id": "Q018",
+      "answerable": true,
+      "with_instruction": false,
+      "without_instruction": false
+    },
+    {
+      "id": "Q020",
+      "answerable": true,
+      "with_instruction": false,
+      "without_instruction": false
+    },
+    {
+      "id": "Q021",
+      "answerable": true,
+      "with_instruction": false,
+      "without_instruction": false
+    },
+    {
+      "id": "Q022",
+      "answerable": true,
+      "with_instruction": false,
+      "without_instruction": false
+    },
+    {
+      "id": "Q023",
+      "answerable": true,
+      "with_instruction": false,
+      "without_instruction": false
+    },
+    {
+      "id": "Q026",
+      "answerable": true,
+      "with_instruction": false,
+      "without_instruction": false
+    },
+    {
+      "id": "Q027",
+      "answerable": true,
+      "with_instruction": false,
+      "without_instruction": false
+    },
+    {
+      "id": "Q029",
+      "answerable": true,
+      "with_instruction": false,
+      "without_instruction": false
+    },
+    {
+      "id": "Q030",
+      "answerable": true,
+      "with_instruction": false,
+      "without_instruction": false
+    },
+    {
+      "id": "Q032",
+      "answerable": true,
+      "with_instruction": false,
+      "without_instruction": false
+    },
+    {
+      "id": "Q033",
+      "answerable": true,
+      "with_instruction": false,
+      "without_instruction": false
+    },
+    {
+      "id": "Q034",
+      "answerable": true,
+      "with_instruction": false,
+      "without_instruction": false
+    },
+    {
+      "id": "Q036",
+      "answerable": true,
+      "with_instruction": false,
+      "without_instruction": false
+    },
+    {
+      "id": "Q037",
+      "answerable": true,
+      "with_instruction": false,
+      "without_instruction": false
+    },
+    {
+      "id": "Q038",
+      "answerable": true,
+      "with_instruction": false,
+      "without_instruction": false
+    },
+    {
+      "id": "Q040",
+      "answerable": true,
+      "with_instruction": false,
+      "without_instruction": false
+    },
+    {
+      "id": "Q041",
+      "answerable": true,
+      "with_instruction": false,
+      "without_instruction": false
+    },
+    {
+      "id": "Q043",
+      "answerable": true,
+      "with_instruction": false,
+      "without_instruction": false
+    },
+    {
+      "id": "Q044",
+      "answerable": true,
+      "with_instruction": false,
+      "without_instruction": false
+    },
+    {
+      "id": "Q045",
+      "answerable": true,
+      "with_instruction": false,
+      "without_instruction": false
+    },
+    {
+      "id": "Q047",
+      "answerable": true,
+      "with_instruction": false,
+      "without_instruction": false
+    },
+    {
+      "id": "Q048",
+      "answerable": true,
+      "with_instruction": false,
+      "without_instruction": false
+    },
+    {
+      "id": "Q049",
+      "answerable": false,
+      "with_instruction": true,
+      "without_instruction": true
+    },
+    {
+      "id": "Q050",
+      "answerable": false,
+      "with_instruction": true,
+      "without_instruction": true
+    },
+    {
+      "id": "Q051",
+      "answerable": false,
+      "with_instruction": true,
+      "without_instruction": true
+    },
+    {
+      "id": "Q055",
+      "answerable": false,
+      "with_instruction": true,
+      "without_instruction": true
+    },
+    {
+      "id": "Q056",
+      "answerable": false,
+      "with_instruction": true,
+      "without_instruction": true
+    },
+    {
+      "id": "Q057",
+      "answerable": false,
+      "with_instruction": true,
+      "without_instruction": true
+    }
+  ]
+}
