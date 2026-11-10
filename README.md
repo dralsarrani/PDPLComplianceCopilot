@@ -2,6 +2,8 @@
 
 > ⚠️ **Not legal advice.** PDPL Copilot is a student project. Its answers and gap reports can be wrong and must be checked against the official texts and a qualified lawyer.
 
+https://github.com/user-attachments/assets/295381fc-55ca-4590-918f-7b2e5b63c11b
+
 PDPL Copilot does three things:
 
 1. **Bilingual legal Q&A.** Ask a question about the PDPL in Arabic or English. The system finds the relevant articles of the PDPL, its Implementing Regulation and the Transfer Regulation, and answers **only** from them, citing the article for every sentence. If the texts do not answer the question, it says **"not covered"** instead of guessing.
